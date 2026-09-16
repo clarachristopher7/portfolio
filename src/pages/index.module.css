@@ -1,0 +1,16 @@
+.hero {
+  padding: 6rem 0;
+  text-align: left;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}

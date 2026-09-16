@@ -1,0 +1,23 @@
+/**
+ * Starter theme colors — tweak these to taste, or swap for your own palette.
+ */
+:root {
+  --ifm-color-primary: #2e5cb8;
+  --ifm-color-primary-dark: #2951a5;
+  --ifm-color-primary-darker: #274c9c;
+  --ifm-color-primary-darkest: #203f80;
+  --ifm-color-primary-light: #3367cb;
+  --ifm-color-primary-lighter: #3d6fce;
+  --ifm-color-primary-lightest: #5985d5;
+  --ifm-code-font-size: 90%;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #7fa6ea;
+  --ifm-color-primary-dark: #5f91e5;
+  --ifm-color-primary-darker: #4f87e2;
+  --ifm-color-primary-darkest: #2569d9;
+  --ifm-color-primary-light: #9fbbef;
+  --ifm-color-primary-lighter: #afc5f1;
+  --ifm-color-primary-lightest: #dfe7f9;
+}
