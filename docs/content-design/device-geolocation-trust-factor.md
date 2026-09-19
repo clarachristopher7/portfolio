@@ -46,4 +46,4 @@ Moving the meter below the inputs puts the card in the order the admin already t
 
 ## What changed
 
-[Whether the pattern carried to the other Trust Factors, or any support signal on misconfigured geolocation policy.]
+The lead UI engineer implemented the reordering across every Trust Factor, not just this one. The argument held wherever a Trust Effect meter reported a result the admin was still configuring, so it stopped being a fix to one screen and became the pattern for the surface.
