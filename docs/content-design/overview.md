@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Content Design
+# Content design
 
 Three samples from SonicWall Cloud Secure Edge, in the order I'd want them read — they make one argument together.
 

@@ -38,16 +38,20 @@ export default function Home() {
         <div className="container">
           <div className={styles.summary}>
             <div className={styles.summaryItem}>
-              <h2>Published docs</h2>
-              <p>Live architecture, integration and concepts pages I write and maintain.</p>
+              <h2>Docs</h2>
+              <p>Live pages I write and maintain on the SonicWall Cloud Secure Edge docs site.</p>
+            </div>
+            <div className={styles.summaryItem}>
+              <h2>Content architecture</h2>
+              <p>A Cloud Secure Edge IA restructure, and an estate-wide model for evaluating doc sets in a single-pane view.</p>
+            </div>
+            <div className={styles.summaryItem}>
+              <h2>Content design</h2>
+              <p>In-product strings, their structuring, and their sequencing.</p>
             </div>
             <div className={styles.summaryItem}>
               <h2>Automations</h2>
-              <p>CI automation that catches drift between what shipped and what's documented.</p>
-            </div>
-            <div className={styles.summaryItem}>
-              <h2>Information architecture</h2>
-              <p>Restructuring a docs estate around reader tasks, measured rather than asserted.</p>
+              <p>AI-assisted analysis and tooling that keeps docs current and robust.</p>
             </div>
           </div>
         </div>

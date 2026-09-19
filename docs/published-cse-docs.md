@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Published docs
+# Docs
 
 Live pages I write and maintain on the [SonicWall Cloud Secure Edge documentation site](https://cse-docs.sonicwall.com). These are public and current — no login, and I still own them. Three different kinds of writing, chosen to show range rather than volume.
 

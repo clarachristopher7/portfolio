@@ -21,9 +21,9 @@ At SonicWall I own the Cloud Secure Edge content end to end. I work with designe
 **Senior Technical Writer** · *Current*
 
 - Analyze customer support tickets, sales engineering calls, product telemetry, and community forums to define the user persona, identify their real-world friction points, and uncover critical product adoption gaps.
-- Apply these user insights to partner with Product, UX, and Growth teams, writing contextual UX copy and auditing the in-product console to transform a feature-heavy onboarding flow into an intuitive, outcome-driven setup experience.
+- Apply these user insights to partner with product, design, and front-end engineers to create contextual UX copy and to transform the product console into an intuitive, outcome-driven setup experience.
 - Continually refine the entire documentation site's information architecture, informed by the product experience, pivoting away from static feature docs to align content taxonomies directly with the user's journey and their desired outcomes. Added self-service features in the docs site redesign, including an RSS release notes subscription option and an in-page feedback form.
-- Design and integrate generative AI workflow automations (using Claude Code) that scan code repositories during CI/CD cycles to cross-reference engineering changes with existing documentation, ensuring real-time alignment with rapid release cycles.
+- Design and integrate generative AI workflow automations (using Claude Code) that scan code repositories during CI/CD cycles to cross-reference engineering changes with existing documentation, ensuring real-time alignment with release cycles.
 - Build staleness audit automations that cross-reference documentation with new console UI versions, dynamically generating prioritized backlog queues to maintain data integrity across cloud pipelines without extensive manual reviews.
 - Architecting a legacy hardware documentation modernization, integrating a docs-as-code publishing pipeline where it fits, mapping docs against a user journey, and researching new tooling (in progress).
 

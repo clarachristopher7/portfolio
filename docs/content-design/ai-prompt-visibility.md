@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# AI Prompt Visibility
+# AI prompt visibility
 
 > **Why this one:** An error message is sometimes the correct answer to a question the product shouldn't have asked. This sample is about deleting two messages and shipping a configuration panel in their place.
 

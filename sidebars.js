@@ -3,7 +3,7 @@ const sidebars = {
   workSidebar: [
     'intro',
     'resume',
-    {type: 'doc', id: 'published-cse-docs', label: 'Docs'},
+    'published-cse-docs',
     {
       type: 'category',
       label: 'Content architecture',
