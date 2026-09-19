@@ -4,13 +4,17 @@ sidebar_position: 3
 
 # AI prompt visibility
 
-> **Why this one:** The error message was accurate and still not useful, because it described a step the admin had to take somewhere else. This one is about removing two messages and putting the setting itself on the screen instead.
+> **Why this one:** The error message was accurate and still not useful, because it described a step the admin had to take somewhere else. This one is about a decision on when a feature should become usable, and about removing two messages by putting the setting itself on the screen.
 
 **Surface:** AI visibility in the Cloud Secure Edge admin console, where admins view user prompt logs from AI applications.
 
 ## The problem
 
-Turning on prompt logging needed a second step in a different part of the console: a setting inside an Internet Threat Protection policy. Without it, logging ran but nothing appeared on screen. The design handled this by showing an error and a warning as soon as the admin turned the toggle on.
+Turning on prompt logging needed a second step in a different part of the console: a setting inside an Internet Threat Protection policy. Without it, logging ran but nothing appeared on screen.
+
+There were two views on how that should work. One was to let admins turn logging on straight away and leave the Internet Threat Protection configuration for later, so setup stayed light and data would be accumulating by the time they came back to look at it. The other, which the designer and I proposed, was to have the admin set the feature up first, so that turning it on produced a working feature.
+
+The version in the console took the first route and covered the gap with an error and a warning, fired the moment the admin flipped the toggle.
 
 [The two strings as they appeared. They are the "before", and the exact wording is the evidence.]
 
@@ -24,13 +28,15 @@ The larger problem was what happened if the admin dismissed them. The toggle sta
 
 ## What I tried
 
-[Whether you proposed rewriting the two messages first, and what made the embedded setting the better answer.]
+[Whether you proposed rewriting the two messages first, and what made the embedded setting the better answer. Also worth recording: how the case for configuring first was made, and what evidence moved it.]
 
 ## What I shipped
 
 Both messages pointed at a policy screen elsewhere and asked the admin to finish the job there. That meant leaving the task, finding an object they might not know was related, and knowing which setting mattered.
 
 Putting the Internet Threat Protection setting into the AI visibility screen removes that trip. The dependency still exists in the system, but the admin no longer has to route around it.
+
+It also settles the question of when the feature should become usable. Keeping setup light and having the toggle produce a working feature stop being alternatives once the configuration is on the same screen, so there is no longer a cost to doing it in the right order.
 
 [Screenshots of the toggle with its error and warning, and the embedded configuration that replaced them, rebuilt unbranded.]
 
