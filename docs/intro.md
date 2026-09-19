@@ -4,11 +4,17 @@ sidebar_position: 1
 
 # Start here
 
-I'm Clara Christopher, a Senior Technical Writer with 9 years of experience, currently
-writing narrative-driven documentation for SonicWall's Cloud Secure Edge — a zero trust
-network access and cloud security platform. My background also includes Tailscale,
-Banyan Security, Quantum XChange, and Security Compass. This section is a self-contained
-sample of my work — no logins, no links to docs I no longer maintain.
+I'm Clara Christopher, a content architect for cloud security products. I design how the
+product UI and docs are written, structured, and published, considering everything from
+the user journey to how the docs pipeline is built.
+
+At SonicWall I own the Cloud Secure Edge content end to end. I work with designers and
+front-end engineers to build in-product experiences, and I'm currently rearchitecting
+SonicWall's hardware and cloud product publishing flow. My background also includes
+Tailscale, Banyan Security, Quantum XChange, and Security Compass.
+
+This section is a self-contained sample of my work — no logins, no links to docs I no
+longer maintain.
 
 ## What's here
 

@@ -11,11 +11,17 @@ export default function Home() {
       <header className={styles.hero}>
         <div className="container">
           <h1 className={styles.heroTitle}>Clara Christopher</h1>
+          <p className={styles.heroLead}>
+            Content architect for cloud security products. I design how the
+            product UI and docs are written, structured, and published,
+            considering everything from the user journey to how the docs
+            pipeline is built.
+          </p>
           <p className={styles.heroSubtitle}>
-            Documentation lead with 9 years of experience creating narrative-driven
-            technical content for cloud infrastructure and cybersecurity platforms —
-            and building the AI-powered automation that keeps it accurate as products
-            change.
+            At SonicWall I own the Cloud Secure Edge content end to end. I work
+            with designers and front-end engineers to build in-product
+            experiences, and I&rsquo;m currently rearchitecting SonicWall&rsquo;s
+            hardware and cloud product publishing flow.
           </p>
           <div>
             <Link className="button button--primary button--lg" to="/work/intro">
