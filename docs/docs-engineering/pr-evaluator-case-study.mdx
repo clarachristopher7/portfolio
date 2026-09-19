@@ -88,10 +88,10 @@ Answers one question: what shipped in the product that the docs have not caught 
 
 <p className="case-label">Two details that decided whether it worked</p>
 
-- **The branch it scans.** Most feature branches merge into `dev` and only reach a release through a roll-up. Scanning `qa-stable` instead caught 1 of 9 merges for the August 2026 release: the job was technically running and almost entirely blind.
-- **Merged is not shipped.** Walking merges between the two newest `r20*` tags tells you what landed in the repository. Fingerprinting each diff and searching the served preview bundle tells you what a customer can actually reach, which is the thing documentation has to match.
+- **Which branch it reads.** Feature work lands on `dev` first, and only reaches a release later when `dev` is merged in as a batch. An early version of the job read `qa-stable` instead, and found 1 of the 9 changes that went into the August 2026 release. It ran and reported every day while missing almost everything.
+- **Merged code is not always live code.** Reading the merges between the two most recent release tags shows what went into the repository. To find out what customers can actually reach, the job takes a distinctive piece of text from each change and searches for it in the JavaScript the preview site is currently serving. Documentation has to match what is live, not what is merged.
 
-Claude is called once per merge, with the index of every docsite page as a cached prefix and only the merge subject plus a trimmed diff varying per call, so the expensive context is paid for once and reused across the batch.
+Each change gets its own call to Claude. The list of every page on the docs site is the long part of the prompt, so it sits in the same position on every call and is served from cache after the first one. Only the merge title and a trimmed diff change between calls, which means the long part is paid for in full once rather than on every call.
 
 <p className="case-label case-label--close">What this demonstrates</p>
 
