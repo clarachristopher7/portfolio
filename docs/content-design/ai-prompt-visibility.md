@@ -4,42 +4,38 @@ sidebar_position: 3
 
 # AI prompt visibility
 
-> **Why this one:** An error message is sometimes the correct answer to a question the product shouldn't have asked. This sample is about deleting two messages and shipping a configuration panel in their place.
+> **Why this one:** The error message was accurate and still not useful, because it described a step the admin had to take somewhere else. This one is about removing two messages and putting the setting itself on the screen instead.
 
 **Surface:** AI visibility in the Cloud Secure Edge admin console, where admins view user prompt logs from AI applications.
 
 ## The problem
 
-Turning on prompt logging required a second step in an unrelated place: a setting inside an Internet Threat Protection policy. Without it, logging ran but the logs never populated the screen. The original design fired an error and a warning the moment the admin flipped the toggle.
+Turning on prompt logging needed a second step in a different part of the console: a setting inside an Internet Threat Protection policy. Without it, logging ran but nothing appeared on screen. The design handled this by showing an error and a warning as soon as the admin turned the toggle on.
 
-[The two strings verbatim. They're the "before," and the exact wording is the evidence.]
+[The two strings as they appeared. They are the "before", and the exact wording is the evidence.]
 
-Three faults, worsening:
+The admin had followed the screen, and the system was working as built. The messages were reporting that the feature needed a second setting before it would show anything, and two messages is a lot of text to explain one setting that could have been on the screen instead.
 
-**The admin did the right thing and got an error.** Nothing had failed. The error reported that the product was incomplete.
-
-**Two messages did the work of one control.** That much explanation usually means the thing being explained shouldn't exist.
-
-**Dismissing them hid the failure.** The toggle stayed on, logging ran, and the screen stayed empty. The admin's belief was right about the toggle and wrong about the outcome, and an empty log screen looks exactly like an organization that barely uses AI tools. A security feature that silently reports nothing is worse than one that's visibly off.
+The larger problem was what happened if the admin dismissed them. The toggle stayed on and logging ran, so the feature looked enabled, but the log screen stayed empty. An empty screen looks the same as an organisation that barely uses AI tools, so nothing prompted a second look.
 
 ## The constraint
 
-[The ITP policy belongs to another surface, possibly another team. What did that allow? Was there a permissions boundary, where an admin who can toggle logging can't edit the policy?]
+[Whether the Internet Threat Protection policy belonged to another surface or team, and what that allowed. Whether an admin who can turn logging on is always able to edit that policy.]
 
 ## What I tried
 
-[Rewriting the two messages is the obvious cheaper fix. If you argued for the embed over a copy fix, that argument goes here.]
+[Whether you proposed rewriting the two messages first, and what made the embedded setting the better answer.]
 
 ## What I shipped
 
-The messages were accurate, and accurate was all they could be. Both pointed elsewhere and asked the admin to finish the job there: leave the task, find an object they may not know is related, and know which setting matters.
+Both messages pointed at a policy screen elsewhere and asked the admin to finish the job there. That meant leaving the task, finding an object they might not know was related, and knowing which setting mattered.
 
-Embedding the policy configuration in the AI visibility surface removes the trip. The dependency still exists in the system; it stops being the admin's to route around, and turning the feature on turns the feature on.
+Putting the Internet Threat Protection setting into the AI visibility screen removes that trip. The dependency still exists in the system, but the admin no longer has to route around it.
 
 [Screenshots of the toggle with its error and warning, and the embedded configuration that replaced them, rebuilt unbranded.]
 
-[What an admin sees who already has the policy configured.]
+[What an admin sees who already has that policy configured.]
 
 ## What changed
 
-[Admins reaching populated logs without a ticket, a drop in "logging is on but empty" reports, or whether the pattern carried to other cross-console prerequisites.]
+[Whether admins reached populated logs without raising a ticket, whether "logging is on but empty" reports dropped, or whether the same approach was used for other features with a prerequisite elsewhere.]

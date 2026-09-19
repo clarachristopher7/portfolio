@@ -4,27 +4,27 @@ sidebar_position: 1
 
 # Device Geolocation Trust Factor
 
-> **Why this one:** Configuration UI is where microcopy has to carry logic, not just tone. The admin is assembling a security policy, and the screen has to make the rule they're building legible before they save it. This sample also includes a layout change I argued for on the same grounds: some reading-order problems can't be solved with better words.
+> **Why this one:** Configuration screens need copy that carries logic, not just tone. The admin is setting a security policy, and the screen has to show what rule they are building before they save it. It also covers a layout change I asked for, because reordering the card fixed something wording could not.
 
-**Surface:** Trust Factor configuration, Cloud Secure Edge admin console. Admins build a device's Trust Level out of individual Trust Factors; each can deny access, downgrade trust, or do nothing.
+**Surface:** Trust Factor configuration, Cloud Secure Edge admin console. Admins build a device's Trust Level out of individual Trust Factors. Each one can deny access, lower the trust level, or do nothing.
 
 ## The problem
 
 ![The factor before the revision: the Trust Effect meter sits above the country selector and its options.](/img/content-design/device-geolocation-before.png)
 
-**The label wasn't a label.** *"Select the countries where devices with this Trust Factor are:"* only resolves if you read the Allowed/Blocked toggle, far to the right, as its last word. It also names the data model, not the task.
+The field label read *"Select the countries where devices with this Trust Factor are:"*. It only makes sense if you read the Allowed/Blocked toggle on the far right as the end of the sentence. It also describes how the system stores the setting rather than what the admin is doing.
 
-**The screen never stated the rule.** `Blocked` plus a chip reading `Algeria` is two facts the admin has to combine, under a label that never said which direction the logic ran. Get it backwards and you ship the opposite policy, with nothing on screen to contradict you.
+The screen never said what the configuration meant. A toggle set to `Blocked` and a chip reading `Algeria` are two separate facts, and nothing said which way the logic ran. An admin who read it the wrong way round would save a policy that did the opposite of what they intended, and nothing on the screen would have told them.
 
-**The outcome sat above its inputs.** The meter reports what happens if the factor isn't satisfied, which is downstream of every control in the card.
+The Trust Effect meter sat at the top of the card. It shows what happens when the factor is not satisfied, which depends on the settings underneath it.
 
 ## The constraint
 
-[What you were writing against: component width limits, no engineering time for new states, terminology fixed by the published docs.]
+[What you were working with: component width limits, no engineering time for new states, terminology already fixed by the published docs.]
 
 ## What I tried
 
-[What you rejected. Did you attempt a clearer meter description before arguing to move it?]
+[What you ruled out. Whether you tried rewriting the meter description before asking to move it.]
 
 ## What I shipped
 
@@ -40,10 +40,10 @@ sidebar_position: 1
 | **Before** | *(no equivalent string)* |
 | **After** | To satisfy the Trust Factor, the device must be located outside of the selected countries. |
 
-The added line reuses the meter's own phrasing below it, *"If this Factor is not satisfied…"*, so the two read as one thought. It sits under the chips, after the selection it describes.
+The new line uses the same phrasing as the meter description below it, *"If this Factor is not satisfied…"*, so the two sentences match. It sits under the country chips, after the selection it describes.
 
-Moving the meter below the inputs puts the card in the order the admin already thinks in: what am I checking, what counts as passing, what happens if it fails.
+Moving the meter below the inputs puts the card in the order the admin works through it: what is being checked, what counts as passing, and what happens if it fails.
 
 ## What changed
 
-The lead UI engineer implemented the reordering across every Trust Factor, not just this one. The argument held wherever a Trust Effect meter reported a result the admin was still configuring, so it stopped being a fix to one screen and became the pattern for the surface.
+The lead UI engineer applied the same reordering to every Trust Factor. The reason held anywhere a Trust Effect meter sat above the settings that determine it.

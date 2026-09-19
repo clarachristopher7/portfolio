@@ -4,10 +4,10 @@ sidebar_position: 0
 
 # Content design
 
-Three samples from SonicWall Cloud Secure Edge. Each started as a request for words; in each, the words turned out to be downstream of something structural.
+Three samples from SonicWall Cloud Secure Edge. In each one I was asked to fix something with wording, and the screen's structure turned out to be part of the problem.
 
-- **[Device Geolocation](./device-geolocation-trust-factor.md):** a screen that listed every input and never stated the rule they produced.
-- **[Service Tunnel configuration](./service-tunnel-configuration.md):** configuration split along the system's seams, so a finished-looking form produced an unusable object.
-- **[AI prompt visibility](./ai-prompt-visibility.md):** an error and a warning doing the work of a control.
+- **[Device Geolocation](./device-geolocation-trust-factor.md):** the screen showed every input but never said what rule they added up to.
+- **[Service Tunnel configuration](./service-tunnel-configuration.md):** the tunnel and the policy governing it were configured in separate places.
+- **[AI prompt visibility](./ai-prompt-visibility.md):** an error and a warning explained a setting the admin had to go elsewhere to change.
 
-The pattern: **a message that tells someone to go somewhere else is usually a structural problem wearing a copy costume.** Writing it more clearly produces a better-worded dead end. The useful move is to ask what the message compensates for, and whether that thing can be moved, reordered, or removed.
+In all three, clearer wording on its own would have left the reader in the same position. What helped was moving, reordering, or removing the thing the message existed to explain.
