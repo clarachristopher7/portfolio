@@ -13,7 +13,7 @@ sample of my work — no logins, no links to docs I no longer maintain.
 ## What's here
 
 - **Product & conceptual docs** — the kind of end-user-facing, explain-the-concept-before-the-steps writing that makes up most of my track record.
-- **Content design** — in-product strings and microcopy: the writing that lives inside the interface, where a reader is mid-task and every word is load-bearing.
+- **Content design** — in-product strings, error states, and the information architecture around them: the writing that lives inside the interface, where a reader is mid-task and every word is load-bearing.
 - **API reference & code samples** — reference documentation paired with a tested code sample, to show the mechanical/developer-docs side of the craft.
 - **Docs engineering case studies** — projects where I treated documentation as infrastructure: automation, CI/CD, and tooling that keeps docs correct instead of just polished once and left to rot.
 

@@ -10,9 +10,11 @@ const sidebars = {
     {
       type: 'category',
       label: 'Content Design',
+      link: {type: 'doc', id: 'content-design/overview'},
       items: [
         'content-design/device-geolocation-trust-factor',
         'content-design/service-tunnel-configuration',
+        'content-design/ai-prompt-visibility',
       ],
     },
     {
