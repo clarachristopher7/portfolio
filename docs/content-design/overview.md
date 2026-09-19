@@ -7,5 +7,3 @@ sidebar_position: 0
 - **[Device Geolocation](./device-geolocation-trust-factor.md):** the screen showed every input but never said what rule they added up to.
 - **[AI prompt visibility](./ai-prompt-visibility.md):** an error and a warning explained a setting the admin had to go elsewhere to change.
 - **[Domain Lookup Tool](./domain-lookup-tool.md):** the answer to a troubleshooting question lived in an architecture diagram rather than in the policy.
-
-In all three, clearer wording on its own would have left the reader in the same position. What helped was moving, reordering, or removing the thing the message existed to explain.
