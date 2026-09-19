@@ -20,7 +20,7 @@ const sidebars = {
       items: [
         'content-design/device-geolocation-trust-factor',
         'content-design/ai-prompt-visibility',
-        'content-design/service-tunnel-configuration',
+        'content-design/domain-lookup-tool',
       ],
     },
     {
