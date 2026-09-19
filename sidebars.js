@@ -19,8 +19,8 @@ const sidebars = {
       link: {type: 'doc', id: 'content-design/overview'},
       items: [
         'content-design/device-geolocation-trust-factor',
-        'content-design/service-tunnel-configuration',
         'content-design/ai-prompt-visibility',
+        'content-design/service-tunnel-configuration',
       ],
     },
     {

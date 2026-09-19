@@ -401,8 +401,16 @@ code {
 
 /* On wide screens the figure pulls out past the text column: the console
    UI needs the pixels more than the prose needs the margin. */
-@media (min-width: 1200px) {
+@media (min-width: 997px) {
   .markdown > p:has(img) {
-    margin-inline: -5rem;
+    margin-inline: -1rem;
+  }
+}
+
+/* Past ~1800px the doc column stops growing and is centred with slack on
+   either side, so the figure can take more without pushing the page wide. */
+@media (min-width: 1800px) {
+  .markdown > p:has(img) {
+    margin-inline: -4.5rem;
   }
 }

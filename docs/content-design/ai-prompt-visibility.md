@@ -1,5 +1,6 @@
 ---
-sidebar_position: 3
+hide_table_of_contents: true
+sidebar_position: 2
 ---
 
 # AI prompt visibility
