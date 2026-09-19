@@ -9,6 +9,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Content Design',
+      link: {type: 'doc', id: 'content-design/overview'},
+      items: [
+        'content-design/device-geolocation-trust-factor',
+        'content-design/service-tunnel-configuration',
+        'content-design/ai-prompt-visibility',
+      ],
+    },
+    {
+      type: 'category',
       label: 'API Reference & Code Samples',
       items: ['api-docs/sample-api-reference'],
     },
