@@ -18,5 +18,3 @@ SonicWall's hardware and cloud product publishing flow.
 - **Content architecture:** Cloud Secure Edge information architecture (IA) restructure, and an estate-wide IA model built to evaluate doc sets in a single-pane view.
 - **Content design:** in-product strings, their structuring, and their sequencing.
 - **Automations:** projects where I used AI-assisted analysis and tooling to keep docs current and robust.
-
-Each sample includes a short "why this one" note explaining what it's meant to demonstrate.
