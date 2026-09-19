@@ -12,7 +12,7 @@ const sidebars = {
       label: 'Content Design',
       items: [
         'content-design/device-geolocation-trust-factor',
-        'content-design/product-flow-strings',
+        'content-design/service-tunnel-configuration',
       ],
     },
     {
