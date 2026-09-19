@@ -6,8 +6,8 @@ import styles from './index.module.css';
 export default function Home() {
   return (
     <Layout
-      title="Clara — Technical Writer"
-      description="Technical writing portfolio: zero trust, cloud security, and docs engineering">
+      title="Clara Christopher"
+      description="Content architect for cloud security products — technical writing, content design, and documentation architecture">
       <header className={styles.hero}>
         <div className="container">
           <h1 className={styles.heroTitle}>Clara Christopher</h1>

@@ -4,79 +4,74 @@ sidebar_position: 2
 
 # Resume
 
-Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com)
+**Clara Christopher** · Content architect
 
-## Summary
+Toronto, ON · (437) 734-9841 · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/)
 
-Technical writer and systems orchestrator with 5+ years documenting cloud security and infrastructure products at fast-moving startups, now leading a company-wide modernization of enterprise documentation spanning cloud and legacy hardware/regulatory content. Directs AI-assisted tooling (Claude Code) to design and run automated systems that keep documentation correct at scale, and is building the information architecture, governance, lifecycle, tooling, and measurement foundations to unify a multi-format documentation portfolio at enterprise scale.
+## About me
 
-## Experience
+Content architect for cloud security products. I design how the product UI and docs are written, structured, and published, considering everything from the user journey to how the docs pipeline is built.
 
-### Senior Technical Writer — SonicWall, Cloud Secure Edge
+At SonicWall I own the Cloud Secure Edge content end to end. I work with designers and front-end engineers to build in-product experiences, and I'm currently rearchitecting SonicWall's hardware and cloud product publishing flow.
 
-*Jan 2024 – Present*
+## Professional experience
 
-- Sole North American technical writer for an enterprise zero-trust networking platform; own the full documentation set — API references, release notes, onboarding guides, feature guides, solution guides, and integration docs — for the product's admin and end-user audiences.
-- Leading a company-wide documentation modernization initiative spanning cloud (docs-as-code) and legacy hardware and regulatory documentation, unifying both under a single front-end site.
-- Evaluated and prototyped Antora, a free open-source multi-repo documentation platform, to unify hardware and cloud content under one site with independent per-product versioning.
-- Designing a unified information architecture and content taxonomy spanning cloud and hardware product lines to eliminate duplicate and orphaned content.
-- Establishing a content governance model — defined ownership, review cadence, and extended automated staleness auditing — across the full documentation portfolio.
-- Defining a content lifecycle policy for retiring and archiving end-of-life hardware documentation and managing regulatory content review cycles.
-- Building a measurement framework tying documentation coverage to support ticket deflection and publishing velocity.
-- Mapping documentation against each stage of the customer journey — evaluation, deployment, and ongoing use — in partnership with product marketing and sales enablement, to close content gaps, eliminate duplicated authoring across teams, and establish documentation as the single source of truth downstream content is built from.
-- Own the information architecture, style, and editorial standards of the doc site, restructuring it as product strategy, third-party integrations, and release cadence shift.
-- Directed the build of a PR evaluator (using Claude Code) that queries the GitLab API for merge changes to product components and cross-references them against the doc repo, flagging documentation that needs updates before it goes stale — an automated review guardrail layered on top of the standard PR workflow.
-- Orchestrated an automated staleness auditor that scans the doc site and compiles a prioritized maintenance backlog, and a companion tool that evaluates the current product UI and suggests screenshot updates across the site — a self-healing layer that catches drift without manual page-by-page review.
-- Redesigned the release notes structure and publishing workflow to support the team's shift to an asynchronous release process, establishing the content conventions other contributors now follow.
-- Operate a Git-based docs-as-code pipeline — Markdown content, Jekyll previews, GitLab review and publication — running a monthly release cycle plus on-demand publishing for field and customer requests.
-- Translate cybersecurity and networking concepts from engineers and product managers into accessible documentation and in-product UX copy through close cross-functional collaboration.
-- Mine customer feedback, product analytics, and support ticket signals to surface documentation gaps and prioritize the iteration backlog.
+### SonicWall (Cloud Secure Edge) — Remotely in Toronto, Ontario, Canada
 
-**Tools:** Markdown, Git, GitHub, GitLab, REST APIs, OpenAPI/Swagger, Jira, Jekyll, Antora, Figma
+**Senior Technical Writer** · *Jan 2024 – Present*
 
-### Senior Technical Writer — Banyan Security (acquired by SonicWall)
+- Analyze customer support tickets, sales engineering calls, product telemetry, and community forums to define the user persona, identify their real-world friction points, and uncover critical product adoption gaps.
+- Apply these user insights to partner with Product, UX, and Growth teams, writing contextual UX copy and auditing the in-product console to transform a feature-heavy onboarding flow into an intuitive, outcome-driven setup experience.
+- Continually refine the entire documentation site's information architecture, informed by the product experience, pivoting away from static feature docs to align content taxonomies directly with the user's journey and their desired outcomes. Added self-service features in the docs site redesign, including an RSS release notes subscription option and an in-page feedback form.
+- Design and integrate generative AI workflow automations (using Claude Code) that scan code repositories during CI/CD cycles to cross-reference engineering changes with existing documentation, ensuring real-time alignment with rapid release cycles.
+- Build staleness audit automations that cross-reference documentation with new console UI versions, dynamically generating prioritized backlog queues to maintain data integrity across cloud pipelines without extensive manual reviews.
+- Architecting a legacy hardware documentation modernization, integrating a docs-as-code publishing pipeline where it fits, mapping docs against a user journey, and researching new tooling (in progress).
 
-*May 2023 – Jan 2024*
+### Banyan Security (acquired by SonicWall) — Remotely in Toronto, Ontario, Canada
 
-- Used Banyan's generative AI product to stress-test common user questions, evaluating response robustness and updating documentation to close the gaps AI usage patterns surfaced — early hands-on work at the intersection of documentation and LLM behavior.
-- Wrote and edited UX copy in the admin console and desktop app as new features shipped.
-- Adapted documentation structure as the product evolved through rapid iteration ahead of acquisition.
+**Senior Technical Writer** · *May 2023 – Jan 2024*
 
-**Tools:** ChatGPT, Figma, Bento, Terminal, GitLab, SourceTree, GitHub Desktop, Atom
+- Refactored documentation information architecture and content taxonomies ahead of corporate acquisition to merge cloud and legacy pipelines.
+- Leveraged generative AI tools to stress-test customer-facing FAQs and onboarding workflows; analyzed AI search patterns to reveal hidden structural friction and rapidly deployed targeted documentation updates.
+- Collaborated side-by-side with product, front end engineering leads, and UX designers to draft and test intuitive microcopy and conversational step-by-step guides embedded inside the admin console and desktop client.
 
-### Technical Writer — Banyan Security
+**Technical Writer** · *Sep 2021 – May 2023*
 
-*Sep 2021 – May 2023*
+- Created and managed the core engineering style guide, establishing uniform standards and an optimized information hierarchy used across all digital properties.
+- Conducted deep audits of legacy documentation to enhance overall readability, transforming static manuals into user-centered walkthroughs and script-based video resources.
 
-- Wrote and edited UX copy in the admin console and desktop app.
-- Audited documentation to identify structural inconsistencies, improve quality, and enhance readability.
-- Created and maintained the team's documentation style guide.
-- Produced product walk-throughs and instructional videos.
+### Tailscale — Toronto, Ontario, Canada
 
-**Tools:** Atom, SourceTree, Jira, Zendesk, Freshdesk, GitLab, CLI (Terminal), Navattic
+**Technical Writer** · *Jan 2021 – Sep 2021*
 
-### Technical Writer — Tailscale
+- Authored technical comparison docs, solution frameworks, and architecture diagrams tailored for developer teams evaluating complex zero-trust network infrastructure.
 
-*Jan 2021 – Sep 2021*
+### Quantum XChange — Remotely in Toronto, Ontario, Canada
 
-- Wrote technical enablement content — comparisons, solutions pages, and knowledge base articles — for teams evaluating and adopting Tailscale's zero-trust networking platform.
+**Contract Technical Writer** · *Apr 2021 – Aug 2021*
 
-**Tools:** GitHub
+- Designed the core technical architecture guides for a next-generation quantum security product, transforming highly intricate cryptographic concepts into clear, actionable configuration documentation for security administrators.
 
-### Contract Technical Writer — Quantum XChange
+### Security Compass — Toronto, Ontario, Canada
 
-*Apr 2021 – Aug 2021*
+**Content Specialist** · *May 2018 – Nov 2019*
 
-- Created admin guides, user guides, and style sheets documenting setup and use of PhioTX, QX's quantum-encryption product.
+- Developed technical enablement content, playbooks, and release frameworks for SD Elements, translating complex threat modeling, compliance mandates, and automated security policies into actionable developer workflows that accelerated secure software delivery.
 
-### Content Specialist — Security Compass
+## Core competencies
 
-*May 2018 – Nov 2019*
+- **Strategic UX & onboarding architecture** — narrative-driven user journeys, trial-to-paid funnel optimization, setup friction reduction.
+- **Information architecture & governance** — docs-as-code, global component content management systems (CCMS), Antora.
+- **Cross-functional orchestration** — unifying Product Management, Engineering, Growth/Product Marketing, and Field Support roadmaps.
+- **AI & automation integration** — AI-powered documentation auditing, predictive gap analysis, automated content linting.
+- **Deep domain expertise** — cybersecurity, cloud infrastructure, zero-trust, API and developer platforms.
 
-- Created white papers, cut-sheets, e-books, blogs, and release notes for a security automation software suite.
+## Technical skills
+
+- **Frameworks & methods** — user-centered design, topic-based authoring, structured content modeling, CI/CD docs pipelines.
+- **Tools & infrastructure** — Git, GitHub, GitLab, REST APIs, OpenAPI/Swagger, Markdown, YAML, Antora, Jekyll, Jira, Figma.
+- **AI & workflow systems** — Claude Code, prompt engineering, automated data-mining.
 
 ## Education
 
-**Bachelor of Arts, Philosophy** — McGill University
-First Class Honours-level Philosophy GPA
-*Sep 2010 – Apr 2014*
+**Bachelor of Arts, Philosophy** (First Class Level in Philosophy) — McGill University
