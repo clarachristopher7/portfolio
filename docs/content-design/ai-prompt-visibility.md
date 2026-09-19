@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # AI prompt visibility
 
-**Surface:** AI visibility in the Cloud Secure Edge admin console, where admins view user prompt logs from AI applications.
+> **Why this one:** An error message is sometimes the correct answer to a question the product shouldn't have asked. This sample is about deleting two messages and shipping a configuration panel in their place.
 
-**My role:** Recommended replacing the post-toggle error and warning with an embedded Internet Threat Protection policy configuration.
+**Surface:** AI visibility in the Cloud Secure Edge admin console, where admins view user prompt logs from AI applications.
 
 ## The problem
 

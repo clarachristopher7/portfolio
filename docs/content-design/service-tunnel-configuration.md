@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Service Tunnel configuration
 
+> **Why this one:** The fix wasn't a string; it was where the strings lived. Network admins arriving from firewall consoles already had a working mental model, and the configuration was split in a way that didn't match it. Content design work often looks like this: the words are fine, but they're in two places that should be one.
+
 **Surface:** Service Tunnel configuration, Cloud Secure Edge admin console.
 
 **Audience:** Network admins whose reference point is a firewall console.
-
-**My role:** Recommended embedding user access policy configuration inside the Service Tunnel configuration.
 
 ## The problem
 

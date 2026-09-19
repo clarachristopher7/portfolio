@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Device Geolocation Trust Factor
 
-**Surface:** Trust Factor configuration, Cloud Secure Edge admin console. Admins build a device's Trust Level out of individual Trust Factors; each can deny access, downgrade trust, or do nothing.
+> **Why this one:** Configuration UI is where microcopy has to carry logic, not just tone. The admin is assembling a security policy, and the screen has to make the rule they're building legible before they save it. This sample also includes a layout change I argued for on the same grounds: some reading-order problems can't be solved with better words.
 
-**My role:** Wrote the in-product strings. Recommended the layout change.
+**Surface:** Trust Factor configuration, Cloud Secure Edge admin console. Admins build a device's Trust Level out of individual Trust Factors; each can deny access, downgrade trust, or do nothing.
 
 ## The problem
 
