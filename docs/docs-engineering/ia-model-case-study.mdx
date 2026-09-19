@@ -1,0 +1,484 @@
+---
+sidebar_position: 4
+---
+
+# Information Architecture for a Product Estate
+
+Documentation for a multi-product security portfolio had grown up per product, in incompatible source systems, with no shared definition of what a complete doc set looks like. I built an instrument that puts the whole estate on one axis — shipped as a single self-contained HTML file with no build step and no dependencies, so any stakeholder can open it and any writer can maintain it by editing one data object.
+
+## Three views of the same estate
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 760 230"
+    role="img"
+    aria-label="One estate examined through three views: Sections asks where a page lives, Journey asks what the reader is doing and which activation metric it serves, and Model asks which cross-cutting decisions apply to every product."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <defs>
+      <marker id="v3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+      </marker>
+    </defs>
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="12">
+      <rect x="16" y="58" width="150" height="130" rx="8" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.28" />
+      <text x="91" y="80" textAnchor="middle" fontWeight="600" fill="currentColor">The estate</text>
+      <rect x="36" y="94" width="34" height="24" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="78" y="94" width="34" height="24" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="120" y="94" width="26" height="24" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="36" y="126" width="34" height="24" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="78" y="126" width="34" height="24" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="120" y="126" width="26" height="24" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="36" y="158" width="34" height="18" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="78" y="158" width="34" height="18" rx="3" fill="currentColor" fillOpacity="0.12" />
+      <rect x="120" y="158" width="26" height="18" rx="3" fill="currentColor" fillOpacity="0.12" />
+
+      <rect x="270" y="30" width="474" height="52" rx="6" fill="var(--ifm-color-primary)" fillOpacity="0.1" stroke="var(--ifm-color-primary)" />
+      <text x="290" y="52" fontWeight="600" fill="currentColor">Sections</text>
+      <text x="290" y="70" fill="currentColor" fillOpacity="0.8">The shelving system — where a page lives</text>
+
+      <rect x="270" y="97" width="474" height="52" rx="6" fill="var(--ifm-color-primary)" fillOpacity="0.1" stroke="var(--ifm-color-primary)" />
+      <text x="290" y="119" fontWeight="600" fill="currentColor">Journey</text>
+      <text x="290" y="137" fill="currentColor" fillOpacity="0.8">The reader's path, and the activation metric each stage serves</text>
+
+      <rect x="270" y="164" width="474" height="52" rx="6" fill="var(--ifm-color-primary)" fillOpacity="0.1" stroke="var(--ifm-color-primary)" />
+      <text x="290" y="186" fontWeight="600" fill="currentColor">Model</text>
+      <text x="290" y="204" fill="currentColor" fillOpacity="0.8">Decisions that cut across every product at once</text>
+
+      <g stroke="currentColor" strokeOpacity="0.5" fill="none" markerEnd="url(#v3-arrow)">
+        <polyline points="166,123 218,123 218,56 262,56" />
+        <line x1="166" y1="123" x2="262" y2="123" />
+        <polyline points="166,123 218,123 218,190 262,190" />
+      </g>
+
+    </g>
+  </svg>
+  <figcaption>
+
+  The same estate read three ways. Most IA work stops at the first one — but a shelving system alone cannot tell you whether the content carries someone from evaluation through to production scale, which is what the second and third views are for.
+
+  </figcaption>
+</figure>
+
+## Making unlike products comparable
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 760 480"
+    role="img"
+    aria-label="The same standard section pattern evaluated against two archetypes. Under the cloud service archetype twelve sections apply and four appliance-specific ones are marked not applicable. Under the appliance archetype all sixteen apply."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="12">
+      <rect x="12" y="52" width="352" height="388" rx="8" fill="currentColor" fillOpacity="0.03" stroke="currentColor" strokeOpacity="0.14" />
+      <rect x="396" y="52" width="352" height="388" rx="8" fill="currentColor" fillOpacity="0.03" stroke="currentColor" strokeOpacity="0.14" />
+
+      <text x="12" y="28" fontSize="13" fontWeight="600" fill="currentColor" fillOpacity="0.9">Cloud service archetype</text>
+      <text x="12" y="44" fontSize="11" fill="currentColor" fillOpacity="0.65">12 sections apply</text>
+      <text x="396" y="28" fontSize="13" fontWeight="600" fill="currentColor" fillOpacity="0.9">Appliance archetype</text>
+      <text x="396" y="44" fontSize="11" fill="currentColor" fillOpacity="0.65">16 sections apply</text>
+
+      <rect x="404" y="330" width="332" height="100" rx="3" fill="var(--ifm-color-primary)" fillOpacity="0.14" />
+      <rect x="404" y="330" width="3" height="100" fill="var(--ifm-color-primary)" />
+
+      <text x="32" y="84" fill="currentColor" fillOpacity="0.85">Get started</text>
+      <text x="32" y="106" fill="currentColor" fillOpacity="0.85">Concepts</text>
+      <text x="32" y="128" fill="currentColor" fillOpacity="0.85">Deploy / activate</text>
+      <text x="32" y="150" fill="currentColor" fillOpacity="0.85">Configure</text>
+      <text x="32" y="172" fill="currentColor" fillOpacity="0.85">Policies / controls</text>
+      <text x="32" y="194" fill="currentColor" fillOpacity="0.85">Operate &amp; monitor</text>
+      <text x="32" y="216" fill="currentColor" fillOpacity="0.85">Clients / agents</text>
+      <text x="32" y="238" fill="currentColor" fillOpacity="0.85">Troubleshoot</text>
+      <text x="32" y="260" fill="currentColor" fillOpacity="0.85">Reference</text>
+      <text x="32" y="282" fill="currentColor" fillOpacity="0.85">API</text>
+      <text x="32" y="304" fill="currentColor" fillOpacity="0.85">Release notes</text>
+      <text x="32" y="326" fill="currentColor" fillOpacity="0.85">Legal &amp; support</text>
+      <text x="32" y="348" fill="currentColor" fillOpacity="0.32">Plan &amp; size</text>
+      <text x="32" y="370" fill="currentColor" fillOpacity="0.32">Migrate</text>
+      <text x="32" y="392" fill="currentColor" fillOpacity="0.32">Maintain &amp; upgrade</text>
+      <text x="32" y="414" fill="currentColor" fillOpacity="0.32">High availability &amp; scale</text>
+
+      <text x="344" y="348" textAnchor="end" fontSize="11" fill="currentColor" fillOpacity="0.45">n/a</text>
+      <text x="344" y="370" textAnchor="end" fontSize="11" fill="currentColor" fillOpacity="0.45">n/a</text>
+      <text x="344" y="392" textAnchor="end" fontSize="11" fill="currentColor" fillOpacity="0.45">n/a</text>
+      <text x="344" y="414" textAnchor="end" fontSize="11" fill="currentColor" fillOpacity="0.45">n/a</text>
+
+      <text x="416" y="84" fill="currentColor" fillOpacity="0.85">Get started</text>
+      <text x="416" y="106" fill="currentColor" fillOpacity="0.85">Concepts</text>
+      <text x="416" y="128" fill="currentColor" fillOpacity="0.85">Deploy / activate</text>
+      <text x="416" y="150" fill="currentColor" fillOpacity="0.85">Configure</text>
+      <text x="416" y="172" fill="currentColor" fillOpacity="0.85">Policies / controls</text>
+      <text x="416" y="194" fill="currentColor" fillOpacity="0.85">Operate &amp; monitor</text>
+      <text x="416" y="216" fill="currentColor" fillOpacity="0.85">Clients / agents</text>
+      <text x="416" y="238" fill="currentColor" fillOpacity="0.85">Troubleshoot</text>
+      <text x="416" y="260" fill="currentColor" fillOpacity="0.85">Reference</text>
+      <text x="416" y="282" fill="currentColor" fillOpacity="0.85">API</text>
+      <text x="416" y="304" fill="currentColor" fillOpacity="0.85">Release notes</text>
+      <text x="416" y="326" fill="currentColor" fillOpacity="0.85">Legal &amp; support</text>
+      <text x="416" y="348" fontWeight="600" fill="currentColor">Plan &amp; size</text>
+      <text x="416" y="370" fontWeight="600" fill="currentColor">Migrate</text>
+      <text x="416" y="392" fontWeight="600" fill="currentColor">Maintain &amp; upgrade</text>
+      <text x="416" y="414" fontWeight="600" fill="currentColor">High availability &amp; scale</text>
+
+      <text x="32" y="464" fontSize="12" fontStyle="italic" fill="currentColor" fillOpacity="0.75">Coverage is scored over applicable rows only</text>
+      <text x="416" y="464" fontSize="12" fontStyle="italic" fill="currentColor" fillOpacity="0.75">…so unlike doc sets stay comparable</text>
+    </g>
+  </svg>
+  <figcaption>
+
+  One pattern, masked per archetype. A cloud service is never penalised for lacking the firmware and high-availability sections an appliance needs, which is what makes a single coverage number mean anything across products with nothing else in common.
+
+  </figcaption>
+</figure>
+
+Five archetypes exist, and each one is a claim about who the reader is and what they are trying to finish. That claim is what decides both the applicable sections and the journey stages:
+
+| Archetype | Why it is its own shape |
+|---|---|
+| Cloud service, self-serve activation | Activation metrics apply directly: tenant activation, time to first value, seats in production. |
+| Appliance and firmware | Bought through a partner, deployed once, run for years. Activation is registration and licensing; scale is HA and central management. |
+| End-user client guide | The reader is an employee, not an administrator. There is no activation or scale journey; the metric is support deflection. |
+| Partner and MSP console | The reader manages other organisations. The journey is tenancy and delegation, not product features. |
+| Shared cross-product content | Not a product. Holds the pages that belong to no single product because they describe two things meeting. Canonical once, cross-referenced from every product that touches them. |
+
+## The reader's path, tied to a metric
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 760 310"
+    role="img"
+    aria-label="The eight journey stages of the cloud service archetype, each with the reader's goal and the activation metric it serves, from Discover through Evaluate, Activate, First deployment, Expand, Production scale, Operate and Troubleshoot."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="11.5">
+      <text x="32" y="28" fontSize="13" fontWeight="600" fill="currentColor" fillOpacity="0.9">Cloud service journey</text>
+      <text x="32" y="52" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">STAGE</text>
+      <text x="200" y="52" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">WHAT THE READER IS DOING</text>
+      <text x="520" y="52" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">ACTIVATION METRIC IT SERVES</text>
+      <line x1="32" y1="60" x2="744" y2="60" stroke="currentColor" strokeOpacity="0.2" />
+
+      <rect x="16" y="68" width="4" height="232" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.35" />
+
+      <text x="32" y="86" fontWeight="600" fill="currentColor">Discover</text>
+      <text x="200" y="86" fill="currentColor" fillOpacity="0.8">Work out whether it solves my problem</text>
+      <text x="520" y="86" fill="currentColor" fillOpacity="0.8">Sessions, search entries, bounce</text>
+
+      <text x="32" y="114" fontWeight="600" fill="currentColor">Evaluate</text>
+      <text x="200" y="114" fill="currentColor" fillOpacity="0.8">Check it fits my environment and licence</text>
+      <text x="520" y="114" fill="currentColor" fillOpacity="0.8">Trial starts, evaluation drop-off</text>
+
+      <text x="32" y="142" fontWeight="600" fill="currentColor">Activate</text>
+      <text x="200" y="142" fill="currentColor" fillOpacity="0.8">Get a tenant, licences, admins, an IdP</text>
+      <text x="520" y="142" fill="currentColor" fillOpacity="0.8">Tenant activation rate</text>
+
+      <text x="32" y="170" fontWeight="600" fill="currentColor">First deployment</text>
+      <text x="200" y="170" fill="currentColor" fillOpacity="0.8">Get one thing working end to end</text>
+      <text x="520" y="170" fill="currentColor" fillOpacity="0.8">Time to first value</text>
+
+      <text x="32" y="198" fontWeight="600" fill="currentColor">Expand</text>
+      <text x="200" y="198" fill="currentColor" fillOpacity="0.8">Add users, resources and integrations</text>
+      <text x="520" y="198" fill="currentColor" fillOpacity="0.8">Breadth of usage per tenant</text>
+
+      <text x="32" y="226" fontWeight="600" fill="currentColor">Production scale</text>
+      <text x="200" y="226" fill="currentColor" fillOpacity="0.8">Size it, make it redundant, run it in anger</text>
+      <text x="520" y="226" fill="currentColor" fillOpacity="0.8">Seats and sites in production</text>
+
+      <text x="32" y="254" fontWeight="600" fill="currentColor">Operate</text>
+      <text x="200" y="254" fill="currentColor" fillOpacity="0.8">Monitor, audit and administer day to day</text>
+      <text x="520" y="254" fill="currentColor" fillOpacity="0.8">Support deflection, renewal</text>
+
+      <text x="32" y="282" fontWeight="600" fill="currentColor">Troubleshoot</text>
+      <text x="200" y="282" fill="currentColor" fillOpacity="0.8">Fix it without opening a case</text>
+      <text x="520" y="282" fill="currentColor" fillOpacity="0.8">Ticket deflection</text>
+
+    </g>
+  </svg>
+  <figcaption>
+
+  Every stage is attached to the metric it moves, so a gap at a stage becomes an argument with a number behind it rather than a matter of taste. Each archetype gets its own stages: an appliance plans and sizes before it procures, and an end-user guide has no activation or scale stage at all.
+
+  </figcaption>
+</figure>
+
+## Content that belongs to no single product
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 760 310"
+    role="img"
+    aria-label="Five products above a shared cross-product tier holding the ownership boundary map, compatibility matrices, integration pairs, cross-portal lifecycle and supported upgrade paths. Each product references the shared tier rather than restating it."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <defs>
+      <marker id="pt-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+      </marker>
+    </defs>
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="11.5" textAnchor="middle">
+      <rect x="16" y="30" width="134" height="40" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.28" />
+      <text x="83" y="55" fill="currentColor">Cloud Secure Edge</text>
+
+      <rect x="166" y="30" width="134" height="40" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.28" />
+      <text x="233" y="55" fill="currentColor">SonicOS</text>
+
+      <rect x="316" y="30" width="134" height="40" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.28" />
+      <text x="383" y="55" fill="currentColor">SMA</text>
+
+      <rect x="466" y="30" width="134" height="40" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.28" />
+      <text x="533" y="55" fill="currentColor">Unified Management</text>
+
+      <rect x="616" y="30" width="128" height="40" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.28" />
+      <text x="680" y="55" fill="currentColor">Endpoint Security</text>
+
+      <g stroke="currentColor" strokeOpacity="0.45" fill="none" markerEnd="url(#pt-arrow)">
+        <polyline points="83,70 83,100 140,100 140,136" />
+        <line x1="233" y1="70" x2="233" y2="136" />
+        <line x1="383" y1="70" x2="383" y2="136" />
+        <line x1="533" y1="70" x2="533" y2="136" />
+        <polyline points="680,70 680,100 622,100 622,136" />
+      </g>
+      <text x="383" y="96" fontSize="10.5" fill="currentColor" fillOpacity="0.6">reference, never restate</text>
+
+      <rect x="80" y="140" width="600" height="130" rx="8" fill="var(--ifm-color-primary)" fillOpacity="0.1" stroke="var(--ifm-color-primary)" strokeWidth="1.5" />
+      <text x="380" y="164" fontWeight="600" fontSize="12.5" fill="currentColor">Shared cross-product tier</text>
+      <text x="380" y="188" fill="currentColor" fillOpacity="0.85">Ownership boundary map — which console owns which object</text>
+      <text x="380" y="208" fill="currentColor" fillOpacity="0.85">Compatibility matrices — which versions work together</text>
+      <text x="380" y="228" fill="currentColor" fillOpacity="0.85">Integration pairs — one page per pair, named for the pair</text>
+      <text x="380" y="248" fill="currentColor" fillOpacity="0.85">Cross-portal lifecycle · Supported upgrade paths</text>
+
+      <text x="380" y="296" fontSize="11" fontStyle="italic" fill="currentColor" fillOpacity="0.7">Before this tier existed, the content lived as scattered paragraphs inside whichever product guide happened to mention it — or nowhere.</text>
+    </g>
+  </svg>
+  <figcaption>
+
+  These pages describe two things meeting, so they belong to neither product. Canonical once, cross-referenced from every product that touches them. Before the tier existed, "which portal is authoritative for this licence" alone accounted for 56 cases across 48 accounts, and trial-to-paid conversion for 167 cases across 120 accounts.
+
+  </figcaption>
+</figure>
+
+## The demand is measured, not asserted
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 760 300"
+    role="img"
+    aria-label="Support case volume per product pair. SonicOS against its own versions dominates at 3,370 cases, followed by Cloud Secure Edge with SonicOS at 788, SMA with SonicOS at 250, Cloud Secure Edge with Unified Management at 230, SonicOS with an identity provider at 215, Cloud Secure Edge across its own versions at 197, and Cloud Secure Edge with an identity provider at 175."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="12">
+      <text x="32" y="28" fontSize="13" fontWeight="600" fill="currentColor" fillOpacity="0.9">Support cases per product pair</text>
+      <text x="32" y="52" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">PAIR</text>
+      <text x="652" y="52" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">CASES</text>
+      <line x1="32" y1="60" x2="728" y2="60" stroke="currentColor" strokeOpacity="0.2" />
+
+      <text x="32" y="86" fill="currentColor">SonicOS × its own versions</text>
+      <rect x="300" y="75" width="340" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.8" />
+      <text x="652" y="86" fill="currentColor" fillOpacity="0.85">3,370</text>
+
+      <text x="32" y="116" fill="currentColor">Cloud Secure Edge × SonicOS</text>
+      <rect x="300" y="105" width="79" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.7" />
+      <text x="652" y="116" fill="currentColor" fillOpacity="0.85">788</text>
+
+      <text x="32" y="146" fill="currentColor">SMA × SonicOS</text>
+      <rect x="300" y="135" width="25" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.6" />
+      <text x="652" y="146" fill="currentColor" fillOpacity="0.85">250</text>
+
+      <text x="32" y="176" fill="currentColor">Cloud Secure Edge × Unified Management</text>
+      <rect x="300" y="165" width="23" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.6" />
+      <text x="652" y="176" fill="currentColor" fillOpacity="0.85">230</text>
+
+      <text x="32" y="206" fill="currentColor">SonicOS × identity provider</text>
+      <rect x="300" y="195" width="22" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.55" />
+      <text x="652" y="206" fill="currentColor" fillOpacity="0.85">215</text>
+
+      <text x="32" y="236" fill="currentColor">Cloud Secure Edge × its own versions</text>
+      <rect x="300" y="225" width="20" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.55" />
+      <text x="652" y="236" fill="currentColor" fillOpacity="0.85">197</text>
+
+      <text x="32" y="266" fill="currentColor">Cloud Secure Edge × identity provider</text>
+      <rect x="300" y="255" width="18" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.5" />
+      <text x="652" y="266" fill="currentColor" fillOpacity="0.85">175</text>
+    </g>
+  </svg>
+  <figcaption>
+
+  Linear scale, deliberately: one pair dwarfs every other, and that shape is the finding. Version-to-version upgrade sequencing for a single product generates more documented demand than every cross-product integration combined — which is why supported upgrade paths sit in the shared tier rather than in a per-product appendix. In the same period, 2,301 cases closed against the "Documentation &amp; KBs" category overall.
+
+  </figcaption>
+</figure>
+
+## The decisions underneath
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 760 360"
+    role="img"
+    aria-label="Nine cross-cutting axes with their status: page metadata, lifecycle, non-page artifacts and search vocabulary are partial; variants, localisation, cross-surface topology, navigation budgets and the prerequisite graph are undecided."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="12">
+      <text x="32" y="28" fontSize="13" fontWeight="600" fill="currentColor" fillOpacity="0.9">Cross-cutting model</text>
+      <text x="32" y="50" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">AXIS</text>
+      <text x="250" y="50" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">WHAT IT DECIDES</text>
+      <text x="640" y="50" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">STATUS</text>
+      <line x1="32" y1="58" x2="744" y2="58" stroke="currentColor" strokeOpacity="0.2" />
+
+      <text x="32" y="82" fill="currentColor">Page metadata</text>
+      <text x="250" y="82" fill="currentColor" fillOpacity="0.78">What every page must declare to be findable</text>
+      <rect x="636" y="70" width="60" height="17" rx="3" fill="#f59e0b" fillOpacity="0.18" />
+      <rect x="636" y="70" width="2.5" height="17" fill="#f59e0b" />
+      <text x="646" y="82" fontSize="11" fill="currentColor" fillOpacity="0.85">Partial</text>
+
+      <text x="32" y="112" fill="currentColor">Variants</text>
+      <text x="250" y="112" fill="currentColor" fillOpacity="0.78">Split pages, tabs, or attribute-gated blocks</text>
+      <rect x="636" y="100" width="76" height="17" rx="3" fill="#dc2626" fillOpacity="0.16" />
+      <rect x="636" y="100" width="2.5" height="17" fill="#dc2626" />
+      <text x="646" y="112" fontSize="11" fill="currentColor" fillOpacity="0.85">Undecided</text>
+
+      <text x="32" y="142" fill="currentColor">Localisation</text>
+      <text x="250" y="142" fill="currentColor" fillOpacity="0.78">What gets translated, and where locale sits</text>
+      <rect x="636" y="130" width="76" height="17" rx="3" fill="#dc2626" fillOpacity="0.16" />
+      <rect x="636" y="130" width="2.5" height="17" fill="#dc2626" />
+      <text x="646" y="142" fontSize="11" fill="currentColor" fillOpacity="0.85">Undecided</text>
+
+      <text x="32" y="172" fill="currentColor">Lifecycle</text>
+      <text x="250" y="172" fill="currentColor" fillOpacity="0.78">What happens to docs at end of life</text>
+      <rect x="636" y="160" width="60" height="17" rx="3" fill="#f59e0b" fillOpacity="0.18" />
+      <rect x="636" y="160" width="2.5" height="17" fill="#f59e0b" />
+      <text x="646" y="172" fontSize="11" fill="currentColor" fillOpacity="0.85">Partial</text>
+
+      <text x="32" y="202" fill="currentColor">Non-page artifacts</text>
+      <text x="250" y="202" fill="currentColor" fillOpacity="0.78">What we publish that is not a web page</text>
+      <rect x="636" y="190" width="60" height="17" rx="3" fill="#f59e0b" fillOpacity="0.18" />
+      <rect x="636" y="190" width="2.5" height="17" fill="#f59e0b" />
+      <text x="646" y="202" fontSize="11" fill="currentColor" fillOpacity="0.85">Partial</text>
+
+      <text x="32" y="232" fill="currentColor">Cross-surface topology</text>
+      <text x="250" y="232" fill="currentColor" fillOpacity="0.78">Which surface owns which question</text>
+      <rect x="636" y="220" width="76" height="17" rx="3" fill="#dc2626" fillOpacity="0.16" />
+      <rect x="636" y="220" width="2.5" height="17" fill="#dc2626" />
+      <text x="646" y="232" fontSize="11" fill="currentColor" fillOpacity="0.85">Undecided</text>
+
+      <text x="32" y="262" fill="currentColor">Search vocabulary</text>
+      <text x="250" y="262" fill="currentColor" fillOpacity="0.78">Whose word wins — ours or the customer's</text>
+      <rect x="636" y="250" width="60" height="17" rx="3" fill="#f59e0b" fillOpacity="0.18" />
+      <rect x="636" y="250" width="2.5" height="17" fill="#f59e0b" />
+      <text x="646" y="262" fontSize="11" fill="currentColor" fillOpacity="0.85">Partial</text>
+
+      <text x="32" y="292" fill="currentColor">Navigation budgets</text>
+      <text x="250" y="292" fill="currentColor" fillOpacity="0.78">How deep and how wide nav may get</text>
+      <rect x="636" y="280" width="76" height="17" rx="3" fill="#dc2626" fillOpacity="0.16" />
+      <rect x="636" y="280" width="2.5" height="17" fill="#dc2626" />
+      <text x="646" y="292" fontSize="11" fill="currentColor" fillOpacity="0.85">Undecided</text>
+
+      <text x="32" y="322" fill="currentColor">Prerequisite graph</text>
+      <text x="250" y="322" fill="currentColor" fillOpacity="0.78">Which tasks must happen before which</text>
+      <rect x="636" y="310" width="76" height="17" rx="3" fill="#dc2626" fillOpacity="0.16" />
+      <rect x="636" y="310" width="2.5" height="17" fill="#dc2626" />
+      <text x="646" y="322" fontSize="11" fill="currentColor" fillOpacity="0.85">Undecided</text>
+
+      <text x="32" y="350" fontSize="11" fontStyle="italic" fill="currentColor" fillOpacity="0.7">Four partial, five undecided — each with a current state, a proposal, the decision needed, and a named owner.</text>
+    </g>
+  </svg>
+  <figcaption>
+
+  Hierarchy and journey describe pages; these nine describe everything else an IA has to settle. Scaffolding them deliberately means an undecided axis renders as a visible gap rather than a silent one — which is the point.
+
+  </figcaption>
+</figure>
+
+An undecided axis is not left as an open question. Each one carries its measured current state, a proposal, the decision that is actually needed, and a named owner — which turns "we have never decided this" into a yes-or-no someone can answer in a meeting:
+
+| Axis | Where it stands today | What I proposed |
+|---|---|---|
+| Page metadata | Solution guides carry tags; nothing else carries structured metadata. 7 of 26 guides are untagged and so invisible in their own catalogue. | Mandatory on every page: product, version, variant, audience, page type, journey stage. Enforce it in the content lint, so a page without them fails the build. |
+| Variants | Flare handled this with condition tags; the conversion dropped a fixed list of them. Antora has no policy at all yet. | Tabs where the difference is a few steps (deployment model, client OS). Separate pages where the whole task differs (Policy versus Classic mode). Attribute-gated blocks only for one-line differences. |
+| Localisation | SonicOS requires Japanese, Korean and Traditional Chinese, with Brazilian Portuguese, Spanish and French wanted. CSE cases arrive in Portuguese, French and Spanish today against no translated docs at all. | Translate by page type, not by product: Get started, Deploy, Legal and print artifacts first; Reference and Troubleshoot in English until demand is measured. |
+| Lifecycle and retirement | 25 pages already carry `nosearch` or `legacy` front matter and are excluded from search, and release-notes archives run back to 2019. There is no written rule behind any of it. | Archived versions stay published, unindexed, with an "applies to a version no longer supported" banner. Retire a URL only with a redirect to its successor; never delete. |
+| Non-page artifacts | PDFs are required for SonicOS and WNM hardware and print in the box. CSE also ships IP range lists, a `.mobileconfig`, an OpenAPI spec, videos and a changelog feed. | Each artifact gets an owner, a source of truth and a refresh trigger. Generated artifacts are built from data, never hand-edited. |
+| Cross-surface topology | Site search, the Salesforce knowledge base, the community forum, in-product help, the management consoles and SonicWall University all answer customer questions. 2,301 cases in 2026 closed as "Documentation & KBs". | Docs own how the product works. The KB owns particular, perishable incidents. University owns training. Community owns discussion. Each surface links to the canonical page rather than restating it. |
+| Search vocabulary | Mined from cases: customers say "Partially Reporting", "PoP", "bastion" or "jump box", "greyed out". Page titles mostly use our words. | Use the customer's word in the title where it is a real error string or console label; carry ours as a synonym in search. Maintain the pairs as data. |
+| Navigation budgets | 265 nav entries and four levels; Platform Components alone holds 53 topics under one group. | Three levels maximum, and no more than about 15 items in a group. Past that, split the group or promote a landing page with curated links. Check it in CI against each nav file. |
+| Prerequisite graph | Known but unrecorded: activate CSE in Unified Management before licences can be added; register the firewall before CSE will provision; the connector needs SonicOS 7.1.2 or later. | Record dependencies as data next to the compatibility matrix, and render them as the Prerequisites block at the top of each task. |
+
+The pattern across all nine is the same: state it, measure it, propose it, and name who decides. Five of the nine also need a decision that blocks something else — the localisation answer, for instance, has to land before component naming can be fixed.
+
+## Content that spans several stages
+
+Some page types deliberately serve more than one journey stage at once. They are the connective tissue between browsing and doing, and they are also where duplication creeps in, so each carries rules.
+
+**Solution guides** span Evaluate, First deployment and Expand. There are 26 of them, and their internal shape shows where they stop being useful:
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 760 250"
+    role="img"
+    aria-label="Of 26 solution guides, 22 have an Overview section, 19 have Prerequisites, 11 have Setup, 10 have Steps, 5 have a Summary and only 4 have a Test section."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="12">
+      <text x="32" y="28" fontSize="13" fontWeight="500" fill="currentColor" fillOpacity="0.9">Which sections the 26 solution guides actually contain</text>
+
+      <text x="32" y="64" fill="currentColor" fillOpacity="0.85">Overview</text>
+      <rect x="180" y="53" width="330" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.75" />
+      <text x="522" y="64" fill="currentColor" fillOpacity="0.85">22</text>
+
+      <text x="32" y="94" fill="currentColor" fillOpacity="0.85">Prerequisites</text>
+      <rect x="180" y="83" width="285" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.68" />
+      <text x="477" y="94" fill="currentColor" fillOpacity="0.85">19</text>
+
+      <text x="32" y="124" fill="currentColor" fillOpacity="0.85">Setup</text>
+      <rect x="180" y="113" width="165" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.55" />
+      <text x="357" y="124" fill="currentColor" fillOpacity="0.85">11</text>
+
+      <text x="32" y="154" fill="currentColor" fillOpacity="0.85">Steps</text>
+      <rect x="180" y="143" width="150" height="14" rx="2" fill="var(--ifm-color-primary)" fillOpacity="0.5" />
+      <text x="342" y="154" fill="currentColor" fillOpacity="0.85">10</text>
+
+      <text x="32" y="184" fill="currentColor" fillOpacity="0.85">Summary</text>
+      <rect x="180" y="173" width="75" height="14" rx="2" fill="#f59e0b" fillOpacity="0.6" />
+      <text x="267" y="184" fill="currentColor" fillOpacity="0.85">5</text>
+
+      <text x="32" y="214" fill="currentColor" fillOpacity="0.85">Test</text>
+      <rect x="180" y="203" width="60" height="14" rx="2" fill="#f59e0b" fillOpacity="0.6" />
+      <text x="252" y="214" fill="currentColor" fillOpacity="0.85">4</text>
+
+      <text x="32" y="240" fontSize="11" fontStyle="italic" fill="currentColor" fillOpacity="0.7">Almost every guide introduces the scenario. Fewer than one in six lets you confirm it worked.</text>
+    </g>
+  </svg>
+  <figcaption>
+
+  The counts fall away in the order a reader would travel them. A guide that describes a scenario but never says how to verify it has done the evaluating and skipped the deploying — which is why the rules below are written as obligations rather than suggestions.
+
+  </figcaption>
+</figure>
+
+The five rules a solution guide has to meet:
+
+- **Orchestrate, never duplicate.** Steps link to the canonical task pages. Today 101 links point into the docs, but 62 of those go to intro and quickstart and only around 22 into the configure sections — so settings are being restated inside guides instead of linked, and will drift.
+- **State the deployment model and prerequisites up front**, so an evaluator can self-select rather than reading to the bottom to find out the guide was not for them.
+- **End with a next step into production scale or operate**, or the guide dead-ends at a demo.
+- **Require at least one tag.** Seven of 26 are untagged and therefore invisible in the filtered catalogue they exist to populate.
+- **Cross-link both ways** — a Related solutions block on the feature page, so operators find the scenario too, not just evaluators.
+
+**Release notes** span Operate and Expand, and carry one rule: link into the pages that changed, so a reader lands on current instructions rather than a changelog line.
+
+## What every product gets regardless
+
+Part of the model is a floor, provided once rather than negotiated per product: one search index across every product, a version selector per product, a last-updated date on every page, old URLs preserved as page aliases, a PDF download where one exists, one centrally owned theme, and a content lint gate on every merge.
+
+Five decisions recur for every product as it moves onto the platform: which existing targets or guides still publish, the condition policy per target, whether PDFs are kept, generated from source or retired, whether the glossary and index are dropped or rebuilt, and which URL aliases carry over from the currently published site.
+
+## How a status is decided
+
+Statuses follow a rule, not an opinion. **Have** means a dedicated top-level nav section exists. **Partial** means pages exist but sit scattered under other sections, or number fewer than five. **Missing** means nothing matches. **n/a** means deliberately out of scope for that doc set. Every status carries an Evidence column naming what it was read from, and counts are derived from navigation data files and converted tables of contents rather than estimated — so any number in the map can be regenerated rather than defended.
+
+Where a gap is claimed, the evidence is a case count: version-gated limits living in forum replies rather than a compatibility matrix, an end-user guide where 0 of 86 pages match any troubleshooting pattern, a cross-portal activation path worth 397 cases in one product alone.
+
+<p className="case-label">Outcome</p>
+
+[Add a concrete result — decisions unblocked, products surveyed, adoption by other doc owners.]
+
+<p className="case-label case-label--close">What this demonstrates</p>
+
+Information architecture as a governance and measurement problem rather than a sitemap exercise.
