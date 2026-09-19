@@ -398,3 +398,11 @@ code {
   display: block;
   max-width: 100%;
 }
+
+/* On wide screens the figure pulls out past the text column: the console
+   UI needs the pixels more than the prose needs the margin. */
+@media (min-width: 1200px) {
+  .markdown > p:has(img) {
+    margin-inline: -5rem;
+  }
+}

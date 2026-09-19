@@ -65,7 +65,7 @@ export default function Contact() {
             </button>
 
             {status === 'sent' && (
-              <p className={styles.ok}>Thanks — your message is on its way.</p>
+              <p className={styles.ok}>Thanks, your message is on its way.</p>
             )}
             {status === 'error' && (
               <p className={styles.problem}>

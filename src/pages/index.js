@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout
       title="Clara Christopher"
-      description="Content architect for cloud security products — technical writing, content design, and documentation architecture">
+      description="Content architect for cloud security products, technical writing, content design, and documentation architecture">
       <header className={styles.hero}>
         <div className="container">
           <h1 className={styles.heroTitle}>Clara Christopher</h1>

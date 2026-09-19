@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # PR-to-docs impact evaluator
 
-Answers one question: what shipped in the product that the docs have not caught up with. It runs as a scheduled CI job and writes a Markdown report as an artifact. It files nothing and changes nothing — a person reads the report and decides.
+Answers one question: what shipped in the product that the docs have not caught up with. It runs as a scheduled CI job and writes a Markdown report as an artifact. It files nothing and changes nothing: a person reads the report and decides.
 
 <figure className="docs-diagram">
   <svg
@@ -45,11 +45,11 @@ Answers one question: what shipped in the product that the docs have not caught 
       <text x="640" y="311" fill="currentColor" fillOpacity="0.8">fingerprints from each merge diff</text>
 
       <rect x="528" y="344" width="224" height="54" rx="6" fill="#f59e0b" fillOpacity="0.13" stroke="#f59e0b" />
-      <text x="640" y="366" fill="currentColor">Fetch the preview JS bundle — mark</text>
+      <text x="640" y="366" fill="currentColor">Fetch the preview JS bundle, mark</text>
       <text x="640" y="381" fill="currentColor" fillOpacity="0.85">each merge live, not found, unknown</text>
 
       <rect x="190" y="420" width="380" height="44" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.28" />
-      <text x="380" y="447" fill="currentColor">Index every page under docsite/_docs — release notes excluded</text>
+      <text x="380" y="447" fill="currentColor">Index every page under docsite/_docs, release notes excluded</text>
 
       <rect x="190" y="484" width="380" height="48" rx="6" fill="var(--ifm-color-primary)" fillOpacity="0.12" stroke="var(--ifm-color-primary)" strokeWidth="1.5" />
       <text x="380" y="504" fontWeight="600" fill="currentColor">Claude, once per merge</text>
@@ -88,11 +88,11 @@ Answers one question: what shipped in the product that the docs have not caught 
 
 <p className="case-label">Two details that decided whether it worked</p>
 
-- **The branch it scans.** Most feature branches merge into `dev` and only reach a release through a roll-up. Scanning `qa-stable` instead caught 1 of 9 merges for the August 2026 release — the job was technically running and almost entirely blind.
+- **The branch it scans.** Most feature branches merge into `dev` and only reach a release through a roll-up. Scanning `qa-stable` instead caught 1 of 9 merges for the August 2026 release: the job was technically running and almost entirely blind.
 - **Merged is not shipped.** Walking merges between the two newest `r20*` tags tells you what landed in the repository. Fingerprinting each diff and searching the served preview bundle tells you what a customer can actually reach, which is the thing documentation has to match.
 
-Claude is called once per merge, with the index of every docsite page as a cached prefix and only the merge subject plus a trimmed diff varying per call — so the expensive context is paid for once and reused across the batch.
+Claude is called once per merge, with the index of every docsite page as a cached prefix and only the merge subject plus a trimmed diff varying per call, so the expensive context is paid for once and reused across the batch.
 
 <p className="case-label case-label--close">What this demonstrates</p>
 
-Treating documentation drift as a measurable condition of the codebase rather than something noticed in review — and keeping the automation strictly advisory, so it reports and a person decides.
+Treating documentation drift as a measurable condition of the codebase rather than something noticed in review, and keeping the automation strictly advisory, so it reports and a person decides.

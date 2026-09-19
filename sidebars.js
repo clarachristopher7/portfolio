@@ -7,6 +7,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Content architecture',
+      link: {type: 'doc', id: 'content-architecture'},
       items: [
         'docs-engineering/cse-ia-rework-case-study',
         'docs-engineering/ia-model-case-study',
@@ -25,6 +26,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Automations',
+      link: {type: 'doc', id: 'automations'},
       items: [
         'docs-engineering/pr-evaluator-case-study',
         'docs-engineering/staleness-auditor-case-study',

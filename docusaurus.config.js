@@ -4,7 +4,7 @@ const {themes} = require('prism-react-renderer');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Clara Christopher',
-  tagline: 'Content architect for cloud security products — technical writing, content design, and documentation architecture',
+  tagline: 'Content architect for cloud security products, technical writing, content design, and documentation architecture',
   favicon: 'img/favicon.ico',
 
   // TODO: replace with your real domain once you pick a host (Netlify/Vercel/GitHub Pages)
