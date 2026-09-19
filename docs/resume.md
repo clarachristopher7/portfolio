@@ -54,11 +54,11 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 
 ## Core competencies
 
-- **Strategic UX & onboarding architecture:** narrative-driven user journeys, trial-to-paid funnel optimization, setup friction reduction.
-- **Information architecture & governance:** docs-as-code, global component content management systems (CCMS), Antora.
-- **Cross-functional orchestration:** unifying Product Management, Engineering, Growth/Product Marketing, and Field Support roadmaps.
-- **AI & automation integration:** AI-powered documentation auditing, predictive gap analysis, automated content linting.
-- **Deep domain expertise:** cybersecurity, cloud infrastructure, zero-trust, API and developer platforms.
+- **Content design:** in-product strings, their structuring and sequencing, written with design and front-end engineering.
+- **Information architecture:** navigation restructures in a shipping product, and a model for comparing unlike doc sets across a product estate.
+- **Content governance:** docs-as-code publishing, ownership and review cadence, content lifecycle and archiving policy.
+- **AI-assisted documentation tooling:** CI jobs that flag drift between merged code and the docs, and staleness audits that produce a prioritized backlog.
+- **Domains:** cloud security, zero trust network access, and cybersecurity platforms.
 
 ## Technical skills
 

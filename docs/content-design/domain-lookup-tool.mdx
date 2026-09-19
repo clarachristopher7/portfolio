@@ -1,0 +1,123 @@
+---
+hide_table_of_contents: true
+sidebar_position: 3
+---
+
+# Domain Lookup Tool
+
+> **Why this one:** The answer an admin needed already existed in our documentation, drawn as an architecture diagram. It was the wrong shape for someone in the middle of an incident. This sample is about moving the answer into the product rather than writing it up again.
+
+**Surface:** Internet Threat Protection policy, Cloud Secure Edge admin console.
+
+**Audience:** Network admins troubleshooting a policy that is blocking or allowing something they did not expect.
+
+## The problem
+
+An Internet Threat Protection policy decides what happens to a DNS request by passing it through several stages: threat protections, then category, application and domain blocking, then exception rules. When a request came back blocked or allowed unexpectedly, the admin could see the outcome but not which stage produced it.
+
+What we had for this was documentation. This is the diagram that explains how a DNS request is resolved under an Internet Threat Protection policy:
+
+<figure className="docs-diagram">
+  <svg
+    viewBox="0 0 1000 430"
+    role="img"
+    aria-label="DNS resolution under an Internet Threat Protection policy. A request from the DNS proxy is sorted into local or internet domain. A local domain goes to the default DNS resolver. An internet domain is checked against whether the Service Tunnel is on: if not, it goes to the SWG agent. If it is, a private domain goes to the Service Tunnel, and a public domain is checked against whether it is included on the tunnel spec, then whether it is excluded, routing to the Service Tunnel, the default DNS resolver or the SWG agent."
+    style={{maxWidth: '100%', height: 'auto'}}
+  >
+    <defs>
+      <marker id="dlt-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0 1 L7 4 L0 7 z" fill="currentColor" fillOpacity="0.45" />
+      </marker>
+    </defs>
+
+    <g fill="none" stroke="currentColor" strokeOpacity="0.32" strokeWidth="1.4" markerEnd="url(#dlt-a)">
+      <path d="M112 217 H132 V63 H150" />
+      <path d="M112 217 H150" markerEnd="none" />
+      <path d="M132 217 H150" />
+      <path d="M284 217 H322" />
+      <path d="M284 63 H884" />
+      <path d="M400 235 V389 H884" />
+      <path d="M476 217 H496 V144 H514" />
+      <path d="M496 217 V299 H514" />
+      <path d="M648 144 H686" />
+      <path d="M648 299 H884" />
+      <path d="M788 162 V198" />
+      <path d="M858 144 H872 V299 H884" />
+      <path d="M858 218 H866 V63 H884" />
+      <path d="M858 218 H878 V389 H884" />
+    </g>
+
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="9" fontWeight="600"
+       fill="currentColor" fillOpacity="0.55" textAnchor="middle">
+      <text x="486" y="205">YES</text>
+      <text x="412" y="256">NO</text>
+      <text x="800" y="184">NO</text>
+      <text x="876" y="258">YES</text>
+      <text x="856" y="104">YES</text>
+      <text x="892" y="350">NO</text>
+    </g>
+
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="11.5" textAnchor="middle">
+      <g fill="currentColor" fillOpacity="0.045" stroke="currentColor" strokeOpacity="0.2">
+        <rect x="8" y="195" width="104" height="44" rx="7" />
+        <rect x="150" y="45" width="134" height="36" rx="7" />
+        <rect x="150" y="199" width="134" height="36" rx="7" />
+        <rect x="322" y="199" width="154" height="36" rx="7" />
+        <rect x="514" y="126" width="134" height="36" rx="7" />
+        <rect x="514" y="281" width="134" height="36" rx="7" />
+        <rect x="686" y="126" width="172" height="36" rx="7" />
+        <rect x="686" y="200" width="172" height="36" rx="7" />
+      </g>
+      <g fill="currentColor" fillOpacity="0.085" stroke="currentColor" strokeOpacity="0.34">
+        <rect x="884" y="40" width="108" height="46" rx="7" />
+        <rect x="884" y="281" width="108" height="36" rx="7" />
+        <rect x="884" y="371" width="108" height="36" rx="7" />
+      </g>
+      <g fill="currentColor">
+        <text x="60" y="221">DNS proxy</text>
+        <text x="217" y="67">Local domain</text>
+        <text x="217" y="221">Internet domain</text>
+        <text x="399" y="221">Service Tunnel on?</text>
+        <text x="581" y="148">Public domain</text>
+        <text x="581" y="303">Private domain</text>
+        <text x="772" y="148">Included on tunnel spec?</text>
+        <text x="772" y="222">Excluded on tunnel spec?</text>
+        <text x="938" y="58">Default DNS</text>
+        <text x="938" y="74">resolver</text>
+        <text x="938" y="303">Service Tunnel</text>
+        <text x="938" y="393">SWG agent</text>
+      </g>
+    </g>
+  </svg>
+  <figcaption>
+
+  Four branch points and three possible destinations. Two of the branches turn on settings held in a different part of the console: whether the Service Tunnel is on, and what its spec includes or excludes.
+
+  </figcaption>
+</figure>
+
+The diagram is accurate, and it answers the question an admin has before they deploy, which is how the system works.
+
+An admin who is mid-incident has a different question: which part of *my* policy handled *this* domain, and what did it decide. No diagram can answer that, because the answer depends on their configuration and the domain in front of them. Tracing their own case through this by hand means knowing their tunnel spec, their inclusion and exclusion lists, and their policy rules, and holding all of it against one domain while a user waits.
+
+[What that cost: ticket volume on unexpected blocks, time to resolve, what admins were doing to work it out instead.]
+
+## The constraint
+
+The scope note carries most of the weight. The tool accounts for threat protections, category, application and domain blocking, and exception rules, and it does not account for Geo Blocking or Risk-based URL Blocking. An admin who assumed it covered everything would read a clean result as proof that nothing in the policy was responsible, and go looking in the wrong place. Stating the limit in the panel keeps that correction next to the result rather than in a document nobody opens mid-incident.
+
+## What I tried
+
+[Whether a better diagram, a troubleshooting page, or a decision table was attempted first, and what made an in-product tool the answer instead.]
+
+## What I shipped
+
+A Domain Lookup Tool inside the Internet Threat Protection policy. The admin enters a domain and gets the verdict that their policy produces for it, along with the categorization behind that verdict, without leaving the policy they are troubleshooting.
+
+![The Lookup Domain panel: a scope note, a domain field with its explanation, and a submit action.](/img/content-design/domain-lookup-tool.png)
+
+[Add the result state. The verdict is where this sample makes its case, and the empty form does not show it.]
+
+## What changed
+
+[Whether admins resolved unexpected blocks without raising a ticket, and whether the architecture diagrams stayed as reference or were retired.]

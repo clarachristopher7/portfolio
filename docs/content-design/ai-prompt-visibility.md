@@ -17,7 +17,9 @@ There were two views on how that should work. One was to let admins turn logging
 
 The version in the console took the first route and covered the gap with an error and a warning, fired the moment the admin flipped the toggle.
 
-[The two strings as they appeared. They are the "before", and the exact wording is the evidence.]
+![The Prompt Visibility screen as it shipped: the Log AI Prompts toggle is on, a warning below it says TLS decryption still has to be set up, and the panel underneath reads "No data yet".](/img/content-design/ai-prompt-before.png)
+
+Two messages carry the dependency. The warning reads *"Before captured prompts can be shown, you must finish TLS decryption set up below. Otherwise we will log your ai prompts it's just they won't show below."* Under it, the empty panel repeats the same thing: *"Prompts can only be captured from devices that are subject to TLS decryption on their ITP policies."*
 
 The admin had followed the screen, and the system was working as built. The messages were reporting that the feature needed a second setting before it would show anything, and two messages is a lot of text to explain one setting that could have been on the screen instead.
 
@@ -39,7 +41,9 @@ Putting the Internet Threat Protection setting into the AI visibility screen rem
 
 It also settles the question of when the feature should become usable. Keeping setup light and having the toggle produce a working feature stop being alternatives once the configuration is on the same screen, so there is no longer a cost to doing it in the right order.
 
-[Screenshots of the toggle with its error and warning, and the embedded configuration that replaced them, rebuilt unbranded.]
+![Proposed screen: the TLS decryption setting sits above the toggle, listing each Internet Threat Protection policy with its device count and a switch to decrypt TLS, followed by the Log AI prompts toggle and a line reading "Logging 38 devices across 1 policy."](/img/content-design/ai-prompt-after.png)
+
+The setting that the warning pointed at moves above the toggle, listing each Internet Threat Protection policy with its device count, so the admin turns decryption on for the policies that should report prompt activity and then turns logging on. The toggle description then says where prompts come from, and a line underneath reports what is actually being logged, which is the confirmation the empty panel could never give.
 
 [What an admin sees who already has that policy configured.]
 
