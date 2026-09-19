@@ -6,7 +6,7 @@ sidebar_position: 2
 
 **Clara Christopher** · Content architect
 
-Toronto, ON · (437) 734-9841 · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/)
+Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/)
 
 ## About me
 
@@ -18,7 +18,7 @@ At SonicWall I own the Cloud Secure Edge content end to end. I work with designe
 
 ### SonicWall (Cloud Secure Edge) — Remotely in Toronto, Ontario, Canada
 
-**Senior Technical Writer** · *Jan 2024 – Present*
+**Senior Technical Writer** · *Current*
 
 - Analyze customer support tickets, sales engineering calls, product telemetry, and community forums to define the user persona, identify their real-world friction points, and uncover critical product adoption gaps.
 - Apply these user insights to partner with Product, UX, and Growth teams, writing contextual UX copy and auditing the in-product console to transform a feature-heavy onboarding flow into an intuitive, outcome-driven setup experience.
@@ -29,32 +29,32 @@ At SonicWall I own the Cloud Secure Edge content end to end. I work with designe
 
 ### Banyan Security (acquired by SonicWall) — Remotely in Toronto, Ontario, Canada
 
-**Senior Technical Writer** · *May 2023 – Jan 2024*
+**Senior Technical Writer**
 
 - Refactored documentation information architecture and content taxonomies ahead of corporate acquisition to merge cloud and legacy pipelines.
 - Leveraged generative AI tools to stress-test customer-facing FAQs and onboarding workflows; analyzed AI search patterns to reveal hidden structural friction and rapidly deployed targeted documentation updates.
 - Collaborated side-by-side with product, front end engineering leads, and UX designers to draft and test intuitive microcopy and conversational step-by-step guides embedded inside the admin console and desktop client.
 
-**Technical Writer** · *Sep 2021 – May 2023*
+**Technical Writer**
 
 - Created and managed the core engineering style guide, establishing uniform standards and an optimized information hierarchy used across all digital properties.
 - Conducted deep audits of legacy documentation to enhance overall readability, transforming static manuals into user-centered walkthroughs and script-based video resources.
 
 ### Tailscale — Toronto, Ontario, Canada
 
-**Technical Writer** · *Jan 2021 – Sep 2021*
+**Technical Writer**
 
 - Authored technical comparison docs, solution frameworks, and architecture diagrams tailored for developer teams evaluating complex zero-trust network infrastructure.
 
 ### Quantum XChange — Remotely in Toronto, Ontario, Canada
 
-**Contract Technical Writer** · *Apr 2021 – Aug 2021*
+**Contract Technical Writer**
 
 - Designed the core technical architecture guides for a next-generation quantum security product, transforming highly intricate cryptographic concepts into clear, actionable configuration documentation for security administrators.
 
 ### Security Compass — Toronto, Ontario, Canada
 
-**Content Specialist** · *May 2018 – Nov 2019*
+**Content Specialist**
 
 - Developed technical enablement content, playbooks, and release frameworks for SD Elements, translating complex threat modeling, compliance mandates, and automated security policies into actionable developer workflows that accelerated secure software delivery.
 
