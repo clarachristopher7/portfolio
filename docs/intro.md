@@ -14,8 +14,8 @@ SonicWall's hardware and cloud product publishing flow.
 
 ## What's here
 
-- **Published docs** — live pages I write and maintain on the SonicWall Cloud Secure Edge docs site: one architecture page, one integration guide, one concepts page.
-- **Information architecture** — the CSE sidebar restructure, and the estate-wide IA model built to compare unlike doc sets on one axis.
+- **Docs** — live pages I write and maintain on the SonicWall Cloud Secure Edge docs site: one architecture page, one integration guide, one concepts page.
+- **Content architecture** — the CSE sidebar restructure, and the estate-wide IA model built to compare unlike doc sets on one axis.
 - **Content design** — in-product strings and the structure around them: three Cloud Secure Edge
   surfaces where the copy turned out to be downstream of something structural.
 - **Automations** — projects where I treated documentation as infrastructure: CI jobs, AI-assisted analysis, and tooling that keeps docs correct instead of just polished once and left to rot.

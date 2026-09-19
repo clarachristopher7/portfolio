@@ -3,9 +3,15 @@ const sidebars = {
   workSidebar: [
     'intro',
     'resume',
-    'published-cse-docs',
-    'docs-engineering/cse-ia-rework-case-study',
-    'docs-engineering/ia-model-case-study',
+    {type: 'doc', id: 'published-cse-docs', label: 'Docs'},
+    {
+      type: 'category',
+      label: 'Content architecture',
+      items: [
+        'docs-engineering/cse-ia-rework-case-study',
+        'docs-engineering/ia-model-case-study',
+      ],
+    },
     {
       type: 'category',
       label: 'Content design',
