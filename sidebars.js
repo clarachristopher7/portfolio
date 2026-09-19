@@ -9,6 +9,14 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Content Design',
+      items: [
+        'content-design/microcopy-rewrites',
+        'content-design/product-flow-strings',
+      ],
+    },
+    {
+      type: 'category',
       label: 'API Reference & Code Samples',
       items: ['api-docs/sample-api-reference'],
     },
