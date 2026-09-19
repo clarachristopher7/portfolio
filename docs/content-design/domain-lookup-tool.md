@@ -15,7 +15,13 @@ sidebar_position: 3
 
 An Internet Threat Protection policy decides what happens to a DNS request by passing it through several stages: threat protections, then category, application and domain blocking, then exception rules. When a request came back blocked or allowed unexpectedly, the admin could see the outcome but not which stage produced it.
 
-What we had for this was documentation: architecture diagrams showing how Internet Threat Protection is put together. Those answer the question an admin has before they deploy, which is how the system works. An admin who is mid-incident has a different question: which part of *my* policy handled *this* domain, and what did it decide. A diagram cannot answer that, because the answer depends on their configuration and the domain in front of them.
+What we had for this was documentation. This is the diagram that explains how a DNS request is resolved under an Internet Threat Protection policy:
+
+![Documentation diagram of DNS resolution under an Internet Threat Protection policy: a request from the DNS proxy is sorted into local, internet, public or private domain, checked against whether the Service Tunnel is on and whether the domain is included or excluded on the tunnel spec, and routed to the default DNS resolver, the Service Tunnel or the SWG agent.](/img/content-design/itp-dns-resolution-diagram.png)
+
+Four branch points, three possible destinations, and two of the branches depend on settings in a different part of the console. The diagram is accurate, and it answers the question an admin has before they deploy, which is how the system works.
+
+An admin who is mid-incident has a different question: which part of *my* policy handled *this* domain, and what did it decide. No diagram can answer that, because the answer depends on their configuration and the domain in front of them. Tracing their own case through this by hand means knowing their tunnel spec, their inclusion and exclusion lists, and their policy rules, and holding all of it against one domain while a user waits.
 
 [What that cost: ticket volume on unexpected blocks, time to resolve, what admins were doing to work it out instead.]
 

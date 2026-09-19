@@ -8,12 +8,6 @@ sidebar_position: 2
 
 Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/)
 
-## About me
-
-Content architect for cloud security products. I design how the product UI and docs are written, structured, and published, considering everything from the user journey to how the docs pipeline is built.
-
-At SonicWall I own the Cloud Secure Edge content end to end. I work with designers and front-end engineers to build in-product experiences, and I'm currently rearchitecting SonicWall's hardware and cloud product publishing flow.
-
 ## Professional experience
 
 ### SonicWall (Cloud Secure Edge), Remotely in Toronto, Ontario, Canada
