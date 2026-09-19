@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Device Geolocation Trust Factor
 
-**Surface:** Trust Factor configuration, Cloud Secure Edge admin console. Admins build a device's Trust Level out of individual Trust Factors. Each one can deny access, lower the trust level, or do nothing.
+**Surface:** A user's device must have a sufficient security posture in order for the user to access secured resources. Admins configure a device's Trust Level by applying individual Trust Factors. If the user's device doesn't satisfy the Trust Factor, the user can be denied access, their trust level can lower, or it can have no effect, all depending on what the admin configures.
 
 ## The problem
 
