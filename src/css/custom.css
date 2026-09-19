@@ -1,23 +1,384 @@
-/**
- * Starter theme colors — tweak these to taste, or swap for your own palette.
- */
+/* ─────────────────────────────────────────────────────────────
+   Base tokens
+
+   Typography and palette follow the Tailscale documentation site:
+   Inter, weight-500 headings, a warm neutral scale rather than a
+   cool grey one, 15px body text, and small radii.
+   ───────────────────────────────────────────────────────────── */
 :root {
-  --ifm-color-primary: #2e5cb8;
-  --ifm-color-primary-dark: #2951a5;
-  --ifm-color-primary-darker: #274c9c;
-  --ifm-color-primary-darkest: #203f80;
-  --ifm-color-primary-light: #3367cb;
-  --ifm-color-primary-lighter: #3d6fce;
-  --ifm-color-primary-lightest: #5985d5;
-  --ifm-code-font-size: 90%;
+  --ifm-font-family-base: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
+  --ifm-font-family-monospace: 'SF Mono', SFMono-Regular, ui-monospace, Menlo,
+    Monaco, Consolas, 'Liberation Mono', monospace;
+
+  --ifm-font-size-base: 15px;
+  --ifm-line-height-base: 1.55;
+  --ifm-heading-font-weight: 500;
+  --ifm-heading-line-height: 1.22;
+  --ifm-code-font-size: 85%;
+  --ifm-code-padding-horizontal: 0.34em;
+  --ifm-code-padding-vertical: 0.15em;
+  --ifm-code-border-radius: 4px;
+  --ifm-global-radius: 4px;
+
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #bfdbfe;
+
+  --ifm-font-color-base: #2e2d2d;
+  --ifm-heading-color: #181717;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #faf9f8;
+
+  --ifm-toc-border-color: #eeebea;
+  --ifm-hr-border-color: #eeebea;
+  --ifm-table-border-color: #eeebea;
+  --ifm-blockquote-color: #57534e;
+  --ifm-blockquote-border-color: #d6d3d1;
+
+  --ifm-navbar-height: 3.5rem;
+  --ifm-navbar-shadow: none;
+
+  --site-muted: #79716b;
+  --site-soft: #57534e;
+  --site-measure: 70ch;
+  --home-bg: #fbefec;
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #7fa6ea;
-  --ifm-color-primary-dark: #5f91e5;
-  --ifm-color-primary-darker: #4f87e2;
-  --ifm-color-primary-darkest: #2569d9;
-  --ifm-color-primary-light: #9fbbef;
-  --ifm-color-primary-lighter: #afc5f1;
-  --ifm-color-primary-lightest: #dfe7f9;
+html[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  --ifm-font-color-base: #d6d2cf;
+  --ifm-heading-color: #f5f3f1;
+  --ifm-background-color: #1a1918;
+  --ifm-background-surface-color: #232120;
+
+  --ifm-toc-border-color: #34302e;
+  --ifm-hr-border-color: #34302e;
+  --ifm-table-border-color: #34302e;
+  --ifm-blockquote-color: #a9a29d;
+  --ifm-blockquote-border-color: #44403c;
+
+  --site-muted: #a9a29d;
+  --site-soft: #c4bdb8;
+  --home-bg: #241d1d;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Headings and prose
+   ───────────────────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  letter-spacing: -0.021em;
+}
+
+.markdown h1:first-child {
+  font-size: 2.25rem;
+  line-height: 1.11;
+  letter-spacing: -0.026em;
+  margin-bottom: 1.15rem;
+}
+
+.markdown > h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.028em;
+  margin-top: 3rem;
+  margin-bottom: 0.9rem;
+}
+
+.markdown > h3 {
+  font-size: 1.125rem;
+  font-weight: 550;
+  letter-spacing: -0.016em;
+  margin-top: 2.25rem;
+}
+
+/* Comfortable measure for text, without constraining figures. */
+.markdown > p,
+.markdown > ul,
+.markdown > ol,
+.markdown > blockquote {
+  max-width: var(--site-measure);
+}
+
+.markdown > ul,
+.markdown > ol {
+  padding-left: 1.15rem;
+}
+
+.markdown li + li {
+  margin-top: 0.3rem;
+}
+
+.markdown a {
+  overflow-wrap: break-word;
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
+  transition: text-decoration-color 120ms ease;
+}
+
+.markdown a:hover {
+  text-decoration-color: currentColor;
+}
+
+.markdown strong {
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.markdown blockquote {
+  border-left-width: 2px;
+  padding: 0.2rem 0 0.2rem 1rem;
+  font-size: 0.9375rem;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Case-study field labels — Problem, Approach, Outcome and the
+   closing claim. A section marker distinct from the h2 used for
+   narrative sections, so both systems can coexist on one page.
+   ───────────────────────────────────────────────────────────── */
+.markdown > p.case-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: var(--site-measure);
+  margin: 2.5rem 0 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--site-muted);
+}
+
+.markdown > p.case-label::before {
+  content: '';
+  width: 18px;
+  height: 2px;
+  flex: none;
+  border-radius: 1px;
+  background: var(--ifm-color-primary);
+}
+
+.markdown > p.case-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ifm-toc-border-color);
+}
+
+/* The closing claim reads as a conclusion, not another field. */
+.markdown > p.case-label--close::before {
+  background: var(--site-muted);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Blog post titles
+
+   Docusaurus renders these at 3rem, which is far too large for
+   an essay-length title running several lines.
+   ───────────────────────────────────────────────────────────── */
+/* The [class] qualifier outranks Docusaurus's own CSS-module class. */
+article > header > h1[class] {
+  font-size: 1.75rem;
+  line-height: 1.22;
+  letter-spacing: -0.022em;
+}
+
+article > header > h2[class] {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: -0.018em;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Chrome: navbar, sidebar, TOC, footer
+   ───────────────────────────────────────────────────────────── */
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  backdrop-filter: saturate(180%) blur(8px);
+  background-color: color-mix(in srgb, var(--ifm-background-color) 88%, transparent);
+}
+
+.navbar__title {
+  font-weight: 550;
+  font-size: 0.9375rem;
+  letter-spacing: -0.014em;
+}
+
+.navbar__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.menu {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 1rem 0.75rem;
+}
+
+.menu__link {
+  border-radius: 4px;
+  line-height: 1.4;
+  padding: 0.35rem 0.6rem;
+  color: var(--ifm-font-color-base);
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background: color-mix(in srgb, var(--ifm-color-primary) 9%, transparent);
+  font-weight: 550;
+}
+
+.menu__list-item-collapsible > .menu__link {
+  font-weight: 550;
+  color: var(--ifm-heading-color);
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-toc-border-color) !important;
+}
+
+.table-of-contents {
+  font-size: 0.8125rem;
+  border-left: 1px solid var(--ifm-toc-border-color);
+}
+
+.table-of-contents__link--active {
+  font-weight: 550;
+}
+
+.breadcrumbs {
+  font-size: 0.8125rem;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: transparent;
+  font-weight: 550;
+}
+
+.footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  font-size: 0.875rem;
+  padding: 2.5rem 0;
+}
+
+.footer--light {
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-footer-color: var(--site-soft);
+  --ifm-footer-link-color: var(--site-soft);
+  --ifm-footer-title-color: var(--ifm-heading-color);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Tables and code
+   ───────────────────────────────────────────────────────────── */
+.markdown table {
+  display: table;
+  width: 100%;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.markdown table th {
+  font-size: 0.75rem;
+  font-weight: 550;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--site-muted);
+  background: transparent;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 0;
+  border-bottom: 1px solid var(--ifm-table-border-color);
+  padding: 0.55rem 0.7rem;
+}
+
+.markdown table tr:nth-child(2n) {
+  background: transparent;
+}
+
+code {
+  border: 1px solid var(--ifm-toc-border-color);
+  background: var(--ifm-background-surface-color);
+}
+
+.theme-code-block {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: none !important;
+}
+
+.theme-code-block code {
+  border: 0;
+  background: transparent;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Case-study diagrams
+
+   The 760-unit viewBox carries 11–12px labels, which drop below
+   legibility once the figure scales under ~700px wide — so the
+   figure scrolls rather than shrinking past that point.
+   ───────────────────────────────────────────────────────────── */
+.docs-diagram {
+  margin: 2rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: var(--ifm-global-radius);
+}
+
+/* On desktop, let the panel bleed outward by its own padding so the drawing
+   gets the full column width — the SVG needs every pixel of its 700px floor. */
+@media (min-width: 997px) {
+  .docs-diagram {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+.docs-diagram svg {
+  display: block;
+  min-width: 700px;
+  max-width: 100%;
+  height: auto;
+}
+
+.docs-diagram figcaption {
+  max-width: 72ch;
+  margin-top: 1rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--ifm-toc-border-color);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--site-soft);
+}
+
+.docs-diagram figcaption p:last-child {
+  margin-bottom: 0;
 }

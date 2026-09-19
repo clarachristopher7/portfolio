@@ -2,18 +2,20 @@
 sidebar_position: 1
 ---
 
-# Start here
+# About me
 
-I'm Clara Christopher, a Senior Technical Writer with 9 years of experience, currently
-writing narrative-driven documentation for SonicWall's Cloud Secure Edge — a zero trust
-network access and cloud security platform. My background also includes Tailscale,
-Banyan Security, Quantum XChange, and Security Compass. This section is a self-contained
-sample of my work — no logins, no links to docs I no longer maintain.
+Documentation Lead with 9 years of experience creating narrative-driven technical
+content. Recent experience developing user journey-focused content strategy for a
+complex cloud infrastructure and cybersecurity platform. Established history of
+partnering with cross-functional teams to help smoothly transition users from discovery
+and evaluation to their first deployment. A self-starter in using the latest AI
+technologies (Claude Code) to build the right scaffolding around documentation
+lifecycles at enterprise scale.
 
 ## What's here
 
-- **Product & conceptual docs** — the kind of end-user-facing, explain-the-concept-before-the-steps writing that makes up most of my track record.
-- **API reference & code samples** — reference documentation paired with a tested code sample, to show the mechanical/developer-docs side of the craft.
-- **Docs engineering case studies** — projects where I treated documentation as infrastructure: automation, CI/CD, and tooling that keeps docs correct instead of just polished once and left to rot.
+- **Published docs** — live pages I write and maintain on the SonicWall Cloud Secure Edge docs site: one architecture page, one integration guide, one concepts page.
+- **Information architecture** — the CSE sidebar restructure, and the estate-wide IA model built to compare unlike doc sets on one axis.
+- **Automations** — projects where I treated documentation as infrastructure: CI jobs, AI-assisted analysis, and tooling that keeps docs correct instead of just polished once and left to rot.
 
 Each sample includes a short "why this one" note explaining what it's meant to demonstrate.

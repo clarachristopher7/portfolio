@@ -18,6 +18,13 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap',
+      type: 'text/css',
+    },
+  ],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -55,12 +62,13 @@ const config = {
         items: [
           {to: '/work/intro', label: 'Work', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/contact', label: 'Contact', position: 'left'},
           {href: 'https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG', label: 'LinkedIn', position: 'right'},
           {href: 'mailto:clara.christopher56@gmail.com', label: 'Email', position: 'right'},
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Elsewhere',

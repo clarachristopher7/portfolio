@@ -2,19 +2,13 @@
 const sidebars = {
   workSidebar: [
     'intro',
+    'resume',
+    'published-cse-docs',
+    'docs-engineering/cse-ia-rework-case-study',
+    'docs-engineering/ia-model-case-study',
     {
       type: 'category',
-      label: 'Product & Conceptual Docs',
-      items: ['product-docs/sample-conceptual-guide'],
-    },
-    {
-      type: 'category',
-      label: 'API Reference & Code Samples',
-      items: ['api-docs/sample-api-reference'],
-    },
-    {
-      type: 'category',
-      label: 'Docs Engineering Case Studies',
+      label: 'Automations',
       items: [
         'docs-engineering/pr-evaluator-case-study',
         'docs-engineering/staleness-auditor-case-study',
