@@ -11,7 +11,7 @@ const sidebars = {
       type: 'category',
       label: 'Content Design',
       items: [
-        'content-design/microcopy-rewrites',
+        'content-design/device-geolocation-trust-factor',
         'content-design/product-flow-strings',
       ],
     },
