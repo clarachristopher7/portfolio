@@ -5,8 +5,6 @@ sidebar_position: 1
 
 # Device Geolocation Trust Factor
 
-> **Why this one:** Configuration screens need copy that carries logic, not just tone. The admin is setting a security policy, and the screen has to show what rule they are building before they save it. It also covers a layout change I asked for, because reordering the card fixed something wording could not.
-
 **Surface:** Trust Factor configuration, Cloud Secure Edge admin console. Admins build a device's Trust Level out of individual Trust Factors. Each one can deny access, lower the trust level, or do nothing.
 
 ## The problem
