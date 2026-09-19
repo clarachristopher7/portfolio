@@ -18,15 +18,15 @@ sidebar_position: 1
 
 ## Before
 
-![The Device Geolocation Trust Factor before the revision: the Trust Effect meter sits at the top of the card, above the country selector and its options.](/img/content-design/device-geolocation-before.png)
+[![The Device Geolocation Trust Factor before the revision: the Trust Effect meter sits at the top of the card, above the country selector and its options.](/img/content-design/device-geolocation-before.png)](/img/content-design/device-geolocation-before.png)
 
 ## After
 
-![The Device Geolocation Trust Factor after the revision: a rewritten field label, a new line explaining the rule the selection produces, and the Trust Effect meter moved to the bottom of the card.](/img/content-design/device-geolocation-after.png)
+[![The Device Geolocation Trust Factor after the revision: a rewritten field label, a new line explaining the rule the selection produces, and the Trust Effect meter moved to the bottom of the card.](/img/content-design/device-geolocation-after.png)](/img/content-design/device-geolocation-after.png)
 
 ## The field label
 
-| | |
+| Version | String |
 |---|---|
 | **Before** | Select the countries where devices with this Trust Factor are: |
 | **After** | Select countries to block or allow: |
@@ -39,7 +39,7 @@ The revision states the action and lets the toggle be a control rather than the 
 
 ## The rule the configuration produces
 
-| | |
+| Version | String |
 |---|---|
 | **Before** | *(no equivalent string)* |
 | **After** | To satisfy the Trust Factor, the device must be located outside of the selected countries. |
