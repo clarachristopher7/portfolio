@@ -21,7 +21,7 @@ At SonicWall I own the Cloud Secure Edge content end to end. I work with designe
 **Senior Technical Writer** · *Current*
 
 - Analyze customer support tickets, sales engineering calls, product telemetry, and community forums to define the user persona, identify their real-world friction points, and uncover critical product adoption gaps.
-- Apply these user insights to partner with product, design, and front-end engineers to create contextual UX copy and to transform the product console into an intuitive, outcome-driven setup experience.
+- Apply these user insights with product, design, and front-end engineers to shape both the contextual UX copy and the order it appears in — restructuring console setup so each screen states the rule the admin is building and places outcomes after the inputs that determine them, turning a feature-led console into an outcome-driven setup experience.
 - Continually refine the entire documentation site's information architecture, informed by the product experience, pivoting away from static feature docs to align content taxonomies directly with the user's journey and their desired outcomes. Added self-service features in the docs site redesign, including an RSS release notes subscription option and an in-page feedback form.
 - Design and integrate generative AI workflow automations (using Claude Code) that scan code repositories during CI/CD cycles to cross-reference engineering changes with existing documentation, ensuring real-time alignment with release cycles.
 - Build staleness audit automations that cross-reference documentation with new console UI versions, dynamically generating prioritized backlog queues to maintain data integrity across cloud pipelines without extensive manual reviews.
@@ -33,7 +33,7 @@ At SonicWall I own the Cloud Secure Edge content end to end. I work with designe
 
 - Refactored documentation information architecture and content taxonomies ahead of corporate acquisition to merge cloud and legacy pipelines.
 - Leveraged generative AI tools to stress-test customer-facing FAQs and onboarding workflows; analyzed AI search patterns to reveal hidden structural friction and rapidly deployed targeted documentation updates.
-- Collaborated side-by-side with product, front end engineering leads, and UX designers to draft and test intuitive microcopy and conversational step-by-step guides embedded inside the admin console and desktop client.
+- Worked side by side with product, front-end engineering leads, and UX designers on in-product content for the admin console and desktop client, treating it as a sequence rather than a set of strings — deciding what each step resolves, what it defers, and how microcopy and step-by-step guidance carry a user from one decision to the next.
 
 **Technical Writer**
 
