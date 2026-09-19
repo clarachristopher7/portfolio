@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # PR-to-docs impact evaluator
 
-Answers one question: what shipped in the product that the docs have not caught up with. It runs as a scheduled CI job and writes a Markdown report as an artifact. It files nothing and changes nothing: a person reads the report and decides.
+A scheduled CI job that compares what has shipped in the product against what the documentation covers, then writes a Markdown report listing the pages that look out of date. The report is saved as a build artifact. The job does not open tickets or edit any pages. Someone reads the report and decides what to do with it.
 
 <figure className="docs-diagram">
   <svg

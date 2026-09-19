@@ -4,9 +4,9 @@ sidebar_position: 6
 
 # Automations
 
-Projects where I used AI-assisted analysis and tooling to keep docs current and robust.
+Two projects that use AI-assisted analysis to keep documentation in step with the product.
 
-- **[PR-to-docs impact evaluator](./docs-engineering/pr-evaluator-case-study.mdx):** queries the GitLab API during CI/CD cycles to cross-reference engineering changes against existing documentation, flagging drift before it reaches customers rather than after.
-- **[Staleness auditor](./docs-engineering/staleness-auditor-case-study.mdx):** cross-references the docs site against new console UI versions and generates a prioritized maintenance backlog, so effort goes to the highest-impact gaps first.
+- **[PR-to-docs impact evaluator](./docs-engineering/pr-evaluator-case-study.mdx):** a scheduled CI job that compares recent merges against the documentation and reports which pages look out of date.
+- **[Staleness auditor](./docs-engineering/staleness-auditor-case-study.mdx):** sweeps the whole docs site against the current console UI and returns a maintenance backlog ordered by drift and impact.
 
-Both treat documentation as infrastructure: the goal is a system that catches drift on its own, not a doc set that was correct once.
+Neither one edits a page or files a ticket. Both produce a list for someone to work through.
