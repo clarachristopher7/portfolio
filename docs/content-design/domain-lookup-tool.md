@@ -21,7 +21,7 @@ What we had for this was documentation: architecture diagrams showing how Intern
 
 ## The constraint
 
-[What the tool could report on, and what it could not. Whether the stages it covers were set by what the backend could expose, and what that meant for how the scope had to be described.]
+The scope note carries most of the weight. The tool accounts for threat protections, category, application and domain blocking, and exception rules, and it does not account for Geo Blocking or Risk-based URL Blocking. An admin who assumed it covered everything would read a clean result as proof that nothing in the policy was responsible, and go looking in the wrong place. Stating the limit in the panel keeps that correction next to the result rather than in a document nobody opens mid-incident.
 
 ## What I tried
 
@@ -32,8 +32,6 @@ What we had for this was documentation: architecture diagrams showing how Intern
 A Domain Lookup Tool inside the Internet Threat Protection policy. The admin enters a domain and gets the verdict that their policy produces for it, along with the categorization behind that verdict, without leaving the policy they are troubleshooting.
 
 ![The Lookup Domain panel: a scope note, a domain field with its explanation, and a submit action.](/img/content-design/domain-lookup-tool.png)
-
-The scope note carries most of the weight. The tool accounts for threat protections, category, application and domain blocking, and exception rules, and it does not account for Geo Blocking or Risk-based URL Blocking. An admin who assumed it covered everything would read a clean result as proof that nothing in the policy was responsible, and go looking in the wrong place. Stating the limit in the panel keeps that correction next to the result rather than in a document nobody opens mid-incident.
 
 [Add the result state. The verdict is where this sample makes its case, and the empty form does not show it.]
 
