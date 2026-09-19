@@ -7,9 +7,13 @@ sidebar_position: 1
 
 **Surface:** A user's device must have a sufficient security posture in order for the user to access secured resources. Admins configure a device's Trust Level by applying individual Trust Factors. If the user's device doesn't satisfy the Trust Factor, the user can be denied access, their trust level can lower, or it can have no effect, all depending on what the admin configures.
 
-## The problem
+## Before
+
+The card opened with the Trust Effect meter, which reports what happens to a device that does not satisfy the factor. Under it came the country selector and its Allowed/Blocked toggle, the list of selected countries, and a setting for what to do when a device's location cannot be determined.
 
 ![The factor before the revision: the Trust Effect meter sits above the country selector and its options.](/img/content-design/device-geolocation-before.png)
+
+## The problem
 
 The field label read *"Select the countries where devices with this Trust Factor are:"*. It only makes sense if you read the Allowed/Blocked toggle on the far right as the end of the sentence. It also describes how the system stores the setting rather than what the admin is doing.
 
@@ -25,7 +29,7 @@ The Trust Effect meter sat at the top of the card. It shows what happens when th
 
 [What you ruled out. Whether you tried rewriting the meter description before asking to move it.]
 
-## What I shipped
+## After
 
 ![The factor after the revision: rewritten label, a line stating the rule, and the meter moved below the inputs.](/img/content-design/device-geolocation-after.png)
 
@@ -43,6 +47,6 @@ The new line uses the same phrasing as the meter description below it, *"If this
 
 Moving the meter below the inputs puts the card in the order the admin works through it: what is being checked, what counts as passing, and what happens if it fails.
 
-## What changed
+## The outcome
 
 The lead UI engineer applied the same reordering to every Trust Factor. The reason held anywhere a Trust Effect meter sat above the settings that determine it.

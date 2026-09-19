@@ -9,7 +9,7 @@ sidebar_position: 2
 
 **Surface:** AI visibility in the Cloud Secure Edge admin console, where admins view user prompt logs from AI applications.
 
-## The problem
+## Before
 
 Turning on prompt logging needed a second step in a different part of the console: a setting inside an Internet Threat Protection policy. Without it, logging ran but nothing appeared on screen.
 
@@ -20,6 +20,8 @@ The version in the console took the first route and covered the gap with an erro
 ![The Prompt Visibility screen as it shipped: the Log AI Prompts toggle is on, a warning below it says TLS decryption still has to be set up, and the panel underneath reads "No data yet".](/img/content-design/ai-prompt-before.png)
 
 Two messages carry the dependency. The warning reads *"Before captured prompts can be shown, you must finish TLS decryption set up below. Otherwise we will log your ai prompts it's just they won't show below."* Under it, the empty panel repeats the same thing: *"Prompts can only be captured from devices that are subject to TLS decryption on their ITP policies."*
+
+## The problem
 
 The admin had followed the screen, and the system was working as built. The messages were reporting that the feature needed a second setting before it would show anything, and two messages is a lot of text to explain one setting that could have been on the screen instead.
 
@@ -33,7 +35,7 @@ The larger problem was what happened if the admin dismissed them. The toggle sta
 
 [Whether you proposed rewriting the two messages first, and what made the embedded setting the better answer. Also worth recording: how the case for configuring first was made, and what evidence moved it.]
 
-## What I shipped
+## After
 
 Both messages pointed at a policy screen elsewhere and asked the admin to finish the job there. That meant leaving the task, finding an object they might not know was related, and knowing which setting mattered.
 
@@ -43,10 +45,10 @@ It also settles the question of when the feature should become usable. Keeping s
 
 ![Proposed screen: the TLS decryption setting sits above the toggle, listing each Internet Threat Protection policy with its device count and a switch to decrypt TLS, followed by the Log AI prompts toggle and a line reading "Logging 38 devices across 1 policy."](/img/content-design/ai-prompt-after.png)
 
-The setting that the warning pointed at moves above the toggle, listing each Internet Threat Protection policy with its device count, so the admin turns decryption on for the policies that should report prompt activity and then turns logging on. The toggle description then says where prompts come from, and a line underneath reports what is actually being logged, which is the confirmation the empty panel could never give.
+This screen was not built. In the version we proposed, the setting that the warning pointed at moves above the toggle, listing each Internet Threat Protection policy with its device count, so the admin turns decryption on for the policies that should report prompt activity and then turns logging on. The toggle description then says where prompts come from, and a line underneath reports what is actually being logged, which is the confirmation the empty panel could never give.
 
 [What an admin sees who already has that policy configured.]
 
-## What changed
+## The outcome
 
 [Whether admins reached populated logs without raising a ticket, whether "logging is on but empty" reports dropped, or whether the same approach was used for other features with a prerequisite elsewhere.]
