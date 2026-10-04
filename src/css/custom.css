@@ -1487,3 +1487,7 @@ html[data-theme='dark'] .hub-tag { color: var(--ifm-color-primary); }
 .markdown .estate-table--decisions td { font-size: 13px; }
 .markdown .estate-floor-label { margin-top: 1.1rem; }
 .pagination-nav__link { background: var(--site-card); }
+
+/* Header and footer sit on white, framing the pink page. */
+.navbar { background-color: var(--site-card); }
+.footer { background-color: var(--site-card) !important; }
