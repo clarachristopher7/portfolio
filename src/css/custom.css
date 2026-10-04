@@ -1526,3 +1526,45 @@ b, strong, th { font-weight: 400; }
 .navbar__title, .navbar__link, .menu__link, .breadcrumbs__link,
 .pagination-nav__label, .footer__title, button { font-weight: 300; }
 .navbar__title { font-weight: 400; }
+
+/* "The situation" box: plain background for readers new to the field */
+.markdown dl.ctx {
+  display: grid;
+  gap: 1px;
+  max-width: 1180px;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  background: var(--ifm-toc-border-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.markdown dl.ctx > div {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--site-card);
+}
+.markdown dl.ctx dt {
+  margin: 0;
+  padding-top: 0.15rem;
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary-dark);
+}
+.markdown dl.ctx dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.markdown .shot-cap {
+  font-size: 13px;
+  color: var(--site-soft);
+  margin: -0.4rem 0 0;
+}
+@media (max-width: 767px) {
+  .markdown dl.ctx > div { grid-template-columns: 1fr; gap: 0.25rem; }
+}

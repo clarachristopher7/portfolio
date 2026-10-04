@@ -7,9 +7,19 @@ sidebar_position: 1
 
 <p className="hub-sub">Admins can block or allow devices based on the country they're in. The screen never said which way the rule worked.</p>
 
+<dl className="ctx">
+  <div><dt>The product</dt><dd>Cloud Secure Edge, a SonicWall service that controls which employees and devices can reach a company’s apps and websites.</dd></div>
+  <div><dt>Who uses it</dt><dd>IT admins who set the company’s security rules.</dd></div>
+  <div><dt>What they’re doing</dt><dd>Deciding which devices are safe enough to let in. One check is location: an admin can block or allow devices by country. A device that fails a check can be refused access.</dd></div>
+  <div><dt>My part</dt><dd>I rewrote the screen’s text and proposed a new layout.</dd></div>
+</dl>
+
+
 ## Before
 
 ![The factor before the revision: the Trust Effect meter sits above the country selector and its options.](/img/content-design/device-geolocation-before.png)
+
+<p className="shot-cap">The meter at the top shows what happens to a device that fails the check. Below it: a country picker, and a Blocked or Allowed switch on the far right.</p>
 
 ## The problem
 
