@@ -1019,3 +1019,46 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
   font-size: 0.9rem;
 }
 .markdown blockquote p:last-child { margin-bottom: 0; }
+
+.hub-card--static { min-height: 0; }
+.hub-card--static:hover { background: var(--ifm-background-color); }
+
+/* Step rows with fewer steps, for the automation pages */
+.markdown ol.ia-steps--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.markdown ol.ia-steps--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1200px) {
+  .markdown ol.ia-steps--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Status chips for the IA model */
+.status-chip {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+.status-chip--have { background: var(--site-chip-bg); color: var(--site-chip-ink); box-shadow: inset 0 0 0 1px var(--site-chip-border); }
+.status-chip--partial { background: color-mix(in srgb, var(--ia-old) 14%, transparent); color: var(--ifm-font-color-base); }
+.status-chip--missing { background: transparent; color: var(--ifm-font-color-base); box-shadow: inset 0 0 0 1px var(--site-muted); }
+.status-chip--na { background: var(--ifm-background-surface-color); color: var(--site-muted); box-shadow: inset 0 0 0 1px var(--ifm-toc-border-color); }
+
+.markdown .ia-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: none;
+  margin: 1rem 0 2.5rem;
+}
+.ia-chips span {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: var(--site-chip-bg);
+  color: var(--site-chip-ink);
+  box-shadow: inset 0 0 0 1px var(--site-chip-border);
+}

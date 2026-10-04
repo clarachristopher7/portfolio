@@ -52,8 +52,10 @@ export function HubGroup({label, columns = 3, children}) {
 
 export function HubCard({to, icon, tag, title, img, imgAlt = '', go, children}) {
   const src = useBaseUrl(img || '');
+  const Tag = to ? Link : 'div';
+  const linkProps = to ? {to} : {};
   return (
-    <Link className={`hub-card${img ? ' hub-card--img' : ''}`} to={to}>
+    <Tag className={`hub-card${img ? ' hub-card--img' : ''}${to ? '' : ' hub-card--static'}`} {...linkProps}>
       {img ? (
         <span className="hub-thumb"><img src={src} alt={imgAlt} loading="lazy" /></span>
       ) : null}
@@ -64,6 +66,6 @@ export function HubCard({to, icon, tag, title, img, imgAlt = '', go, children}) 
       <h3>{title}</h3>
       {children && <p>{children}</p>}
       {go && <span className="go">{go} <Arrow /></span>}
-    </Link>
+    </Tag>
   );
 }
