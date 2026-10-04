@@ -13,7 +13,7 @@ The only explanation was a diagram of how a DNS request is resolved.
 
 <figure className="docs-diagram">
   <svg
-    viewBox="0 0 1000 430"
+    viewBox="0 0 1000 272"
     role="img"
     aria-label="DNS resolution under an Internet Threat Protection policy. A request from the DNS proxy is sorted into local or internet domain. A local domain goes to the default DNS resolver. An internet domain is checked against whether the Service Tunnel is on: if not, it goes to the SWG agent. If it is, a private domain goes to the Service Tunnel, and a public domain is checked against whether it is included on the tunnel spec, then whether it is excluded, routing to the Service Tunnel, the default DNS resolver or the SWG agent."
     style={{maxWidth: '100%', height: 'auto'}}
@@ -25,61 +25,61 @@ The only explanation was a diagram of how a DNS request is resolved.
     </defs>
 
     <g fill="none" stroke="currentColor" strokeOpacity="0.32" strokeWidth="1.4" markerEnd="url(#dlt-a)">
-      <path d="M112 217 H132 V63 H150" />
-      <path d="M112 217 H150" markerEnd="none" />
-      <path d="M132 217 H150" />
-      <path d="M284 217 H322" />
-      <path d="M284 63 H884" />
-      <path d="M400 235 V389 H884" />
-      <path d="M476 217 H496 V144 H514" />
-      <path d="M496 217 V299 H514" />
-      <path d="M648 144 H686" />
-      <path d="M648 299 H884" />
-      <path d="M788 162 V198" />
-      <path d="M858 144 H872 V299 H884" />
-      <path d="M858 218 H866 V63 H884" />
-      <path d="M858 218 H878 V389 H884" />
+      <path d="M112 138 H132 V30 H150" />
+      <path d="M112 138 H150" markerEnd="none" />
+      <path d="M132 138 H150" />
+      <path d="M284 138 H322" />
+      <path d="M284 30 H884" />
+      <path d="M400 156 V246 H884" />
+      <path d="M476 138 H496 V84 H514" />
+      <path d="M496 138 V192 H514" />
+      <path d="M648 84 H686" />
+      <path d="M648 192 H884" />
+      <path d="M788 102 V118" />
+      <path d="M858 84 H872 V192 H884" />
+      <path d="M858 138 H866 V30 H884" />
+      <path d="M858 138 H878 V246 H884" />
     </g>
 
     <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="9" fontWeight="600"
        fill="currentColor" fillOpacity="0.55" textAnchor="middle">
-      <text x="486" y="205">YES</text>
-      <text x="412" y="256">NO</text>
-      <text x="800" y="184">NO</text>
-      <text x="876" y="258">YES</text>
-      <text x="856" y="104">YES</text>
-      <text x="892" y="350">NO</text>
+      <text x="486" y="128">YES</text>
+      <text x="414" y="204">NO</text>
+      <text x="802" y="114">NO</text>
+      <text x="884" y="170">YES</text>
+      <text x="852" y="64">YES</text>
+      <text x="892" y="226">NO</text>
     </g>
 
     <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="11.5" textAnchor="middle">
       <g fill="currentColor" fillOpacity="0.045" stroke="currentColor" strokeOpacity="0.2">
-        <rect x="8" y="195" width="104" height="44" rx="7" />
-        <rect x="150" y="45" width="134" height="36" rx="7" />
-        <rect x="150" y="199" width="134" height="36" rx="7" />
-        <rect x="322" y="199" width="154" height="36" rx="7" />
-        <rect x="514" y="126" width="134" height="36" rx="7" />
-        <rect x="514" y="281" width="134" height="36" rx="7" />
-        <rect x="686" y="126" width="172" height="36" rx="7" />
-        <rect x="686" y="200" width="172" height="36" rx="7" />
+        <rect x="8" y="116" width="104" height="44" rx="7" />
+        <rect x="150" y="12" width="134" height="36" rx="7" />
+        <rect x="150" y="120" width="134" height="36" rx="7" />
+        <rect x="322" y="120" width="154" height="36" rx="7" />
+        <rect x="514" y="66" width="134" height="36" rx="7" />
+        <rect x="514" y="174" width="134" height="36" rx="7" />
+        <rect x="686" y="66" width="172" height="36" rx="7" />
+        <rect x="686" y="120" width="172" height="36" rx="7" />
       </g>
       <g fill="currentColor" fillOpacity="0.085" stroke="currentColor" strokeOpacity="0.34">
-        <rect x="884" y="40" width="108" height="46" rx="7" />
-        <rect x="884" y="281" width="108" height="36" rx="7" />
-        <rect x="884" y="371" width="108" height="36" rx="7" />
+        <rect x="884" y="7" width="108" height="46" rx="7" />
+        <rect x="884" y="174" width="108" height="36" rx="7" />
+        <rect x="884" y="228" width="108" height="36" rx="7" />
       </g>
       <g fill="currentColor">
-        <text x="60" y="221">DNS proxy</text>
-        <text x="217" y="67">Local domain</text>
-        <text x="217" y="221">Internet domain</text>
-        <text x="399" y="221">Service Tunnel on?</text>
-        <text x="581" y="148">Public domain</text>
-        <text x="581" y="303">Private domain</text>
-        <text x="772" y="148">Included on tunnel spec?</text>
-        <text x="772" y="222">Excluded on tunnel spec?</text>
-        <text x="938" y="58">Default DNS</text>
-        <text x="938" y="74">resolver</text>
-        <text x="938" y="303">Service Tunnel</text>
-        <text x="938" y="393">SWG agent</text>
+        <text x="60" y="142">DNS proxy</text>
+        <text x="217" y="34">Local domain</text>
+        <text x="217" y="142">Internet domain</text>
+        <text x="399" y="142">Service Tunnel on?</text>
+        <text x="581" y="88">Public domain</text>
+        <text x="581" y="196">Private domain</text>
+        <text x="772" y="88">Included on tunnel spec?</text>
+        <text x="772" y="142">Excluded on tunnel spec?</text>
+        <text x="938" y="26">Default DNS</text>
+        <text x="938" y="42">resolver</text>
+        <text x="938" y="196">Service Tunnel</text>
+        <text x="938" y="250">SWG agent</text>
       </g>
     </g>
   </svg>

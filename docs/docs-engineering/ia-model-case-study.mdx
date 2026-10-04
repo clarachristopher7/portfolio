@@ -44,3 +44,46 @@ A cloud service and a hardware appliance need different docs. Each product type 
   <HubCard title={<span className="status-chip status-chip--missing">Missing</span>}>Nothing covers it.</HubCard>
   <HubCard title={<span className="status-chip status-chip--na">n/a</span>}>Out of scope for this product.</HubCard>
 </HubGroup>
+
+## How it comes together
+
+<div className="ia-browser ia-browser--lg estate">
+  <div className="ia-nav estate-tabs"><b>Estate map</b><span>Sections</span><span className="is-on">Journey</span><span>Decisions</span><em>Example data</em></div>
+  <div className="estate-body">
+    <div className="estate-table-wrap">
+      <table className="estate-table">
+        <thead>
+          <tr><th>Product <i className="ia-num">1</i></th><th>Evaluate</th><th>Activate</th><th>Deploy</th><th>Operate</th><th>Scale</th><th>Troubleshoot</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Cloud service</b></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--have">Have</span></td></tr>
+          <tr><td><b>Firewall appliance</b></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span> <i className="ia-num">3</i><small className="estate-ev">Evidence: nav file, no troubleshooting section</small></td></tr>
+          <tr><td><b>End-user app</b></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">n/a</span> <i className="ia-num">1</i></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
+          <tr><td><b>Partner console</b></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--partial">Partial</span> <i className="ia-num">2</i></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="estate-foot">
+      <div>
+        <p className="ia-home-label">Every product gets <i className="ia-num">4</i></p>
+        <p className="ia-chips estate-chips"><span>One search index</span><span>Version selector</span><span>Last-updated date</span><span>Old URLs kept</span><span>Lint on every merge</span></p>
+      </div>
+      <div>
+        <p className="ia-home-label">Open decisions <i className="ia-num">5</i></p>
+        <ul className="estate-decisions">
+          <li><b>Page metadata</b><span>Proposed · needs an owner</span></li>
+          <li><b>Translation</b><span>Proposed · blocks naming</span></li>
+          <li><b>Retiring old versions</b><span>Proposed · owner named</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ol className="ia-callouts ia-callouts--5">
+  <li><i className="ia-num">1</i><b>Product type</b><span>Decides which stages apply. The rest read n/a.</span></li>
+  <li><i className="ia-num">2</i><b>Status by rule</b><span>Have, Partial, Missing, from one definition.</span></li>
+  <li><i className="ia-num">3</i><b>Evidence</b><span>Every status names where it was read from.</span></li>
+  <li><i className="ia-num">4</i><b>A shared floor</b><span>The same basics for every product.</span></li>
+  <li><i className="ia-num">5</i><b>Decisions</b><span>Each open question shows where it stands.</span></li>
+</ol>
