@@ -3,26 +3,28 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
-# Reorganizing the Cloud Secure Edge docs
+# Cloud Secure Edge information architecture
 
-<p className="hub-sub">Cloud Secure Edge is a SonicWall security product. I reorganized its help site around what readers are trying to do. It's live, and every old link still works.</p>
+<p className="hub-sub">I restructured the Cloud Secure Edge documentation around the tasks readers come to complete. The new structure is live, and every existing link still works.</p>
 
 <dl className="ctx">
-  <div><dt>The product</dt><dd>The help site for Cloud Secure Edge, a SonicWall service that controls which employees and devices can reach a company’s apps and websites.</dd></div>
-  <div><dt>Who uses it</dt><dd>IT admins setting the product up for the first time, and admins fixing a problem.</dd></div>
-  <div><dt>What they’re doing</dt><dd>Looking for the right page. The menu was organized around the product’s internal parts, so readers had to know how the product is built to find a task.</dd></div>
-  <div><dt>My part</dt><dd>I planned the new structure and rewrote the menu and homepage.</dd></div>
+  <div><dt>The product</dt><dd>The documentation site for Cloud Secure Edge, a SonicWall security service that controls which employees and devices can reach company applications and websites.</dd></div>
+  <div><dt>Who uses it</dt><dd>Administrators evaluating, setting up, and running the product, and those diagnosing problems under time pressure.</dd></div>
+  <div><dt>What they’re doing</dt><dd>Finding the page for the job at hand. The navigation mirrored how the product is engineered, so readers needed to understand its internal components before they could find out how to use it.</dd></div>
+  <div><dt>My part</dt><dd>I designed the new structure, rewrote the navigation labels, and redesigned the documentation homepage.</dd></div>
 </dl>
 
 
 <div className="ia-brief">
-  <div><h4>Problem</h4><p>The help site's menu was organized by product part. Readers come looking to get something done.</p></div>
-  <div><h4>Constraint</h4><p>Only change the menu. Every page keeps its address, so no saved links break.</p></div>
+  <div><h4>Problem</h4><p>The navigation was organized by product component, while readers arrive with a task in mind.</p></div>
+  <div><h4>Constraint</h4><p>The change had to happen in the navigation alone. No page could move and no web address could change, so bookmarks, search results, and links from support articles kept working.</p></div>
   <div><h4>What I tried</h4><p>[An approach you considered and dropped.]</p></div>
-  <div><h4>The outcome</h4><p>Tasks are named for what you do, in the order you do them. [Add a reader signal.]</p></div>
+  <div><h4>The outcome</h4><p>Tasks now sit under names that describe the work, in the order an administrator performs it. [Add a reader signal.]</p></div>
 </div>
 
 ## The homepage starts from goals
+
+The previous homepage listed product areas. The new one opens on what an administrator wants to accomplish.
 
 <div className="ia-shot">
   <p className="ia-shot-label">Before</p>
@@ -39,7 +41,7 @@ hide_table_of_contents: true
       </div>
     </div>
   </div>
-  <p className="ia-shot-note">Nine product areas, and no menu.</p>
+  <p className="ia-shot-note">Nine product areas, and no navigation menu.</p>
 </div>
 
 <div className="ia-shot">
@@ -75,15 +77,17 @@ hide_table_of_contents: true
 </div>
 
 <ol className="ia-callouts">
-  <li><i className="ia-num">1</i><b>A menu on the homepage</b><span>With a search box for the menu. Before, there was no menu at all.</span></li>
-  <li><i className="ia-num">2</i><b>Goals, not product areas</b><span>Cards are grouped by what an admin wants to do.</span></li>
-  <li><i className="ia-num">3</i><b>Plan on every goal</b><span>Each card shows which product plan it needs.</span></li>
-  <li><i className="ia-num">4</i><b>Troubleshooting up front</b><span>One click from the homepage and the top bar.</span></li>
+  <li><i className="ia-num">1</i><b>Navigation from the first page</b><span>The full menu, with a filter, is available on the homepage. Previously the homepage had no menu at all.</span></li>
+  <li><i className="ia-num">2</i><b>Organized by goal</b><span>Cards are grouped by what an administrator is trying to achieve.</span></li>
+  <li><i className="ia-num">3</i><b>License on every goal</b><span>Each card names the license it requires, Secure Private Access (SPA) or Secure Internet Access (SIA), so readers can tell at once whether it applies to them.</span></li>
+  <li><i className="ia-num">4</i><b>Troubleshooting up front</b><span>Reachable directly from the top navigation and the homepage.</span></li>
 </ol>
 
-## The menu follows the job
+## The navigation follows the order of adoption
 
-<div className="journey" role="img" aria-label="The new menu sections in order, grouped into four phases. Start: Get started, Learn. Set up: Activate, Deploy (new), Set up users and devices (new). Protect: Set access rules, Secure resources. Run: Monitor and maintain (new), Troubleshoot (new).">
+The menu now runs in the sequence an administrator adopts the product: from first evaluation, through deployment, to everyday operation and recovery.
+
+<div className="journey" role="img" aria-label="The new navigation sections in order, grouped into four phases. Start: Get started, Learn. Set up: Activate, Deploy (new), Set up users and devices (new). Protect: Define access policies, Secure resources. Run: Monitor and maintain (new), Troubleshoot (new).">
   <div className="journey-phases">
     <span style={{gridColumn: '1 / span 2'}}>Start</span>
     <span style={{gridColumn: '3 / span 3'}}>Set up</span>
@@ -96,37 +100,41 @@ hide_table_of_contents: true
     <li><i>3</i><b>Activate</b></li>
     <li className="is-new"><i>4</i><b>Deploy</b><small>New</small></li>
     <li className="is-new"><i>5</i><b>Set up users and devices</b><small>New</small></li>
-    <li><i>6</i><b>Set access rules</b></li>
+    <li><i>6</i><b>Define access policies</b></li>
     <li><i>7</i><b>Secure resources</b></li>
     <li className="is-new"><i>8</i><b>Monitor and maintain</b><small>New</small></li>
     <li className="is-new"><i>9</i><b>Troubleshoot</b><small>New</small></li>
   </ol>
 </div>
 
-## Tasks are named for what you do
+## Tasks are named for the work
+
+Three common tasks, and the path a reader followed to reach each one, before and after.
 
 <div className="ia-paths">
   <div className="ia-path">
     <p className="ia-q">Install a Connector with Docker</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Connector</li><li>Install</li><li>Docker Container</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Deploy</li><li>Install a Connector</li><li>Docker Container</li></ol></div>
-    <p className="ia-note">An install guide was filed under Learn.</p>
+    <p className="ia-note">An installation guide sat under Learn, a section meant for concepts.</p>
   </div>
   <div className="ia-path">
-    <p className="ia-q">Fix the desktop app</p>
+    <p className="ia-q">Troubleshoot the desktop app</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Desktop App</li><li>Troubleshooting the Desktop App</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Troubleshooting</li><li>Find and Fix a Problem</li><li>Desktop App</li></ol></div>
-    <p className="ia-note">A broken app sent you to Learn.</p>
+    <p className="ia-note">Fixing the app meant browsing through a description of the product’s components.</p>
   </div>
   <div className="ia-path">
-    <p className="ia-q">Connect a sign-in provider (Okta)</p>
+    <p className="ia-q">Connect Okta as the sign-in provider</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Manage and Monitor Your Org</li><li>Manage Users and Devices</li><li>Okta</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Set Up Users and Devices</li><li>Set Up an Identity Provider</li><li>Okta</li></ol></div>
-    <p className="ia-note">First-time setup was filed under Monitor.</p>
+    <p className="ia-note">First-time setup sat in a section named for ongoing monitoring.</p>
   </div>
 </div>
 
-## One place to fix a problem
+## One place to troubleshoot
+
+Troubleshooting content was spread across seven locations in three sections. It now lives in one, linked from the homepage.
 
 <div className="ia-compare">
   <div className="ia-mini">

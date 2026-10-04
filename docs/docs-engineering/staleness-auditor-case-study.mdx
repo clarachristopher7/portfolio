@@ -3,24 +3,23 @@ sidebar_position: 2
 hide_table_of_contents: true
 ---
 
-# Outdated page finder
+# Documentation staleness auditor
 
-<p className="hub-sub">Checks every help page against the latest version of the product and ranks what to fix first.</p>
+<p className="hub-sub">Cross-references the documentation against each new version of the admin console and produces a prioritized maintenance backlog, so effort goes to the highest-impact gaps first.</p>
 
 <dl className="ctx">
-  <div><dt>The situation</dt><dd>When a new version of the product’s admin screens ships, many help pages can go out of date at once. Checking hundreds of pages by hand doesn’t scale.</dd></div>
-  <div><dt>Who uses it</dt><dd>The docs team.</dd></div>
-  <div><dt>What it does</dt><dd>Compares every help page with the new version, then ranks the pages by how outdated they are and how often people read them, so the most important fixes come first.</dd></div>
+  <div><dt>The situation</dt><dd>The admin console ships new interface versions regularly. Each release can invalidate field labels, screenshots, and procedures across a large documentation set, faster than periodic manual review can detect.</dd></div>
+  <div><dt>Who uses it</dt><dd>The documentation team.</dd></div>
+  <div><dt>What it does</dt><dd>Compares every page with the current console, identifies where pages no longer match the interface, and orders the findings into a backlog ranked by impact.</dd></div>
   <div><dt>My part</dt><dd>I designed and built it.</dd></div>
 </dl>
-
 
 ## How it works
 
 <ol className="ia-steps ia-steps--3" aria-label="How the auditor works">
-  <li>New product version ships</li>
-  <li>Check every page against it</li>
-  <li className="is-new">Rank by how outdated and how visited<small>Result</small></li>
+  <li>A new console version ships</li>
+  <li>Every page is cross-referenced against it</li>
+  <li className="is-new">A backlog ranked by impact<small>Output</small></li>
 </ol>
 
 ## The outcome

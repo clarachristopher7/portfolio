@@ -7,6 +7,6 @@ import WorkCards from '@site/src/components/WorkCards';
 
 # Content design
 
-<p className="hub-sub">The words on a security product's screens, shown before and after.</p>
+<p className="hub-sub">Interface language and setup flows from a cloud security admin console, shown before and after.</p>
 
 <WorkCards set="contentDesign" />

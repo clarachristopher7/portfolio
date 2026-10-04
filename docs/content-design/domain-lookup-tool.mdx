@@ -3,27 +3,26 @@ hide_table_of_contents: true
 sidebar_position: 3
 ---
 
-# Website lookup tool
+# Domain Lookup Tool
 
-<p className="hub-sub">When a security policy blocked a website unexpectedly, admins couldn't see which rule did it.</p>
+<p className="hub-sub">When an Internet Threat Protection policy blocked or allowed a website unexpectedly, admins had no direct way to see which part of the policy was responsible.</p>
 
 <dl className="ctx">
-  <div><dt>The product</dt><dd>Internet Threat Protection, part of Cloud Secure Edge. It blocks harmful or unwanted websites on a company’s devices.</dd></div>
-  <div><dt>Who uses it</dt><dd>IT admins, often while an employee waits because a website they need is blocked.</dd></div>
-  <div><dt>What they’re doing</dt><dd>Working out why a website was blocked or allowed. Several layers of rules decide: threat protection, blocked categories like gambling, block lists, and exceptions.</dd></div>
-  <div><dt>My part</dt><dd>[Add: your part.]</dd></div>
+  <div><dt>The product</dt><dd>Internet Threat Protection, the part of Cloud Secure Edge that filters web traffic on company devices, blocking malicious sites and the categories an organization chooses to restrict.</dd></div>
+  <div><dt>Who uses it</dt><dd>IT and security administrators, often mid-incident, with an employee waiting on a blocked site.</dd></div>
+  <div><dt>What they’re doing</dt><dd>Diagnosing a policy decision. Every website request passes through several layers of rules: protection against known threats, blocked categories such as gambling, blocked applications and sites, and finally any exceptions.</dd></div>
+  <div><dt>My part</dt><dd>I suggested building a domain lookup tool into the policy itself.</dd></div>
 </dl>
-
 
 ## Before
 
-The only explanation was this diagram of how the product decides where a website request goes.
+The only explanation available was this diagram, from the documentation, of how the service routes a device’s request to look up a website.
 
 <figure className="docs-diagram">
   <svg
     viewBox="0 0 1000 272"
     role="img"
-    aria-label="How the product decides where a website request goes. A request is either for a local or an internet website. Local websites use the normal internet lookup. For internet websites, if the private tunnel is off, the request goes to the web gateway. If it is on, private websites go through the private tunnel, and public websites are checked against what is sent through or kept out of the tunnel, ending at the private tunnel, the normal internet lookup, or the web gateway."
+    aria-label="How a DNS request is routed under an Internet Threat Protection policy. The DNS proxy sorts the request into a local or internet domain. Local domains go to the default DNS resolver. For internet domains, if the Service Tunnel is off the request goes to the web gateway. If it is on, private domains go through the Service Tunnel, and public domains are checked against the tunnel include and exclude lists, ending at the Service Tunnel, the default DNS resolver, or the web gateway."
     style={{maxWidth: '100%', height: 'auto'}}
   >
     <defs>
@@ -76,35 +75,35 @@ The only explanation was this diagram of how the product decides where a website
         <rect x="884" y="228" width="108" height="36" rx="7" />
       </g>
       <g fill="currentColor">
-        <text x="60" y="142">Website request</text>
-        <text x="217" y="34">Local website</text>
-        <text x="217" y="142">Internet website</text>
-        <text x="399" y="142">Private tunnel on?</text>
-        <text x="581" y="88">Public website</text>
-        <text x="581" y="196">Private website</text>
-        <text x="772" y="88">Sent through tunnel?</text>
-        <text x="772" y="142">Kept out of tunnel?</text>
-        <text x="938" y="26">Normal internet</text>
-        <text x="938" y="42">lookup</text>
-        <text x="938" y="196">Private tunnel</text>
+        <text x="60" y="142">Lookup request</text>
+        <text x="217" y="34">Local domain</text>
+        <text x="217" y="142">Internet domain</text>
+        <text x="399" y="142">Service Tunnel on?</text>
+        <text x="581" y="88">Public domain</text>
+        <text x="581" y="196">Private domain</text>
+        <text x="772" y="88">On the include list?</text>
+        <text x="772" y="142">On the exclude list?</text>
+        <text x="938" y="26">Default</text>
+        <text x="938" y="42">resolver</text>
+        <text x="938" y="196">Service Tunnel</text>
         <text x="938" y="250">Web gateway</text>
       </g>
     </g>
   </svg>
   <figcaption>
 
-  Four decisions, three possible outcomes. Too much to trace by hand.
+  Four decision points and three possible destinations. Accurate, but it describes the system in general, not any one admin’s configuration.
 
   </figcaption>
 </figure>
 
 ## The problem
 
-When something breaks, an admin needs to know which of their own rules blocked one website. A general diagram can't tell them.
+A diagnosis depends on the admin’s own configuration: which traffic their organization routes through its private connection, which sites they have listed as exceptions, and which rules they have set, all applied to one specific website. A general diagram cannot answer that, and tracing it by hand is slow and error-prone while a user waits.
 
 ## The constraint
 
-The tool can't check two kinds of blocking, by country and by risk score, so the panel says so up front.
+The tool does not evaluate blocking by country or by risk score. A clean result could be misread as proof that the policy was not responsible, so the panel states that limit before the admin runs a lookup.
 
 ## What I tried
 
@@ -114,7 +113,7 @@ The tool can't check two kinds of blocking, by country and by risk score, so the
 
 ![The Lookup Domain panel: a scope note, a domain field with its explanation, and a submit action.](/img/content-design/domain-lookup-tool.png)
 
-Type in a website, and the panel shows whether your policy allows or blocks it, and why.
+An admin enters a website address inside the policy and sees whether that policy allows or blocks it, and the category behind the decision, without leaving the screen they are troubleshooting.
 
 ## The outcome
 

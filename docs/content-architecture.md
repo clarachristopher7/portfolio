@@ -7,6 +7,6 @@ import WorkCards from '@site/src/components/WorkCards';
 
 # Content architecture
 
-<p className="hub-sub">How documentation is organized, for one product and across many.</p>
+<p className="hub-sub">How documentation is structured and navigated, for a single product and across a portfolio.</p>
 
 <WorkCards set="architecture" />

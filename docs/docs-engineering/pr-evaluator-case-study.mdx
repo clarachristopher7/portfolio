@@ -5,34 +5,33 @@ hide_table_of_contents: true
 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
-# Docs change checker
+# Documentation impact evaluator
 
-<p className="hub-sub">An automatic daily check that lists the help pages a recent product change made out of date. It only reports. A person decides what to fix.</p>
+<p className="hub-sub">A scheduled job that compares recent changes to the product’s code with the documentation, and reports which pages those changes have likely made inaccurate. It is advisory by design: it flags pages, and a writer decides what to revise.</p>
 
 <dl className="ctx">
-  <div><dt>The situation</dt><dd>Engineers change the product every week. A help page goes out of date the moment a change it describes ships, and nobody tells the docs team.</dd></div>
-  <div><dt>Who uses it</dt><dd>The docs team.</dd></div>
-  <div><dt>What it does</dt><dd>Every day it reads what engineers changed, checks which changes customers can actually see, and uses AI to compare each one against every help page. Then it lists the pages that look out of date.</dd></div>
+  <div><dt>The situation</dt><dd>Engineers change the product continuously. When a change alters behavior that a help page describes, the page becomes inaccurate, and nothing in the release process alerts the documentation team.</dd></div>
+  <div><dt>Who uses it</dt><dd>The documentation team.</dd></div>
+  <div><dt>What it does</dt><dd>Each run reads the most recent completed code changes, confirms which of them customers can actually reach, and uses Claude to assess each change against an index of every documentation page. The output is a dated report of pages likely to need revision.</dd></div>
   <div><dt>My part</dt><dd>I designed and built it.</dd></div>
 </dl>
-
 
 ## How it works
 
 <ol className="ia-steps ia-steps--4" aria-label="How the evaluator works">
-  <li>Read recent product changes</li>
-  <li className="is-new">Check what customers can see<small>Key step</small></li>
-  <li>Compare with every help page</li>
-  <li>Write a report</li>
+  <li>Read recent code changes</li>
+  <li className="is-new">Confirm what is released<small>Key step</small></li>
+  <li>Assess each change against the documentation</li>
+  <li>Publish a dated report</li>
 </ol>
 
 ## What made it work
 
 <HubGroup columns={2}>
-  <HubCard icon="git" tag="Lesson" title="Watch the right place">
-    An early version watched a testing copy of the code and missed most changes. New work shows up somewhere else first.
+  <HubCard icon="git" tag="Lesson" title="Watch where new work appears first">
+    An early version watched the copy of the code reserved for testing and caught only one of the nine changes in a release. New features reach the main development code first, so that is where the evaluator now looks.
   </HubCard>
-  <HubCard icon="search" tag="Lesson" title="Finished isn't released">
-    It checks whether each change has actually reached customers, so the docs match what they see.
+  <HubCard icon="search" tag="Lesson" title="Finished code may not be released yet">
+    A change can be complete well before customers see it. The evaluator searches for distinctive text from each change in the pre-release version of the product, so the documentation tracks what customers can actually use.
   </HubCard>
 </HubGroup>
