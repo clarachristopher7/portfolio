@@ -5,24 +5,79 @@ hide_table_of_contents: true
 
 # CSE documentation IA rework
 
-I regrouped the Cloud Secure Edge docs sidebar around what readers are trying to do, instead of how the product is built. It's live, and no URL changed.
-
-<div className="ia-stats">
-  <div className="ia-stat"><b>26 → 34</b><span>Top-level groups</span></div>
-  <div className="ia-stat"><b>7 → 10</b><span>Bands</span></div>
-  <div className="ia-stat"><b>278 → 319</b><span>Sidebar entries</span></div>
-  <div className="ia-stat"><b>46</b><span>Pages added to the sidebar</span></div>
-  <div className="ia-stat ia-stat--hi"><b>0</b><span>URLs changed</span></div>
-</div>
+<p className="hub-sub">I regrouped the Cloud Secure Edge docs so a reader finds a task by its name, in the order they would do it. The new structure is live, and every existing link still works.</p>
 
 <div className="ia-brief">
-  <div><h4>Problem</h4><p>Groups were named after product parts. Readers arrive with a task.</p></div>
+  <div><h4>Problem</h4><p>The sidebar was named after product parts. Readers arrive with a task.</p></div>
   <div><h4>Constraint</h4><p>Change the navigation only. No page moves, no broken bookmarks.</p></div>
   <div><h4>What I tried</h4><p>[An approach you considered and dropped.]</p></div>
-  <div><h4>The outcome</h4><p>Bands now follow the order a customer works in. [Add a reader signal.]</p></div>
+  <div><h4>The outcome</h4><p>Tasks are named for what you do and sit in the order you do them. [Add a reader signal.]</p></div>
 </div>
 
-## The new order
+## Tasks are named for what you're doing
+
+Before, you had to know which product part a task belonged to. Now the path says what you're doing.
+
+<div className="ia-paths">
+  <div className="ia-path">
+    <p className="ia-q">Install a Connector with Docker</p>
+    <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Connector</li><li>Install</li><li>Docker Container</li></ol></div>
+    <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Deploy</li><li>Install a Connector</li><li>Docker Container</li></ol></div>
+    <p className="ia-note">An install guide was filed under Learn.</p>
+  </div>
+  <div className="ia-path">
+    <p className="ia-q">Fix the desktop app</p>
+    <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Desktop App</li><li>Troubleshooting the Desktop App</li></ol></div>
+    <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Troubleshooting</li><li>Find and Fix a Problem</li><li>Desktop App</li></ol></div>
+    <p className="ia-note">A broken app sent you to Learn.</p>
+  </div>
+  <div className="ia-path">
+    <p className="ia-q">Connect Okta</p>
+    <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Manage and Monitor Your Org</li><li>Manage Users and Devices</li><li>Okta</li></ol></div>
+    <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Set Up Users and Devices</li><li>Set Up an Identity Provider</li><li>Okta</li></ol></div>
+    <p className="ia-note">First-time setup lived under Monitor.</p>
+  </div>
+</div>
+
+## One place to fix a problem
+
+Troubleshooting pages were spread across seven places in three bands. Now they share one, and the docs homepage links to it directly.
+
+<div className="ia-compare">
+  <div className="ia-mini">
+    <p className="ia-mini-head">Before</p>
+    <p className="ia-band">Learn Cloud Secure Edge</p>
+    <p className="ia-item">Platform Components</p>
+    <p className="ia-sub ia-hit--old">Desktop App › Troubleshooting</p>
+    <p className="ia-sub ia-hit--old">Mobile App › Troubleshooting</p>
+    <p className="ia-sub ia-hit--old">Access Tier › Manage › Troubleshooting</p>
+    <p className="ia-sub ia-hit--old">Connector › Manage › Troubleshooting</p>
+    <p className="ia-band">Secure Resources</p>
+    <p className="ia-item">Networks</p>
+    <p className="ia-sub ia-hit--old">Service Tunnel Troubleshooting</p>
+    <p className="ia-item">Internet Traffic</p>
+    <p className="ia-sub ia-hit--old">ITP Troubleshooting</p>
+    <p className="ia-band">Manage and Monitor Your Org</p>
+    <p className="ia-item">Manage Users and Devices</p>
+    <p className="ia-sub ia-hit--old">Remote Diagnostics</p>
+  </div>
+  <div className="ia-mini">
+    <p className="ia-mini-head">After</p>
+    <p className="ia-band">Troubleshooting</p>
+    <p className="ia-item">Find and Fix a Problem</p>
+    <p className="ia-sub ia-hit--new">Desktop App</p>
+    <p className="ia-sub ia-hit--new">Mobile App</p>
+    <p className="ia-sub ia-hit--new">Access Tier</p>
+    <p className="ia-sub ia-hit--new">Connector (OVA)</p>
+    <p className="ia-sub ia-hit--new">Service Tunnels</p>
+    <p className="ia-sub ia-hit--new">Internet Traffic (ITP)</p>
+    <p className="ia-sub ia-hit--new">Remote Diagnostics</p>
+  </div>
+</div>
+
+## Bands follow the order of the job
+
+Read top to bottom, the sidebar now walks a customer from first look to first fix.
 
 <ol className="ia-steps" aria-label="New sidebar bands, top to bottom">
   <li>Get started</li>
@@ -36,91 +91,68 @@ I regrouped the Cloud Secure Edge docs sidebar around what readers are trying to
   <li className="is-new">Troubleshoot<small>New</small></li>
 </ol>
 
-## Where every page went
+## Learn only teaches
 
-<figure className="docs-diagram">
-  <svg
-    viewBox="0 0 760 614"
-    role="img"
-    aria-label="Flow chart of every sidebar entry from the 7 old bands to the 10 new bands. Most of the old Learn band splits into the new Deploy, Monitor and Maintain, and Troubleshooting bands. Most of Manage and Monitor Your Org moves into the new Set Up Users and Devices band. 46 pages that were not in the old sidebar are added, mostly to Get Started."
-    style={{maxWidth: '100%', height: 'auto'}}
-  >
-    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)" fontSize="12.5">
-      <text x="208" y="22" textAnchor="end" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">OLD SIDEBAR</text>
-      <text x="548" y="22" fontSize="11" fontWeight="600" fill="currentColor" fillOpacity="0.55">NEW SIDEBAR</text>
-      <path d="M208,55.0 C378.0,55.0 378.0,44.0 548,44.0 L548,53.1 C378.0,53.1 378.0,64.1 208,64.1 Z" fill="currentColor" fillOpacity="0.13"><title>Get Started → Get Started: 7 pages</title></path>
-      <path d="M208,75.1 C378.0,75.1 378.0,53.1 548,53.1 L548,63.5 C378.0,63.5 378.0,85.5 208,85.5 Z" fill="currentColor" fillOpacity="0.13"><title>Learn → Get Started: 8 pages</title></path>
-      <path d="M208,85.5 C378.0,85.5 378.0,126.5 548,126.5 L548,152.5 C378.0,152.5 378.0,111.5 208,111.5 Z" fill="currentColor" fillOpacity="0.13"><title>Learn → Learn: 20 pages</title></path>
-      <path d="M208,111.5 C378.0,111.5 378.0,191.4 548,191.4 L548,218.7 C378.0,218.7 378.0,138.8 208,138.8 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Learn → Deploy: 21 pages</title></path>
-      <path d="M208,138.8 C378.0,138.8 378.0,349.2 548,349.2 L548,350.5 C378.0,350.5 378.0,140.1 208,140.1 Z" fill="currentColor" fillOpacity="0.13"><title>Learn → Secure Your Resources: 1 page</title></path>
-      <path d="M208,140.1 C378.0,140.1 378.0,444.7 548,444.7 L548,457.7 C378.0,457.7 378.0,153.1 208,153.1 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Learn → Monitor and Maintain: 10 pages</title></path>
-      <path d="M208,153.1 C378.0,153.1 378.0,488.2 548,488.2 L548,493.4 C378.0,493.4 378.0,158.3 208,158.3 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Learn → Troubleshooting: 4 pages</title></path>
-      <path d="M208,169.3 C378.0,169.3 378.0,163.5 548,163.5 L548,167.4 C378.0,167.4 378.0,173.2 208,173.2 Z" fill="currentColor" fillOpacity="0.13"><title>Activate → Activate: 3 pages</title></path>
-      <path d="M208,184.2 C378.0,184.2 378.0,218.7 548,218.7 L548,220.0 C378.0,220.0 378.0,185.5 208,185.5 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Secure Resources → Deploy: 1 page</title></path>
-      <path d="M208,185.5 C378.0,185.5 378.0,350.5 548,350.5 L548,432.4 C378.0,432.4 378.0,267.4 208,267.4 Z" fill="currentColor" fillOpacity="0.13"><title>Secure Resources → Secure Your Resources: 63 pages</title></path>
-      <path d="M208,267.4 C378.0,267.4 378.0,493.4 548,493.4 L548,507.7 C378.0,507.7 378.0,281.7 208,281.7 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Secure Resources → Troubleshooting: 11 pages</title></path>
-      <path d="M208,292.7 C378.0,292.7 378.0,303.1 548,303.1 L548,338.2 C378.0,338.2 378.0,327.8 208,327.8 Z" fill="currentColor" fillOpacity="0.13"><title>Manage Access Policies → Manage Access Policies: 27 pages</title></path>
-      <path d="M208,327.8 C378.0,327.8 378.0,432.4 548,432.4 L548,433.7 C378.0,433.7 378.0,329.1 208,329.1 Z" fill="currentColor" fillOpacity="0.13"><title>Manage Access Policies → Secure Your Resources: 1 page</title></path>
-      <path d="M208,340.1 C378.0,340.1 378.0,220.0 548,220.0 L548,233.0 C378.0,233.0 378.0,353.1 208,353.1 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Manage and Monitor Your Org → Deploy: 10 pages</title></path>
-      <path d="M208,353.1 C378.0,353.1 378.0,244.0 548,244.0 L548,286.9 C378.0,286.9 378.0,396.0 208,396.0 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Manage and Monitor Your Org → Set Up Users and Devices: 33 pages</title></path>
-      <path d="M208,396.0 C378.0,396.0 378.0,457.7 548,457.7 L548,475.9 C378.0,475.9 378.0,414.2 208,414.2 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Manage and Monitor Your Org → Monitor and Maintain: 14 pages</title></path>
-      <path d="M208,414.2 C378.0,414.2 378.0,507.7 548,507.7 L548,509.0 C378.0,509.0 378.0,415.5 208,415.5 Z" fill="var(--ia-new)" fillOpacity="0.5"><title>Manage and Monitor Your Org → Troubleshooting: 1 page</title></path>
-      <path d="M208,415.5 C378.0,415.5 378.0,522.6 548,522.6 L548,523.9 C378.0,523.9 378.0,416.8 208,416.8 Z" fill="currentColor" fillOpacity="0.13"><title>Manage and Monitor Your Org → Resources: 1 page</title></path>
-      <path d="M208,427.8 C378.0,427.8 378.0,63.5 548,63.5 L548,75.2 C378.0,75.2 378.0,439.5 208,439.5 Z" fill="currentColor" fillOpacity="0.13"><title>More Resources → Get Started: 9 pages</title></path>
-      <path d="M208,439.5 C378.0,439.5 378.0,167.4 548,167.4 L548,170.0 C378.0,170.0 378.0,442.1 208,442.1 Z" fill="currentColor" fillOpacity="0.13"><title>More Resources → Activate: 2 pages</title></path>
-      <path d="M208,442.1 C378.0,442.1 378.0,523.9 548,523.9 L548,556.4 C378.0,556.4 378.0,474.6 208,474.6 Z" fill="currentColor" fillOpacity="0.13"><title>More Resources → Resources: 25 pages</title></path>
-      <path d="M208,485.6 C378.0,485.6 378.0,75.2 548,75.2 L548,115.5 C378.0,115.5 378.0,525.9 208,525.9 Z" fill="var(--ia-added)" fillOpacity="0.55"><title>Not in the old sidebar → Get Started: 31 pages</title></path>
-      <path d="M208,525.9 C378.0,525.9 378.0,170.0 548,170.0 L548,180.4 C378.0,180.4 378.0,536.3 208,536.3 Z" fill="var(--ia-added)" fillOpacity="0.55"><title>Not in the old sidebar → Activate: 8 pages</title></path>
-      <path d="M208,536.3 C378.0,536.3 378.0,286.9 548,286.9 L548,292.1 C378.0,292.1 378.0,541.5 208,541.5 Z" fill="var(--ia-added)" fillOpacity="0.55"><title>Not in the old sidebar → Set Up Users and Devices: 4 pages</title></path>
-      <path d="M208,541.5 C378.0,541.5 378.0,475.9 548,475.9 L548,477.2 C378.0,477.2 378.0,542.8 208,542.8 Z" fill="var(--ia-added)" fillOpacity="0.55"><title>Not in the old sidebar → Monitor and Maintain: 1 page</title></path>
-      <path d="M208,542.8 C378.0,542.8 378.0,509.0 548,509.0 L548,511.6 C378.0,511.6 378.0,545.4 208,545.4 Z" fill="var(--ia-added)" fillOpacity="0.55"><title>Not in the old sidebar → Troubleshooting: 2 pages</title></path>
-      <rect x="196" y="55.0" width="12" height="9.1" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="188" y="63.6" textAnchor="end" fill="currentColor" fillOpacity="0.85">Get Started</text>
-      <rect x="196" y="75.1" width="12" height="83.2" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="188" y="120.7" textAnchor="end" fill="currentColor" fillOpacity="0.85">Learn</text>
-      <rect x="196" y="169.3" width="12" height="3.9" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="188" y="175.2" textAnchor="end" fill="currentColor" fillOpacity="0.85">Activate</text>
-      <rect x="196" y="184.2" width="12" height="97.5" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="188" y="237.0" textAnchor="end" fill="currentColor" fillOpacity="0.85">Secure Resources</text>
-      <rect x="196" y="292.7" width="12" height="36.4" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="188" y="314.9" textAnchor="end" fill="currentColor" fillOpacity="0.85">Manage Access Policies</text>
-      <rect x="196" y="340.1" width="12" height="76.7" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="188" y="382.5" textAnchor="end" fill="currentColor" fillOpacity="0.85">Manage and Monitor Your Org</text>
-      <rect x="196" y="427.8" width="12" height="46.8" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="188" y="455.2" textAnchor="end" fill="currentColor" fillOpacity="0.85">More Resources</text>
-      <rect x="196" y="485.6" width="12" height="59.8" rx="2" fill="var(--ia-added)" fillOpacity="1" />
-      <text x="188" y="519.5" textAnchor="end" fill="currentColor" fillOpacity="0.85">Not in the old sidebar</text>
-      <rect x="548" y="44.0" width="12" height="71.5" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="568" y="83.8" fill="currentColor" fontWeight="400">Get Started <tspan fillOpacity="0.55" fontWeight="400">55</tspan></text>
-      <rect x="548" y="126.5" width="12" height="26.0" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="568" y="143.5" fill="currentColor" fontWeight="400">Learn <tspan fillOpacity="0.55" fontWeight="400">20</tspan></text>
-      <rect x="548" y="163.5" width="12" height="16.9" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="568" y="175.9" fill="currentColor" fontWeight="400">Activate <tspan fillOpacity="0.55" fontWeight="400">13</tspan></text>
-      <rect x="548" y="191.4" width="12" height="41.6" rx="2" fill="var(--ia-new)" fillOpacity="1" />
-      <text x="568" y="216.2" fill="currentColor" fontWeight="600">Deploy <tspan fillOpacity="0.55" fontWeight="400">32</tspan></text>
-      <rect x="548" y="244.0" width="12" height="48.1" rx="2" fill="var(--ia-new)" fillOpacity="1" />
-      <text x="568" y="272.1" fill="currentColor" fontWeight="600">Set Up Users and Devices <tspan fillOpacity="0.55" fontWeight="400">37</tspan></text>
-      <rect x="548" y="303.1" width="12" height="35.1" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="568" y="324.7" fill="currentColor" fontWeight="400">Manage Access Policies <tspan fillOpacity="0.55" fontWeight="400">27</tspan></text>
-      <rect x="548" y="349.2" width="12" height="84.5" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="568" y="395.5" fill="currentColor" fontWeight="400">Secure Your Resources <tspan fillOpacity="0.55" fontWeight="400">65</tspan></text>
-      <rect x="548" y="444.7" width="12" height="32.5" rx="2" fill="var(--ia-new)" fillOpacity="1" />
-      <text x="568" y="465.0" fill="currentColor" fontWeight="600">Monitor and Maintain <tspan fillOpacity="0.55" fontWeight="400">25</tspan></text>
-      <rect x="548" y="488.2" width="12" height="23.4" rx="2" fill="var(--ia-new)" fillOpacity="1" />
-      <text x="568" y="503.9" fill="currentColor" fontWeight="600">Troubleshooting <tspan fillOpacity="0.55" fontWeight="400">18</tspan></text>
-      <rect x="548" y="522.6" width="12" height="33.8" rx="2" fill="currentColor" fillOpacity="0.55" />
-      <text x="568" y="543.5" fill="currentColor" fontWeight="400">Resources <tspan fillOpacity="0.55" fontWeight="400">26</tspan></text>
-      <g fontSize="11.5" fill="currentColor">
-        <rect x="46" y="590.4000000000001" width="14" height="10" rx="2" fill="var(--ia-new)" fillOpacity="0.7" /><text x="66" y="599.4000000000001" fillOpacity="0.8">Into a new band</text>
-        <rect x="206" y="590.4000000000001" width="14" height="10" rx="2" fill="var(--ia-added)" fillOpacity="0.75" /><text x="226" y="599.4000000000001" fillOpacity="0.8">Added to the sidebar</text>
-        <rect x="386" y="590.4000000000001" width="14" height="10" rx="2" fill="currentColor" fillOpacity="0.2" /><text x="406" y="599.4000000000001" fillOpacity="0.8">Same band</text>
-      </g>
-    </g>
-  </svg>
-</figure>
+The old Platform Components group mixed concepts with install guides, admin tasks and fixes. Concepts stayed in Learn. Everything else moved to the band for that job.
 
-The old Learn band held install guides, troubleshooting and concepts in one 55-entry group called Platform Components. Most of it now sits in Deploy, Monitor and Maintain, and Troubleshooting.
+<div className="ia-split">
+  <div className="ia-split-row">
+    <span className="ia-when">Before</span>
+    <div className="ia-bar">
+      <span className="ia-seg ia-seg--concept" style={{flex: 20}}>Concepts</span>
+      <span className="ia-seg ia-seg--task" style={{flex: 21}}>Install and deploy</span>
+      <span className="ia-seg ia-seg--task" style={{flex: 9}}>Manage</span>
+      <span className="ia-seg ia-seg--task" style={{flex: 4}}>Fix</span>
+    </div>
+  </div>
+  <div className="ia-split-row">
+    <span className="ia-when">After</span>
+    <div className="ia-bar">
+      <span className="ia-seg ia-seg--concept" style={{flex: 20}}>Learn</span>
+      <span className="ia-seg ia-seg--moved" style={{flex: 21}}>→ Deploy</span>
+      <span className="ia-seg ia-seg--moved" style={{flex: 9}}>→ Monitor</span>
+      <span className="ia-seg ia-seg--moved" style={{flex: 4}}>→ Fix</span>
+    </div>
+  </div>
+</div>
 
-## Before and after
+## A front door organized by goal
 
-![The Cloud Secure Edge docs sidebar before and after the restructure, side by side. Before: 26 top-level groups in 7 bands. After: 34 top-level groups in 10 bands, with new Deploy, Set Up Users and Devices, Monitor and Maintain, and Troubleshooting bands.](/img/content-architecture/cse-sidebar-before-after.png)
+The old homepage listed product areas. The new one starts from what an admin wants to get done, says which license each goal needs, and puts Troubleshooting one click away.
+
+<div className="ia-compare ia-compare--home">
+  <div className="ia-browser">
+    <p className="ia-browser-bar"><i /><i /><i /><span>Before</span></p>
+    <div className="ia-home">
+      <p className="ia-home-title">Cloud Secure Edge Docs</p>
+      <div className="ia-home-grid">
+        <span>Discover CSE</span><span>Secure private resources</span><span>Secure SaaS applications</span>
+        <span>Secure internet traffic</span><span>Networks and Service Tunnels</span><span>Manage users and devices</span>
+        <span>Trust and access policies</span><span>Components</span><span>API and automation</span>
+      </div>
+    </div>
+  </div>
+  <div className="ia-browser">
+    <p className="ia-browser-bar"><i /><i /><i /><span>After</span></p>
+    <div className="ia-home">
+      <p className="ia-home-title">Cloud Secure Edge Docs</p>
+      <p className="ia-home-pills"><b>Get started</b><em>What is CSE?</em><em className="ia-hl">Troubleshooting</em></p>
+      <p className="ia-home-label">Primary use cases</p>
+      <div className="ia-home-grid">
+        <span>Replace your legacy VPN<small className="ia-hl">SPA</small></span>
+        <span>Block internet content<small className="ia-hl">SIA</small></span>
+        <span>Set up ZTNA<small className="ia-hl">SPA</small></span>
+      </div>
+      <p className="ia-home-label">Gain visibility and control</p>
+      <div className="ia-home-grid">
+        <span>Protect SaaS apps<small className="ia-hl">SIA</small></span>
+        <span>Manage shadow AI and IT<small className="ia-hl">SIA</small></span>
+        <span>Monitor device posture<small className="ia-hl">SPA</small></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## The whole sidebar
+
+![The Cloud Secure Edge docs sidebar before and after the restructure, side by side, with each band and group tagged as new, split, grouped, moved or renamed.](/img/content-architecture/cse-sidebar-before-after.png)

@@ -1,8 +1,10 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   workSidebar: [
+    {type: 'html', value: 'About', className: 'sidebar-band', defaultStyle: false},
     'intro',
     'resume',
+    {type: 'html', value: 'Work', className: 'sidebar-band', defaultStyle: false},
     'published-cse-docs',
     {
       type: 'category',

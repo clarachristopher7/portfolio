@@ -2,11 +2,10 @@
 sidebar_position: 6
 ---
 
+import WorkCards from '@site/src/components/WorkCards';
+
 # Automations
 
-Two projects that use AI-assisted analysis to keep documentation in step with the product.
+<p className="hub-sub">AI-assisted checks that keep documentation in step with the product. Neither edits a page or files a ticket. Both produce a list for someone to work through.</p>
 
-- **[PR-to-docs impact evaluator](./docs-engineering/pr-evaluator-case-study.mdx):** a scheduled CI job that compares recent merges against the documentation and reports which pages look out of date.
-- **[Staleness auditor](./docs-engineering/staleness-auditor-case-study.mdx):** sweeps the whole docs site against the current console UI and returns a maintenance backlog ordered by drift and impact.
-
-Neither one edits a page or files a ticket. Both produce a list for someone to work through.
+<WorkCards set="automations" />
