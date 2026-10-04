@@ -3,19 +3,19 @@ hide_table_of_contents: true
 sidebar_position: 3
 ---
 
-# Domain Lookup Tool
+# Website lookup tool
 
-<p className="hub-sub">When a policy blocked a domain unexpectedly, admins had no way to see which part of the policy did it.</p>
+<p className="hub-sub">When a security policy blocked a website unexpectedly, admins couldn't see which rule did it.</p>
 
 ## Before
 
-The only explanation was a diagram of how a DNS request is resolved.
+The only explanation was this diagram of how the product decides where a website request goes.
 
 <figure className="docs-diagram">
   <svg
     viewBox="0 0 1000 272"
     role="img"
-    aria-label="DNS resolution under an Internet Threat Protection policy. A request from the DNS proxy is sorted into local or internet domain. A local domain goes to the default DNS resolver. An internet domain is checked against whether the Service Tunnel is on: if not, it goes to the SWG agent. If it is, a private domain goes to the Service Tunnel, and a public domain is checked against whether it is included on the tunnel spec, then whether it is excluded, routing to the Service Tunnel, the default DNS resolver or the SWG agent."
+    aria-label="How the product decides where a website request goes. A request is either for a local or an internet website. Local websites use the normal internet lookup. For internet websites, if the private tunnel is off, the request goes to the web gateway. If it is on, private websites go through the private tunnel, and public websites are checked against what is sent through or kept out of the tunnel, ending at the private tunnel, the normal internet lookup, or the web gateway."
     style={{maxWidth: '100%', height: 'auto'}}
   >
     <defs>
@@ -68,35 +68,35 @@ The only explanation was a diagram of how a DNS request is resolved.
         <rect x="884" y="228" width="108" height="36" rx="7" />
       </g>
       <g fill="currentColor">
-        <text x="60" y="142">DNS proxy</text>
-        <text x="217" y="34">Local domain</text>
-        <text x="217" y="142">Internet domain</text>
-        <text x="399" y="142">Service Tunnel on?</text>
-        <text x="581" y="88">Public domain</text>
-        <text x="581" y="196">Private domain</text>
-        <text x="772" y="88">Included on tunnel spec?</text>
-        <text x="772" y="142">Excluded on tunnel spec?</text>
-        <text x="938" y="26">Default DNS</text>
-        <text x="938" y="42">resolver</text>
-        <text x="938" y="196">Service Tunnel</text>
-        <text x="938" y="250">SWG agent</text>
+        <text x="60" y="142">Website request</text>
+        <text x="217" y="34">Local website</text>
+        <text x="217" y="142">Internet website</text>
+        <text x="399" y="142">Private tunnel on?</text>
+        <text x="581" y="88">Public website</text>
+        <text x="581" y="196">Private website</text>
+        <text x="772" y="88">Sent through tunnel?</text>
+        <text x="772" y="142">Kept out of tunnel?</text>
+        <text x="938" y="26">Normal internet</text>
+        <text x="938" y="42">lookup</text>
+        <text x="938" y="196">Private tunnel</text>
+        <text x="938" y="250">Web gateway</text>
       </g>
     </g>
   </svg>
   <figcaption>
 
-  Four decision points, three possible destinations.
+  Four decisions, three possible outcomes. Too much to trace by hand.
 
   </figcaption>
 </figure>
 
 ## The problem
 
-Mid-incident, an admin needs to know which part of their own policy decided one domain. A general diagram can't tell them.
+When something breaks, an admin needs to know which of their own rules blocked one website. A general diagram can't tell them.
 
 ## The constraint
 
-The tool doesn't cover Geo Blocking or Risk-based URL Blocking, so the panel says so next to the result.
+The tool can't check two kinds of blocking, by country and by risk score, so the panel says so up front.
 
 ## What I tried
 
@@ -106,7 +106,7 @@ The tool doesn't cover Geo Blocking or Risk-based URL Blocking, so the panel say
 
 ![The Lookup Domain panel: a scope note, a domain field with its explanation, and a submit action.](/img/content-design/domain-lookup-tool.png)
 
-Enter a domain, and the panel shows the verdict your policy gives it.
+Type in a website, and the panel shows whether your policy allows or blocks it, and why.
 
 ## The outcome
 

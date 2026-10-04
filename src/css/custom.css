@@ -1492,21 +1492,18 @@ html[data-theme='dark'] .hub-tag { color: var(--ifm-color-primary); }
 .navbar { background-color: var(--site-card); }
 .footer { background-color: var(--site-card) !important; }
 
-/* Titles: Inter Tight, lighter and smaller, so page titles read as
-   calm labels rather than banners. */
-:root { --site-title-font: 'Inter Tight', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+/* Titles: Inter at a light weight, so page titles read as calm labels
+   rather than banners. */
 .markdown h1:first-child,
 article > header > h1[class] {
-  font-family: var(--site-title-font);
   font-size: 2.15rem;
-  font-weight: 400;
-  letter-spacing: -0.025em;
+  font-weight: 300;
+  letter-spacing: -0.015em;
   line-height: 1.15;
 }
 .markdown > h2 {
-  font-family: var(--site-title-font);
   font-weight: 500;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
 }
 @media (max-width: 767px) {
   .markdown h1:first-child { font-size: 1.85rem; }

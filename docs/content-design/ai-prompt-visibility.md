@@ -3,17 +3,17 @@ hide_table_of_contents: true
 sidebar_position: 2
 ---
 
-# AI prompt visibility
+# AI prompt logging
 
-<p className="hub-sub">Turning on AI prompt logging needed a setting on a different screen. Without it, the log stayed empty.</p>
+<p className="hub-sub">Admins can keep a log of what employees type into AI tools. Turning it on needed a second setting on a different screen, and without it the log stayed empty.</p>
 
 ## Before
 
-![The Prompt Visibility screen as it shipped: the Log AI Prompts toggle is on, a warning below it says TLS decryption still has to be set up, and the panel underneath reads "No data yet".](/img/content-design/ai-prompt-before.png)
+![The screen as it shipped: the AI logging switch is on, a warning below it says a security setting still has to be set up elsewhere, and the log reads "No data yet".](/img/content-design/ai-prompt-before.png)
 
 ## The problem
 
-A warning pointed the admin to another policy. Dismiss it, and the empty log looked like an organization that barely uses AI.
+A warning sent the admin to another screen. If they dismissed it, the empty log looked like a company that barely uses AI.
 
 ## The constraint
 
@@ -25,9 +25,9 @@ A warning pointed the admin to another policy. Dismiss it, and the empty log loo
 
 ## After
 
-![Proposed screen: the TLS decryption setting sits above the toggle, listing each Internet Threat Protection policy with its device count and a switch to decrypt TLS, followed by the Log AI prompts toggle and a line reading "Logging 38 devices across 1 policy."](/img/content-design/ai-prompt-after.png)
+![The proposed screen: the missing security setting sits right above the AI logging switch, with a line confirming how many devices are being logged.](/img/content-design/ai-prompt-after.png)
 
-The proposal puts the decryption setting on the same screen, above the toggle, so turning logging on produces logs. This screen was not built.
+I proposed putting the missing setting on the same screen, right above the on switch, so turning logging on just works. This design was not built.
 
 ## The outcome
 

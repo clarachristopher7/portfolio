@@ -3,9 +3,9 @@ hide_table_of_contents: true
 sidebar_position: 1
 ---
 
-# Device Geolocation Trust Factor
+# Device location rule
 
-<p className="hub-sub">Admins block or allow devices by country. The screen never said which way the rule ran.</p>
+<p className="hub-sub">Admins can block or allow devices based on the country they're in. The screen never said which way the rule worked.</p>
 
 ## Before
 
@@ -13,7 +13,7 @@ sidebar_position: 1
 
 ## The problem
 
-The label only made sense if you read the toggle at the far right as the end of the sentence. Nothing stated the rule, so an admin could save the opposite of what they meant.
+The label only made sense if you read the switch on the far right as the end of the sentence. Nothing stated the rule, so an admin could easily set up the opposite of what they meant.
 
 ## The constraint
 
@@ -32,8 +32,8 @@ The label only made sense if you read the toggle at the far right as the end of 
 | **Label** | Select the countries where devices with this Trust Factor are: | Select countries to block or allow: |
 | **Rule** | *(none)* | To satisfy the Trust Factor, the device must be located outside of the selected countries. |
 
-The effect meter moved below the inputs, so the card reads in the order the admin works.
+I also moved the result meter below the settings, so the screen reads in the order the admin fills it in.
 
 ## The outcome
 
-The lead UI engineer applied the same order to every Trust Factor.
+The lead front-end engineer used the same layout for every security check of this kind.

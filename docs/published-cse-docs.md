@@ -7,6 +7,6 @@ import WorkCards from '@site/src/components/WorkCards';
 
 # Docs
 
-<p className="hub-sub">Live pages I write and maintain on the Cloud Secure Edge docs site.</p>
+<p className="hub-sub">Help pages I write and keep current for Cloud Secure Edge, a SonicWall security product.</p>
 
 <WorkCards set="docs" />

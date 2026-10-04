@@ -5,36 +5,36 @@ hide_table_of_contents: true
 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
-# Information architecture for a product estate
+# Organizing docs across many products
 
-<p className="hub-sub">Every product's docs had grown up separately. I built one view that measures them all against the same definition of complete.</p>
+<p className="hub-sub">Each product's help docs had grown up separately. I built one map that checks them all against the same idea of complete.</p>
 
 <div className="ia-brief">
-  <div><h4>Problem</h4><p>No two products could be compared, so gaps were argued, not shown.</p></div>
-  <div><h4>Constraint</h4><p>Anyone can open it, any writer can update it. One HTML file.</p></div>
+  <div><h4>Problem</h4><p>There was no way to compare products, so gaps were argued about instead of shown.</p></div>
+  <div><h4>Constraint</h4><p>One simple file that anyone can open and any writer can update.</p></div>
   <div><h4>What I tried</h4><p>[An approach you considered and dropped.]</p></div>
   <div><h4>The outcome</h4><p>[Add a result.]</p></div>
 </div>
 
-## One estate, three views
+## One map, three views
 
 <HubGroup>
   <HubCard icon="layers" tag="Sections" title="Where a page lives">
-    The shelving: which sections each product has.
+    Which sections each product's docs have.
   </HubCard>
   <HubCard icon="route" tag="Journey" title="What the reader is doing">
-    Evaluate, deploy, operate, expand. Gaps show up as missing stages.
+    Every step from first look to daily use. Gaps show up as missing steps.
   </HubCard>
   <HubCard icon="grid" tag="Decisions" title="What applies to every product">
-    Metadata, versions, translation, retirement. Each with an owner.
+    Shared rules, like translation and retiring old versions.
   </HubCard>
 </HubGroup>
 
 ## Fair to unlike products
 
-A cloud service and a hardware appliance need different docs. Each product type gets only the sections that fit it, so one score means the same thing everywhere.
+A cloud service and a hardware device need different docs. Each type of product is only checked for the sections that fit it, so the results are fair.
 
-<p className="ia-chips"><span>Cloud service</span><span>Appliance</span><span>End-user app</span><span>Partner console</span><span>Shared content</span></p>
+<p className="ia-chips"><span>Cloud service</span><span>Appliance</span><span>End-user app</span><span>Partner portal</span><span>Shared content</span></p>
 
 ## Status by rule, not opinion
 
@@ -42,7 +42,7 @@ A cloud service and a hardware appliance need different docs. Each product type 
   <HubCard title={<span className="status-chip status-chip--have">Have</span>}>A dedicated section exists.</HubCard>
   <HubCard title={<span className="status-chip status-chip--partial">Partial</span>}>Pages exist but are scattered.</HubCard>
   <HubCard title={<span className="status-chip status-chip--missing">Missing</span>}>Nothing covers it.</HubCard>
-  <HubCard title={<span className="status-chip status-chip--na">n/a</span>}>Out of scope for this product.</HubCard>
+  <HubCard title={<span className="status-chip status-chip--na">Not needed</span>}>Doesn't apply to this product.</HubCard>
 </HubGroup>
 
 ## How it comes together
@@ -52,55 +52,55 @@ A cloud service and a hardware appliance need different docs. Each product type 
   <input type="radio" name="estate-view" id="estate-journey" className="estate-radio" />
   <input type="radio" name="estate-view" id="estate-decisions" className="estate-radio" />
   <div className="ia-browser ia-browser--lg estate">
-    <div className="ia-nav estate-tabs" role="tablist"><b>Estate map</b><label htmlFor="estate-sections">Sections</label><label htmlFor="estate-journey">Journey</label><label htmlFor="estate-decisions">Decisions</label><em>Example data</em></div>
+    <div className="ia-nav estate-tabs" role="tablist"><b>Docs map</b><label htmlFor="estate-sections">Sections</label><label htmlFor="estate-journey">Journey</label><label htmlFor="estate-decisions">Decisions</label><em>Example data</em></div>
 
     <div className="estate-panel estate-panel--sections">
-      <p className="estate-cap">Where each product's pages live.</p>
+      <p className="estate-cap">Which sections each product's docs have.</p>
       <div className="estate-table-wrap">
       <table className="estate-table">
-        <thead><tr><th>Product</th><th>Get started</th><th>Install</th><th>Configure</th><th>Integrations</th><th>Troubleshoot</th><th>Release notes</th><th>Firmware and HA</th><th>Evidence</th></tr></thead>
+        <thead><tr><th>Product</th><th>Get started</th><th>Install</th><th>Settings</th><th>Connecting other tools</th><th>Fixing problems</th><th>What's new</th><th>Hardware setup</th><th>Source</th></tr></thead>
         <tbody>
-          <tr><td><b>Cloud service</b></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td className="estate-evcol">Nav file</td></tr>
-          <tr><td><b>Firewall appliance</b></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td className="estate-evcol">Converted TOC</td></tr>
-          <tr><td><b>End-user app</b></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td className="estate-evcol">Nav file</td></tr>
-          <tr><td><b>Partner console</b></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td className="estate-evcol">Converted TOC</td></tr>
+          <tr><td><b>Cloud service</b></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td className="estate-evcol">Menu file</td></tr>
+          <tr><td><b>Firewall device</b></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td className="estate-evcol">Old table of contents</td></tr>
+          <tr><td><b>End-user app</b></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td className="estate-evcol">Menu file</td></tr>
+          <tr><td><b>Partner portal</b></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td className="estate-evcol">Old table of contents</td></tr>
         </tbody>
       </table>
       </div>
     </div>
 
     <div className="estate-panel estate-panel--journey">
-      <p className="estate-cap">Whether each product carries a reader from first look to scale.</p>
+      <p className="estate-cap">Whether each product's docs cover every step, from first look to growing use.</p>
       <div className="estate-table-wrap">
       <table className="estate-table">
-        <thead><tr><th>Product</th><th>Evaluate</th><th>Activate</th><th>Deploy</th><th>Operate</th><th>Scale</th><th>Troubleshoot</th></tr></thead>
+        <thead><tr><th>Product</th><th>Try it</th><th>Activate</th><th>Set up</th><th>Day to day</th><th>Grow</th><th>Fix problems</th></tr></thead>
         <tbody>
           <tr><td><b>Cloud service</b></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--have">Have</span></td></tr>
-          <tr><td><b>Firewall appliance</b></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
-          <tr><td><b>End-user app</b></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
-          <tr><td><b>Partner console</b></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--na">n/a</span></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
+          <tr><td><b>Firewall device</b></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
+          <tr><td><b>End-user app</b></td><td><span className="status-chip status-chip--na">Not needed</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td><span className="status-chip status-chip--have">Have</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
+          <tr><td><b>Partner portal</b></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--partial">Partial</span></td><td><span className="status-chip status-chip--missing">Missing</span></td><td><span className="status-chip status-chip--na">Not needed</span></td><td><span className="status-chip status-chip--missing">Missing</span></td></tr>
         </tbody>
       </table>
       </div>
     </div>
 
     <div className="estate-panel estate-panel--decisions">
-      <p className="estate-cap">What has to be settled once, for every product.</p>
+      <p className="estate-cap">Rules to agree on once, for every product.</p>
       <div className="estate-table-wrap">
       <table className="estate-table estate-table--decisions">
         <thead><tr><th>Decision</th><th>Proposal</th><th>Status</th></tr></thead>
         <tbody>
-          <tr><td><b>Page metadata</b></td><td>Required fields on every page, checked on every merge</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
-          <tr><td><b>Variants</b></td><td>Tabs for small differences, separate pages for big ones</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
-          <tr><td><b>Translation</b></td><td>By page type, not by product</td><td><span className="status-chip status-chip--partial">Open · blocks naming</span></td></tr>
+          <tr><td><b>Page labels</b></td><td>Every page tagged with its product, version and audience</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
+          <tr><td><b>Product versions</b></td><td>Tabs for small differences, separate pages for big ones</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
+          <tr><td><b>Translation</b></td><td>By page type, not by product</td><td><span className="status-chip status-chip--partial">Open · needed before naming</span></td></tr>
           <tr><td><b>Retiring old versions</b></td><td>Kept online, hidden from search, with a banner</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
-          <tr><td><b>Navigation limits</b></td><td>Three levels, about 15 items per group</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
-          <tr><td><b>Prerequisites</b></td><td>Stored as data, shown at the top of each task</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
+          <tr><td><b>Menu limits</b></td><td>No more than three levels, about 15 items per group</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
+          <tr><td><b>What you need first</b></td><td>Listed at the top of every task</td><td><span className="status-chip status-chip--partial">Open</span></td></tr>
         </tbody>
       </table>
       </div>
       <p className="ia-home-label estate-floor-label">Every product gets</p>
-      <p className="ia-chips estate-chips"><span>One search index</span><span>Version selector</span><span>Last-updated date</span><span>Old URLs kept</span><span>Lint on every merge</span></p>
+      <p className="ia-chips estate-chips"><span>One search box</span><span>A version picker</span><span>A last-updated date</span><span>Old links still work</span><span>Automatic style checks</span></p>
     </div>
   </div>
 </div>

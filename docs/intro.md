@@ -10,16 +10,16 @@ I work across docs, content design, and content architecture for cloud security 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <HubGroup label="What's here" columns={2}>
-  <HubCard to="/published-cse-docs" icon="file" tag="Docs" title="Live docs I maintain" go="See the pages">
-    Pages I write and keep current on the Cloud Secure Edge docs site.
+  <HubCard to="/published-cse-docs" icon="file" tag="Docs" title="Docs" go="See the pages">
+    Help pages I write and keep current for Cloud Secure Edge, a SonicWall security product.
   </HubCard>
-  <HubCard to="/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the IA work">
-    A docs sidebar regrouped around reader tasks, and a model for comparing doc sets across products.
+  <HubCard to="/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the work">
+    How help docs are organized, for one product and across many.
   </HubCard>
   <HubCard to="/content-design/overview" icon="pen" tag="In-product" title="Content design" go="See the samples">
-    In-product strings, how they're structured, and the order a user meets them.
+    The words on product screens, and the order people see them in.
   </HubCard>
   <HubCard to="/automations" icon="bot" tag="Tooling" title="Automations" go="See the tools">
-    AI-assisted checks that keep the docs in step with the product.
+    Automatic checks that keep the help docs up to date with the product.
   </HubCard>
 </HubGroup>

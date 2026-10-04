@@ -7,6 +7,6 @@ import WorkCards from '@site/src/components/WorkCards';
 
 # Automations
 
-<p className="hub-sub">AI-assisted checks that keep documentation in step with the product. Neither edits a page or files a ticket. Both produce a list for someone to work through.</p>
+<p className="hub-sub">Automatic checks that keep the help docs up to date with the product. Neither one changes a page. Both make a to-do list for a person.</p>
 
 <WorkCards set="automations" />

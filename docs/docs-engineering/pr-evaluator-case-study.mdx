@@ -5,26 +5,26 @@ hide_table_of_contents: true
 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
-# PR-to-docs impact evaluator
+# Docs change checker
 
-<p className="hub-sub">A scheduled job that lists the docs pages a recent product change made out of date. It reports. A person decides.</p>
+<p className="hub-sub">An automatic daily check that lists the help pages a recent product change made out of date. It only reports. A person decides what to fix.</p>
 
 ## How it works
 
 <ol className="ia-steps ia-steps--4" aria-label="How the evaluator works">
-  <li>Read recent merges</li>
-  <li className="is-new">Check what's actually live<small>Key step</small></li>
-  <li>Compare against every docs page</li>
+  <li>Read recent product changes</li>
+  <li className="is-new">Check what customers can see<small>Key step</small></li>
+  <li>Compare with every help page</li>
   <li>Write a report</li>
 </ol>
 
 ## What made it work
 
 <HubGroup columns={2}>
-  <HubCard icon="git" tag="Lesson" title="Read the right branch">
-    An early version read a QA branch and missed most changes. Features land on dev first.
+  <HubCard icon="git" tag="Lesson" title="Watch the right place">
+    An early version watched a testing copy of the code and missed most changes. New work shows up somewhere else first.
   </HubCard>
-  <HubCard icon="search" tag="Lesson" title="Merged isn't live">
-    It looks for each change in the code customers are served, so the docs match what they can see.
+  <HubCard icon="search" tag="Lesson" title="Finished isn't released">
+    It checks whether each change has actually reached customers, so the docs match what they see.
   </HubCard>
 </HubGroup>
