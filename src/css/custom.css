@@ -13,7 +13,7 @@
 
   --ifm-font-size-base: 15px;
   --ifm-line-height-base: 1.6;
-  --ifm-heading-font-weight: 500;
+  --ifm-heading-font-weight: 300;
   --ifm-heading-line-height: 1.2;
   --ifm-code-font-size: 85%;
   --ifm-code-padding-horizontal: 0.34em;
@@ -95,13 +95,13 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: -0.021em;
 }
 
 .markdown h1:first-child {
   font-size: 2.6rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.12;
   letter-spacing: -0.02em;
   margin: 0.25rem 0 0.75rem;
@@ -109,7 +109,7 @@ h4 {
 
 .markdown > h2 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -0.01em;
   margin-top: 3rem;
   margin-bottom: 0.9rem;
@@ -117,7 +117,7 @@ h4 {
 
 .markdown > h3 {
   font-size: 1.125rem;
-  font-weight: 550;
+  font-weight: 300;
   letter-spacing: -0.016em;
   margin-top: 2.25rem;
 }
@@ -154,7 +154,7 @@ h4 {
 }
 
 .markdown strong {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ifm-heading-color);
 }
 
@@ -176,7 +176,7 @@ h4 {
   max-width: var(--site-measure);
   margin: 2.5rem 0 0.75rem;
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -232,14 +232,14 @@ article > header > h2[class] {
 }
 
 .navbar__title {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   letter-spacing: -0.01em;
 }
 
 .navbar__link {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .menu {
@@ -263,7 +263,7 @@ article > header > h2[class] {
 /* Top-level entries are bold, as on the CSE docs sidebar. */
 .theme-doc-sidebar-menu > .menu__list-item > .menu__link,
 .theme-doc-sidebar-menu > .menu__list-item > .menu__list-item-collapsible > .menu__link {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ifm-heading-color);
 }
 
@@ -282,7 +282,7 @@ article > header > h2[class] {
   margin: 1.4rem 0 0.35rem;
   padding: 0 0.6rem;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -298,7 +298,7 @@ article > header > h2[class] {
 }
 
 .table-of-contents__link--active {
-  font-weight: 550;
+  font-weight: 300;
 }
 
 .breadcrumbs {
@@ -307,7 +307,7 @@ article > header > h2[class] {
 
 .breadcrumbs__item--active .breadcrumbs__link {
   background: transparent;
-  font-weight: 550;
+  font-weight: 300;
 }
 
 .footer {
@@ -336,7 +336,7 @@ article > header > h2[class] {
 
 .markdown table th {
   font-size: 0.75rem;
-  font-weight: 550;
+  font-weight: 300;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -464,7 +464,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
 }
 .ia-brief h4 {
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ifm-color-emphasis-700);
@@ -499,7 +499,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
   padding: 8px 14px 8px 20px;
   text-align: center;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.25;
   background: var(--ifm-color-emphasis-200);
   clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
@@ -510,13 +510,13 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
 }
 .markdown ol.ia-steps li.is-new {
   background: color-mix(in srgb, var(--ia-new) 22%, transparent);
-  font-weight: 650;
+  font-weight: 400;
 }
 .markdown ol.ia-steps small {
   display: block;
   margin-top: 4px;
   font-size: 0.6rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ia-new);
@@ -535,7 +535,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
 }
 .hub-group-label {
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -587,7 +587,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
 }
 .hub-tag {
   font-size: 10.5px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ifm-color-primary);
@@ -596,7 +596,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
 }
 .hub-card h3 {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
   color: var(--ifm-heading-color);
@@ -667,7 +667,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
   align-items: center;
   border-radius: 999px;
   padding: 0.5rem 1.4rem;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 0.9375rem;
   text-decoration: none;
   transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
@@ -732,7 +732,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
 }
 .markdown .ia-q {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ifm-heading-color);
   margin: 0 0 0.7rem;
 }
@@ -745,7 +745,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
 .ia-when {
   flex: 0 0 3.6rem;
   font-size: 10.5px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -797,7 +797,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
   border-radius: 5px;
   background: var(--site-chip-bg);
   color: var(--site-chip-ink);
-  font-weight: 600;
+  font-weight: 400;
 }
 .markdown ol.ia-crumbs li::before { background: none; }
 .markdown .ia-note {
@@ -822,7 +822,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
 .markdown .ia-mini p { margin: 0; max-width: none; }
 .markdown .ia-mini-head {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ifm-heading-color);
   padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
@@ -831,14 +831,14 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
 .markdown .ia-band {
   margin-top: 0.8rem;
   font-size: 10.5px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--site-muted);
 }
 .markdown .ia-item {
   font-size: 13.5px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 0.25rem 0.5rem 0.15rem;
   color: var(--ifm-heading-color);
 }
@@ -856,7 +856,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
   background: var(--site-chip-bg);
   color: var(--site-chip-ink);
   box-shadow: inset 2px 0 0 var(--ia-new);
-  font-weight: 500;
+  font-weight: 300;
 }
 
 /* Platform Components split bars */
@@ -881,7 +881,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
   height: 40px;
   padding: 0 0.4rem;
   font-size: 12.5px;
-  font-weight: 600;
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -899,7 +899,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
 .ia-seg--moved {
   background: transparent;
   color: var(--site-soft);
-  font-weight: 500;
+  font-weight: 300;
   border: 1px dashed color-mix(in srgb, var(--site-muted) 60%, transparent);
 }
 
@@ -919,7 +919,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
   background: var(--ifm-background-surface-color);
   border-bottom: 1px solid var(--ifm-toc-border-color);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -934,7 +934,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
 .ia-home { padding: 1rem 1rem 1.15rem; }
 .markdown .ia-home-title {
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--ifm-heading-color);
   margin-bottom: 0.6rem;
 }
@@ -948,7 +948,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
 .ia-home-pills em {
   font-style: normal;
   font-size: 10.5px;
-  font-weight: 500;
+  font-weight: 300;
   padding: 0.22rem 0.65rem;
   border-radius: 999px;
   border: 1px solid #dee2e6;
@@ -966,7 +966,7 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
 }
 .markdown .ia-home-label {
   font-size: 9.5px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -984,7 +984,7 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
   padding: 0.55rem 0.55rem 0.6rem;
   min-height: 3.4rem;
   font-size: 11.5px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.3;
   color: var(--ifm-heading-color);
   display: flex;
@@ -994,7 +994,7 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
 .ia-home-grid small {
   align-self: flex-start;
   font-size: 9px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.08em;
   padding: 0.05rem 0.35rem;
   border-radius: 3px;
@@ -1054,7 +1054,7 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
 .status-chip {
   display: inline-block;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.2rem 0.6rem;
@@ -1075,7 +1075,7 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
 }
 .ia-chips span {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
   background: var(--site-chip-bg);
@@ -1126,17 +1126,17 @@ main[class*="docMainContainer"] > .container {
 .pagination-nav__link:hover { background: var(--ifm-background-surface-color); border-color: var(--ifm-toc-border-color); }
 .pagination-nav__sublabel {
   font-size: 10.5px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--site-muted);
   margin-bottom: 0.3rem;
 }
-.pagination-nav__label { font-size: 0.95rem; font-weight: 600; color: var(--ifm-heading-color); }
+.pagination-nav__label { font-size: 0.95rem; font-weight: 400; color: var(--ifm-heading-color); }
 .pagination-nav__link--next .pagination-nav__label::after,
 .pagination-nav__link--prev .pagination-nav__label::before { content: none; }
 
-.navbar__link { font-weight: 500; }
+.navbar__link { font-weight: 300; }
 .markdown .post-meta { font-size: 13px; color: var(--site-muted); margin-top: -0.25rem; }
 
 /* Paint the page background from the theme on both html and body, so a
@@ -1170,7 +1170,7 @@ body {
 .markdown .ia-shot p { max-width: none; }
 .markdown .ia-shot-label {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -1188,8 +1188,8 @@ body {
   font-size: 12.5px;
   color: var(--site-soft);
 }
-.ia-nav b { color: var(--ifm-heading-color); font-weight: 700; margin-right: 0.6rem; }
-.ia-nav .ia-hl-text { color: var(--site-chip-ink); font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem; }
+.ia-nav b { color: var(--ifm-heading-color); font-weight: 400; margin-right: 0.6rem; }
+.ia-nav .ia-hl-text { color: var(--site-chip-ink); font-weight: 400; display: inline-flex; align-items: center; gap: 0.35rem; }
 .ia-page { padding: 1.25rem 1.4rem 1.4rem; }
 .ia-page--split { display: grid; grid-template-columns: 210px 1fr; gap: 1.5rem; padding-left: 0; padding-top: 0; }
 .ia-side {
@@ -1212,13 +1212,13 @@ body {
 }
 .markdown .ia-side-band {
   font-size: 9.5px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--site-muted);
   margin: 0.7rem 0 0.2rem;
 }
-.markdown .ia-side-item { font-size: 12px; font-weight: 600; color: var(--ifm-heading-color); margin: 0.15rem 0; }
+.markdown .ia-side-item { font-size: 12px; font-weight: 400; color: var(--ifm-heading-color); margin: 0.15rem 0; }
 .ia-browser--lg .ia-home-title { font-size: 1.35rem !important; margin-bottom: 0.8rem !important; }
 .ia-browser--lg .ia-home-pills b,
 .ia-browser--lg .ia-home-pills em { font-size: 12px; padding: 0.3rem 0.85rem; }
@@ -1239,7 +1239,7 @@ body {
   background: var(--ia-new);
   color: #fff;
   font-size: 10.5px;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
   text-transform: none;
@@ -1288,7 +1288,7 @@ body {
 .journey-phases { column-gap: 10px; margin-bottom: 1rem; }
 .journey-phases span {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -1328,7 +1328,7 @@ body {
   align-items: center;
   justify-content: center;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
   background: var(--ifm-background-color);
   color: var(--site-soft);
@@ -1336,11 +1336,11 @@ body {
   margin-bottom: 0.65rem;
   position: relative;
 }
-.journey-steps b { font-size: 13.5px; font-weight: 600; line-height: 1.3; color: var(--ifm-heading-color); }
+.journey-steps b { font-size: 13.5px; font-weight: 400; line-height: 1.3; color: var(--ifm-heading-color); }
 .journey-steps small {
   margin-top: 0.35rem;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--site-chip-ink);
@@ -1370,7 +1370,7 @@ body {
   margin-left: auto;
   font-style: normal;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--site-muted);
@@ -1426,7 +1426,7 @@ body {
   padding: 0.35rem 0;
   border-bottom: 1px solid var(--ifm-toc-border-color);
 }
-.estate-decisions b { color: var(--ifm-heading-color); font-weight: 600; }
+.estate-decisions b { color: var(--ifm-heading-color); font-weight: 400; }
 .estate-decisions span { color: var(--site-soft); }
 .markdown ol.ia-callouts--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 @media (max-width: 1100px) {
@@ -1453,7 +1453,7 @@ html[data-theme='dark'] .hub-tag { color: var(--ifm-color-primary); }
   padding: 0.35rem 0.7rem;
   border-radius: 6px;
   color: var(--site-soft);
-  font-weight: 500;
+  font-weight: 300;
   transition: background 0.12s ease, color 0.12s ease;
 }
 .estate-tabs label:hover { background: var(--ifm-background-surface-color); color: var(--ifm-heading-color); }
@@ -1466,7 +1466,7 @@ html[data-theme='dark'] .hub-tag { color: var(--ifm-color-primary); }
 #estate-decisions:checked ~ .estate label[for='estate-decisions'] {
   background: var(--site-chip-bg);
   color: var(--site-chip-ink);
-  font-weight: 600;
+  font-weight: 400;
 }
 #estate-sections:focus-visible ~ .estate label[for='estate-sections'],
 #estate-journey:focus-visible ~ .estate label[for='estate-journey'],
@@ -1480,7 +1480,7 @@ html[data-theme='dark'] .hub-tag { color: var(--ifm-color-primary); }
   margin-top: 0.15rem;
   font-size: 10.5px;
   color: var(--site-muted);
-  font-weight: 500;
+  font-weight: 300;
 }
 .markdown .estate-table td.estate-evcol { font-size: 11.5px; color: var(--site-soft); white-space: nowrap; }
 .markdown .estate-table--decisions { min-width: 560px; }
@@ -1502,9 +1502,27 @@ article > header > h1[class] {
   line-height: 1.15;
 }
 .markdown > h2 {
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: -0.01em;
 }
 @media (max-width: 767px) {
   .markdown h1:first-child { font-size: 1.85rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   One light voice for the whole site, matching the titles: light
+   Inter for text, regular Inter where something needs to stand out.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --ifm-font-weight-light: 300;
+  --ifm-font-weight-normal: 300;
+  --ifm-font-weight-semibold: 400;
+  --ifm-font-weight-bold: 400;
+  --ifm-heading-font-weight: 300;
+}
+body { font-weight: 300; }
+b, strong, th { font-weight: 400; }
+.markdown strong, .markdown b { font-weight: 400; }
+.navbar__title, .navbar__link, .menu__link, .breadcrumbs__link,
+.pagination-nav__label, .footer__title, button { font-weight: 300; }
+.navbar__title { font-weight: 400; }
