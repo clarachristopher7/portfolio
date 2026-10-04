@@ -31,25 +31,26 @@
 
   --ifm-font-color-base: #212529;
   --ifm-heading-color: #212529;
-  --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #fbfcfe;
+  --ifm-background-color: #f8eeeb;
+  --ifm-background-surface-color: #fdf8f7;
+  --site-card: #ffffff;
 
-  --ifm-toc-border-color: #e4e7ec;
-  --ifm-hr-border-color: #e4e7ec;
-  --ifm-table-border-color: #e4e7ec;
+  --ifm-toc-border-color: #e8dad6;
+  --ifm-hr-border-color: #e8dad6;
+  --ifm-table-border-color: #e8dad6;
   --ifm-blockquote-color: #6c6e80;
   --ifm-blockquote-border-color: #d6ebff;
 
   --ifm-navbar-height: 3.75rem;
   --ifm-navbar-shadow: none;
 
-  --site-muted: #868e96;
-  --site-soft: #6c6e80;
+  --site-muted: #676d78;
+  --site-soft: #5f6470;
   --site-measure: 70ch;
   --site-chip-bg: #eff8ff;
   --site-chip-border: #d6ebff;
   --site-chip-ink: #0072d6;
-  --home-bg: #ffffff;
+  --home-bg: #f8eeeb;
 }
 
 html[data-theme='dark'] {
@@ -65,6 +66,7 @@ html[data-theme='dark'] {
   --ifm-heading-color: #f1f3f5;
   --ifm-background-color: #121417;
   --ifm-background-surface-color: #181b20;
+  --site-card: #181b20;
 
   --ifm-toc-border-color: #2a2f36;
   --ifm-hr-border-color: #2a2f36;
@@ -551,7 +553,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
 .hub-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .hub-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .hub-card {
-  background: var(--ifm-background-color);
+  background: var(--site-card);
   padding: 1.35rem 1.45rem 1.25rem;
   display: flex;
   flex-direction: column;
@@ -682,7 +684,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
   text-decoration: none;
 }
 .btn-hub-alt {
-  background: var(--ifm-background-color);
+  background: var(--site-card);
   border: 1px solid #dee2e6;
   color: var(--ifm-heading-color);
 }
@@ -725,7 +727,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
   margin: 1.25rem 0 2.5rem;
 }
 .ia-path {
-  background: var(--ifm-background-color);
+  background: var(--site-card);
   padding: 1.1rem 1.35rem 1rem;
 }
 .markdown .ia-q {
@@ -815,7 +817,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 8px;
   padding: 1rem 1.15rem 1.1rem;
-  background: var(--ifm-background-color);
+  background: var(--site-card);
 }
 .markdown .ia-mini p { margin: 0; max-width: none; }
 .markdown .ia-mini-head {
@@ -906,7 +908,7 @@ html[data-theme='dark'] .btn-hub-alt { border-color: var(--ifm-toc-border-color)
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 8px;
   overflow: hidden;
-  background: var(--ifm-background-color);
+  background: var(--site-card);
 }
 .markdown .ia-browser p { margin: 0; max-width: none; }
 .markdown .ia-browser-bar {
@@ -978,7 +980,7 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
   border: 1px solid var(--ifm-toc-border-color);
 }
 .ia-home-grid span {
-  background: var(--ifm-background-color);
+  background: var(--site-card);
   padding: 0.55rem 0.55rem 0.6rem;
   min-height: 3.4rem;
   font-size: 11.5px;
@@ -1039,7 +1041,7 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
 .markdown blockquote p:last-child { margin-bottom: 0; }
 
 .hub-card--static { min-height: 0; }
-.hub-card--static:hover { background: var(--ifm-background-color); }
+.hub-card--static:hover { background: var(--site-card); }
 
 /* Step rows with fewer steps, for the automation pages */
 .markdown ol.ia-steps--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1109,7 +1111,7 @@ main[class*="docMainContainer"] > .container {
 .ia-brief > div {
   border-top: 0;
   padding: 1.1rem 1.25rem 1.2rem;
-  background: var(--ifm-background-color);
+  background: var(--site-card);
 }
 .ia-brief h4 { color: var(--ifm-color-primary); font-size: 10.5px; letter-spacing: 0.1em; }
 .ia-brief p { font-size: 13.5px; color: var(--site-soft); }
@@ -1206,7 +1208,7 @@ body {
   border-radius: 6px;
   padding: 0.35rem 0.55rem;
   margin: 0 0 0.6rem;
-  background: var(--ifm-background-color);
+  background: var(--site-card);
 }
 .markdown .ia-side-band {
   font-size: 9.5px;
@@ -1256,7 +1258,7 @@ body {
 }
 .markdown ol.ia-callouts li {
   margin: 0;
-  background: var(--ifm-background-color);
+  background: var(--site-card);
   padding: 1rem 1.1rem 1.1rem;
   display: flex;
   flex-direction: column;
@@ -1364,8 +1366,6 @@ body {
    Product estate: the single-pane map, drawn as a mockup
    ───────────────────────────────────────────────────────────── */
 .estate { max-width: 1180px; margin: 1.25rem 0 1rem; }
-.estate-tabs span { padding: 0.15rem 0.1rem; }
-.estate-tabs span.is-on { color: var(--ifm-color-primary); font-weight: 600; box-shadow: inset 0 -2px 0 var(--ifm-color-primary); }
 .estate-tabs em {
   margin-left: auto;
   font-style: normal;
@@ -1436,3 +1436,54 @@ body {
   .estate-foot { grid-template-columns: 1fr; }
   .markdown ol.ia-callouts--5 { grid-template-columns: 1fr; }
 }
+
+/* Prose links and small blue labels sit on pale pink, so they use the
+   darker blues to stay readable. */
+.markdown a { color: var(--ifm-color-primary-darker); }
+.hub-tag { color: var(--ifm-color-primary-dark); }
+html[data-theme='dark'] .markdown a { color: var(--ifm-color-primary); }
+html[data-theme='dark'] .hub-tag { color: var(--ifm-color-primary); }
+
+/* Estate map tabs: radio buttons drive the panels, so the tabs work
+   with or without JavaScript and respond to the keyboard. */
+.estate-tabs-wrap { position: relative; max-width: 1180px; }
+.estate-radio { position: absolute; opacity: 0; pointer-events: none; }
+.estate-tabs label {
+  cursor: pointer;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  color: var(--site-soft);
+  font-weight: 500;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.estate-tabs label:hover { background: var(--ifm-background-surface-color); color: var(--ifm-heading-color); }
+.estate-panel { display: none; padding: 1rem 1.2rem 1.25rem; }
+#estate-sections:checked ~ .estate .estate-panel--sections,
+#estate-journey:checked ~ .estate .estate-panel--journey,
+#estate-decisions:checked ~ .estate .estate-panel--decisions { display: block; }
+#estate-sections:checked ~ .estate label[for='estate-sections'],
+#estate-journey:checked ~ .estate label[for='estate-journey'],
+#estate-decisions:checked ~ .estate label[for='estate-decisions'] {
+  background: var(--site-chip-bg);
+  color: var(--site-chip-ink);
+  font-weight: 600;
+}
+#estate-sections:focus-visible ~ .estate label[for='estate-sections'],
+#estate-journey:focus-visible ~ .estate label[for='estate-journey'],
+#estate-decisions:focus-visible ~ .estate label[for='estate-decisions'] {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+.markdown .estate-cap { font-size: 13px; color: var(--site-soft); margin: 0 0 0.75rem; max-width: none; }
+.estate-type {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 10.5px;
+  color: var(--site-muted);
+  font-weight: 500;
+}
+.markdown .estate-table td.estate-evcol { font-size: 11.5px; color: var(--site-soft); white-space: nowrap; }
+.markdown .estate-table--decisions { min-width: 560px; }
+.markdown .estate-table--decisions td { font-size: 13px; }
+.markdown .estate-floor-label { margin-top: 1.1rem; }
+.pagination-nav__link { background: var(--site-card); }
