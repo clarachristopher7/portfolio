@@ -1,0 +1,34 @@
+---
+slug: /
+title: Home
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+import Link from '@docusaurus/Link';
+import WorkCards from '@site/src/components/WorkCards';
+import {HubGroup, HubCard} from '@site/src/components/Hub';
+
+# Clara Christopher
+
+<p className="hub-sub">Content architect for cloud security products. I design how the product UI and docs are written, structured, and published, from the user journey to the docs pipeline.</p>
+
+<div className="hub-actions">
+  <Link className="btn-hub" to="/intro">About me</Link>
+  <Link className="btn-hub-alt" to="/resume">Resume</Link>
+  <Link className="btn-hub-alt" to="/contact">Contact</Link>
+</div>
+
+<WorkCards set="contentDesign" label="Content design" />
+<WorkCards set="architecture" label="Content architecture" />
+<WorkCards set="docs" label="Docs" />
+
+<div className="hub-row">
+  <WorkCards set="automations" label="Automations" />
+  <HubGroup label="Writing" columns={1}>
+    <HubCard to="/blog/future-of-technical-writing-generative-ai" icon="book" tag="Essay" title="Technical writing and generative AI" go="Read the post">
+      What the Chinese Room thought experiment says about writing docs with AI.
+    </HubCard>
+  </HubGroup>
+</div>

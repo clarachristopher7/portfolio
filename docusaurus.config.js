@@ -36,17 +36,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: 'work', // makes the docs section live at /work instead of /docs
+          routeBasePath: '/', // every page shares the docs layout, so the sidebar shows everywhere
           sidebarPath: require.resolve('./sidebars.js'),
         },
-        blog: {
-          routeBasePath: 'blog',
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -60,7 +53,9 @@ const config = {
       navbar: {
         title: 'Clara Christopher',
         items: [
-          {to: '/work/intro', label: 'Work', position: 'left'},
+          {to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$'},
+          {to: '/intro', label: 'About', position: 'left'},
+          {to: '/resume', label: 'Resume', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/contact', label: 'Contact', position: 'left'},
           {href: 'https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG', label: 'LinkedIn', position: 'right'},

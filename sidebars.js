@@ -1,9 +1,11 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   workSidebar: [
+    {type: 'doc', id: 'index', label: 'Home'},
     {type: 'html', value: 'About', className: 'sidebar-band', defaultStyle: false},
     'intro',
     'resume',
+    'contact',
     {type: 'html', value: 'Work', className: 'sidebar-band', defaultStyle: false},
     'published-cse-docs',
     {
@@ -33,6 +35,13 @@ const sidebars = {
         'docs-engineering/pr-evaluator-case-study',
         'docs-engineering/staleness-auditor-case-study',
       ],
+    },
+    {type: 'html', value: 'Writing', className: 'sidebar-band', defaultStyle: false},
+    {
+      type: 'category',
+      label: 'Blog',
+      link: {type: 'doc', id: 'blog/index'},
+      items: ['blog/future-of-technical-writing-generative-ai'],
     },
   ],
 };

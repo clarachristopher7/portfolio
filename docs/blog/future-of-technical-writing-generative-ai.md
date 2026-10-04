@@ -1,13 +1,17 @@
 ---
-slug: future-of-technical-writing-generative-ai
+slug: /blog/future-of-technical-writing-generative-ai
 title: "Determining the future of technical writing in the world of generative AI: a leap of faith, like anything else"
-authors: clara
-tags: [generative-ai, technical-writing, philosophy]
+sidebar_label: Technical writing and generative AI
+hide_table_of_contents: true
 ---
+
+# Determining the future of technical writing in the world of generative AI: a leap of faith, like anything else
+
+<p className="post-meta">September 16, 2026</p>
+
 
 In the 1980s, when AI was more a matter of speculation than a widespread implementation, philosopher John Searle proposed a thought experiment which he called the Chinese Room. He put forward a hypothetical scenario in which a person confined to a room receives paper messages through a slot in the wall. The person is then tasked with returning intelligible responses through another slot in the wall. The messages contain symbols which represent Chinese characters, and the person uses an instruction manual that tells them which symbols to return based on the symbols they just received.
 
-<!-- truncate -->
 
 What Searle demonstrates here is a person who can effectively communicate in Chinese without any direct experience or inherent understanding of the Chinese language, drawing a parallel to how artificial intelligence essentially works: in response to information input, meaningful responses are returned, while the machine lacks an inherent understanding of the language it uses. In other words, it operates blindly.
 

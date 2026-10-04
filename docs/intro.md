@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 sidebar_position: 1
 ---
 
@@ -15,16 +16,16 @@ SonicWall's hardware and cloud product publishing flow.
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <HubGroup label="What's here" columns={2}>
-  <HubCard to="/work/published-cse-docs" icon="file" tag="Docs" title="Live docs I maintain" go="See the pages">
+  <HubCard to="/published-cse-docs" icon="file" tag="Docs" title="Live docs I maintain" go="See the pages">
     Pages I write and keep current on the Cloud Secure Edge docs site.
   </HubCard>
-  <HubCard to="/work/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the IA work">
+  <HubCard to="/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the IA work">
     A docs sidebar regrouped around reader tasks, and a model for comparing doc sets across products.
   </HubCard>
-  <HubCard to="/work/content-design/overview" icon="pen" tag="In-product" title="Content design" go="See the samples">
+  <HubCard to="/content-design/overview" icon="pen" tag="In-product" title="Content design" go="See the samples">
     In-product strings, how they're structured, and the order a user meets them.
   </HubCard>
-  <HubCard to="/work/automations" icon="bot" tag="Tooling" title="Automations" go="See the tools">
+  <HubCard to="/automations" icon="bot" tag="Tooling" title="Automations" go="See the tools">
     AI-assisted checks that keep the docs in step with the product.
   </HubCard>
 </HubGroup>
