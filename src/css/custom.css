@@ -414,3 +414,118 @@ code {
     margin-inline: -4.5rem;
   }
 }
+
+/* CSE IA case study: chart colors, stat tiles, brief cards */
+:root { --ia-new: #3b82f6; --ia-added: #d97706; }
+html[data-theme='dark'] { --ia-new: #4b8df8; --ia-added: #d97706; }
+
+.ia-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 1.75rem 0 1.5rem;
+}
+.ia-stat {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  padding: 18px 10px 14px;
+  text-align: center;
+}
+.ia-stat b {
+  display: block;
+  font-size: 1.55rem;
+  font-weight: 650;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+.ia-stat span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-700);
+}
+.ia-stat--hi {
+  border-color: var(--ia-new);
+  background: color-mix(in srgb, var(--ia-new) 9%, transparent);
+}
+
+.ia-brief {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 0 2.25rem;
+}
+.ia-brief > div {
+  border-top: 3px solid var(--ifm-color-emphasis-300);
+  padding-top: 10px;
+}
+.ia-brief h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0 0 6px;
+}
+.ia-brief p {
+  font-size: 0.93rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .ia-stats { grid-template-columns: repeat(3, 1fr); }
+  .ia-brief { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .ia-stats { grid-template-columns: repeat(2, 1fr); }
+  .ia-stat b { font-size: 1.3rem; }
+}
+
+.markdown ol.ia-steps {
+  max-width: none;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 4px;
+  padding: 0;
+  margin: 1.25rem 0 2.5rem;
+}
+.markdown ol.ia-steps li {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 8px 14px 8px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.25;
+  background: var(--ifm-color-emphasis-200);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
+}
+.markdown ol.ia-steps li:first-child {
+  padding-left: 10px;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%);
+}
+.markdown ol.ia-steps li.is-new {
+  background: color-mix(in srgb, var(--ia-new) 22%, transparent);
+  font-weight: 650;
+}
+.markdown ol.ia-steps small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ia-new);
+}
+@media (max-width: 1200px) {
+  .markdown ol.ia-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
