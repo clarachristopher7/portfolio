@@ -4,11 +4,10 @@
 }
 
 .title {
-  font-family: Fraunces, Georgia, 'Times New Roman', serif;
-  font-optical-sizing: auto;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 500;
-  letter-spacing: -0.018em;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
   margin-bottom: 0.75rem;
 }
 
