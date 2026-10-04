@@ -31,26 +31,26 @@
 
   --ifm-font-color-base: #212529;
   --ifm-heading-color: #212529;
-  --ifm-background-color: #f8eeeb;
-  --ifm-background-surface-color: #fdf8f7;
+  --ifm-background-color: #fbe8eb;
+  --ifm-background-surface-color: #fef6f7;
   --site-card: #ffffff;
 
-  --ifm-toc-border-color: #e8dad6;
-  --ifm-hr-border-color: #e8dad6;
-  --ifm-table-border-color: #e8dad6;
+  --ifm-toc-border-color: #efd8dc;
+  --ifm-hr-border-color: #efd8dc;
+  --ifm-table-border-color: #efd8dc;
   --ifm-blockquote-color: #6c6e80;
   --ifm-blockquote-border-color: #d6ebff;
 
   --ifm-navbar-height: 3.75rem;
   --ifm-navbar-shadow: none;
 
-  --site-muted: #676d78;
+  --site-muted: #61666f;
   --site-soft: #5f6470;
   --site-measure: 70ch;
   --site-chip-bg: #eff8ff;
   --site-chip-border: #d6ebff;
   --site-chip-ink: #0072d6;
-  --home-bg: #f8eeeb;
+  --home-bg: #fbe8eb;
 }
 
 html[data-theme='dark'] {
