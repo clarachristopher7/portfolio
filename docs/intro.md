@@ -5,13 +5,7 @@ sidebar_position: 1
 
 # About me
 
-Content architect for cloud security products. I design how the product UI and docs are
-written, structured, and published, considering everything from the user journey to how
-the docs pipeline is built.
-
-At SonicWall I own the Cloud Secure Edge content end to end. I work with designers and
-front-end engineers to build in-product experiences, and I'm currently rearchitecting
-SonicWall's hardware and cloud product publishing flow.
+I work across docs, content design, and content architecture for cloud security products. I design the content in the product and docs, and I create a cohesive experience between product doc sets.
 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
