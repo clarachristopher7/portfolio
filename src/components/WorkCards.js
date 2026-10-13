@@ -14,7 +14,7 @@ const SETS = {
       title: "AI prompt visibility", img: "/img/content-design/ai-prompt-itp-policy.png",
       imgAlt: "A prototype of an Internet Threat Protection policy with a TLS decryption switch",
       go: "See the prototypes",
-      text: "The logging switch seemed to work, but nothing was captured until an admin turned on decryption in another part of the admin console. I prototyped two ways to connect the two settings."},
+      text: "In the product manager's prototype, the logging switch seemed to work, but nothing would be captured until an admin turned on decryption in another part of the admin console. I prototyped two ways to connect the two settings."},
     {to: "/content-design/domain-lookup-tool", tag: "Troubleshooting",
       title: "Domain Lookup Tool", img: "/img/content-design/domain-lookup-tool.png",
       imgAlt: "The Domain Lookup Tool panel inside an Internet Threat Protection policy",
