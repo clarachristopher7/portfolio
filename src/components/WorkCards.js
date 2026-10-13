@@ -37,7 +37,7 @@ const SETS = {
       text: "Each product's docs grew separately. I built a model that measures all of them against one definition of complete."},
     {to: "/docs-engineering/docs-modernization-case-study", img: "/img/previews/modernization.png",
       imgAlt: "One sonicwall.com address that routes /docs to a docs pipeline and everything else to the main website", tag: "Platform proposal",
-      title: "One documentation site for every SonicWall product", go: "See the proposal",
+      title: "Documentation platform modernization", go: "See the proposal",
       text: "Docs were split across two sites, and another team controlled the navigation. I proposed one docs site that the docs team can change directly."},
   ],
   docs: [
