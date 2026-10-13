@@ -16,16 +16,16 @@ sidebar_position: 4
 
 ## The problem
 
-![A prototype of the homepage before the redesign. Callout 1 points to the Services count, 2 to a trust level chart that is almost all Deny, 3 to a legend cut off mid-word, and 4 to a chart with a single bar.](/img/content-design/console-home-before.png)
+![A prototype of the homepage before the redesign. Callout 1 points to the row of counts, 2 to the devices by operating system chart, 3 to a hollow ring chart, and 4 to a legend cut off mid-word.](/img/content-design/console-home-before.png)
 
 <p className="shot-cap">Six counts and five charts, filtered to the last 30 days. Every chart describes what the organization has. None of them says whether the product is working.</p>
 
 The homepage answered questions that admins don't ask when they sign in.
 
-1. **Counts with no context.** It counted devices, users, services, policies, roles, and connectors. 1,149 services is neither good nor bad.
-2. **Charts that don't say what to do.** A trust level chart that's almost all **Deny** could mean an attack, or a trust setting that's too strict. The screen didn't say which.
-3. **Labels cut off.** Legends were cut off mid-word, so admins couldn't always tell what a color meant.
-4. **Nothing to compare.** One chart had a single bar for a single platform.
+1. **Counts with no context.** The top row counted devices, users, services, policies, roles, and connectors. 1,149 services is neither good nor bad.
+2. **No sense of what to do.** A chart of devices by operating system shows the mix of devices. It doesn't tell an admin what to act on, or whether the organization is in good health.
+3. **Hard-to-read charts.** Hollow ring charts make it hard to compare slices, especially thin ones.
+4. **Labels cut off.** Legends were cut off mid-word, so admins couldn't always tell what a color meant.
 
 ## What I tried
 
@@ -33,7 +33,9 @@ I started from the use cases instead of from the data. For each use case, I aske
 
 Then I chose the metrics that answer those questions. Each use case gets its own card, with a headline number, the gap that needs attention, and a link to the activity behind it. The cards replaced the inventory counts and charts.
 
-![A prototype of the redesigned homepage. An alert, licenses, and tasks are at the top. Below them are AI activity metrics and one card for each use case.](/img/content-design/console-home-after.png)
+At the top of the page, a health meter rolls the use cases up into one score. It lists each use case with its status, so the admin sees what needs attention before scrolling.
+
+![A prototype of the redesigned homepage. A health meter with a score of 82 out of 100 is at the top, followed by an alert, licenses, and tasks. Below them are AI activity metrics and a Security Overview with one card for each use case.](/img/content-design/console-home-after.png)
 
 | Use case | What the homepage shows |
 |---|---|
