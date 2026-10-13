@@ -9,6 +9,11 @@ hide_table_of_contents: true
 
 <p className="post-meta">July 2023 · Published by <a href="https://securityboulevard.com/2023/07/generative-ai-and-the-future-of-technical-writing">Security Boulevard</a></p>
 
+<figure className="drawing drawing--photo">
+  <img src={require('@site/static/img/drawings/diner-menu.jpg').default} alt="Pencil drawing of two hands resting on a diner menu" />
+</figure>
+
+
 
 In the 1980s, when AI was more a matter of speculation than a widespread implementation, philosopher John Searle proposed a thought experiment which he called the Chinese Room. He put forward a hypothetical scenario in which a person confined to a room receives paper messages through a slot in the wall. The person is then tasked with returning intelligible responses through another slot in the wall. The messages contain symbols which represent Chinese characters, and the person uses an instruction manual that tells them which symbols to return based on the symbols they just received.
 
