@@ -19,7 +19,7 @@ sidebar_position: 2
 
 <p className="shot-cap">The product manager's prototype.</p>
 
-1. **The switch turns on, but logging doesn't start.** An admin can turn the switch on before decryption is set up. The switch shows as on, but Cloud Secure Edge can't capture any prompts until setup is finished.
+1. **The switch turns on, but logging doesn't start.** An admin can turn the switch on before decryption is set up.
 2. **The warning can be dismissed.** The warning names the missing step, but the admin can close it and leave the screen with setup unfinished.
 3. **The log stays empty.** An admin who comes back later may have forgotten about the unfinished setup. The empty log suggests that employees aren't using AI tools, when Cloud Secure Edge was never capturing their prompts.
 
