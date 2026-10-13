@@ -28,7 +28,7 @@ sidebar_position: 2
 
 My first prototype moved the decryption setting onto the logging screen, above the logging switch. The admin could finish setup in one place, so the warning was no longer needed.
 
-![The first prototype. The decryption setting is directly above the logging switch, and a line confirms how many devices are logged.](/img/content-design/ai-prompt-after.png)
+![The first prototype. Callouts point to the decryption setting on the same screen as logging, the device count for each policy, and the line that confirms how many devices are logged.](/img/content-design/ai-prompt-after-annotated.png)
 
 <p className="shot-cap">The screen lists each Internet Threat Protection policy with the number of devices that it covers and a decryption switch. A line under the logging switch confirms how many devices Cloud Secure Edge is logging.</p>
 

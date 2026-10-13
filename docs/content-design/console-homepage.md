@@ -35,7 +35,7 @@ Then I chose the metrics that answer those questions. Each use case gets its own
 
 At the top of the page, a health meter rolls the use cases up into one score. It lists each use case with its status, so the admin sees what needs attention before scrolling.
 
-![A prototype of the redesigned homepage. A health meter with a score of 82 out of 100 is at the top, followed by an alert, licenses, and tasks. Below them are AI activity metrics and a Security Overview with one card for each use case.](/img/content-design/console-home-after.png)
+![A prototype of the redesigned homepage. Callouts point to the health meter, the license setup progress, a locked metric that shows what an upgrade adds, and a use case card that shows what needs attention.](/img/content-design/console-home-after-annotated.png)
 
 | Use case | What the homepage shows |
 |---|---|

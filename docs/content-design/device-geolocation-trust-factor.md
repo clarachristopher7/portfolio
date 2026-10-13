@@ -29,7 +29,7 @@ In this example, the admin selected Algeria and set the switch to **Blocked**. T
 
 I made three changes to the same screen. I rewrote the label so that it names both choices, block and allow. I added a sentence under the country list that states the rule in words. I also moved the trust effect meter below the settings, because the meter shows a result of those settings.
 
-![A prototype of the trust factor after the revision. The label is rewritten, a sentence states the rule, and the meter is below the settings.](/img/content-design/device-geolocation-after.png)
+![A prototype of the trust factor after the revision. Callouts point to the label, which names both choices, the sentence that states the rule, and the trust effect meter, which now comes last.](/img/content-design/device-geolocation-after-annotated.png)
 
 | | Before | After |
 |---|---|---|
