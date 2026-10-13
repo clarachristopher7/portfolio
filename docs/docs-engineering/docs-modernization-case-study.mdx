@@ -84,14 +84,14 @@ Customers and staff showed which design worked. They kept going to the Cloud Sec
 
 The web team set six conditions. The proposal had to meet all of them.
 
-| Condition | How the proposal meets it |
-|---|---|
-| **One website** | The docs are served at sonicwall.com/docs, on the address customers already use. There's no separate docs domain. |
-| **No loss of search ranking** | The hostname doesn't change. Every page address that does change gets an automatic redirect. |
-| **No disruption to site search, metadata, or AI answers** | Search tools index by address, so they still see one website. The pipeline writes page metadata directly from the source. |
-| **One brand** | The docs use the web team's design tokens and stylesheet from their single source, so brand changes reach the docs on the next build. |
-| **No added work for the web team** | The docs team runs its own publishing pipeline. The web team adds one routing rule. |
-| **No way for a writer to put the company at risk** | Automated checks block code in content. Only one lead writer can change navigation and page templates. Every change needs a recorded approval. |
+<ol className="conditions">
+  <li>One website, with no separate docs domain</li>
+  <li>No loss of search ranking</li>
+  <li>No disruption to site search, metadata, or AI answers</li>
+  <li>One brand across the whole site</li>
+  <li>No added work for the web team</li>
+  <li>No way for a writer to put the company at risk</li>
+</ol>
 
 ## What I tried
 
@@ -147,6 +147,17 @@ For publishing, I chose Antora. It treats one product as having several live ver
 </div>
 
 To a customer, a search engine, or an AI assistant, this is still one website. The only difference is inside. The docs team publishes to its own location on its own schedule.
+
+### How the design meets each condition
+
+| Condition | How the design meets it |
+|---|---|
+| **One website** | The docs are served at sonicwall.com/docs, on the address customers already use. There's no separate docs domain. |
+| **No loss of search ranking** | The hostname doesn't change. Every page address that does change gets an automatic redirect. |
+| **No disruption to site search, metadata, or AI answers** | Search tools index by address, so they still see one website. The pipeline writes page metadata directly from the source. |
+| **One brand** | The docs use the web team's design tokens and stylesheet from their single source, so brand changes reach the docs on the next build. |
+| **No added work for the web team** | The docs team runs its own publishing pipeline. The web team adds one routing rule. |
+| **No way for a writer to put the company at risk** | Automated checks block code in content. Only one lead writer can change navigation and page templates. Every change needs a recorded approval. |
 
 ### A correction, from edit to live
 

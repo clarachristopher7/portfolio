@@ -1705,3 +1705,14 @@ body * {
 }
 .markdown figure.drawing--photo { max-width: 520px; }
 .markdown figure.drawing--photo img { mix-blend-mode: normal; border-radius: 2px; }
+
+/* Numbered list of conditions, set as a hairline grid. */
+.markdown ol.conditions {
+  list-style: none; counter-reset: cond; padding: 0; max-width: none;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px;
+  background: var(--ifm-toc-border-color); border: 1px solid var(--ifm-toc-border-color); border-radius: 2px; overflow: hidden;
+  margin: 1rem 0 2rem;
+}
+.markdown ol.conditions li { counter-increment: cond; background: var(--site-card); margin: 0; padding: 0.9rem 1.1rem; font-size: 14px; line-height: 1.4; }
+.markdown ol.conditions li::before { content: counter(cond); display: block; font-size: 11px; color: var(--ia-new); margin-bottom: 0.3rem; }
+@media (max-width: 767px) { .markdown ol.conditions { grid-template-columns: 1fr; } }
