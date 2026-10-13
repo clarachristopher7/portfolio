@@ -5,13 +5,12 @@ sidebar_position: 2
 
 # AI prompt visibility
 
-<p className="hub-sub">Admins can log the prompts that employees send to AI tools. The logging switch seemed to work, but Cloud Secure Edge captured nothing until an admin changed a second setting on another screen.</p>
+<p className="hub-sub">Admins can log the prompts that employees send to AI tools. The logging switch seemed to work, but Cloud Secure Edge captured nothing until an admin changed a second setting in another part of the admin console.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
   <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools such as ChatGPT. Employees sometimes paste sensitive information into these tools, such as customer records, source code, or internal documents. Once that information leaves the company, the company can't control where it goes. The log shows admins what's being shared, so they can catch leaks and set clear rules for using AI.</p>
   <p>Prompts travel over encrypted connections. Cloud Secure Edge can read a prompt only if it has permission to decrypt that traffic. Admins give that permission in the Internet Threat Protection policy, which is in a different part of the admin console.</p>
-  <p>The product designer and I argued that admins should finish this setup before they turn on logging. I prototyped two ways to connect the decryption setting to logging.</p>
 </div>
 
 ## The problem
