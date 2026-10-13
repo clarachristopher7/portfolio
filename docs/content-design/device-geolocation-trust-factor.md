@@ -16,15 +16,14 @@ sidebar_position: 1
 
 ## The problem
 
-![A prototype of the trust factor before the revision. The trust effect meter is above the country selector and its options.](/img/content-design/device-geolocation-before.png)
+![A prototype of the trust factor before the revision. Callout 1 points to the label, 2 to the Allowed and Blocked switch at the far right, 3 to the country list, which has no rule under it, and 4 to the trust effect meter above the settings.](/img/content-design/device-geolocation-before.png)
 
-<p className="shot-cap">The trust effect meter at the top shows what happens to a device that fails the check. The meter appears before the settings that control it. The <b>Allowed</b> and <b>Blocked</b> switch is at the far right, away from the label that it completes.</p>
+In this example, the admin selected Algeria and set the switch to **Blocked**. That means a device passes the check only if it is outside Algeria.
 
-The label said "Select the countries where devices with this Trust Factor are:". The sentence makes sense only if you read the **Allowed** and **Blocked** switch at the far right as its last word.
-
-In the prototype, the admin selected Algeria and set the switch to **Blocked**. That setting means a device passes the check only if it is outside Algeria. A device in Algeria fails the check, and the trust effect meter decides what happens to it next.
-
-The screen never stated that rule in words. An admin who read the switch the other way would think that devices in Algeria pass. They would save a policy that did the opposite of what they wanted, and nothing on the screen would warn them.
+1. **The label is an unfinished sentence.** "Select the countries where devices with this Trust Factor are:" ends in a colon. It makes sense only if you read the switch as its last word.
+2. **The switch that finishes it is at the far right.** The **Allowed** and **Blocked** switch sits across the screen from the label that it completes.
+3. **Nothing states the rule.** An admin who read the switch the other way would think that devices in Algeria pass. They would save a policy that did the opposite of what they wanted, and nothing on the screen would warn them.
+4. **The result comes first.** The trust effect meter shows what happens to a device that fails the check. It appears above the settings that decide which devices fail.
 
 ## What I tried
 

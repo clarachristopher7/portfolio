@@ -16,15 +16,16 @@ sidebar_position: 4
 
 ## The problem
 
-![A prototype of the homepage before the redesign. Six counts sit above five charts that split devices, policies, and connectors by type or status.](/img/content-design/console-home-before.png)
+![A prototype of the homepage before the redesign. Callout 1 points to the Services count, 2 to a trust level chart that is almost all Deny, 3 to a legend cut off mid-word, and 4 to a chart with a single bar.](/img/content-design/console-home-before.png)
 
 <p className="shot-cap">Six counts and five charts, filtered to the last 30 days. Every chart describes what the organization has. None of them says whether the product is working.</p>
 
-The homepage answered questions that admins don't ask when they sign in. It counted devices, users, services, policies, roles, and connectors. Its charts split those counts by operating system or by status.
+The homepage answered questions that admins don't ask when they sign in.
 
-A count with no context doesn't tell an admin what to do. 1,149 services is neither good nor bad. A trust level chart that's almost all **Deny** could mean an attack, or a trust setting that's too strict. The screen didn't say which.
-
-The charts also hid what little they showed. Legends were cut off mid-word, and one chart had a single bar for a single platform.
+1. **Counts with no context.** It counted devices, users, services, policies, roles, and connectors. 1,149 services is neither good nor bad.
+2. **Charts that don't say what to do.** A trust level chart that's almost all **Deny** could mean an attack, or a trust setting that's too strict. The screen didn't say which.
+3. **Labels cut off.** Legends were cut off mid-word, so admins couldn't always tell what a color meant.
+4. **Nothing to compare.** One chart had a single bar for a single platform.
 
 ## What I tried
 

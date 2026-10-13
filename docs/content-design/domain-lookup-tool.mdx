@@ -19,9 +19,9 @@ Before the tool, the only explanation was this diagram from the docs. It shows h
 
 <figure className="docs-diagram">
   <svg
-    viewBox="0 0 1000 272"
+    viewBox="0 0 1000 392"
     role="img"
-    aria-label="How a DNS request is routed under an Internet Threat Protection policy. The DNS proxy sorts the request into a local or internet domain. Local domains go to the default DNS resolver. For internet domains, if the Service Tunnel is off the request goes to the web gateway. If it is on, private domains go through the Service Tunnel, and public domains are checked against the tunnel include and exclude lists, ending at the Service Tunnel, the default DNS resolver, or the web gateway."
+    aria-label="Annotated diagram. 1 points to the Service Tunnel decision, 2 to the include and exclude lists, and 3 to the web gateway, where the diagram cannot say which rule decided. How a DNS request is routed under an Internet Threat Protection policy. The DNS proxy sorts the request into a local or internet domain. Local domains go to the default DNS resolver. For internet domains, if the Service Tunnel is off the request goes to the web gateway. If it is on, private domains go through the Service Tunnel, and public domains are checked against the tunnel include and exclude lists, ending at the Service Tunnel, the default DNS resolver, or the web gateway."
     style={{maxWidth: '100%', height: 'auto'}}
   >
     <defs>
@@ -88,6 +88,32 @@ Before the tool, the only explanation was this diagram from the docs. It shows h
         <text x="938" y="250">Web gateway</text>
       </g>
     </g>
+
+    <defs>
+      <marker id="dlt-n" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0 1 L7 4 L0 7 z" style={{fill: 'var(--ia-new)'}} />
+      </marker>
+    </defs>
+    <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)">
+    <path d="M370 318 C 370 237.0, 370 237.0, 370 160" fill="none" style={{stroke: 'var(--ia-new)'}} strokeWidth="1.8" markerEnd="url(#dlt-n)" />
+    <rect x="150" y="318" width="250" height="60" rx="7" style={{fill: 'var(--site-card)', stroke: 'var(--site-chip-border)'}} />
+    <circle cx="170" cy="339" r="10" style={{fill: 'var(--ia-new)'}} />
+    <text x="170" y="343" textAnchor="middle" fontSize="11" fill="#fff">1</text>
+    <text x="188" y="343" fontSize="13" fill="currentColor">Is the Service Tunnel on for</text>
+    <text x="188" y="361" fontSize="13" fill="currentColor">this device? It depends.</text>
+    <path d="M662 318 C 662 237.0, 740 237.0, 740 160" fill="none" style={{stroke: 'var(--ia-new)'}} strokeWidth="1.8" markerEnd="url(#dlt-n)" />
+    <rect x="430" y="318" width="262" height="60" rx="7" style={{fill: 'var(--site-card)', stroke: 'var(--site-chip-border)'}} />
+    <circle cx="450" cy="339" r="10" style={{fill: 'var(--ia-new)'}} />
+    <text x="450" y="343" textAnchor="middle" fontSize="11" fill="#fff">2</text>
+    <text x="468" y="343" fontSize="13" fill="currentColor">Is this website on the include or</text>
+    <text x="468" y="361" fontSize="13" fill="currentColor">exclude list? It depends.</text>
+    <path d="M938 318 C 938 291.0, 938 291.0, 938 268" fill="none" style={{stroke: 'var(--ia-new)'}} strokeWidth="1.8" markerEnd="url(#dlt-n)" />
+    <rect x="722" y="318" width="270" height="60" rx="7" style={{fill: 'var(--site-card)', stroke: 'var(--site-chip-border)'}} />
+    <circle cx="742" cy="339" r="10" style={{fill: 'var(--ia-new)'}} />
+    <text x="742" y="343" textAnchor="middle" fontSize="11" fill="#fff">3</text>
+    <text x="760" y="343" fontSize="13" fill="currentColor">Which rule blocked it at the web</text>
+    <text x="760" y="361" fontSize="13" fill="currentColor">gateway? The diagram can't say.</text>
+    </g>
   </svg>
   <figcaption>
 
@@ -96,7 +122,13 @@ Before the tool, the only explanation was this diagram from the docs. It shows h
   </figcaption>
 </figure>
 
-To diagnose a block, the admin has to apply their own configuration to one website. They need to know which traffic goes through the Service Tunnel, the private connection to the company network. They also need to know which websites are on their exception lists and which rules they set. A general diagram can't answer those questions. When an admin traces the answer by hand, the work is slow and errors are likely, especially while an employee waits.
+To diagnose a block, the admin has to apply their own configuration to one website. The diagram can't do that for them.
+
+1. **Is the Service Tunnel on?** The Service Tunnel is the private connection to the company network. Whether a request uses it depends on the device and the admin's settings.
+2. **Is the website on an exception list?** The admin has to check the include and exclude lists by hand.
+3. **Which rule blocked it?** The web gateway applies the categories and rules that the admin set. The diagram doesn't show which one decided the result.
+
+When an admin traces the answer by hand, the work is slow and errors are likely, especially while an employee waits.
 
 ## What I tried
 
