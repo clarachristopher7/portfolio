@@ -11,7 +11,7 @@ sidebar_position: 2
   <p className="ctx-label">Background</p>
   <p>Cloud Secure Edge is a SonicWall service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools such as ChatGPT, so admins can see what employees share.</p>
   <p>Prompts travel over encrypted connections. Cloud Secure Edge can read a prompt only if it has permission to decrypt that traffic. Admins give that permission in the Internet Threat Protection policy, which is on a different screen.</p>
-  <p>The product designer and I argued that admins should finish this setup before they turn on logging. I proposed that the decryption setting appear in the same flow as the logging switch.</p>
+  <p>The product designer and I argued that admins should finish this setup before they turn on logging. I prototyped two ways to connect the decryption setting to logging.</p>
 </div>
 
 ## Before
@@ -30,15 +30,23 @@ An admin could dismiss the warning and leave the screen with logging turned on. 
 
 ## What I tried
 
-The warning and the empty log both pointed the admin to a setting on another screen. I proposed moving that setting onto this screen, above the logging switch, so the admin can finish setup in one place. With the setting on the screen, the warning is no longer needed.
+My first prototype moved the decryption setting onto the logging screen, above the logging switch. The admin could finish setup in one place, so the warning was no longer needed.
+
+![The first prototype. The decryption setting is directly above the logging switch, and a line confirms how many devices are logged.](/img/content-design/ai-prompt-after.png)
+
+<p className="shot-cap">The screen lists each Internet Threat Protection policy with the number of devices that it covers and a decryption switch. A line under the logging switch confirms how many devices Cloud Secure Edge is logging.</p>
 
 ## After
 
-![The proposed screen. The decryption setting is directly above the logging switch, and a line confirms how many devices are logged.](/img/content-design/ai-prompt-after.png)
+The second prototype puts the decryption switch inside the Internet Threat Protection policy, next to the policy's other settings. Decryption is a policy setting, so the policy is where admins expect to find it.
 
-In the proposal, the decryption setting appears directly above the logging switch. The screen lists each Internet Threat Protection policy with the number of devices that it covers and a decryption switch. The admin turns on decryption for each policy that should capture prompts, then turns on logging. A line under the switch confirms how many devices Cloud Secure Edge is logging.
+![The second prototype. An Internet Threat Protection policy has a TLS decryption tab with a decryption switch, a list of the features that use decryption, and a list of categories that are never decrypted.](/img/content-design/ai-prompt-itp-policy.png)
 
-This design is a proposal. The team has not built it.
+Under the switch, a **Used by** list names each feature that needs decryption and shows its status. AI prompt visibility appears there with the number of devices that it logs. An admin can see what turning off decryption would stop, and can open **Prompt Visibility** from the policy.
+
+A **Don't decrypt** list names the categories that the policy never decrypts, such as financial services and health. Admins can protect employee privacy in the same place where they turn on decryption.
+
+Both designs are prototypes. The team has not built them.
 
 ## The outcome
 
