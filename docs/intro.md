@@ -9,7 +9,7 @@ I'm a technical writer with a background in networking and cloud security startu
 
 I learn products first-hand and investigate where customers get stuck. I use that understanding to build content around the customer journey and to clarify a path forward for users.
 
-My work spans product docs, in-product copy and setup flows, and the information architecture of docs sites. I also build docs-as-code publishing pipelines, along with automated checks that flag pages when the product changes. I currently own Cloud Secure Edge docs at SonicWall, following its acquisition of Banyan Security, where I was the sole technical writer. Before that, I wrote docs for Tailscale and technical content for Security Compass.
+My work spans product docs, in-product copy and setup flows, and the information architecture of docs sites. I currently own Cloud Secure Edge docs at SonicWall, following its acquisition of Banyan Security, where I was the sole technical writer. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
 <figure className="drawing">
   <img src={require('@site/static/img/drawings/diner.jpg').default} alt="Ink drawing of a diner, with a server carrying plates past the counter stools" />
