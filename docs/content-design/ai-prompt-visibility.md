@@ -21,7 +21,7 @@ sidebar_position: 2
 
 1. An admin can toggle on the switch before decryption is set up.
 2. **The warning can be dismissed.** The warning names the missing step, but the admin can close it and leave the screen with setup unfinished.
-3. **The log stays empty.** An admin who comes back later may have forgotten about the unfinished setup. The empty log suggests that employees aren't using AI tools, when Cloud Secure Edge was never capturing their prompts.
+3. An admin who comes back later may recall turning on AI prompt visibility and see an empty log, thus wrongly concluding that employees aren't using AI tools.
 
 ## What I tried
 
