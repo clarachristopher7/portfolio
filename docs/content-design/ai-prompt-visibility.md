@@ -18,7 +18,7 @@ sidebar_position: 2
 
 ![The screen as it shipped. The logging switch is on, a warning says that a security setting on another screen still needs setup, and the log says "No data yet".](/img/content-design/ai-prompt-before.png)
 
-<p className="shot-cap">In the shipped version, an admin can turn on logging immediately. A warning under the switch points to the decryption setting on another screen.</p>
+<p className="shot-cap">In this version, an admin can turn on logging immediately. A warning under the switch points to the decryption setting on another screen.</p>
 
 ## The problem
 
