@@ -3,19 +3,37 @@ sidebar_position: 1
 hide_table_of_contents: true
 ---
 
-import {HubGroup, HubCard} from '@site/src/components/Hub';
-
 # Documentation impact evaluator
 
 <p className="hub-sub">A scheduled job compares recent code changes with the docs. It reports the pages that the changes probably made wrong, and a writer decides what to change.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Engineers change the product every day. If a change affects a feature that a docs page describes, the page becomes wrong. Nothing in the release process tells the docs team.</p>
-  <p>I designed and built a scheduled job to find those pages. Each run reads the latest code changes and checks which changes customers can use. Then Claude compares each change with an index of every docs page. The job writes a dated report of the pages that probably need an update.</p>
+  <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. Its engineers change the product every day, and its docs describe how the product works.</p>
+  <p>I designed and built a scheduled job that tells the docs team which of those changes affect the docs.</p>
 </div>
 
-## How it works
+## The problem
+
+When a change affects a feature that a docs page describes, the page becomes wrong. Nothing in the release process tells the docs team.
+
+<div className="lanes">
+  <div className="lane">
+    <p className="arch-head">A product change, without the evaluator</p>
+    <div className="chain">
+      <div className="arch-node"><b>An engineer merges a change</b></div>
+      <div className="arch-node"><b>The change reaches customers</b></div>
+      <div className="arch-node arch-node--old"><b>A docs page still describes the old behavior</b></div>
+      <div className="arch-node arch-node--old"><b>A customer finds the mismatch first</b></div>
+    </div>
+  </div>
+</div>
+
+Reading every code change by hand isn't realistic. Most changes never affect the docs, and the ones that do are hard to spot among them.
+
+## What I tried
+
+Each run of the job follows four steps.
 
 <ol className="ia-steps ia-steps--4" aria-label="How the evaluator works">
   <li>Read recent code changes</li>
@@ -24,13 +42,23 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
   <li>Write a dated report</li>
 </ol>
 
-## Two lessons from building it
+Claude compares each change with an index of every docs page. The report lists the pages that probably need an update.
 
-<HubGroup columns={2}>
-  <HubCard icon="git" tag="Lesson" title="Read the code where new features arrive first">
-    My first version read the copy of the code that the team uses for testing. It found one of the nine changes in a release. New features reach the main development code first, so the job reads that code now.
-  </HubCard>
-  <HubCard icon="search" tag="Lesson" title="A finished change is not always live">
-    A change can be finished long before customers can use it. The job searches the code that the preview environment runs for distinctive text from each change. If the job finds the text, it marks the change as live.
-  </HubCard>
-</HubGroup>
+![A sample docs impact report. Callouts point to the count of changes that are live in preview, the docs pages that each change probably affects, and the column where a writer marks each item.](/img/automations/impact-report-annotated.png)
+
+<p className="shot-cap">A sample report. The changes and pages are examples.</p>
+
+Two lessons changed how the job works.
+
+<div className="pillars">
+  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>The first version read the testing copy of the code</b></div><div className="arch-node"><b>It found one of the nine changes in a release</b><span>New features reach the main development code first</span></div><div className="arch-node arch-node--new"><b>The job now reads the main development code</b></div></div>
+  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>A finished change isn't always live</b></div><div className="arch-node"><b>Docs written too early describe features that customers can't use yet</b></div><div className="arch-node arch-node--new"><b>The job checks the preview environment for each change</b><span>If it finds distinctive text from the change, it marks the change as live</span></div></div>
+</div>
+
+## The constraint
+
+I couldn't change how engineering releases the product. The job had to work from what engineers already produce, the code changes in the repository, without adding a step to their process.
+
+## The outcome
+
+The job runs on a schedule and writes a dated report. A writer works through a short list of likely changes instead of reading every code change, and decides what to update.

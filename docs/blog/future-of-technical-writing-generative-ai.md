@@ -9,9 +9,6 @@ hide_table_of_contents: true
 
 <p className="post-meta">July 2023 · Published by <a href="https://securityboulevard.com/2023/07/generative-ai-and-the-future-of-technical-writing">Security Boulevard</a></p>
 
-<figure className="drawing drawing--photo">
-  <img src={require('@site/static/img/drawings/diner-menu.jpg').default} alt="Pencil drawing of two hands resting on a diner menu" />
-</figure>
 
 
 

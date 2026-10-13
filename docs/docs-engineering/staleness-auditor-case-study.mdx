@@ -9,11 +9,29 @@ hide_table_of_contents: true
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>SonicWall releases new versions of the admin console often. A release can change field labels, screenshots, and steps on many docs pages at the same time. Manual reviews usually find those changes after customers find them.</p>
-  <p>I designed and built an auditor that compares every docs page with the current console. It flags each page that no longer matches the console and ranks the flagged pages by impact.</p>
+  <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. Admins set it up in a web-based admin console, and the docs walk them through each screen.</p>
+  <p>I designed and built an auditor that checks the docs against each new version of that console.</p>
 </div>
 
-## How it works
+## The problem
+
+New versions of the admin console ship often. A single release can change field labels, screenshots, and steps on many docs pages at the same time.
+
+<div className="lanes">
+  <div className="lane">
+    <p className="arch-head">A console release, without the auditor</p>
+    <div className="chain">
+      <div className="arch-node"><b>A new console version ships</b></div>
+      <div className="arch-node"><b>Labels, screenshots, and steps change on many pages</b></div>
+      <div className="arch-node arch-node--old"><b>Manual reviews find the changes late</b></div>
+      <div className="arch-node arch-node--old"><b>Customers find the mismatches first</b></div>
+    </div>
+  </div>
+</div>
+
+## What I tried
+
+The auditor runs after each console release.
 
 <ol className="ia-steps ia-steps--3" aria-label="How the auditor works">
   <li>A new console version is released</li>
@@ -21,6 +39,16 @@ hide_table_of_contents: true
   <li className="is-new">A backlog ranked by impact<small>Output</small></li>
 </ol>
 
+It flags each page that no longer matches the console, says what changed, and ranks the pages by impact.
+
+![A sample staleness backlog. Callouts point to the console version the docs were checked against, the column that says what no longer matches, and the impact ranking.](/img/automations/staleness-backlog-annotated.png)
+
+<p className="shot-cap">A sample backlog. The pages and changes are examples.</p>
+
+## The constraint
+
+Console releases come often, and the docs team is small. Each audit had to produce a backlog that the team could work through before the next release arrived.
+
 ## The outcome
 
-[Add a result.]
+Each console release now comes with a ranked backlog. The team fixes the largest gaps first, instead of finding them by chance or from customers.

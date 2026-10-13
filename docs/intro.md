@@ -11,10 +11,6 @@ I learn products first-hand and investigate where customers get stuck. I use tha
 
 My work spans product docs, in-product copy and setup flows, and the information architecture of docs sites. I currently own Cloud Secure Edge docs at SonicWall, following its acquisition of Banyan Security, where I was the sole technical writer. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
-<figure className="drawing">
-  <img src={require('@site/static/img/drawings/diner.jpg').default} alt="Ink drawing of a diner, with a server carrying plates past the counter stools" />
-  <figcaption>The drawings on this site are mine.</figcaption>
-</figure>
 
 I'm open to roles including:
 
