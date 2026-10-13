@@ -22,7 +22,7 @@ const SETS = {
       text: "When a website was blocked, admins could not tell which rule blocked it. I suggested a lookup tool inside the policy that shows them."},
     {to: "/content-design/console-homepage", tag: "Dashboard",
       title: "Admin console homepage", img: "/img/content-design/console-home-after.png",
-      imgAlt: "A prototype of the redesigned console homepage, with AI activity metrics above the inventory counts",
+      imgAlt: "A prototype of the redesigned console homepage, with a card of metrics for each use case",
       go: "See the before and after",
       text: "The homepage showed counts and charts that didn't tell admins anything they could act on. I chose metrics for each reason that customers buy the product."},
   ],

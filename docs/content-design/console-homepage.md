@@ -11,7 +11,7 @@ sidebar_position: 4
   <p className="ctx-label">Background</p>
   <p>Cloud Secure Edge is a SonicWall service that decides whether an employee's device can connect to company apps and websites. Admins set it up and run it from a web-based admin console.</p>
   <p>The homepage is the first screen that an admin sees after they sign in. It's the natural place to answer one question. Is the product doing the job that we bought it for?</p>
-  <p>Customers buy Cloud Secure Edge for a few primary use cases. Examples are replacing a VPN, filtering web traffic, and controlling the AI apps that employees use. I worked on the redesign with the product designer. My part was to choose the metrics that show how each use case is going.</p>
+  <p>Customers buy Cloud Secure Edge for a few primary use cases. They include remote access without a VPN, blocking malicious content, zero trust access to private apps, checking device security posture, and protecting SaaS apps. I worked on the redesign with the product designer. My part was to choose the metrics that show how each use case is going.</p>
 </div>
 
 ## The problem
@@ -30,17 +30,20 @@ The charts also hid what little they showed. Legends were cut off mid-word, and 
 
 I started from the use cases instead of from the data. For each use case, I asked what an admin needs to know to decide whether it's working. I also asked what the admin should do next if it isn't.
 
-Then I chose the metrics that answer those questions. Each metric has a comparison, such as "vs. yesterday", and a link to the activity behind it. The inventory counts and charts stayed, under the heading **Environment Overview**, below the use case metrics.
+Then I chose the metrics that answer those questions. Each use case gets its own card, with a headline number, the gap that needs attention, and a link to the activity behind it. The cards replaced the inventory counts and charts.
 
-![A prototype of the redesigned homepage. An alert, licenses, tasks, and release notes are at the top. Below them, AI activity metrics come before the inventory counts and charts.](/img/content-design/console-home-after.png)
+![A prototype of the redesigned homepage. An alert, licenses, and tasks are at the top. Below them are AI activity metrics and one card for each use case.](/img/content-design/console-home-after.png)
 
-| What the admin needs to know | What the homepage shows |
+| Use case | What the homepage shows |
 |---|---|
-| Is there something to act on now? | An alert for AI apps that nobody has reviewed yet, with a button to review them |
-| Am I getting what I pay for? | Each license, its renewal date, and how many of its features are set up |
-| What should I set up next? | Tasks, each with a one-line reason and a **Get Started** link |
-| Is AI use under control? | AI apps discovered, allowed, and blocked, each compared with the day or week before |
-| What are employees sending to AI apps? | Prompts, prompts sent from personal accounts, and prompts with attachments |
+| **Remote access** | How many users connected through a Service Tunnel today, and how many connections failed |
+| **Blocking malicious content** | Threats blocked this week, and the devices that have no threat protection |
+| **Zero trust access** | Access requests denied by policy, and the services that have no access policy |
+| **Device security posture** | Devices at each trust level, how many are below the level they need, and the most common reason |
+| **Protecting SaaS apps** | Sign-ins blocked from untrusted devices, and the apps that still accept any device |
+| **AI apps** | AI apps discovered, allowed, and blocked, plus the prompts that employees send |
+
+Above the cards, an alert flags AI apps that nobody has reviewed yet. Each license shows how many of its features are set up, and the task list suggests what to set up next.
 
 Metrics that need a higher license still appear, with the note "Can see more with a license upgrade". The admin sees what they could measure, instead of an empty space.
 
