@@ -14,23 +14,21 @@ sidebar_position: 2
   <p>The product designer and I argued that admins should finish this setup before they turn on logging. I prototyped two ways to connect the decryption setting to logging.</p>
 </div>
 
-## Before
-
-![The screen as it shipped. The logging switch is on, a warning says that a security setting on another screen still needs setup, and the log says "No data yet".](/img/content-design/ai-prompt-before.png)
-
-<p className="shot-cap">In this version, an admin can turn on logging immediately. A warning under the switch points to the decryption setting on another screen.</p>
-
 ## The problem
 
-An admin could dismiss the warning and leave the screen with logging turned on. The log then stayed empty. An empty log looks the same as a log from a company whose employees rarely use AI tools. So the admin had no reason to come back and check the setup.
+![The logging screen before the redesign. Callout 1 points to the logging switch, which is on. Callout 2 points to the close button on a warning about unfinished setup. Callout 3 points to an empty log that says "No data yet".](/img/content-design/ai-prompt-before-annotated.png)
 
-## The constraint
+<p className="shot-cap">In this version, an admin can turn on logging before setup is finished.</p>
 
-Turning on logging couldn't turn on decryption for the admin. Decryption lets Cloud Secure Edge read all the encrypted traffic that a policy covers, not only AI prompts. That choice affects employee privacy, so an admin has to make it deliberately.
-
-Decryption also had to stay a single setting in the Internet Threat Protection policy. Other features depend on it too. A separate decryption switch for AI prompts would let the two settings disagree.
+1. **Logging turns on right away.** The switch works even though decryption isn't set up, so Cloud Secure Edge can't capture any prompts yet.
+2. **The warning can be dismissed.** The warning names the missing step, but the admin can close it and leave the screen with setup unfinished.
+3. **The log stays empty.** An admin who comes back later may have forgotten about the unfinished setup. The empty log suggests that employees aren't using AI tools, when Cloud Secure Edge was never capturing their prompts.
 
 ## What I tried
+
+I prototyped two ways to connect the decryption setting to logging.
+
+### First prototype
 
 My first prototype moved the decryption setting onto the logging screen, above the logging switch. The admin could finish setup in one place, so the warning was no longer needed.
 
@@ -38,7 +36,7 @@ My first prototype moved the decryption setting onto the logging screen, above t
 
 <p className="shot-cap">The screen lists each Internet Threat Protection policy with the number of devices that it covers and a decryption switch. A line under the logging switch confirms how many devices Cloud Secure Edge is logging.</p>
 
-## After
+### Second prototype
 
 The second prototype puts the decryption switch inside the Internet Threat Protection policy, next to the policy's other settings. Decryption is a policy setting, so the policy is where admins expect to find it.
 
@@ -48,8 +46,12 @@ Under the switch, a **Used by** list names each feature that needs decryption an
 
 A **Don't decrypt** list names the categories that the policy never decrypts, such as financial services and health. Admins can protect employee privacy in the same place where they turn on decryption.
 
-Both designs are prototypes. The team has not built them.
+## The constraint
+
+Turning on logging couldn't turn on decryption for the admin. Decryption lets Cloud Secure Edge read all the encrypted traffic that a policy covers, not only AI prompts. That choice affects employee privacy, so an admin has to make it deliberately.
+
+Decryption also had to stay a single setting in the Internet Threat Protection policy. Other features depend on it too. A separate decryption switch for AI prompts would let the two settings disagree.
 
 ## The outcome
 
-[Add a result.]
+Both designs are prototypes. The team hasn't built them yet. [Add a result.]

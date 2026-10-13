@@ -14,13 +14,11 @@ sidebar_position: 4
   <p>Customers buy Cloud Secure Edge for a few primary use cases. Examples are replacing a VPN, filtering web traffic, and controlling the AI apps that employees use. I worked on the redesign with the product designer. My part was to choose the metrics that show how each use case is going.</p>
 </div>
 
-## Before
+## The problem
 
 ![A prototype of the homepage before the redesign. Six counts sit above five charts that split devices, policies, and connectors by type or status.](/img/content-design/console-home-before.png)
 
 <p className="shot-cap">Six counts and five charts, filtered to the last 30 days. Every chart describes what the organization has. None of them says whether the product is working.</p>
-
-## The problem
 
 The homepage answered questions that admins don't ask when they sign in. It counted devices, users, services, policies, roles, and connectors. Its charts split those counts by operating system or by status.
 
@@ -28,17 +26,11 @@ A count with no context doesn't tell an admin what to do. 1,149 services is neit
 
 The charts also hid what little they showed. Legends were cut off mid-word, and one chart had a single bar for a single platform.
 
-## The constraint
-
-The homepage had to work for every customer, whatever they had bought. Each license turns on different features, so each customer's console collects different data. A metric couldn't depend on a feature that the customer doesn't have.
-
 ## What I tried
 
 I started from the use cases instead of from the data. For each use case, I asked what an admin needs to know to decide whether it's working. I also asked what the admin should do next if it isn't.
 
 Then I chose the metrics that answer those questions. Each metric has a comparison, such as "vs. yesterday", and a link to the activity behind it. The inventory counts and charts stayed, under the heading **Environment Overview**, below the use case metrics.
-
-## After
 
 ![A prototype of the redesigned homepage. An alert, licenses, tasks, and release notes are at the top. Below them, AI activity metrics come before the inventory counts and charts.](/img/content-design/console-home-after.png)
 
@@ -51,6 +43,10 @@ Then I chose the metrics that answer those questions. Each metric has a comparis
 | What are employees sending to AI apps? | Prompts, prompts sent from personal accounts, and prompts with attachments |
 
 Metrics that need a higher license still appear, with the note "Can see more with a license upgrade". The admin sees what they could measure, instead of an empty space.
+
+## The constraint
+
+The homepage had to work for every customer, whatever they had bought. Each license turns on different features, so each customer's console collects different data. A metric couldn't depend on a feature that the customer doesn't have.
 
 ## The outcome
 

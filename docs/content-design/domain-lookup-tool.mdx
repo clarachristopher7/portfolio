@@ -13,7 +13,7 @@ sidebar_position: 3
   <p>When a website is blocked or allowed unexpectedly, the admin has to find the rule that decided the result. An employee is often waiting for access. I suggested a domain lookup tool inside the policy so that admins can check a website directly.</p>
 </div>
 
-## Before
+## The problem
 
 Before the tool, the only explanation was this diagram from the docs. It shows how Cloud Secure Edge routes a device's request to look up a website.
 
@@ -96,23 +96,19 @@ Before the tool, the only explanation was this diagram from the docs. It shows h
   </figcaption>
 </figure>
 
-## The problem
-
 To diagnose a block, the admin has to apply their own configuration to one website. They need to know which traffic goes through the Service Tunnel, the private connection to the company network. They also need to know which websites are on their exception lists and which rules they set. A general diagram can't answer those questions. When an admin traces the answer by hand, the work is slow and errors are likely, especially while an employee waits.
-
-## The constraint
-
-The tool does not check blocks by country or by risk score. Without a warning, an admin could read a clean result as proof that the policy did not cause the block.
 
 ## What I tried
 
 I proposed a lookup panel inside the policy itself, because the policy is where the admin is already working when a block happens. The panel opens with a note that states what the tool checks, and that it doesn't check blocks by country or by risk score. The admin reads this limit before running a lookup, so a clean result isn't mistaken for proof. Then the panel asks for one website address.
 
-## After
-
 ![The Lookup Domain panel. It has a note about what the tool checks, a domain field with an explanation, and a submit button.](/img/content-design/domain-lookup-tool.png)
 
 The admin enters a website address in the policy. The tool shows whether the policy allows or blocks the website, and which category decided the result. The admin does not have to leave the policy to get the answer.
+
+## The constraint
+
+The tool does not check blocks by country or by risk score. Without a warning, an admin could read a clean result as proof that the policy did not cause the block.
 
 ## The outcome
 

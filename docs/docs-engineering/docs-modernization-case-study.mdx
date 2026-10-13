@@ -15,7 +15,9 @@ hide_table_of_contents: true
   <p>I wrote a proposal for phase 1 of a modernization program. It asks leadership for two decisions, and a working prototype backs it up.</p>
 </div>
 
-## Before
+## The problem
+
+The docs lived on two sites, and the docs team controlled only one of them.
 
 <div className="arch">
   <div className="arch-col">
@@ -30,8 +32,6 @@ hide_table_of_contents: true
     </div>
   </div>
 </div>
-
-## The problem
 
 Support cases about the docs pointed at one problem far more than any other.
 
@@ -80,19 +80,6 @@ The site itself caused much of this, and the docs team couldn't fix it.
 
 Customers and staff showed which design worked. They kept going to the Cloud Secure Edge docs site, because it was faster to navigate.
 
-## The constraint
-
-The web team set six conditions. The proposal had to meet all of them.
-
-<ol className="conditions">
-  <li>One website, with no separate docs domain</li>
-  <li>No loss of search ranking</li>
-  <li>No disruption to site search, metadata, or AI answers</li>
-  <li>One brand across the whole site</li>
-  <li>No added work for the web team</li>
-  <li>No way for a writer to put the company at risk</li>
-</ol>
-
 ## What I tried
 
 The proposal rests on three principles.
@@ -103,7 +90,7 @@ The proposal rests on three principles.
   <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Mapped to the user journey</b></div><div className="arch-node"><span>Every piece of content ties to a stage of adoption, from discovery to first deployment to running at scale.</span></div></div>
 </div>
 
-I surveyed every product with its owner. I sorted the doc sets by one question: do the docs ship with hardware, or carry a regulatory obligation?
+I surveyed every product with its owner. I sorted the doc sets by one question. Do the docs ship with hardware, or carry a regulatory obligation?
 
 <div className="docset-groups">
   <div>
@@ -127,7 +114,7 @@ I kept MadCap Flare as the writing tool. Moving writers to a new authoring langu
 
 For publishing, I chose Antora. It treats one product as having several live versions, which SonicOS needs. Its navigation and page templates are files the docs team owns. I built a prototype that publishes four products from converted Flare content.
 
-## After
+### One site behind the same address
 
 <div className="arch">
   <div className="arch-col">
@@ -148,7 +135,7 @@ For publishing, I chose Antora. It treats one product as having several live ver
 
 To a customer, a search engine, or an AI assistant, this is still one website. The only difference is inside. The docs team publishes to its own location on its own schedule.
 
-### How the design meets each condition
+### How the design meets the web team's conditions
 
 | Condition | How the design meets it |
 |---|---|
@@ -179,6 +166,19 @@ Three risks were too severe to manage by being careful. Each one has an automate
   <div className="chain chain--3"><div className="arch-node arch-node--old"><b>A page shows the wrong firmware version</b><span>A customer follows steps that don't match their device</span></div><div className="arch-node"><b>Version check</b><span>The version comes from the Flare source. Each page is compared with the page published today.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
   <div className="chain chain--3"><div className="arch-node arch-node--old"><b>Certified content changes</b><span>Government-certified docs can't absorb ordinary edits</span></div><div className="arch-node"><b>Checksum check</b><span>Certified docs stay out of the pipeline. Any change to their pages is detected.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
 </div>
+
+## The constraint
+
+The web team set six conditions. The proposal had to meet all of them.
+
+<ol className="conditions">
+  <li>One website, with no separate docs domain</li>
+  <li>No loss of search ranking</li>
+  <li>No disruption to site search, metadata, or AI answers</li>
+  <li>One brand across the whole site</li>
+  <li>No added work for the web team</li>
+  <li>No way for a writer to put the company at risk</li>
+</ol>
 
 ## The outcome
 
