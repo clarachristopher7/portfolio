@@ -1,0 +1,140 @@
+---
+sidebar_position: 5
+hide_table_of_contents: true
+---
+
+import {HubGroup, HubCard} from '@site/src/components/Hub';
+
+# One documentation site for every SonicWall product
+
+<p className="hub-sub">SonicWall's product docs were split across two sites, and another team controlled the navigation for most of them. I proposed one docs site, at the company's existing address, that the docs team can change directly.</p>
+
+<div className="ctx-prose">
+  <p className="ctx-label">Background</p>
+  <p>SonicWall makes firewalls, network management tools, and cloud security services. Each product has its own set of docs. The most common complaint about them wasn't missing content. Customers couldn't find docs that already existed.</p>
+  <p>Most product docs lived on the company's main website, which the web team builds. To reorder a section, rename a menu label, or move the version picker, a writer had to file a ticket with that team. The Cloud Secure Edge docs had their own site, which I build and run.</p>
+  <p>I wrote a proposal for phase 1 of a modernization program. It asks leadership for two decisions, and a working prototype backs it up.</p>
+</div>
+
+## Before
+
+<div className="arch">
+  <div className="arch-col">
+    <p className="arch-head">Before</p>
+    <div className="arch-split">
+      <div>
+        <div className="arch-node arch-node--old"><b>Main website</b><span>Docs for every product except Cloud Secure Edge. Navigation and page layout are web team code, so each change is a ticket.</span></div>
+      </div>
+      <div>
+        <div className="arch-node arch-node--old"><b>Separate docs site</b><span>Cloud Secure Edge only, with different navigation and its own address.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+## The problem
+
+<HubGroup>
+  <HubCard icon="search" tag="Hard to find" title="Controls in the wrong place">
+    The version filter matters most to a customer on a specific firmware release. It sat at the bottom of the list, mislabeled and out of order.
+  </HubCard>
+  <HubCard icon="clock" tag="Slow to fix" title="Every fix is a ticket">
+    Navigation needs many small corrections over time. A ticket queue shared with company-wide work can't deliver them.
+  </HubCard>
+  <HubCard icon="file" tag="Slow to publish" title="No preview, no date">
+    A writer who fixed an error couldn't preview the published page, or tell anyone which day it would go live.
+  </HubCard>
+</HubGroup>
+
+Customers and staff showed which design worked. They kept going to the Cloud Secure Edge docs site, because it was faster to navigate.
+
+## The constraint
+
+The web team set six conditions. The proposal had to meet all of them.
+
+| Condition | How the proposal meets it |
+|---|---|
+| **One website** | The docs are served at sonicwall.com/docs, on the address customers already use. There's no separate docs domain. |
+| **No loss of search ranking** | The hostname doesn't change. Every page address that does change gets an automatic redirect. |
+| **No disruption to site search, metadata, or AI answers** | Search tools index by address, so they still see one website. The pipeline writes page metadata directly from the source. |
+| **One brand** | The docs use the web team's design tokens and stylesheet from their single source, so brand changes reach the docs on the next build. |
+| **No added work for the web team** | The docs team runs its own publishing pipeline. The web team adds one routing rule. |
+| **No way for a writer to put the company at risk** | Automated checks block code in content. Only one lead writer can change navigation and page templates. Every change needs a recorded approval. |
+
+## What I tried
+
+I surveyed every product with its owner. I sorted the doc sets by one question: do the docs ship with hardware, or carry a regulatory obligation?
+
+<div className="docset-groups">
+  <div>
+    <p className="arch-head">Publish as soon as they're approved</p>
+    <p className="ia-chips"><span>Unified Management</span><span>NSM</span><span>Endpoint Security</span><span>WNM console</span><span>Cloud Secure Edge</span></p>
+    <p className="docset-note">No printed guides, errata notices, or regulatory sign-off. Yet they published on the hardware release schedule.</p>
+  </div>
+  <div>
+    <p className="arch-head">Keep today's release gates</p>
+    <p className="ia-chips"><span>SonicOS</span><span>WNM hardware</span></p>
+    <p className="docset-note">Printed in the box and tied to hardware ship dates. Every approval step stays.</p>
+  </div>
+</div>
+
+The hardware docs still gain two things. Writers and approvers see a preview of the real published page. Text shared between firmware versions is stored once, instead of copied into each version by hand.
+
+I kept MadCap Flare as the writing tool. Moving writers to a new authoring language would mean rebuilding translation and PDF output, and phase 1 doesn't need it.
+
+<p className="ia-home-label">What doesn't change</p>
+<p className="ia-chips"><span>Writing in MadCap Flare</span><span>Approval in Agile</span><span>Errata notices</span><span>Printed guides</span><span>Translation</span><span>Regulatory review</span></p>
+
+For publishing, I chose Antora. It treats one product as having several live versions, which SonicOS needs. Its navigation and page templates are files the docs team owns. I built a prototype that publishes four products from converted Flare content.
+
+## After
+
+<div className="arch">
+  <div className="arch-col">
+    <p className="arch-head arch-head--after">After</p>
+    <div className="arch-node arch-node--new"><b>sonicwall.com</b><span>One address, one brand, one sitemap. The network layer in front of the site routes each request by its path.</span></div>
+    <div className="arch-split">
+      <div>
+        <p className="arch-route">↓ /docs/…</p>
+        <div className="arch-node arch-node--new"><b>Docs pipeline</b><span>Owned by the docs team. Docs for every product, including Cloud Secure Edge. Publishes when a change is approved.</span></div>
+      </div>
+      <div>
+        <p className="arch-route">↓ everything else</p>
+        <div className="arch-node"><b>Main website</b><span>Owned by the web team. Unchanged.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+To a customer, a search engine, or an AI assistant, this is still one website. The only difference is inside. The docs team publishes to its own location on its own schedule.
+
+### A correction, from edit to live
+
+<div className="ia-paths">
+  <div className="ia-path">
+    <p className="ia-q">A writer fixes an error in a published procedure</p>
+    <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Edit in Flare</li><li>Ready to Publish folder</li><li>Approval in Agile</li><li>Script places the file</li><li>Live, date unknown</li></ol></div>
+    <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Edit in Flare</li><li>Preview of the real page</li><li>Automated checks</li><li>Recorded approval</li><li>Live in minutes</li></ol></div>
+    <p className="ia-note">This applies to the five doc sets without hardware release gates.</p>
+  </div>
+</div>
+
+### The worst failures can't publish
+
+Three risks were too severe to manage by being careful. Each one has an automated check that fails the build.
+
+<HubGroup>
+  <HubCard icon="route" tag="Broken links" title="Every old address redirects">
+    The build fails if any old page address has no redirect. QR codes printed on hardware boxes get permanent, one-step redirects.
+  </HubCard>
+  <HubCard icon="layers" tag="Wrong version" title="Versions come from the source">
+    Each page's firmware version comes from the Flare source. A check compares every converted page with the page that's published today.
+  </HubCard>
+  <HubCard icon="shield" tag="Certified content" title="Certified docs stay out">
+    Government-certified docs stay out of the pipeline. A checksum check fails the build if any of those pages changes.
+  </HubCard>
+</HubGroup>
+
+## The outcome
+
+The proposal went to the VP of Product in October 2026. It asks for two decisions. The first is whether the docs team owns the docs site. The second is whether five doc sets move to docs-as-code publishing. The first steps of the plan need no approval, so the work can start before the decision. [Add: the decision, when you have it.]

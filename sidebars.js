@@ -15,6 +15,7 @@ const sidebars = {
       items: [
         'docs-engineering/cse-ia-rework-case-study',
         'docs-engineering/ia-model-case-study',
+        'docs-engineering/docs-modernization-case-study',
       ],
     },
     {

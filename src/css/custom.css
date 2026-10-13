@@ -1601,3 +1601,49 @@ body * {
   color: var(--ifm-color-primary-dark);
   margin-bottom: 0.5rem;
 }
+
+/* A lone card that shouldn't stretch across an empty column. */
+.hub-single { max-width: 32rem; }
+
+/* Documentation modernization: where docs are served, before and after. */
+.arch {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--ifm-toc-border-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 1.25rem 0 2.25rem;
+}
+.arch-col { background: var(--site-card); padding: 1.1rem 1.25rem 1.25rem; }
+.markdown .arch p { margin: 0; max-width: none; }
+.markdown .arch-head {
+  font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--site-muted); margin-bottom: 0.9rem;
+}
+.markdown .arch-head--after { color: var(--ia-new); }
+.arch-node {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  background: var(--ifm-background-surface-color);
+}
+.markdown .arch-node b { display: block; font-size: 14px; color: var(--ifm-heading-color); }
+.markdown .arch-node span { display: block; font-size: 12.5px; color: var(--site-soft); line-height: 1.45; margin-top: 0.15rem; }
+.arch-node--old { box-shadow: inset 3px 0 0 var(--ia-old); }
+.arch-node--new { box-shadow: inset 3px 0 0 var(--ia-new); }
+.arch-arrow { text-align: center; color: var(--site-muted); font-size: 15px; line-height: 1; padding: 0.35rem 0; }
+.markdown .arch-route { font-size: 11.5px; color: var(--site-muted); text-align: center; padding: 0.3rem 0; }
+.arch-split { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.markdown .arch-split > div > .arch-route { padding-top: 0; }
+@media (max-width: 767px) {
+  .arch-split { grid-template-columns: 1fr; }
+}
+
+/* Documentation sets sorted by release process. */
+.docset-groups { display: grid; grid-template-columns: 5fr 2fr; gap: 1.25rem; margin: 1rem 0 1.5rem; }
+.markdown .docset-groups p { margin: 0; max-width: none; }
+.markdown .docset-groups .ia-chips { margin: 0.5rem 0 0.4rem; }
+.markdown .docset-note { font-size: 13px; color: var(--site-soft); line-height: 1.5; }
+@media (max-width: 767px) { .docset-groups { grid-template-columns: 1fr; } }
