@@ -7,30 +7,30 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 # Documentation impact evaluator
 
-<p className="hub-sub">A scheduled job that compares recent code changes with the docs and flags the pages those changes probably made wrong. It only reports. A writer decides what to change.</p>
+<p className="hub-sub">A scheduled job compares recent code changes with the docs. It reports the pages that the changes probably made wrong, and a writer decides what to change.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Engineers change the product constantly. When a change affects something a help page describes, that page becomes wrong, and nothing in the release process tells the docs team.</p>
-  <p>I designed and built a scheduled job to close that gap. On each run, it reads the latest code changes, checks which ones customers can actually use, and has Claude compare each change against an index of every docs page. The result is a dated report of the pages that probably need an update.</p>
+  <p>Engineers change the product every day. If a change affects a feature that a docs page describes, the page becomes wrong. Nothing in the release process tells the docs team.</p>
+  <p>I designed and built a scheduled job to find those pages. Each run reads the latest code changes and checks which changes customers can use. Then Claude compares each change with an index of every docs page. The job writes a dated report of the pages that probably need an update.</p>
 </div>
 
 ## How it works
 
 <ol className="ia-steps ia-steps--4" aria-label="How the evaluator works">
   <li>Read recent code changes</li>
-  <li className="is-new">Check what’s actually released<small>Key step</small></li>
+  <li className="is-new">Check which changes are live<small>Key step</small></li>
   <li>Compare each change with the docs</li>
-  <li>Publish a dated report</li>
+  <li>Write a dated report</li>
 </ol>
 
-## What made it work
+## Two lessons from building it
 
 <HubGroup columns={2}>
-  <HubCard icon="git" tag="Lesson" title="Watch where new work shows up first">
-    My first version watched the copy of the code used for testing, and it caught one of the nine changes in a release. New features land in the main development code first, so that’s where it looks now.
+  <HubCard icon="git" tag="Lesson" title="Read the code where new features arrive first">
+    My first version read the copy of the code that the team uses for testing. It found one of the nine changes in a release. New features reach the main development code first, so the job reads that code now.
   </HubCard>
-  <HubCard icon="search" tag="Lesson" title="Finished doesn’t mean released">
-    A change can be done long before customers see it. So the evaluator looks for distinctive text from each change in the pre-release version of the product, which keeps the docs in step with what customers can actually use.
+  <HubCard icon="search" tag="Lesson" title="A finished change is not always live">
+    A change can be finished long before customers can use it. The job searches the code that the preview environment runs for distinctive text from each change. If the job finds the text, it marks the change as live.
   </HubCard>
 </HubGroup>

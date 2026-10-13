@@ -5,17 +5,17 @@ sidebar_position: 3
 
 # Domain Lookup Tool
 
-<p className="hub-sub">When a web filtering policy blocked or allowed a site unexpectedly, admins had no direct way to find out which part of the policy was responsible.</p>
+<p className="hub-sub">If an Internet Threat Protection policy blocked or allowed a website unexpectedly, admins had no direct way to find the rule that caused it.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Internet Threat Protection is the part of Cloud Secure Edge that filters web traffic on company devices. For every website a device requests, it checks for known threats, then applies the categories, apps, and sites the organization has chosen to block, and finally any exceptions the admin has set.</p>
-  <p>When a site gets blocked or allowed unexpectedly, an admin has to work out which of those rules made the call, often while an employee is waiting. I suggested building a domain lookup tool right into the policy so admins could check directly.</p>
+  <p>Internet Threat Protection is the part of Cloud Secure Edge that filters web traffic on company devices. For each website that a device requests, it checks for known threats. Then it applies the categories, apps, and websites that the organization blocks. Last, it applies the exceptions that the admin has set.</p>
+  <p>When a website is blocked or allowed unexpectedly, the admin has to find the rule that decided the result. An employee is often waiting for access. I suggested a domain lookup tool inside the policy so that admins can check a website directly.</p>
 </div>
 
 ## Before
 
-The only explanation we had was this diagram from the docs. It shows how Cloud Secure Edge routes a device’s request to look up a website.
+Before the tool, the only explanation was this diagram from the docs. It shows how Cloud Secure Edge routes a device's request to look up a website.
 
 <figure className="docs-diagram">
   <svg
@@ -91,28 +91,28 @@ The only explanation we had was this diagram from the docs. It shows how Cloud S
   </svg>
   <figcaption>
 
-  Four decision points and three possible destinations. It’s accurate, but it explains the system in general, not your configuration.
+  The diagram has four decision points and three possible destinations. It is accurate, but it describes the system in general. It can't show how one admin's configuration handles one website.
 
   </figcaption>
 </figure>
 
 ## The problem
 
-To diagnose a block, an admin has to apply their own configuration to one specific site: which traffic goes through their private connection, which sites they’ve listed as exceptions, and which rules they’ve set. A general diagram can’t do that, and working it out by hand is slow and easy to get wrong, especially with someone waiting.
+To diagnose a block, the admin has to apply their own configuration to one website. They need to know which traffic goes through the Service Tunnel, the private connection to the company network. They also need to know which websites are on their exception lists and which rules they set. A general diagram can't answer those questions. When an admin traces the answer by hand, the work is slow and errors are likely, especially while an employee waits.
 
 ## The constraint
 
-The tool doesn’t check blocking by country or by risk score. Without a warning, a clean result could look like proof that the policy wasn’t responsible, so the panel states this limit before you run a lookup.
+The tool does not check blocks by country or by risk score. Without a warning, an admin could read a clean result as proof that the policy did not cause the block. So the panel states this limit before the admin runs a lookup.
 
 ## What I tried
 
-[Add: what you ruled out.]
+I proposed a lookup panel inside the policy itself, because the policy is where the admin is already working when a block happens. The panel opens with a note that states what the tool checks. Then it asks for one website address.
 
 ## After
 
-![The Lookup Domain panel: a scope note, a domain field with its explanation, and a submit action.](/img/content-design/domain-lookup-tool.png)
+![The Lookup Domain panel. It has a note about what the tool checks, a domain field with an explanation, and a submit button.](/img/content-design/domain-lookup-tool.png)
 
-Inside the policy, you enter a site’s address and see whether the policy allows or blocks it, plus the category behind that decision, without leaving the screen you’re troubleshooting.
+The admin enters a website address in the policy. The tool shows whether the policy allows or blocks the website, and which category decided the result. The admin does not have to leave the policy to get the answer.
 
 ## The outcome
 

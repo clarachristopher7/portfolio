@@ -5,19 +5,19 @@ hide_table_of_contents: true
 
 # Documentation staleness auditor
 
-<p className="hub-sub">Compares the docs with each new version of the admin console and produces a maintenance backlog, sorted so the biggest gaps get fixed first.</p>
+<p className="hub-sub">The auditor compares the docs with each new version of the admin console. It produces a maintenance backlog in order of impact, so the team fixes the largest gaps first.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>The admin console ships new versions regularly. Each release can change field labels, screenshots, and steps across many pages at once, and periodic manual review usually catches those changes after customers do.</p>
-  <p>I designed and built an auditor that compares every page with the current console, flags the pages that no longer match it, and ranks them into a backlog by impact.</p>
+  <p>SonicWall releases new versions of the admin console often. A release can change field labels, screenshots, and steps on many docs pages at the same time. Manual reviews usually find those changes after customers find them.</p>
+  <p>I designed and built an auditor that compares every docs page with the current console. It flags each page that no longer matches the console and ranks the flagged pages by impact.</p>
 </div>
 
 ## How it works
 
 <ol className="ia-steps ia-steps--3" aria-label="How the auditor works">
-  <li>A new console version ships</li>
-  <li>Every page gets checked against it</li>
+  <li>A new console version is released</li>
+  <li>The auditor checks every page against it</li>
   <li className="is-new">A backlog ranked by impact<small>Output</small></li>
 </ol>
 

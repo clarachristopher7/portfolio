@@ -7,18 +7,18 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 # Information architecture across a product portfolio
 
-<p className="hub-sub">Every SonicWall product’s docs had grown up on their own. I built a model that measures them all against the same definition of complete, so you can point to a gap and show the evidence for it.</p>
+<p className="hub-sub">Each SonicWall product's docs grew separately. I built a model that measures every product's docs against one definition of complete, so each gap comes with evidence.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>SonicWall sells firewalls, cloud services, apps that run on employees’ computers, and portals for partner companies. Each product’s docs were written by a different team, in a different tool, with no shared idea of what a complete set should include. That made it hard for docs leads and product owners to see where the real gaps were, or decide where to focus.</p>
-  <p>I designed a model that measures every product’s docs against the same standard, the rules that decide each status, and a single-page tool that shows the results.</p>
+  <p>SonicWall sells firewalls, cloud services, apps for employees' computers, and portals for partner companies. A different team wrote each product's docs, in a different tool. No one had agreed on what a complete set of docs contains.</p>
+  <p>Without that agreement, docs leads and product owners could not see where the gaps were or decide where to spend effort. I designed the model, the rules that set each status, and a single-page tool that shows the results.</p>
 </div>
 
 
 <div className="ia-brief">
-  <div><h4>Problem</h4><p>Without a shared standard, coverage gaps came down to opinion, and you couldn’t compare one product with another.</p></div>
-  <div><h4>Constraint</h4><p>It had to be one self-contained web page that anyone could open and any writer could keep up to date.</p></div>
+  <div><h4>Problem</h4><p>Without a shared standard, a coverage gap was a matter of opinion, and nobody could compare two products.</p></div>
+  <div><h4>Constraint</h4><p>The tool had to be one self-contained web page. Anyone had to be able to open it, and any writer had to be able to update it.</p></div>
   <div><h4>What I tried</h4><p>[An approach you considered and dropped.]</p></div>
   <div><h4>The outcome</h4><p>[Add a result.]</p></div>
 </div>
@@ -27,23 +27,23 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <HubGroup>
   <HubCard icon="layers" tag="Sections" title="Where content lives">
-    Which sections each product’s docs contain.
+    The sections that each product's docs contain.
   </HubCard>
   <HubCard icon="route" tag="Journey" title="What the reader is doing">
-    Whether the docs support every stage, from evaluating a product to scaling it up.
+    Whether the docs support each stage, from evaluating a product to scaling it.
   </HubCard>
   <HubCard icon="grid" tag="Decisions" title="What applies to every product">
-    Policies every product shares, like page metadata, translation, and retiring old versions, each with an owner.
+    Policies that apply to every product, such as page metadata, translation, and retiring old versions. Each policy has an owner.
   </HubCard>
 </HubGroup>
 
-## Fair to unlike products
+## Fair comparisons across product types
 
-A cloud service and a hardware appliance need different docs. So each product gets a type, and only the sections that make sense for that type count. That way, a status means the same thing no matter which product it’s on.
+A cloud service and a hardware appliance need different docs. So each product has a type, and only the sections that apply to that type count. A status then means the same thing on every product.
 
 <p className="ia-chips"><span>Cloud service</span><span>Hardware appliance</span><span>Employee app</span><span>Partner portal</span><span>Shared content</span></p>
 
-## Status by rule, not opinion
+## Each status follows a rule
 
 <HubGroup columns={4}>
   <HubCard title={<span className="status-chip status-chip--have">Have</span>}>A dedicated section exists in the navigation.</HubCard>
@@ -52,7 +52,7 @@ A cloud service and a hardware appliance need different docs. So each product ge
   <HubCard title={<span className="status-chip status-chip--na">Not applicable</span>}>Out of scope for this type of product.</HubCard>
 </HubGroup>
 
-## How it comes together
+## The portfolio map
 
 <div className="estate-tabs-wrap">
   <input type="radio" name="estate-view" id="estate-sections" className="estate-radio" defaultChecked />
@@ -62,7 +62,7 @@ A cloud service and a hardware appliance need different docs. So each product ge
     <div className="ia-nav estate-tabs" role="tablist"><b>Portfolio map</b><label htmlFor="estate-sections">Sections</label><label htmlFor="estate-journey">Journey</label><label htmlFor="estate-decisions">Decisions</label><em>Example data</em></div>
 
     <div className="estate-panel estate-panel--sections">
-      <p className="estate-cap">Which sections each product’s docs contain, and where each status came from.</p>
+      <p className="estate-cap">The sections that each product's docs contain, and where each status came from.</p>
       <div className="estate-table-wrap">
       <table className="estate-table">
         <thead><tr><th>Product</th><th>Get started</th><th>Installation</th><th>Configuration</th><th>Integrations</th><th>Troubleshooting</th><th>Release notes</th><th>Firmware and failover</th><th>Source</th></tr></thead>
@@ -77,7 +77,7 @@ A cloud service and a hardware appliance need different docs. So each product ge
     </div>
 
     <div className="estate-panel estate-panel--journey">
-      <p className="estate-cap">Whether each product’s docs support every stage of adoption.</p>
+      <p className="estate-cap">Whether each product's docs support each stage of adoption.</p>
       <div className="estate-table-wrap">
       <table className="estate-table">
         <thead><tr><th>Product</th><th>Evaluate</th><th>Activate</th><th>Deploy</th><th>Operate</th><th>Scale</th><th>Troubleshoot</th></tr></thead>
@@ -92,7 +92,7 @@ A cloud service and a hardware appliance need different docs. So each product ge
     </div>
 
     <div className="estate-panel estate-panel--decisions">
-      <p className="estate-cap">Policies you decide once and apply everywhere.</p>
+      <p className="estate-cap">Policies that the team decides once and applies to every product.</p>
       <div className="estate-table-wrap">
       <table className="estate-table estate-table--decisions">
         <thead><tr><th>Decision</th><th>Proposal</th><th>Status</th></tr></thead>

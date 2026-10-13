@@ -5,25 +5,25 @@ hide_table_of_contents: true
 
 # Cloud Secure Edge information architecture
 
-<p className="hub-sub">I reorganized the Cloud Secure Edge docs around the tasks people actually come to do. The new structure is live, and every existing link still works.</p>
+<p className="hub-sub">I reorganized the Cloud Secure Edge docs around the tasks that admins come to do. The new structure is live, and every existing link still works.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Cloud Secure Edge is a SonicWall service that decides whether an employee’s device can connect to a company’s apps and websites. Its docs site serves admins at every stage: evaluating the product, deploying it, running it day to day, and fixing things when they break.</p>
-  <p>The site’s navigation followed the way the product is engineered, so you had to understand its internal components before you could find the task you came for. I designed a new structure around those tasks, rewrote the navigation labels, and redesigned the docs homepage.</p>
+  <p>Cloud Secure Edge is a SonicWall service that decides whether an employee's device can connect to company apps and websites. Admins use its docs site to evaluate the product, deploy it, run it, and fix problems.</p>
+  <p>The site's navigation followed the product's internal components. To find a task, an admin first had to know which component the task belonged to. I designed a new structure around tasks, rewrote the navigation labels, and redesigned the docs homepage.</p>
 </div>
 
 
 <div className="ia-brief">
-  <div><h4>Problem</h4><p>The navigation was organized by product component, but people show up with a task.</p></div>
-  <div><h4>Constraint</h4><p>Everything had to happen in the navigation. No page could move and no URL could change, so bookmarks, search results, and links from support articles all kept working.</p></div>
-  <div><h4>What I tried</h4><p>[An approach you considered and dropped.]</p></div>
-  <div><h4>The outcome</h4><p>Tasks now live under names that describe the work, in the order an admin does it. [Add a reader signal.]</p></div>
+  <div><h4>Problem</h4><p>The navigation was organized by product component. Admins come to the docs with a task.</p></div>
+  <div><h4>Constraint</h4><p>I could change only the navigation. No page could move and no URL could change, so bookmarks, search results, and links from support articles still work.</p></div>
+  <div><h4>What I tried</h4><p>I kept every page where it was and changed only the navigation: new section names, a new section order, and a homepage organized by goal.</p></div>
+  <div><h4>The outcome</h4><p>Each task now has a name that describes the work, in the order that an admin does it. [Add a reader signal.]</p></div>
 </div>
 
-## The homepage starts from goals
+## The homepage starts with goals
 
-The old homepage listed product areas. The new one starts with what you’re trying to get done.
+The old homepage listed product areas. The new homepage starts with what the admin wants to do.
 
 <div className="ia-shot">
   <p className="ia-shot-label">Before</p>
@@ -40,7 +40,7 @@ The old homepage listed product areas. The new one starts with what you’re try
       </div>
     </div>
   </div>
-  <p className="ia-shot-note">Nine product areas, and no navigation.</p>
+  <p className="ia-shot-note">Nine product areas and no navigation.</p>
 </div>
 
 <div className="ia-shot">
@@ -76,15 +76,15 @@ The old homepage listed product areas. The new one starts with what you’re try
 </div>
 
 <ol className="ia-callouts">
-  <li><i className="ia-num">1</i><b>Navigation from the first page</b><span>The full sidebar, with a filter, is right there on the homepage. Before, the homepage had no navigation at all.</span></li>
-  <li><i className="ia-num">2</i><b>Organized by goal</b><span>Cards are grouped by what an admin is trying to accomplish.</span></li>
-  <li><i className="ia-num">3</i><b>License on every goal</b><span>Each card names the license it requires, Secure Private Access (SPA) or Secure Internet Access (SIA), so you can tell right away whether it applies to you.</span></li>
-  <li><i className="ia-num">4</i><b>Troubleshooting up front</b><span>One click away from both the top navigation and the homepage.</span></li>
+  <li><i className="ia-num">1</i><b>Navigation on the homepage</b><span>The full sidebar and its filter appear on the homepage. The old homepage had no navigation.</span></li>
+  <li><i className="ia-num">2</i><b>Cards grouped by goal</b><span>Each group of cards matches something that an admin wants to do.</span></li>
+  <li><i className="ia-num">3</i><b>A license on every goal</b><span>Each card names the license that it needs, Secure Private Access (SPA) or Secure Internet Access (SIA). Admins can see at once whether the card applies to them.</span></li>
+  <li><i className="ia-num">4</i><b>Troubleshooting in one click</b><span>Troubleshooting is one click from the top navigation and one click from the homepage.</span></li>
 </ol>
 
 ## The navigation follows the order of adoption
 
-The navigation now follows the order you’d adopt the product in: evaluate it, deploy it, run it, and fix it when something breaks.
+The navigation now follows the order in which an admin adopts the product. The admin evaluates it, deploys it, runs it, and fixes problems.
 
 <div className="journey" role="img" aria-label="The new navigation sections in order, grouped into four phases. Start: Get started, Learn. Set up: Activate, Deploy (new), Set up users and devices (new). Protect: Define access policies, Secure resources. Run: Monitor and maintain (new), Troubleshoot (new).">
   <div className="journey-phases">
@@ -108,32 +108,32 @@ The navigation now follows the order you’d adopt the product in: evaluate it, 
 
 ## Tasks are named for the work
 
-Here are three common tasks, and the path you had to take to reach each one, before and after.
+Here are three common tasks, with the path to each one before and after the change.
 
 <div className="ia-paths">
   <div className="ia-path">
     <p className="ia-q">Install a Connector with Docker</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Connector</li><li>Install</li><li>Docker Container</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Deploy</li><li>Install a Connector</li><li>Docker Container</li></ol></div>
-    <p className="ia-note">An install guide lived under Learn, a section meant for concepts.</p>
+    <p className="ia-note">The install guide was under Learn, a section for concepts.</p>
   </div>
   <div className="ia-path">
     <p className="ia-q">Troubleshoot the desktop app</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Desktop App</li><li>Troubleshooting the Desktop App</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Troubleshooting</li><li>Find and Fix a Problem</li><li>Desktop App</li></ol></div>
-    <p className="ia-note">To fix the app, you first had to browse a description of the product’s components.</p>
+    <p className="ia-note">To fix the app, an admin first had to open a description of the product's components.</p>
   </div>
   <div className="ia-path">
     <p className="ia-q">Connect Okta as the sign-in provider</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Manage and Monitor Your Org</li><li>Manage Users and Devices</li><li>Okta</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Set Up Users and Devices</li><li>Set Up an Identity Provider</li><li>Okta</li></ol></div>
-    <p className="ia-note">First-time setup lived in a section named for ongoing monitoring.</p>
+    <p className="ia-note">First-time setup was in a section named for monitoring.</p>
   </div>
 </div>
 
 ## One place to troubleshoot
 
-Troubleshooting content was spread across seven places in three sections. Now it’s all in one, linked from the homepage.
+Troubleshooting pages were in seven places across three sections. Now they are in one section, and the homepage links to it.
 
 <div className="ia-compare">
   <div className="ia-mini">
