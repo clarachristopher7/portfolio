@@ -1647,3 +1647,43 @@ body * {
 .markdown .docset-groups .ia-chips { margin: 0.5rem 0 0.4rem; }
 .markdown .docset-note { font-size: 13px; color: var(--site-soft); line-height: 1.5; }
 @media (max-width: 767px) { .docset-groups { grid-template-columns: 1fr; } }
+
+/* Headline numbers above a chart. */
+.stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--ifm-toc-border-color); border: 1px solid var(--ifm-toc-border-color); border-radius: 2px; overflow: hidden; margin: 1rem 0 1.5rem; }
+.stat-row > div { background: var(--site-card); padding: 1.1rem 1.25rem; }
+.stat-row b { display: block; font-size: 1.75rem; color: var(--ifm-heading-color); line-height: 1.15; margin-bottom: 0.35rem; }
+.stat-row span { display: block; font-size: 13.5px; color: var(--site-soft); line-height: 1.45; }
+@media (max-width: 767px) { .stat-row { grid-template-columns: 1fr; } }
+
+/* One-series horizontal bar chart: share of support cases by reason.
+   Values are printed beside every bar, so the chart doubles as its table. */
+.cases { margin: 0 0 1.75rem; background: var(--site-card); border: 1px solid var(--ifm-toc-border-color); border-radius: 2px; padding: 1.1rem 1.25rem 1rem; }
+.cases figcaption { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--site-muted); margin-bottom: 0.8rem; }
+.markdown .cases ol { list-style: none; margin: 0; padding: 0; max-width: none; }
+.markdown .cases li { display: grid; grid-template-columns: minmax(0, 17rem) 1fr 3.2rem; align-items: center; gap: 0.75rem; margin: 0 0 0.45rem; font-size: 13px; }
+.cases-label { color: var(--ifm-font-color-base); line-height: 1.3; }
+.cases-track { display: block; height: 10px; }
+.cases-bar { display: block; height: 10px; min-width: 3px; background: var(--ia-new); border-radius: 0 4px 4px 0; }
+.cases-val { color: var(--site-soft); text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 767px) { .markdown .cases li { grid-template-columns: 1fr 3rem; } .cases-track { grid-column: 1 / -1; grid-row: 2; } }
+
+/* Flow chains: nodes in a row joined by arrows. */
+.lanes { display: grid; gap: 1px; background: var(--ifm-toc-border-color); border: 1px solid var(--ifm-toc-border-color); border-radius: 2px; overflow: hidden; margin: 1rem 0 2rem; }
+.lane { background: var(--site-card); padding: 1rem 1.25rem 1.15rem; }
+.markdown .lane p { margin: 0; max-width: none; }
+.markdown .lane .arch-head { margin-bottom: 0.7rem; }
+.chain { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.7rem; align-items: stretch; }
+.chain--2 { grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); }
+.chain--3 { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr) minmax(0, 0.7fr); }
+.chain > .arch-node { position: relative; display: flex; flex-direction: column; justify-content: center; }
+.chain > .arch-node + .arch-node::before {
+  content: '→'; position: absolute; left: -1.35rem; top: 50%; transform: translateY(-50%);
+  color: var(--site-muted); font-size: 15px;
+}
+.pillars { display: grid; gap: 0.75rem; margin: 1rem 0 2rem; }
+.markdown .pillars p { margin: 0; max-width: none; }
+.markdown .chain--2 .arch-node span { font-size: 13.5px; margin-top: 0; }
+@media (max-width: 767px) {
+  .chain, .chain--2, .chain--3 { grid-template-columns: 1fr; gap: 1.5rem; }
+  .chain > .arch-node + .arch-node::before { content: '↓'; left: 50%; top: -1.25rem; transform: translateX(-50%); }
+}

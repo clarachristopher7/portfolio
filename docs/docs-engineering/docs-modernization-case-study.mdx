@@ -3,7 +3,6 @@ sidebar_position: 5
 hide_table_of_contents: true
 ---
 
-import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 # One documentation site for every SonicWall product
 
@@ -11,7 +10,7 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>SonicWall makes firewalls, network management tools, and cloud security services. Each product has its own set of docs. The most common complaint about them wasn't missing content. Customers couldn't find docs that already existed.</p>
+  <p>SonicWall makes firewalls, network management tools, and cloud security services. Each product has its own set of docs. Support cases showed that the biggest problem wasn't missing content. Customers couldn't find docs that already existed.</p>
   <p>Most product docs lived on the company's main website, which the web team builds. To reorder a section, rename a menu label, or move the version picker, a writer had to file a ticket with that team. The Cloud Secure Edge docs had their own site, which I build and run.</p>
   <p>I wrote a proposal for phase 1 of a modernization program. It asks leadership for two decisions, and a working prototype backs it up.</p>
 </div>
@@ -34,17 +33,50 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 ## The problem
 
-<HubGroup>
-  <HubCard icon="search" tag="Hard to find" title="Controls in the wrong place">
-    The version filter matters most to a customer on a specific firmware release. It sat at the bottom of the list, mislabeled and out of order.
-  </HubCard>
-  <HubCard icon="clock" tag="Slow to fix" title="Every fix is a ticket">
-    Navigation needs many small corrections over time. A ticket queue shared with company-wide work can't deliver them.
-  </HubCard>
-  <HubCard icon="file" tag="Slow to publish" title="No preview, no date">
-    A writer who fixed an error couldn't preview the published page, or tell anyone which day it would go live.
-  </HubCard>
-</HubGroup>
+Support cases about the docs pointed at one problem far more than any other.
+
+<div className="stat-row">
+  <div><b>3 in 4</b><span>doc support cases came from customers who couldn't find a doc that already existed</span></div>
+  <div><b>About a week</b><span>was the median time before a customer was sent a doc that had been published all along</span></div>
+  <div><b>Staff too</b><span>Dozens of these cases came from SonicWall's own employees</span></div>
+</div>
+
+<figure className="cases" aria-label="Documentation support cases from the past two years, by reason">
+  <figcaption>Doc support cases from the past two years, by reason</figcaption>
+  <ol>
+    <li><span className="cases-label">Couldn't find a doc that already exists</span><span className="cases-track"><span className="cases-bar" style={{width: '100.0%'}} /></span><span className="cases-val">76.5%</span></li>
+    <li><span className="cases-label">Needed an API or command line reference</span><span className="cases-track"><span className="cases-bar" style={{width: '6.5%'}} /></span><span className="cases-val">5%</span></li>
+    <li><span className="cases-label">Couldn't tell which version or firmware a doc covers</span><span className="cases-track"><span className="cases-bar" style={{width: '5.9%'}} /></span><span className="cases-val">4.5%</span></li>
+    <li><span className="cases-label">Needed a hardening or security guide</span><span className="cases-track"><span className="cases-bar" style={{width: '5.1%'}} /></span><span className="cases-val">3.9%</span></li>
+    <li><span className="cases-label">A required step or detail was missing</span><span className="cases-track"><span className="cases-bar" style={{width: '2.9%'}} /></span><span className="cases-val">2.2%</span></li>
+    <li><span className="cases-label">No doc existed for the feature</span><span className="cases-track"><span className="cases-bar" style={{width: '2.9%'}} /></span><span className="cases-val">2.2%</span></li>
+    <li><span className="cases-label">The doc was wrong about the product</span><span className="cases-track"><span className="cases-bar" style={{width: '2.9%'}} /></span><span className="cases-val">2.2%</span></li>
+    <li><span className="cases-label">Other</span><span className="cases-track"><span className="cases-bar" style={{width: '3.7%'}} /></span><span className="cases-val">2.8%</span></li>
+  </ol>
+</figure>
+
+The site itself caused much of this, and the docs team couldn't fix it.
+
+<div className="lanes">
+  <div className="lane">
+    <p className="arch-head">A customer looks for a doc</p>
+    <div className="chain">
+      <div className="arch-node"><b>Opens the docs on sonicwall.com</b></div>
+      <div className="arch-node"><b>Looks for their firmware version</b><span>The version filter is at the bottom of the list, mislabeled and out of order</span></div>
+      <div className="arch-node"><b>Can't find a doc that exists</b></div>
+      <div className="arch-node arch-node--old"><b>Opens a support case</b><span>Waits about a week for a link</span></div>
+    </div>
+  </div>
+  <div className="lane">
+    <p className="arch-head">A writer tries to fix the navigation</p>
+    <div className="chain">
+      <div className="arch-node"><b>Sees the problem</b></div>
+      <div className="arch-node"><b>Files a ticket with the web team</b><span>Navigation and layout are their code</span></div>
+      <div className="arch-node"><b>Ticket waits behind company-wide work</b></div>
+      <div className="arch-node arch-node--old"><b>Fix ships on another team's schedule</b><span>Small, frequent fixes rarely make it</span></div>
+    </div>
+  </div>
+</div>
 
 Customers and staff showed which design worked. They kept going to the Cloud Secure Edge docs site, because it was faster to navigate.
 
@@ -62,6 +94,14 @@ The web team set six conditions. The proposal had to meet all of them.
 | **No way for a writer to put the company at risk** | Automated checks block code in content. Only one lead writer can change navigation and page templates. Every change needs a recorded approval. |
 
 ## What I tried
+
+The proposal rests on three principles.
+
+<div className="pillars">
+  <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Content as code</b></div><div className="arch-node"><span>Docs are stored in Git, built from reusable parts, and checked automatically before they publish.</span></div></div>
+  <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Built for AI tools</b></div><div className="arch-node"><span>Every page carries structured facts, such as product and version, so AI assistants and search engines read it correctly.</span></div></div>
+  <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Mapped to the user journey</b></div><div className="arch-node"><span>Every piece of content ties to a stage of adoption, from discovery to first deployment to running at scale.</span></div></div>
+</div>
 
 I surveyed every product with its owner. I sorted the doc sets by one question: do the docs ship with hardware, or carry a regulatory obligation?
 
@@ -121,19 +161,13 @@ To a customer, a search engine, or an AI assistant, this is still one website. T
 
 ### The worst failures can't publish
 
-Three risks were too severe to manage by being careful. Each one has an automated check that fails the build.
+Three risks were too severe to manage by being careful. Each one has an automated check that stops the publish.
 
-<HubGroup>
-  <HubCard icon="route" tag="Broken links" title="Every old address redirects">
-    The build fails if any old page address has no redirect. QR codes printed on hardware boxes get permanent, one-step redirects.
-  </HubCard>
-  <HubCard icon="layers" tag="Wrong version" title="Versions come from the source">
-    Each page's firmware version comes from the Flare source. A check compares every converted page with the page that's published today.
-  </HubCard>
-  <HubCard icon="shield" tag="Certified content" title="Certified docs stay out">
-    Government-certified docs stay out of the pipeline. A checksum check fails the build if any of those pages changes.
-  </HubCard>
-</HubGroup>
+<div className="pillars">
+  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>An old page address has no redirect</b><span>Bookmarks, support articles, and QR codes printed on hardware boxes would break</span></div><div className="arch-node"><b>Redirect check</b><span>Every old address needs a redirect. Printed QR codes get permanent, one-step redirects.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
+  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>A page shows the wrong firmware version</b><span>A customer follows steps that don't match their device</span></div><div className="arch-node"><b>Version check</b><span>The version comes from the Flare source. Each page is compared with the page published today.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
+  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>Certified content changes</b><span>Government-certified docs can't absorb ordinary edits</span></div><div className="arch-node"><b>Checksum check</b><span>Certified docs stay out of the pipeline. Any change to their pages is detected.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
+</div>
 
 ## The outcome
 

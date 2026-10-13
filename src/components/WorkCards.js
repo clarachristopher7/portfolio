@@ -20,6 +20,11 @@ const SETS = {
       imgAlt: "The Domain Lookup Tool panel inside an Internet Threat Protection policy",
       go: "See the tool",
       text: "When a website was blocked, admins could not tell which rule blocked it. I suggested a lookup tool inside the policy that shows them."},
+    {to: "/content-design/console-homepage", tag: "Dashboard",
+      title: "Admin console homepage", img: "/img/content-design/console-home-after.png",
+      imgAlt: "A prototype of the redesigned console homepage, with AI activity metrics above the inventory counts",
+      go: "See the before and after",
+      text: "The homepage showed counts and charts that didn't tell admins anything they could act on. I chose metrics for each reason that customers buy the product."},
   ],
   architecture: [
     {to: "/docs-engineering/cse-ia-rework-case-study", img: "/img/previews/cse-ia.png",
@@ -64,7 +69,7 @@ const SETS = {
 export default function WorkCards({set, label, columns}) {
   const cards = SETS[set] || [];
   return (
-    <HubGroup label={label} columns={columns || (cards.length === 2 ? 2 : 3)}>
+    <HubGroup label={label} columns={columns || (cards.length % 3 === 0 ? 3 : 2)}>
       {cards.map(({text, ...c}) => (
         <HubCard key={c.to} {...c}>{text}</HubCard>
       ))}

@@ -26,6 +26,7 @@ const sidebars = {
         'content-design/device-geolocation-trust-factor',
         'content-design/ai-prompt-visibility',
         'content-design/domain-lookup-tool',
+        'content-design/console-homepage',
       ],
     },
     {
