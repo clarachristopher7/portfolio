@@ -17,7 +17,7 @@ sidebar_position: 2
 
 ![The product manager's prototype of the logging screen. Callout 1 points to the logging switch, which shows as on even though nothing is logged. Callout 2 points to the close button on a warning about unfinished setup. Callout 3 points to an empty log that says "No data yet".](/img/content-design/ai-prompt-before-annotated.png)
 
-<p className="shot-cap">The product manager's prototype. In this version, the logging switch turns on before setup is finished, but no prompts are logged.</p>
+<p className="shot-cap">The product manager's prototype.</p>
 
 1. **The switch turns on, but logging doesn't start.** An admin can turn the switch on before decryption is set up. The switch shows as on, but Cloud Secure Edge can't capture any prompts until setup is finished.
 2. **The warning can be dismissed.** The warning names the missing step, but the admin can close it and leave the screen with setup unfinished.
