@@ -1089,7 +1089,8 @@ html[data-theme='dark'] .ia-home-pills em { border-color: var(--ifm-toc-border-c
    and content held to the same width.
    ───────────────────────────────────────────────────────────── */
 .theme-doc-breadcrumbs { display: none; }
-.theme-doc-markdown { max-width: 1180px; }
+.theme-doc-markdown { max-width: 1180px; padding-top: 2.5rem; }
+@media (max-width: 996px) { .theme-doc-markdown { padding-top: 1.5rem; } }
 main[class*="docMainContainer"] > .container {
   padding: 2.5rem 2rem 4rem;
   margin: 0;
