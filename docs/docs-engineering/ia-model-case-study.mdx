@@ -7,19 +7,19 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 # Information architecture across a product portfolio
 
-<p className="hub-sub">Documentation for each SonicWall product had developed independently. I built a model that assesses every product’s documentation against one definition of completeness, so gaps could be demonstrated with evidence.</p>
+<p className="hub-sub">Every SonicWall product’s docs had grown up on their own. I built a model that measures them all against the same definition of complete, so you can point to a gap and show the evidence for it.</p>
 
 <dl className="ctx">
-  <div><dt>The situation</dt><dd>SonicWall sells firewalls, cloud services, apps installed on employees’ computers, and portals for partner companies. Each has its own documentation, written in different tools by different teams, with no shared standard for what a complete set should contain.</dd></div>
-  <div><dt>Who uses it</dt><dd>Documentation leads and product owners deciding where documentation effort should go.</dd></div>
-  <div><dt>What they’re doing</dt><dd>Establishing which products are missing which content, in a way that is fair to products with very different needs.</dd></div>
-  <div><dt>My part</dt><dd>I designed the model, the rules that assign each status, and the single-file tool that presents it.</dd></div>
+  <div><dt>The situation</dt><dd>SonicWall sells firewalls, cloud services, apps that run on employees’ computers, and portals for partner companies. Each product has its own docs, written in different tools by different teams, and nobody had agreed on what a complete set looks like.</dd></div>
+  <div><dt>Who uses it</dt><dd>Docs leads and product owners deciding where docs effort should go next.</dd></div>
+  <div><dt>What they’re doing</dt><dd>Working out which products are missing which content, in a way that’s fair to products with very different needs.</dd></div>
+  <div><dt>My part</dt><dd>I designed the model, the rules behind each status, and the single-page tool that shows it all.</dd></div>
 </dl>
 
 
 <div className="ia-brief">
-  <div><h4>Problem</h4><p>Without a common standard, coverage gaps were a matter of opinion and could not be compared across products.</p></div>
-  <div><h4>Constraint</h4><p>It had to be a single, self-contained web page that any stakeholder could open and any writer could maintain.</p></div>
+  <div><h4>Problem</h4><p>Without a shared standard, coverage gaps came down to opinion, and you couldn’t compare one product with another.</p></div>
+  <div><h4>Constraint</h4><p>It had to be one self-contained web page that anyone could open and any writer could keep up to date.</p></div>
   <div><h4>What I tried</h4><p>[An approach you considered and dropped.]</p></div>
   <div><h4>The outcome</h4><p>[Add a result.]</p></div>
 </div>
@@ -28,19 +28,19 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <HubGroup>
   <HubCard icon="layers" tag="Sections" title="Where content lives">
-    Which sections each product’s documentation contains.
+    Which sections each product’s docs contain.
   </HubCard>
   <HubCard icon="route" tag="Journey" title="What the reader is doing">
-    Whether the documentation supports every stage, from evaluating the product to scaling it up.
+    Whether the docs support every stage, from evaluating a product to scaling it up.
   </HubCard>
   <HubCard icon="grid" tag="Decisions" title="What applies to every product">
-    Shared policies, such as page metadata, translation, and retiring old versions, each with an owner.
+    Policies every product shares, like page metadata, translation, and retiring old versions, each with an owner.
   </HubCard>
 </HubGroup>
 
 ## Fair to unlike products
 
-A cloud service and a hardware appliance need different documentation. Each product is classified by type, and only the sections relevant to that type count toward its assessment, so a status means the same thing across the portfolio.
+A cloud service and a hardware appliance need different docs. So each product gets a type, and only the sections that make sense for that type count. That way, a status means the same thing no matter which product it’s on.
 
 <p className="ia-chips"><span>Cloud service</span><span>Hardware appliance</span><span>Employee app</span><span>Partner portal</span><span>Shared content</span></p>
 
@@ -63,7 +63,7 @@ A cloud service and a hardware appliance need different documentation. Each prod
     <div className="ia-nav estate-tabs" role="tablist"><b>Portfolio map</b><label htmlFor="estate-sections">Sections</label><label htmlFor="estate-journey">Journey</label><label htmlFor="estate-decisions">Decisions</label><em>Example data</em></div>
 
     <div className="estate-panel estate-panel--sections">
-      <p className="estate-cap">Which sections each product’s documentation contains, and where each status was read from.</p>
+      <p className="estate-cap">Which sections each product’s docs contain, and where each status came from.</p>
       <div className="estate-table-wrap">
       <table className="estate-table">
         <thead><tr><th>Product</th><th>Get started</th><th>Installation</th><th>Configuration</th><th>Integrations</th><th>Troubleshooting</th><th>Release notes</th><th>Firmware and failover</th><th>Source</th></tr></thead>
@@ -78,7 +78,7 @@ A cloud service and a hardware appliance need different documentation. Each prod
     </div>
 
     <div className="estate-panel estate-panel--journey">
-      <p className="estate-cap">Whether each product’s documentation supports every stage of adoption.</p>
+      <p className="estate-cap">Whether each product’s docs support every stage of adoption.</p>
       <div className="estate-table-wrap">
       <table className="estate-table">
         <thead><tr><th>Product</th><th>Evaluate</th><th>Activate</th><th>Deploy</th><th>Operate</th><th>Scale</th><th>Troubleshoot</th></tr></thead>
@@ -93,7 +93,7 @@ A cloud service and a hardware appliance need different documentation. Each prod
     </div>
 
     <div className="estate-panel estate-panel--decisions">
-      <p className="estate-cap">Policies settled once and applied across the portfolio.</p>
+      <p className="estate-cap">Policies you decide once and apply everywhere.</p>
       <div className="estate-table-wrap">
       <table className="estate-table estate-table--decisions">
         <thead><tr><th>Decision</th><th>Proposal</th><th>Status</th></tr></thead>

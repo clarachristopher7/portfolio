@@ -19,15 +19,15 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <HubGroup label="What's here" columns={2}>
   <HubCard to="/published-cse-docs" icon="file" tag="Docs" title="Docs" go="See the pages">
-    Pages I write and maintain on the Cloud Secure Edge documentation site.
+    Pages I write and maintain on the Cloud Secure Edge docs site.
   </HubCard>
   <HubCard to="/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the work">
-    How documentation is structured, for a single product and across a portfolio.
+    How docs are structured, for one product and across many.
   </HubCard>
   <HubCard to="/content-design/overview" icon="pen" tag="In-product" title="Content design" go="See the samples">
-    The language inside the product, and the order in which people encounter it.
+    The words inside the product, and the order you meet them in.
   </HubCard>
   <HubCard to="/automations" icon="bot" tag="Tooling" title="Automations" go="See the tools">
-    Tooling that detects when the documentation has fallen out of step with the product.
+    Tools that notice when the docs and the product have drifted apart.
   </HubCard>
 </HubGroup>

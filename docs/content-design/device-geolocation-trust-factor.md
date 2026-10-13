@@ -5,24 +5,24 @@ sidebar_position: 1
 
 # Geolocation trust factor
 
-<p className="hub-sub">Admins can restrict access based on the country a device is in. The configuration screen collected every input but never stated the rule those inputs produced.</p>
+<p className="hub-sub">Admins can block or allow devices based on the country they’re in. The screen collected all the right inputs, but it never told you what rule you’d just built.</p>
 
 <dl className="ctx">
-  <div><dt>The product</dt><dd>Cloud Secure Edge, a SonicWall security service that checks every attempt by an employee’s device to reach company applications and websites, and decides whether to allow it.</dd></div>
-  <div><dt>Who uses it</dt><dd>IT and security administrators.</dd></div>
-  <div><dt>What they’re doing</dt><dd>Configuring trust factors: individual checks on a device, such as its operating system or location, that together set its trust level. A device that fails a factor can be denied access or have its trust level lowered.</dd></div>
-  <div><dt>My part</dt><dd>I rewrote the screen’s copy and proposed moving the trust effect meter below the settings it depends on.</dd></div>
+  <div><dt>The product</dt><dd>Cloud Secure Edge, a SonicWall service that checks each time an employee’s device tries to reach a company app or website, and decides whether to let it through.</dd></div>
+  <div><dt>Who uses it</dt><dd>IT and security admins.</dd></div>
+  <div><dt>What they’re doing</dt><dd>Setting up trust factors. Each one is a check on a device, like its operating system or where it is, and together they decide how much the device is trusted. If a device fails a check, it can lose trust or be blocked outright.</dd></div>
+  <div><dt>My part</dt><dd>I rewrote the copy on this screen and suggested moving the trust effect meter below the settings it depends on.</dd></div>
 </dl>
 
 ## Before
 
 ![The factor before the revision: the Trust Effect meter sits above the country selector and its options.](/img/content-design/device-geolocation-before.png)
 
-<p className="shot-cap">The trust effect meter, which shows what happens to a device that fails the check, sits above the settings that determine it. The Allowed and Blocked switch sits at the far right of the label.</p>
+<p className="shot-cap">The meter at the top shows what happens to a device that fails the check, but it sits above the settings that decide that. The Allowed and Blocked switch is all the way over on the right.</p>
 
 ## The problem
 
-The label, *“Select the countries where devices with this Trust Factor are:”*, only resolves if the reader treats the Allowed and Blocked switch at the far right as the end of the sentence. Nothing on the screen stated the resulting rule, so an admin who read the logic backwards would save a policy that did the opposite of what they intended, with no warning.
+The label read *“Select the countries where devices with this Trust Factor are:”*. It only makes sense if you read the Allowed and Blocked switch on the far right as the end of the sentence. Nothing on the screen spelled out the rule, either. If you read the logic backwards, you’d save a policy that did the opposite of what you meant, and nothing would warn you.
 
 ## The constraint
 
@@ -41,8 +41,8 @@ The label, *“Select the countries where devices with this Trust Factor are:”
 | **Label** | Select the countries where devices with this Trust Factor are: | Select countries to block or allow: |
 | **Rule** | *(none)* | To satisfy the Trust Factor, the device must be located outside of the selected countries. |
 
-The new sentence states the rule in the same terms as the meter’s description, *“If this Factor is not satisfied…”*, so the two read as one statement. The meter now follows the settings, so the screen reads in the order an admin works: what is checked, what counts as passing, and what happens on failure.
+The new sentence states the rule in the same words as the meter’s description, *“If this Factor is not satisfied…”*, so the two read as one thought. The meter now comes after the settings, so the screen follows the order you think in: what’s being checked, what counts as passing, and what happens if a device fails.
 
 ## The outcome
 
-The lead front-end engineer applied the same ordering to every trust factor.
+The lead front-end engineer ended up using the same order for every trust factor, since it made sense for all of them.

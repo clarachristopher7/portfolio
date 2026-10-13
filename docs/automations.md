@@ -7,6 +7,6 @@ import WorkCards from '@site/src/components/WorkCards';
 
 # Automations
 
-<p className="hub-sub">Tooling that detects when the documentation has fallen out of step with the product. Both tools report and neither edits a page, so every change still passes through a writer’s judgment.</p>
+<p className="hub-sub">Tools that notice when the docs have drifted out of step with the product. They report what they find, and a writer decides what to change.</p>
 
 <WorkCards set="automations" />
