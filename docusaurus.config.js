@@ -16,6 +16,9 @@ const config = {
   // projectName: 'portfolio',
 
   onBrokenLinks: 'warn',
+  // The site is also published as a static copy without the JS bundle, where
+  // this banner would otherwise appear on the homepage.
+  baseUrlIssueBanner: false,
   onBrokenMarkdownLinks: 'warn',
 
   stylesheets: [

@@ -13,7 +13,7 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 
 ### SonicWall (Cloud Secure Edge), Remotely in Toronto, Ontario, Canada
 
-**Senior Technical Writer** · *Jan 2024 – Present*
+**Senior Technical Writer** · *Feb 2024 – Present*
 
 - Analyze customer support tickets, sales engineering calls, product telemetry, and community forums to define the user persona, identify their real-world friction points, and uncover critical product adoption gaps.
 - Apply these user insights with product, design, and front-end engineers to shape both the contextual UX copy and the order it appears in, restructuring console setup so each screen states the rule the admin is building and places outcomes after the inputs that determine them, turning a feature-led console into an outcome-driven setup experience.

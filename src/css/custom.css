@@ -1568,3 +1568,13 @@ b, strong, th { font-weight: 400; }
 @media (max-width: 767px) {
   .markdown dl.ctx > div { grid-template-columns: 1fr; gap: 0.25rem; }
 }
+
+/* One weight and one family everywhere, including form controls and
+   diagram labels, so every piece of text matches the titles. */
+input, textarea, select, button {
+  font-family: inherit;
+}
+body,
+body * {
+  font-weight: 300 !important;
+}

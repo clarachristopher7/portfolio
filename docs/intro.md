@@ -5,7 +5,15 @@ sidebar_position: 1
 
 # About me
 
-I work across docs, content design, and content architecture for cloud security products. I design the content in the product and docs, and I create a cohesive experience between product doc sets.
+I’m a technical writer with a background in networking and cloud security startups. I own product documentation strategy, design in-product content, and define the information architecture of doc sets.
+
+I learn products first-hand and investigate where customers get stuck. I use that understanding to build content around the customer journey and to clarify a path forward for users.
+
+My work spans onboarding flows, product architecture docs, and configuration guides. I currently own Cloud Secure Edge docs at SonicWall, following its acquisition of Banyan Security, where I was the sole technical writer. Before that, I wrote docs for Tailscale and technical content for Security Compass.
+
+I’m open to roles including:
+
+<p className="ia-chips role-chips"><span>Technical writer</span><span>Content engineer</span><span>Content architect</span><span>Content designer</span><span>UX writer</span><span>Content strategist</span><span>Content specialist</span><span>Technical content marketer</span></p>
 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
