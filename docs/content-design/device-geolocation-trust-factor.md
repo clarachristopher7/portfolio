@@ -16,7 +16,7 @@ sidebar_position: 1
 
 ## Before
 
-![The trust factor before the revision. The trust effect meter is above the country selector and its options.](/img/content-design/device-geolocation-before.png)
+![A prototype of the trust factor before the revision. The trust effect meter is above the country selector and its options.](/img/content-design/device-geolocation-before.png)
 
 <p className="shot-cap">The trust effect meter at the top shows what happens to a device that fails the check. The meter appears before the settings that control it. The <b>Allowed</b> and <b>Blocked</b> switch is at the far right, away from the label that it completes.</p>
 
@@ -24,13 +24,17 @@ sidebar_position: 1
 
 The label said "Select the countries where devices with this Trust Factor are:". The sentence makes sense only if you read the **Allowed** and **Blocked** switch at the far right as its last word.
 
-In the screenshot, the admin selected Algeria and set the switch to **Blocked**. That setting means a device passes the check only if it is outside Algeria. A device in Algeria fails the check, and the trust effect meter decides what happens to it next.
+In the prototype, the admin selected Algeria and set the switch to **Blocked**. That setting means a device passes the check only if it is outside Algeria. A device in Algeria fails the check, and the trust effect meter decides what happens to it next.
 
 The screen never stated that rule in words. An admin who read the switch the other way would think that devices in Algeria pass. They would save a policy that did the opposite of what they wanted, and nothing on the screen would warn them.
 
 ## The constraint
 
-[Add: what you were working with.]
+Every trust factor in the console uses the same card. The card has four parts. They are a label, the settings, a description, and the trust effect meter. I couldn't add a new control or a new kind of warning. I could change only the words and the order of the parts.
+
+The words had limits too. Trust Factor and Trust Level are defined terms across the console and the docs. The new copy had to use them exactly as they were, capitals included.
+
+Because the card is shared, a change to its order would apply to every trust factor. So the new order had to make sense for factors that check very different things, not only for location.
 
 ## What I tried
 
@@ -38,7 +42,7 @@ I made three changes to the same screen. I rewrote the label so that it names bo
 
 ## After
 
-![The trust factor after the revision. The label is rewritten, a sentence states the rule, and the meter is below the settings.](/img/content-design/device-geolocation-after.png)
+![A prototype of the trust factor after the revision. The label is rewritten, a sentence states the rule, and the meter is below the settings.](/img/content-design/device-geolocation-after.png)
 
 | | Before | After |
 |---|---|---|
@@ -49,4 +53,8 @@ The new sentence uses the same words as the meter description, "If this Factor i
 
 ## The outcome
 
-The lead front-end engineer used the same order for every trust factor, because the order made sense for all of them.
+The lead front-end engineer used the same order for every trust factor, because the order made sense for all of them. Each card now lists its settings first, states its rule, and ends with the trust effect meter.
+
+![A trust profile with four trust factors. They are Device Geolocation, Operating System Version, Disk Encryption, and Firewall. Each card shows its settings, then a sentence that states its rule, then the trust effect meter.](/img/content-design/trust-factors-after.png)
+
+<p className="shot-cap">A prototype of one trust profile with four trust factors. The settings in each card are examples. The order of the parts is the same on every card.</p>
