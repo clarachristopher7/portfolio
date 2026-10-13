@@ -1563,8 +1563,17 @@ b, strong, th { font-weight: 400; }
 }
 .markdown .shot-cap {
   font-size: 13px;
+  font-style: italic;
   color: var(--site-soft);
-  margin: -0.4rem 0 0;
+  /* The screenshots carry a transparent margin around the frame, so pull
+     the caption up to sit just under the visible edge. */
+  margin: -2.25rem 0 1.5rem;
+}
+@media (max-width: 996px) {
+  .markdown .shot-cap { margin-top: -1.5rem; }
+}
+@media (max-width: 600px) {
+  .markdown .shot-cap { margin-top: -1rem; }
 }
 @media (max-width: 767px) {
   .markdown dl.ctx > div { grid-template-columns: 1fr; gap: 0.25rem; }
