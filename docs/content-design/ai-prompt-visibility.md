@@ -5,14 +5,14 @@ sidebar_position: 2
 
 # AI prompt visibility
 
-<p className="hub-sub">Admins can log the prompts employees send to AI tools. The switch looked like it worked, but nothing got captured until you changed a second setting on a different screen.</p>
+<p className="hub-sub">Admins can log the prompts employees send to AI tools. Turning logging on looked like it worked, but nothing was captured until an admin changed a second setting on another screen.</p>
 
-<dl className="ctx">
-  <div><dt>The product</dt><dd>Cloud Secure Edge, a SonicWall service that checks each time an employee’s device tries to reach a company app or website, and decides whether to let it through.</dd></div>
-  <div><dt>Who uses it</dt><dd>IT and security admins.</dd></div>
-  <div><dt>What they’re doing</dt><dd>Turning on prompt logging to see what employees share with AI tools like ChatGPT. Those prompts travel over encrypted connections, so the service can only read them if it’s allowed to decrypt that traffic. That permission lives in the organization’s web filtering policy, on a separate screen.</dd></div>
-  <div><dt>My part</dt><dd>The product designer and I made the case for having admins finish setup before logging gets switched on. I proposed putting the decryption setting right in that flow.</dd></div>
-</dl>
+<div className="ctx-prose">
+  <p className="ctx-label">Background</p>
+  <p>Cloud Secure Edge is a SonicWall service that decides whether an employee’s device can connect to a company’s apps and websites. It can also keep a log of the prompts employees send to AI tools like ChatGPT, so admins can see what’s being shared.</p>
+  <p>There’s a catch: those prompts travel over encrypted connections. Cloud Secure Edge can only read them if it’s allowed to decrypt that traffic, and that permission is set in a web filtering policy on a different screen.</p>
+  <p>The product designer and I argued that admins should finish this setup before turning logging on. I proposed bringing the decryption setting into the same flow.</p>
+</div>
 
 ## Before
 
@@ -36,7 +36,7 @@ It was easy to dismiss the warning and move on, thinking logging was on. Then th
 
 ![The proposed screen: the missing security setting sits right above the AI logging switch, with a line confirming how many devices are being logged.](/img/content-design/ai-prompt-after.png)
 
-In the proposal, the decryption setting sits right above the logging switch, listed for each web filtering policy along with how many devices it covers. You turn on decryption where you want prompts captured, then switch logging on, and a line confirms how many devices you’re now logging. This design was proposed and hasn’t been built.
+In the proposal, the decryption setting appears right above the logging switch. Each web filtering policy is listed with the number of devices it covers and its own decryption switch. You turn on decryption for the policies you want to capture prompts from, then turn logging on, and a line confirms how many devices are being logged. This design was proposed and hasn’t been built.
 
 ## The outcome
 

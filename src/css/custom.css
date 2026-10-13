@@ -1578,3 +1578,26 @@ body,
 body * {
   font-weight: 300 !important;
 }
+
+/* Background card: a short prose introduction to each case study */
+.markdown .ctx-prose {
+  max-width: 1180px;
+  margin: 0 0 1.75rem;
+  padding: 1.15rem 1.4rem 0.35rem;
+  background: var(--site-card);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 2px;
+}
+.markdown .ctx-prose > p {
+  max-width: 78ch;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 0.85rem;
+}
+.markdown .ctx-prose > p.ctx-label {
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary-dark);
+  margin-bottom: 0.5rem;
+}

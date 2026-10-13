@@ -7,16 +7,15 @@ sidebar_position: 3
 
 <p className="hub-sub">When a web filtering policy blocked or allowed a site unexpectedly, admins had no direct way to find out which part of the policy was responsible.</p>
 
-<dl className="ctx">
-  <div><dt>The product</dt><dd>Internet Threat Protection, the part of Cloud Secure Edge that filters web traffic on company devices. It blocks malicious sites, plus whatever categories an organization decides to restrict.</dd></div>
-  <div><dt>Who uses it</dt><dd>IT and security admins, often in the middle of an incident, with an employee waiting on a blocked site.</dd></div>
-  <div><dt>What they’re doing</dt><dd>Figuring out why a policy made the call it did. Every website request passes through several layers of rules: protection against known threats, blocked categories like gambling, blocked apps and sites, and then any exceptions.</dd></div>
-  <div><dt>My part</dt><dd>I suggested building a domain lookup tool right into the policy.</dd></div>
-</dl>
+<div className="ctx-prose">
+  <p className="ctx-label">Background</p>
+  <p>Internet Threat Protection is the part of Cloud Secure Edge that filters web traffic on company devices. For every website a device requests, it checks for known threats, then applies the categories, apps, and sites the organization has chosen to block, and finally any exceptions the admin has set.</p>
+  <p>When a site gets blocked or allowed unexpectedly, an admin has to work out which of those rules made the call, often while an employee is waiting. I suggested building a domain lookup tool right into the policy so admins could check directly.</p>
+</div>
 
 ## Before
 
-The only explanation we had was this diagram from the docs, which shows how the service routes a device’s request to look up a website.
+The only explanation we had was this diagram from the docs. It shows how Cloud Secure Edge routes a device’s request to look up a website.
 
 <figure className="docs-diagram">
   <svg
@@ -99,11 +98,11 @@ The only explanation we had was this diagram from the docs, which shows how the 
 
 ## The problem
 
-To diagnose a block, you have to apply your own configuration to one specific site: which traffic goes through your private connection, which sites you’ve listed as exceptions, and which rules you’ve set. A general diagram can’t do that for you, and working it out by hand is slow and easy to get wrong, especially with someone waiting.
+To diagnose a block, an admin has to apply their own configuration to one specific site: which traffic goes through their private connection, which sites they’ve listed as exceptions, and which rules they’ve set. A general diagram can’t do that, and working it out by hand is slow and easy to get wrong, especially with someone waiting.
 
 ## The constraint
 
-The tool doesn’t check blocking by country or by risk score. If it didn’t say so, a clean result could look like proof that the policy wasn’t the problem. So the panel calls out that limit before you run a lookup.
+The tool doesn’t check blocking by country or by risk score. Without a warning, a clean result could look like proof that the policy wasn’t responsible, so the panel states this limit before you run a lookup.
 
 ## What I tried
 

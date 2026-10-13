@@ -9,12 +9,11 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <p className="hub-sub">A scheduled job that compares recent code changes with the docs and flags the pages those changes probably made wrong. It only reports. A writer decides what to change.</p>
 
-<dl className="ctx">
-  <div><dt>The situation</dt><dd>Engineers ship changes to the product all the time. When one of them changes behavior that a help page describes, that page is now wrong, and nothing in the release process tells the docs team.</dd></div>
-  <div><dt>Who uses it</dt><dd>The docs team.</dd></div>
-  <div><dt>What it does</dt><dd>On each run, it reads the latest code changes, checks which ones customers can actually use yet, and has Claude compare each change against an index of every docs page. You get a dated report of the pages that likely need an update.</dd></div>
-  <div><dt>My part</dt><dd>I designed and built it.</dd></div>
-</dl>
+<div className="ctx-prose">
+  <p className="ctx-label">Background</p>
+  <p>Engineers change the product constantly. When a change affects something a help page describes, that page becomes wrong, and nothing in the release process tells the docs team.</p>
+  <p>I designed and built a scheduled job to close that gap. On each run, it reads the latest code changes, checks which ones customers can actually use, and has Claude compare each change against an index of every docs page. The result is a dated report of the pages that probably need an update.</p>
+</div>
 
 ## How it works
 
