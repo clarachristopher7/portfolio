@@ -26,7 +26,9 @@ An admin could dismiss the warning and leave the screen with logging turned on. 
 
 ## The constraint
 
-[Add: what you were working with.]
+Turning on logging couldn't turn on decryption for the admin. Decryption lets Cloud Secure Edge read all the encrypted traffic that a policy covers, not only AI prompts. That choice affects employee privacy, so an admin has to make it deliberately.
+
+Decryption also had to stay a single setting in the Internet Threat Protection policy. Other features depend on it too. A separate decryption switch for AI prompts would let the two settings disagree.
 
 ## What I tried
 
