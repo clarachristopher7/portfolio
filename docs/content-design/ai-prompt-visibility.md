@@ -15,11 +15,11 @@ sidebar_position: 2
 
 ## The problem
 
-![The logging screen before the redesign. Callout 1 points to the logging switch, which is on. Callout 2 points to the close button on a warning about unfinished setup. Callout 3 points to an empty log that says "No data yet".](/img/content-design/ai-prompt-before-annotated.png)
+![The logging screen before the redesign. Callout 1 points to the logging switch, which shows as on even though nothing is logged. Callout 2 points to the close button on a warning about unfinished setup. Callout 3 points to an empty log that says "No data yet".](/img/content-design/ai-prompt-before-annotated.png)
 
-<p className="shot-cap">In this version, an admin can turn on logging before setup is finished.</p>
+<p className="shot-cap">In this version, the logging switch turns on before setup is finished, but no prompts are logged.</p>
 
-1. **Logging turns on right away.** The switch works even though decryption isn't set up, so Cloud Secure Edge can't capture any prompts yet.
+1. **The switch turns on, but logging doesn't start.** An admin can turn the switch on before decryption is set up. The switch shows as on, but Cloud Secure Edge can't capture any prompts until setup is finished.
 2. **The warning can be dismissed.** The warning names the missing step, but the admin can close it and leave the screen with setup unfinished.
 3. **The log stays empty.** An admin who comes back later may have forgotten about the unfinished setup. The empty log suggests that employees aren't using AI tools, when Cloud Secure Edge was never capturing their prompts.
 
