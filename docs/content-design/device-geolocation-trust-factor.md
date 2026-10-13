@@ -5,13 +5,13 @@ sidebar_position: 1
 
 # Geolocation trust factor
 
-<p className="hub-sub">Admins can allow or block devices by country. The screen collected the right settings, but it never said what rule those settings made.</p>
+<p className="hub-sub">Admins can allow or block employee devices by country. A device that connects from a blocked country can lose access to company apps. The settings screen collected the right information, but it never stated the rule the admin was building. Its layout also worked against the logic of that rule.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Cloud Secure Edge is a SonicWall service that decides whether an employee's device can connect to company apps and websites. Admins control those decisions with trust factors. Each trust factor checks one thing about a device, such as its operating system or its location.</p>
-  <p>The results set the device's trust level. If a device fails a trust factor, Cloud Secure Edge can lower its trust level or block it.</p>
-  <p>This sample is about the geolocation trust factor, which lets admins allow or block devices by country. I rewrote the copy on its settings screen. I also suggested moving the trust effect meter below the settings that control it.</p>
+  <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps. Admins shape those decisions with trust factors. Each trust factor checks one fact about a device, such as its operating system or its location.</p>
+  <p>Together, the results set the device's trust level. When a device fails a trust factor, Cloud Secure Edge lowers its trust level or blocks it, depending on how the admin set up that factor.</p>
+  <p>This sample covers the geolocation trust factor. I rewrote the copy on its settings screen. I also suggested moving the trust effect meter below the settings that control it.</p>
 </div>
 
 ## Before
