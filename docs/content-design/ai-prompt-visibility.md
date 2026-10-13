@@ -9,7 +9,7 @@ sidebar_position: 2
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Cloud Secure Edge is a SonicWall service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools such as ChatGPT, so admins can see what employees share.</p>
+  <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools such as ChatGPT, so admins can see what employees share.</p>
   <p>Prompts travel over encrypted connections. Cloud Secure Edge can read a prompt only if it has permission to decrypt that traffic. Admins give that permission in the Internet Threat Protection policy, which is on a different screen.</p>
   <p>The product designer and I argued that admins should finish this setup before they turn on logging. I prototyped two ways to connect the decryption setting to logging.</p>
 </div>

@@ -9,7 +9,7 @@ sidebar_position: 4
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Cloud Secure Edge is a SonicWall service that decides whether an employee's device can connect to company apps and websites. Admins set it up and run it from a web-based admin console.</p>
+  <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. Admins set it up and run it from a web-based admin console.</p>
   <p>The homepage is the first screen that an admin sees after they sign in. It's the natural place to answer one question. Is the product doing the job that we bought it for?</p>
   <p>Customers buy Cloud Secure Edge for a few primary use cases. They include remote access without a VPN, blocking malicious content, zero trust access to private apps, checking device security posture, and protecting SaaS apps. I worked on the redesign with the product designer. My part was to choose the metrics that show how each use case is going.</p>
 </div>
