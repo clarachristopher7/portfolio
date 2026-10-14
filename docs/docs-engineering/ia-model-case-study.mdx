@@ -8,31 +8,29 @@ import IaViews from '@site/src/components/IaViews';
 
 # Information architecture across a product portfolio
 
-<p className="hub-sub">Each SonicWall product's docs grew separately. I built a model that measures every product's docs against one definition of complete, so each gap comes with evidence.</p>
+<p className="hub-sub">Each SonicWall product's docs grew separately. I built a model that measures every product's docs against one definition of complete.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>SonicWall sells firewalls, cloud services, apps for employees' computers, and portals for partner companies. A different team wrote each product's docs, in a different tool. No one had agreed on what a complete set of docs contains.</p>
-  <p>Without that agreement, docs leads and product owners could not see where the gaps were or decide where to spend effort. I designed the model, the rules that set each status, and a single-page tool that shows the results.</p>
+  <p>SonicWall sells firewalls, cloud services, apps for employees' computers, and portals for partner companies. A different team wrote each product's docs, in a different tool, and no one had agreed on what complete docs contain.</p>
+  <p>I designed the model, the rules that set each status, and a single-page tool that shows the results.</p>
 </div>
 
 
 <div className="chain brief-flow">
-  <div className="arch-node arch-node--old"><b>The problem</b><span>Without a shared standard, a coverage gap was a matter of opinion, and nobody could compare two products.</span></div>
-  <div className="arch-node"><b>The approach</b><span>I defined one standard set of sections for each type of product. Then I scored every product's docs against it, using its navigation file or table of contents as evidence.</span></div>
-  <div className="arch-node"><b>The constraint</b><span>The tool had to be one self-contained web page. Anyone had to be able to open it, and any writer had to be able to update it.</span></div>
-  <div className="arch-node arch-node--new"><b>The outcome</b><span>For the first time, docs leads could compare products side by side. Troubleshooting was the most common gap, so it became the first priority for the next quarter.</span></div>
+  <div className="arch-node arch-node--old"><b>The problem</b><span>Without a shared standard, a gap was a matter of opinion, and nobody could compare two products.</span></div>
+  <div className="arch-node"><b>The approach</b><span>I defined a standard set of sections for each product type, then scored every product against it.</span></div>
+  <div className="arch-node"><b>The constraint</b><span>The tool had to be one web page that anyone could open and any writer could update.</span></div>
+  <div className="arch-node arch-node--new"><b>The outcome</b><span>Docs leads could compare products side by side for the first time. Troubleshooting was the most common gap, so it became the next priority.</span></div>
 </div>
 
 ## Three views of the same portfolio
-
-The model looks at the docs in three ways. The first two score each product. The third holds the decisions that apply to every product.
 
 <IaViews />
 
 ## Fair comparisons across product types
 
-A cloud service and a hardware appliance need different docs. So each product has a type, and only the sections that apply to that type count. A status then means the same thing on every product.
+A cloud service and a hardware appliance need different docs. So each product has a type, and only the sections for that type count.
 
 <p className="ia-chips"><span>Cloud service</span><span>Hardware appliance</span><span>Employee app</span><span>Partner portal</span><span>Shared content</span></p>
 

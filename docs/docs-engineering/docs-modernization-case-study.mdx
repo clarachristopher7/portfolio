@@ -6,13 +6,12 @@ hide_table_of_contents: true
 
 # Documentation platform modernization
 
-<p className="hub-sub">SonicWall's product docs were split across two sites, and another team controlled the navigation for most of them. I proposed one docs site, at the company's existing address, that the docs team can change directly.</p>
+<p className="hub-sub">SonicWall's product docs were split across two sites, and another team controlled the navigation for most of them. I proposed one docs site that the docs team can change directly.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>SonicWall makes firewalls, network management tools, and cloud security services. Each product has its own set of docs. Support cases showed that the biggest problem wasn't missing content. Customers couldn't find docs that already existed.</p>
-  <p>Most product docs lived on the company's main website, which the web team builds. To reorder a section, rename a menu label, or move the version picker, a writer had to file a ticket with that team. The Cloud Secure Edge docs had their own site, which I build and run.</p>
-  <p>I wrote a proposal for phase 1 of a modernization program. It asks leadership for two decisions, and a working prototype backs it up.</p>
+  <p>SonicWall makes firewalls, network management tools, and cloud security services. Most product docs lived on the main website, which the web team builds, so every navigation change was a ticket to that team. The Cloud Secure Edge docs had their own site, which I run.</p>
+  <p>I wrote a proposal for phase 1 of a modernization program, backed by a working prototype.</p>
 </div>
 
 ## The problem
@@ -33,13 +32,8 @@ The docs lived on two sites, and the docs team controlled only one of them.
   </div>
 </div>
 
-Support cases about the docs pointed at one problem far more than any other.
+Most doc support cases came from customers who couldn't find a doc that already existed.
 
-<div className="stat-row">
-  <div><b>3 in 4</b><span>doc support cases came from customers who couldn't find a doc that already existed</span></div>
-  <div><b>About a week</b><span>was the median time before a customer was sent a doc that had been published all along</span></div>
-  <div><b>30+</b><span>internal teams asked for every product's docs to work like the Cloud Secure Edge site</span></div>
-</div>
 
 <figure className="cases" aria-label="Documentation support cases from the past two years, by reason">
   <figcaption>Doc support cases from the past two years, by reason</figcaption>
@@ -55,7 +49,7 @@ Support cases about the docs pointed at one problem far more than any other.
   </ol>
 </figure>
 
-The site itself caused much of this, and the docs team couldn't fix it.
+The site caused much of this, and the docs team couldn't fix it.
 
 <div className="lanes">
   <div className="lane">
@@ -78,7 +72,7 @@ The site itself caused much of this, and the docs team couldn't fix it.
   </div>
 </div>
 
-Customers and staff showed which design worked. They kept going to the Cloud Secure Edge docs site, because it was faster to navigate.
+Meanwhile, customers and staff kept going to the Cloud Secure Edge docs site, because it was faster to navigate.
 
 ## The approach
 
@@ -90,7 +84,7 @@ The proposal rests on three principles.
   <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Mapped to the user journey</b></div><div className="arch-node"><span>Every piece of content ties to a stage of adoption, from discovery to first deployment to running at scale.</span></div></div>
 </div>
 
-I surveyed every product with its owner. I sorted the doc sets by one question. Do the docs ship with hardware, or carry a regulatory obligation?
+I sorted the doc sets by one question. Do they ship with hardware, or carry a regulatory obligation?
 
 <div className="docset-groups">
   <div>
@@ -105,14 +99,10 @@ I surveyed every product with its owner. I sorted the doc sets by one question. 
   </div>
 </div>
 
-The hardware docs still gain two things. Writers and approvers see a preview of the real published page. Text shared between firmware versions is stored once, instead of copied into each version by hand.
-
-I kept MadCap Flare as the writing tool. Moving writers to a new authoring language would mean rebuilding translation and PDF output, and phase 1 doesn't need it.
-
 <p className="ia-home-label">What doesn't change</p>
 <p className="ia-chips"><span>Writing in MadCap Flare</span><span>Approval in Agile</span><span>Errata notices</span><span>Printed guides</span><span>Translation</span><span>Regulatory review</span></p>
 
-For publishing, I chose Antora. It treats one product as having several live versions, which SonicOS needs. Its navigation and page templates are files the docs team owns. I built a prototype that publishes four products from converted Flare content.
+For publishing, I chose Antora. It handles several live versions of one product, and the docs team owns its navigation and templates. My prototype publishes four products from converted Flare content.
 
 ### One site behind the same address
 
@@ -133,18 +123,7 @@ For publishing, I chose Antora. It treats one product as having several live ver
   </div>
 </div>
 
-To a customer, a search engine, or an AI assistant, this is still one website. The only difference is inside. The docs team publishes to its own location on its own schedule.
-
-### How the design meets the web team's conditions
-
-| Condition | How the design meets it |
-|---|---|
-| **One website** | The docs are served at sonicwall.com/docs, on the address customers already use. There's no separate docs domain. |
-| **No loss of search ranking** | The hostname doesn't change. Every page address that does change gets an automatic redirect. |
-| **No disruption to site search, metadata, or AI answers** | Search tools index by address, so they still see one website. The pipeline writes page metadata directly from the source. |
-| **One brand** | The docs use the web team's design tokens and stylesheet from their single source, so brand changes reach the docs on the next build. |
-| **No added work for the web team** | The docs team runs its own publishing pipeline. The web team adds one routing rule. |
-| **No way for a writer to put the company at risk** | Automated checks block code in content. Only one lead writer can change navigation and page templates. Every change needs a recorded approval. |
+Customers, search engines, and AI assistants still see one website. The docs team publishes to its part of it on its own schedule.
 
 ### A correction, from edit to live
 
@@ -159,7 +138,7 @@ To a customer, a search engine, or an AI assistant, this is still one website. T
 
 ### The worst failures can't publish
 
-Three risks were too severe to manage by being careful. Each one has an automated check that stops the publish.
+Each of the three worst risks has an automated check that stops the publish.
 
 <div className="pillars">
   <div className="chain chain--3"><div className="arch-node arch-node--old"><b>An old page address has no redirect</b><span>Bookmarks, support articles, and QR codes printed on hardware boxes would break</span></div><div className="arch-node"><b>Redirect check</b><span>Every old address needs a redirect. Printed QR codes get permanent, one-step redirects.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
@@ -169,19 +148,17 @@ Three risks were too severe to manage by being careful. Each one has an automate
 
 ## The constraint
 
-The web team set six conditions. The proposal had to meet all of them.
+The web team set six conditions, and the design had to meet all of them.
 
-<div className="ts-steps">
-
-1. One website, with no separate docs domain
-2. No loss of search ranking
-3. No disruption to site search, metadata, or AI answers
-4. One brand across the whole site
-5. No added work for the web team
-6. No way for a writer to put the company at risk
-
-</div>
+| Condition | How the design meets it |
+|---|---|
+| **One website** | Docs are served at sonicwall.com/docs, with no separate docs domain. |
+| **No loss of search ranking** | The hostname stays the same, and every changed page address redirects automatically. |
+| **No disruption to site search, metadata, or AI answers** | Search tools still see one website. The pipeline writes page metadata from the source. |
+| **One brand** | The docs use the web team's design tokens and stylesheet, so brand changes reach them on the next build. |
+| **No added work for the web team** | The docs team runs its own pipeline. The web team adds one routing rule. |
+| **No way for a writer to put the company at risk** | Automated checks block code in content. Only a lead writer can change navigation, and every change needs a recorded approval. |
 
 ## The outcome
 
-The proposal went to the VP of Product in October 2026. It asks for two decisions. The first is whether the docs team owns the docs site. The second is whether five doc sets move to docs-as-code publishing. The first steps of the plan needed no approval, so I started them before the decision. The VP of Product approved phase 1, and the docs team is building the internal preview of the new site.
+The proposal went to the VP of Product in October 2026. It asked whether the docs team should own the docs site, and whether five doc sets should move to docs-as-code publishing. The VP approved phase 1, and the docs team is building an internal preview of the new site.
