@@ -1726,3 +1726,7 @@ body * {
 .markdown ol.conditions li { counter-increment: cond; background: var(--site-card); margin: 0; padding: 0.9rem 1.1rem; font-size: 14px; line-height: 1.4; }
 .markdown ol.conditions li::before { content: counter(cond); display: block; font-size: 11px; color: var(--ia-new); margin-bottom: 0.3rem; }
 @media (max-width: 767px) { .markdown ol.conditions { grid-template-columns: 1fr; } }
+
+/* Bold text written in page content (**like this**) stays bold, even though
+   everything else uses the light weight. */
+.markdown strong { font-weight: 600 !important; }
