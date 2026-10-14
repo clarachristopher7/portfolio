@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Keeping the docs accurate
 
-<p className="hub-sub">Docs go wrong quietly when the product changes. I built two tools that catch it, one for code changes and one for console releases. Both tools report what they find, and a writer decides what to fix.</p>
+<p className="hub-sub">Docs drift when the product version updates. I built two tools that catch it, one for code changes and one for UI console releases. Both tools report what they find, and I decide how to fix it.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>

@@ -58,7 +58,7 @@ const SETS = {
     {to: "/automations", img: "/img/previews/evaluator.png",
       imgAlt: "A dated report that lists code changes and the docs pages they likely affect", tag: "Automation",
       title: "Keeping the docs accurate", go: "See how they work",
-      text: "Docs go wrong quietly when the product changes. I built two tools that catch it, and a writer decides what to fix."},
+      text: "Docs drift when the product version updates. I built two tools that catch it, and I decide how to fix it."},
   ],
 };
 
