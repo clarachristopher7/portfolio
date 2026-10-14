@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Geolocation trust factor
 
-<p className="hub-sub">Admins can allow or block employee devices by country. A device that connects from a blocked country can lose access to company apps. The settings screen collected the right information, but it never stated the rule the admin was building. Its layout also worked against the logic of that rule.</p>
+<p className="hub-sub">Admins can allow or block employee devices by geolocation. A device that attempts to connect from a blocked country loses access to company apps. The settings never stated the rule the admin was building, and the layout worked against the logic of that rule.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
