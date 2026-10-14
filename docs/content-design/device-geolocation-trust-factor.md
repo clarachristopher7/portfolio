@@ -31,12 +31,16 @@ I made three changes to the same screen. I rewrote the label so that it names bo
 
 ![A prototype of the trust factor after the revision. Callouts point to the label, which names both choices, the sentence that states the rule, and the trust effect meter, which now comes last.](/img/content-design/device-geolocation-after-annotated.png)
 
+<div className="hl-last-row">
+
 | | Before | After |
 |---|---|---|
 | **Label** | Select the countries where devices with this Trust Factor are: | Select countries to block or allow: |
 | **Rule** | *(none)* | To satisfy the Trust Factor, the device must be located outside of the selected countries. |
 | **Trust effect meter** | At the top, above the settings | At the bottom, below the settings |
 | **Reading order** | What happens on failure, then the settings that decide it | What the factor checks, then what counts as a pass, then what happens on failure |
+
+</div>
 
 ## The constraint
 

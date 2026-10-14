@@ -1730,3 +1730,11 @@ body * {
 /* Bold text written in page content (**like this**) stays bold, even though
    everything else uses the light weight. */
 .markdown strong { font-weight: 600 !important; }
+
+/* Highlight the last row of a table, for the change that matters most. */
+.markdown .hl-last-row tbody tr:last-child td {
+  background: var(--site-chip-bg);
+  color: var(--site-chip-ink);
+}
+.markdown .hl-last-row tbody tr:last-child td:first-child { box-shadow: inset 3px 0 0 var(--ia-new); }
+.markdown .hl-last-row tbody tr:last-child td strong { color: var(--site-chip-ink); }
