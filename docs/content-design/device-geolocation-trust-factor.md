@@ -21,7 +21,7 @@ sidebar_position: 1
 In this example, the admin selected Algeria and set the switch to **Blocked**. That means a device passes the check only when it's located outside Algeria. A device in Algeria fails the check, so its trust level drops and it can lose access to protected apps.
 
 1. **The label is an unfinished sentence.** "Select the countries where devices with this Trust Factor are:" stops before it says what happens to those countries. The answer, **Allowed** or **Blocked**, is on a switch at the far right of the screen. An admin who reads the label alone can't tell whether the countries they pick will be allowed or blocked.
-2. **The switch that finishes it is at the far right.** The **Allowed** and **Blocked** switch sits across the screen from the label that it completes.
+2. **The switch that finishes it is at the far right.** After reading the label, the eye moves down to the country list, not across the screen. It's easy to miss the switch, or to treat it as a separate setting.
 3. **Nothing states the rule.** An admin who read the switch the other way would think that devices in Algeria pass. They would save a policy that did the opposite of what they wanted, and nothing on the screen would warn them.
 4. **The result comes first.** The trust effect meter shows what happens to a device that fails the check. It appears above the settings that decide which devices fail.
 
