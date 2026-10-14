@@ -11,6 +11,8 @@ My job is to understand how a system actually works, then describe it in terms o
 
 I studied philosophy at McGill. It turns out to be surprisingly good training for this work. Most of philosophy is noticing when a sentence doesn't quite say what it means, and that's still most of my job.
 
+I'm a creative at heart, and a generalist. You're not supposed to say that these days, but I'll say it anyway. Writing well takes a lot of things at once. You have to exercise judgment, know how to reach people and relate to them, and get the delivery, flow, and sequence right. And you have to see a complex technology with the innocent eyes of someone on the outside, because that's where your reader is standing.
+
 Right now I own the Cloud Secure Edge docs at SonicWall. I was the only technical writer at Banyan Security, and I stayed on when SonicWall acquired it. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
 ## How I work
