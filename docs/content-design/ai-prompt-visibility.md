@@ -33,9 +33,7 @@ My first prototype moved the decryption setting onto the logging screen, above t
 
 ## The constraint
 
-Turning on logging couldn't turn on decryption for the admin. Decryption lets Cloud Secure Edge read all the encrypted traffic that a policy covers, not only AI prompts. That choice affects employee privacy, so an admin has to make it deliberately.
-
-Decryption also had to stay a single setting in the Internet Threat Protection policy. Other features depend on it too. A separate decryption switch for AI prompts would let the two settings disagree.
+Turning on decryption lets Cloud Secure Edge read all encrypted traffic that one policy covers, not just the AI prompts. Making it too easy to turn on would introduce employee privacy issues and apply the setting too broadly.
 
 ## The outcome
 
