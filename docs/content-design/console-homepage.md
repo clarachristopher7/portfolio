@@ -27,7 +27,7 @@ The homepage answered questions that admins don't ask when they sign in.
 3. **Hard-to-read charts.** Hollow ring charts make it hard to compare slices, especially thin ones.
 4. **Labels cut off.** Legends were cut off mid-word, so admins couldn't always tell what a color meant.
 
-## What I tried
+## The approach
 
 I started from the use cases instead of from the data. For each use case, I asked what an admin needs to know to decide whether it's working. I also asked what the admin should do next if it isn't.
 

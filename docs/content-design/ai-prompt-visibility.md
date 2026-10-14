@@ -23,7 +23,7 @@ sidebar_position: 2
 2. **The warning can be dismissed.** The warning names the missing step, but the admin can close it and leave the screen with setup unfinished.
 3. An admin who comes back later may recall turning on AI prompt visibility and see an empty log, thus wrongly concluding that employees aren't using AI tools.
 
-## What I tried
+## The approach
 
 My first prototype moved the decryption setting onto the logging screen, above the logging switch. The admin could finish setup in one place, so the warning was no longer needed.
 

@@ -25,7 +25,7 @@ In this example, the admin selected Algeria and set the switch to **Blocked**. T
 3. **Nothing states the rule.** An admin who read the switch the other way would think that devices in Algeria pass. They would save a policy that did the opposite of what they wanted, and nothing on the screen would warn them.
 4. **The result comes first.** The trust effect meter shows what happens to a device that fails the check. It appears above the settings that decide which devices fail.
 
-## What I tried
+## The approach
 
 I made three changes to the same screen. I rewrote the label so that it names both choices, block and allow. I added a sentence under the country list that states the rule in words. I also moved the trust effect meter below the settings, because the meter shows a result of those settings.
 
