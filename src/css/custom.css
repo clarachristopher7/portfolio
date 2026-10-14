@@ -1745,15 +1745,15 @@ body * {
 
 /* Numbered points in the style of Tailscale's docs steps: a round number
    badge, joined to the next point by a thin line. */
-.markdown .ts-steps ol { list-style: none; counter-reset: ts-step; padding: 0; margin: 1rem 0 1.5rem; }
-.markdown .ts-steps li {
+.markdown ol:not([class]) { list-style: none; counter-reset: ts-step; padding: 0; margin: 1rem 0 1.5rem; }
+.markdown ol:not([class]) > li {
   counter-increment: ts-step;
   position: relative;
   padding-left: 2.75rem;
   margin: 0 0 1.4rem;
   min-height: 1.9rem;
 }
-.markdown .ts-steps li::before {
+.markdown ol:not([class]) > li::before {
   content: counter(ts-step);
   position: absolute; left: 0; top: -0.05rem;
   width: 1.9rem; height: 1.9rem;
@@ -1766,10 +1766,10 @@ body * {
   font-weight: 600 !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
-.markdown .ts-steps li::after {
+.markdown ol:not([class]) > li::after {
   content: '';
   position: absolute; left: 0.95rem; top: 2.05rem; bottom: -1.3rem;
   width: 1px; background: color-mix(in srgb, var(--ia-new) 35%, transparent);
 }
-.markdown .ts-steps li:last-child::after { display: none; }
-.markdown .ts-steps li:last-child { margin-bottom: 0; }
+.markdown ol:not([class]) > li:last-child::after { display: none; }
+.markdown ol:not([class]) > li:last-child { margin-bottom: 0; }
