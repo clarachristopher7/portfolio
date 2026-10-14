@@ -16,7 +16,6 @@ const sidebars = {
         'content-design/device-geolocation-trust-factor',
         'content-design/console-homepage',
         'content-design/ai-prompt-visibility',
-        'content-design/domain-lookup-tool',
       ],
     },
     {
@@ -25,7 +24,6 @@ const sidebars = {
       link: {type: 'doc', id: 'content-architecture'},
       items: [
         'docs-engineering/cse-ia-rework-case-study',
-        'docs-engineering/ia-model-case-study',
         'docs-engineering/docs-modernization-case-study',
       ],
     },
