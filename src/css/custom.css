@@ -1773,3 +1773,14 @@ body * {
 }
 .markdown ol:not([class]) > li:last-child::after { display: none; }
 .markdown ol:not([class]) > li:last-child { margin-bottom: 0; }
+
+/* Problem → approach → constraint → outcome, as a flow with arrows. */
+.chain.brief-flow { margin: 1.25rem 0 2.5rem; align-items: stretch; }
+.markdown .brief-flow .arch-node { justify-content: flex-start; padding: 0.9rem 1rem 1rem; background: var(--site-card); }
+.markdown .brief-flow .arch-node b {
+  font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ia-new); margin-bottom: 0.45rem;
+}
+.markdown .brief-flow .arch-node span { font-size: 14px; line-height: 1.5; color: var(--ifm-font-color-base); margin-top: 0; }
+.markdown .brief-flow .arch-node--new { background: var(--site-chip-bg); }
+.chain.brief-flow > .arch-node + .arch-node::before { font-size: 18px; color: var(--ia-new); }
