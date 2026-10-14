@@ -7,9 +7,9 @@ sidebar_position: 1
 
 I'm a content designer and technical writer with a background in networking and cloud security startups. I own product documentation strategy, design in-product content, and define the information architecture of doc sets.
 
-I learn products first-hand and investigate where customers get stuck. I use that understanding to build content around the customer journey and to clarify a path forward for users.
+My role is to understand the technical requirements of a system, then translate them into terms that match what users experience in the real world. I learn products first-hand and investigate where customers get stuck. I use that understanding to build content around the customer journey and to clarify a path forward for users.
 
-My work spans product docs, in-product copy and setup flows, and the information architecture of docs sites. I currently own Cloud Secure Edge docs at SonicWall, following its acquisition of Banyan Security, where I was the sole technical writer. Before that, I wrote docs for Tailscale and technical content for Security Compass.
+I currently own Cloud Secure Edge docs at SonicWall, following its acquisition of Banyan Security, where I was the sole technical writer. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
 
 I'm open to roles including:
