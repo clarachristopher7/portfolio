@@ -18,7 +18,7 @@ sidebar_position: 1
 
 ![A prototype of the trust factor before the revision. Callout 1 points to the label, 2 to the Allowed and Blocked switch at the far right, 3 to the country list, which has no rule under it, and 4 to the trust effect meter above the settings.](/img/content-design/device-geolocation-before.png)
 
-In this example, the admin selected Christmas Island and set the switch to **Blocked**. That means a device passes the check only when it's located outside Christmas Island. A device in Christmas Island fails the check, so its trust level drops and it can lose access to protected apps.
+In this example, the admin selected Christmas Island and set the switch to **Blocked**. That means a device passes the check only when it's located outside Christmas Island. A device in Christmas Island fails the check, so its trust level drops (to Medium or Low, for example) and it loses access to company apps.
 
 1. **The label is an unfinished sentence.** "Select the countries where devices with this Trust Factor are:" stops before it says what happens to those countries. The answer, **Allowed** or **Blocked**, is on a switch at the far right of the screen. An admin who reads the label alone can't tell whether the countries they pick will be allowed or blocked.
 2. **The switch that finishes it is at the far right.** After reading the label, the eye moves down to the country list, not across the screen. It's easy to miss the switch, or to treat it as a separate setting.
