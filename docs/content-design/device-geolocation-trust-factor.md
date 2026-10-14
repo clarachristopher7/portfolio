@@ -44,11 +44,11 @@ I made three changes to the same screen. I rewrote the label so that it names bo
 
 ## The constraint
 
-Every trust factor in the console uses the same card. The card has four parts. They are a label, the settings, a description, and the trust effect meter. I couldn't add a new control or a new kind of warning. I could change only the words and the order of the parts.
+Every trust factor in the console uses the same card component, which has four parts: a label, settings, a description, and a trust effect meter. Under the UI team's requirements, I couldn't add a new control or a new kind of warning. I could change only the words and the order of the parts.
 
-The words had limits too. Trust Factor and Trust Level are defined terms across the console and the docs. The new copy had to use them exactly as they were, capitals included.
+The words had limits too: Trust Factor and Trust Level are proprietary terms across the console and the docs. The new copy had to use them exactly as they were.
 
-Because the card is shared, a change to its order would apply to every trust factor. So the new order had to make sense for factors that check very different things, not only for location.
+Finally, because the card component is shared, a change to its order would apply to every trust factor. So the new order had to make sense for trust factors that check very different things, like the OS version or whether the device's firewall is on.
 
 ## The outcome
 
