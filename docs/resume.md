@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Resume
 
-**Clara Christopher** · Technical writer
+**Clara Christopher** · Technical writer · Content architect · Content designer · Content specialist
 
 Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/)
 
@@ -15,20 +15,19 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 
 **Senior Technical Writer** · *Feb 2024 – Present*
 
-- Analyze support tickets, sales engineering calls, product telemetry, and community forums to find where customers get stuck and which features they don't adopt.
-- Work with product, design, and front-end engineers on console copy and the order it appears in. Setup screens now state the rule the admin is building, and show each outcome after the settings that decide it.
-- Restructured the docs site around the customer journey instead of product features. Added an RSS feed for release notes and an in-page feedback form.
-- Built AI automations with Claude Code that compare engineering changes with the docs in each release cycle, and flag the pages that need an update.
-- Built a staleness audit that checks the docs against each new console version, and produces a backlog ranked by impact.
+- Analyze support tickets, sales engineering calls, product telemetry, and community forums to find where customers hesitate or get stuck.
+- Work with product, design, and front-end engineers on in-product content design. Strategize to create an intuitive, effortless experience given the technical constraints of our product.
+- Continuously refine the presentation of information on our docsite so that it more closely mirrors the real-world experience of our users. Set up vehicles for user engagement, like feedback forms and subscription options.
+- Build and hone AI automations with Claude Code to systematize the accuracy and extensibility of the docsite. Examples include a script that evaluates engineering changes to technical components and identifies which docs require updates based on these changes, or a staleness checker that compares docs against the latest console UI.
 - Leading a documentation platform modernization, including a docs-as-code publishing pipeline, navigation mapped to the customer journey, and new tooling (in progress).
 
 ### Banyan Security (acquired by SonicWall), Remotely in Toronto, Ontario, Canada
 
 **Senior Technical Writer and Content Designer** · *May 2023 – Jan 2024*
 
-- Restructured the docs' information architecture and taxonomy ahead of the acquisition, to merge the cloud and legacy publishing pipelines.
+- Restructured the docs' information architecture and taxonomy ahead of the acquisition, in an effort to reposition our product as a full-fledged SSE offering.
 - Used generative AI tools to test customer FAQs and onboarding flows. Analyzed AI search patterns to find gaps in the docs' structure, then fixed them.
-- Worked with product, front-end leads, and UX designers on in-product content for the admin console and desktop app. Treated the copy as a sequence, deciding what each step resolves and what it leaves for later.
+- Worked with product, front-end leads, and UX designers on in-product content for the admin console and desktop app.
 
 **Technical Writer and UX Writer** · *Sep 2021 – May 2023*
 
@@ -39,7 +38,7 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 
 **Technical Writer** · *Jan 2021 – Sep 2021*
 
-- Wrote comparison docs, solution guides, and architecture diagrams for developer teams evaluating zero trust networking.
+- Wrote comparison docs, solution guides, and technical blogs for developers evaluating zero trust networking.
 
 ### Quantum XChange, Remotely in Toronto, Ontario, Canada
 
@@ -51,7 +50,7 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 
 **Content Specialist** · *May 2018 – Nov 2019*
 
-- Wrote enablement content and playbooks for SD Elements. Turned threat modeling, compliance requirements, and security policies into steps that developers could follow.
+- Wrote enablement content and playbooks for SD Elements, an application security automation platform.
 
 ## Core competencies
 
