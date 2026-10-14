@@ -55,14 +55,10 @@ const SETS = {
       text: "Defines four trust terms that sound alike, and shows how they combine into one decision about a device."},
   ],
   automations: [
-    {to: "/docs-engineering/pr-evaluator-case-study", img: "/img/previews/evaluator.png",
-      imgAlt: "A dated report that lists code changes and the docs pages they likely affect", tag: "Scheduled job",
-      title: "Documentation impact evaluator", go: "See how it works",
-      text: "A scheduled job that compares recent code changes with the docs, and reports the pages they probably made wrong."},
-    {to: "/docs-engineering/staleness-auditor-case-study", img: "/img/previews/auditor.png",
-      imgAlt: "A backlog of docs pages that no longer match the console, ranked by impact", tag: "Audit",
-      title: "Documentation staleness auditor", go: "See how it works",
-      text: "Compares the docs with each new admin console release, and produces a backlog of fixes ranked by impact."},
+    {to: "/automations", img: "/img/previews/evaluator.png",
+      imgAlt: "A dated report that lists code changes and the docs pages they likely affect", tag: "Automation",
+      title: "Keeping the docs accurate", go: "See how they work",
+      text: "Docs go wrong quietly when the product changes. I built two tools that catch it, and a writer decides what to fix."},
   ],
 };
 
@@ -80,7 +76,7 @@ SETS.featured = FEATURED.map((to) => ALL.find((c) => c.to === to));
 export default function WorkCards({set, label, srLabel = 'Projects', columns, exclude}) {
   const cards = (SETS[set] || []).filter((c) => !(exclude && FEATURED.includes(c.to)));
   return (
-    <HubGroup label={label} srLabel={srLabel} columns={columns || (cards.length % 3 === 0 ? 3 : 2)}>
+    <HubGroup label={label} srLabel={srLabel} columns={columns || (cards.length === 1 ? 1 : cards.length % 3 === 0 ? 3 : 2)}>
       {cards.map(({text, ...c}) => (
         <HubCard key={c.to} {...c}>{text}</HubCard>
       ))}

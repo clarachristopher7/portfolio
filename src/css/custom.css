@@ -668,11 +668,14 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
   align-items: stretch;
 }
 .hub-row > .hub-group:first-child { grid-column: span 2; }
+.hub-row.hub-row--even { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hub-row--even > .hub-group:first-child { grid-column: auto; }
 .hub-row > .hub-group { display: flex; flex-direction: column; }
 .hub-row > .hub-group > .hub-grid { flex: 1; }
 @media (max-width: 767px) {
   .hub-row { grid-template-columns: 1fr; }
   .hub-row > .hub-group:first-child { grid-column: auto; }
+  .hub-row.hub-row--even { grid-template-columns: 1fr; }
 }
 
 /* Pill buttons, as on the CSE docs homepage. */

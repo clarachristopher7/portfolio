@@ -29,15 +29,7 @@ const sidebars = {
         'docs-engineering/docs-modernization-case-study',
       ],
     },
-    {
-      type: 'category',
-      label: 'Automations',
-      link: {type: 'doc', id: 'automations'},
-      items: [
-        'docs-engineering/pr-evaluator-case-study',
-        'docs-engineering/staleness-auditor-case-study',
-      ],
-    },
+    {type: 'doc', id: 'automations', label: 'Automations'},
     {type: 'html', value: 'Writing', className: 'sidebar-band', defaultStyle: false},
     {
       type: 'category',
