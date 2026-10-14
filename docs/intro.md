@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # About me
 
-I'm a technical writer with a background in networking and cloud security startups. I own product documentation strategy, design in-product content, and define the information architecture of doc sets.
+I'm a content designer and technical writer with a background in networking and cloud security startups. I own product documentation strategy, design in-product content, and define the information architecture of doc sets.
 
 I learn products first-hand and investigate where customers get stuck. I use that understanding to build content around the customer journey and to clarify a path forward for users.
 
