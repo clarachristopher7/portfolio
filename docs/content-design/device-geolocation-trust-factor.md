@@ -35,8 +35,8 @@ I made three changes to the same screen. I rewrote the label so that it names bo
 |---|---|---|
 | **Label** | Select the countries where devices with this Trust Factor are: | Select countries to block or allow: |
 | **Rule** | *(none)* | To satisfy the Trust Factor, the device must be located outside of the selected countries. |
-
-The new sentence uses the same words as the meter description, "If this Factor is not satisfied...". The two sentences now read as one rule. The meter now comes after the settings, so the screen follows the order in which an admin decides. First the admin sees what the factor checks, then what counts as a pass, and last what happens when a device fails.
+| **Trust effect meter** | At the top, above the settings | At the bottom, below the settings |
+| **Reading order** | What happens on failure, then the settings that decide it | What the factor checks, then what counts as a pass, then what happens on failure |
 
 ## The constraint
 
