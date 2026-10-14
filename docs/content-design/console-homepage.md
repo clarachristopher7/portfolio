@@ -16,22 +16,20 @@ sidebar_position: 2
 
 ## The problem
 
-![A prototype of the homepage before the redesign. Callout 1 points to the row of counts, and 2 to the devices by operating system chart.](/img/content-design/console-home-before.webp)
+![A prototype of the homepage before the redesign. Callout 1 points to the devices by operating system chart, and 2 to the row of counts.](/img/content-design/console-home-before.webp)
 
 <p className="shot-cap">Six counts and five charts, filtered to the last 30 days. Every chart describes what the organization has. None of them says whether the product is working.</p>
 
 The homepage answered questions that admins don't ask when they sign in.
 
-1. **Counts with no context.** The top row counted devices, users, services, policies, roles, and connectors. 1,149 services is neither good nor bad.
-2. **No sense of what to do.** A chart of devices by operating system shows the mix of devices. It doesn't tell an admin what to act on, or whether the organization is in good health.
+1. **No sense of what to do.** A chart of devices by operating system shows the mix of devices. It doesn't tell an admin what to act on, or whether the organization is in good health.
+2. **Counts with no context.** The top row counted devices, users, services, policies, roles, and connectors. 1,149 services is neither good nor bad.
 
 ## The approach
 
-I started from the use cases instead of from the data. For each use case, I asked what an admin needs to know to decide whether it's working. I also asked what the admin should do next if it isn't.
+I started from the use cases, not the data. For each one, I asked what an admin needs to know to tell whether it's working, and what to do if it isn't. Then I chose the metrics that answer those questions.
 
-Then I chose the metrics that answer those questions. Each use case gets its own card, with a headline number, the gap that needs attention, and a link to the activity behind it. The cards replaced the inventory counts and charts.
-
-At the top of the page, a health meter rolls the use cases up into one score. It lists each use case with its status, so the admin sees what needs attention before scrolling.
+Each use case gets a card with a headline number, the gap to fix, and a link to the activity behind it. At the top, a health meter rolls the use cases up into one score, so the admin sees what needs attention before scrolling.
 
 ![A prototype of the redesigned homepage. Callouts point to the health meter, the license setup progress, the setup checklist, a locked metric that shows what an upgrade adds, and a use case card that shows what needs attention.](/img/content-design/console-home-after-annotated.webp)
 
