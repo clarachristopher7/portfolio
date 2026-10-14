@@ -16,7 +16,7 @@ sidebar_position: 4
 
 ## The problem
 
-![A prototype of the homepage before the redesign. Callout 1 points to the row of counts, 2 to the devices by operating system chart, 3 to a hollow ring chart, and 4 to a legend cut off mid-word.](/img/content-design/console-home-before.png)
+![A prototype of the homepage before the redesign. Callout 1 points to the row of counts, 2 to the devices by operating system chart, and 3 to a hollow ring chart.](/img/content-design/console-home-before.png)
 
 <p className="shot-cap">Six counts and five charts, filtered to the last 30 days. Every chart describes what the organization has. None of them says whether the product is working.</p>
 
@@ -25,7 +25,6 @@ The homepage answered questions that admins don't ask when they sign in.
 1. **Counts with no context.** The top row counted devices, users, services, policies, roles, and connectors. 1,149 services is neither good nor bad.
 2. **No sense of what to do.** A chart of devices by operating system shows the mix of devices. It doesn't tell an admin what to act on, or whether the organization is in good health.
 3. **Hard-to-read charts.** Hollow ring charts make it hard to compare slices, especially thin ones.
-4. **Labels cut off.** Legends were cut off mid-word, so admins couldn't always tell what a color meant.
 
 ## The approach
 
