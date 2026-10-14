@@ -31,6 +31,17 @@ My first prototype moved the decryption setting onto the logging screen, above t
 
 <p className="shot-cap">The screen lists each Internet Threat Protection policy with the number of devices that it covers and a decryption switch. A line under the logging switch confirms how many devices Cloud Secure Edge is logging.</p>
 
+<div className="hl-after">
+
+| | Before | After |
+|---|---|---|
+| **Where decryption is set up** | In the Internet Threat Protection policy, in another part of the admin console | On the logging screen, above the logging switch |
+| **Order of setup** | Logging first, decryption later and somewhere else | Decryption first, then logging |
+| **Warning** | Can be dismissed while setup is unfinished | Not needed |
+| **Confirmation** | "No data yet" | "Logging 38 devices across 1 policy." |
+
+</div>
+
 ## The constraint
 
 Turning on decryption lets Cloud Secure Edge read all encrypted traffic that one policy covers, not just the AI prompts. Making it too easy to turn on would introduce employee privacy issues and apply the setting too broadly.

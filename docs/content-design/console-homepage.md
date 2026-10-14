@@ -37,6 +37,20 @@ At the top of the page, a health meter rolls the use cases up into one score. It
 
 ![A prototype of the redesigned homepage. Callouts point to the health meter, the license setup progress, a locked metric that shows what an upgrade adds, and a use case card that shows what needs attention.](/img/content-design/console-home-after-annotated.png)
 
+<div className="hl-after">
+
+| | Before | After |
+|---|---|---|
+| **Top of the page** | Six inventory counts | A health score for the organization, with what needs attention |
+| **Main content** | Counts of devices, users, services, policies, roles, and connectors | A card for each use case, with a headline number and the gap to fix |
+| **Context** | No comparisons or status | Comparisons such as "vs. yesterday", and a status for each use case |
+| **Next step** | None | A link to the activity behind each number, and a task list |
+| **Charts** | Hollow ring charts with legends cut off | Plain numbers and bars with full labels |
+
+</div>
+
+Each use case card answers one question:
+
 | Use case | What the homepage shows |
 |---|---|
 | **Remote access** | How many users connected through a Service Tunnel today, and how many connections failed |

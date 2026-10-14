@@ -17,11 +17,11 @@ sidebar_position: 3
 
 Before the tool, the only explanation was this diagram from the docs. It shows how Cloud Secure Edge routes a device's request to look up a website.
 
-<figure className="docs-diagram">
+<figure className="docs-diagram docs-diagram--compact">
   <svg
-    viewBox="0 0 1000 392"
+    viewBox="0 0 1000 272"
     role="img"
-    aria-label="Annotated diagram. 1 points to the Service Tunnel decision, 2 to the include and exclude lists, and 3 to the web gateway, where the diagram cannot say which rule decided. How a DNS request is routed under an Internet Threat Protection policy. The DNS proxy sorts the request into a local or internet domain. Local domains go to the default DNS resolver. For internet domains, if the Service Tunnel is off the request goes to the web gateway. If it is on, private domains go through the Service Tunnel, and public domains are checked against the tunnel include and exclude lists, ending at the Service Tunnel, the default DNS resolver, or the web gateway."
+    aria-label="Diagram with three numbered markers. 1 marks the Service Tunnel decision, 2 the include and exclude lists, and 3 the web gateway. How a DNS request is routed under an Internet Threat Protection policy. The DNS proxy sorts the request into a local or internet domain. Local domains go to the default DNS resolver. For internet domains, if the Service Tunnel is off the request goes to the web gateway. If it is on, private domains go through the Service Tunnel, and public domains are checked against the tunnel include and exclude lists, ending at the Service Tunnel, the default DNS resolver, or the web gateway."
     style={{maxWidth: '100%', height: 'auto'}}
   >
     <defs>
@@ -89,30 +89,13 @@ Before the tool, the only explanation was this diagram from the docs. It shows h
       </g>
     </g>
 
-    <defs>
-      <marker id="dlt-n" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
-        <path d="M0 1 L7 4 L0 7 z" style={{fill: '#0072d6'}} />
-      </marker>
-    </defs>
     <g fontFamily="var(--ifm-font-family-base, system-ui, sans-serif)">
-    <path d="M370 318 C 370 237.0, 370 237.0, 370 160" fill="none" style={{stroke: '#0072d6'}} strokeWidth="2.2" markerEnd="url(#dlt-n)" />
-    <rect x="150" y="318" width="250" height="60" rx="7" style={{fill: '#0072d6', stroke: '#fff', strokeWidth: 2}} />
-    <circle cx="170" cy="339" r="10" style={{fill: '#fff'}} />
-    <text x="170" y="343" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0072d6">1</text>
-    <text x="188" y="343" fontSize="13" fontWeight="500" fill="#fff">Is the Service Tunnel on for</text>
-    <text x="188" y="361" fontSize="13" fontWeight="500" fill="#fff">this device? It depends.</text>
-    <path d="M662 318 C 662 237.0, 740 237.0, 740 160" fill="none" style={{stroke: '#0072d6'}} strokeWidth="2.2" markerEnd="url(#dlt-n)" />
-    <rect x="430" y="318" width="262" height="60" rx="7" style={{fill: '#0072d6', stroke: '#fff', strokeWidth: 2}} />
-    <circle cx="450" cy="339" r="10" style={{fill: '#fff'}} />
-    <text x="450" y="343" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0072d6">2</text>
-    <text x="468" y="343" fontSize="13" fontWeight="500" fill="#fff">Is this website on the include or</text>
-    <text x="468" y="361" fontSize="13" fontWeight="500" fill="#fff">exclude list? It depends.</text>
-    <path d="M938 318 C 938 291.0, 938 291.0, 938 268" fill="none" style={{stroke: '#0072d6'}} strokeWidth="2.2" markerEnd="url(#dlt-n)" />
-    <rect x="722" y="318" width="270" height="60" rx="7" style={{fill: '#0072d6', stroke: '#fff', strokeWidth: 2}} />
-    <circle cx="742" cy="339" r="10" style={{fill: '#fff'}} />
-    <text x="742" y="343" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0072d6">3</text>
-    <text x="760" y="343" fontSize="13" fontWeight="500" fill="#fff">Which rule blocked it at the web</text>
-    <text x="760" y="361" fontSize="13" fontWeight="500" fill="#fff">gateway? The diagram can't say.</text>
+      <circle cx="476" cy="120" r="12" style={{fill: '#0072d6', stroke: '#fff', strokeWidth: 2}} />
+      <text x="476" y="124.5" textAnchor="middle" fontSize="12.5" fontWeight="700" fill="#fff">1</text>
+      <circle cx="686" cy="111" r="12" style={{fill: '#0072d6', stroke: '#fff', strokeWidth: 2}} />
+      <text x="686" y="115.5" textAnchor="middle" fontSize="12.5" fontWeight="700" fill="#fff">2</text>
+      <circle cx="992" cy="228" r="12" style={{fill: '#0072d6', stroke: '#fff', strokeWidth: 2}} />
+      <text x="992" y="232.5" textAnchor="middle" fontSize="12.5" fontWeight="700" fill="#fff">3</text>
     </g>
   </svg>
   <figcaption>
@@ -137,6 +120,17 @@ I proposed a lookup panel inside the policy itself, because the policy is where 
 ![The Lookup Domain panel. Callouts point to the note that states what the tool checks and what it doesn't, and to the field that asks for one website address.](/img/content-design/domain-lookup-tool-annotated.png)
 
 The admin enters a website address in the policy. The tool shows whether the policy allows or blocks the website, and which category decided the result. The admin does not have to leave the policy to get the answer.
+
+<div className="hl-after">
+
+| | Before | After |
+|---|---|---|
+| **Where the admin looks** | A general diagram in the docs | A lookup panel inside the policy |
+| **What the admin does** | Traces the diagram by hand, using what they remember of their settings | Enters one website address |
+| **What the admin learns** | The paths a request could take | Whether this policy allows or blocks the website, and which category decided |
+| **Limits** | Not stated | Stated up front: the tool doesn't check blocks by country or risk score |
+
+</div>
 
 ## The constraint
 
