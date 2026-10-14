@@ -24,13 +24,13 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 
 ### Banyan Security (acquired by SonicWall), Remotely in Toronto, Ontario, Canada
 
-**Senior Technical Writer** · *May 2023 – Jan 2024*
+**Senior Technical Writer and Content Designer** · *May 2023 – Jan 2024*
 
 - Restructured the docs' information architecture and taxonomy ahead of the acquisition, to merge the cloud and legacy publishing pipelines.
 - Used generative AI tools to test customer FAQs and onboarding flows. Analyzed AI search patterns to find gaps in the docs' structure, then fixed them.
 - Worked with product, front-end leads, and UX designers on in-product content for the admin console and desktop app. Treated the copy as a sequence, deciding what each step resolves and what it leaves for later.
 
-**Technical Writer** · *Sep 2021 – May 2023*
+**Technical Writer and UX Writer** · *Sep 2021 – May 2023*
 
 - Created and maintained the style guide, which set one standard and information hierarchy across all docs.
 - Audited legacy docs for readability, and turned static manuals into task-based walkthroughs and video scripts.
