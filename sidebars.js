@@ -10,23 +10,23 @@ const sidebars = {
     'published-cse-docs',
     {
       type: 'category',
+      label: 'Content design',
+      link: {type: 'doc', id: 'content-design/overview'},
+      items: [
+        'content-design/device-geolocation-trust-factor',
+        'content-design/console-homepage',
+        'content-design/ai-prompt-visibility',
+        'content-design/domain-lookup-tool',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Content architecture',
       link: {type: 'doc', id: 'content-architecture'},
       items: [
         'docs-engineering/cse-ia-rework-case-study',
         'docs-engineering/ia-model-case-study',
         'docs-engineering/docs-modernization-case-study',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Content design',
-      link: {type: 'doc', id: 'content-design/overview'},
-      items: [
-        'content-design/device-geolocation-trust-factor',
-        'content-design/ai-prompt-visibility',
-        'content-design/domain-lookup-tool',
-        'content-design/console-homepage',
       ],
     },
     {

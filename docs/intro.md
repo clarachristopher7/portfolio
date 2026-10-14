@@ -22,11 +22,11 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
   <HubCard to="/published-cse-docs" icon="file" tag="Docs" title="Docs" go="See the pages">
     Pages that I write and maintain on the Cloud Secure Edge docs site.
   </HubCard>
-  <HubCard to="/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the work">
-    How docs are structured, for one product and for a group of products.
-  </HubCard>
   <HubCard to="/content-design/overview" icon="pen" tag="In-product" title="Content design" go="See the samples">
     The words in the product, and the order in which users see them.
+  </HubCard>
+  <HubCard to="/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the work">
+    How docs are structured, for one product and for a group of products.
   </HubCard>
   <HubCard to="/automations" icon="bot" tag="Tooling" title="Automations" go="See the tools">
     Tools that find docs that no longer match the product.
