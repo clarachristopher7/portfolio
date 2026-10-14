@@ -31,7 +31,7 @@ I made three changes to the same screen. I rewrote the label so that it names bo
 
 ![A prototype of the trust factor after the revision. Callouts point to the label, which names both choices, the sentence that states the rule, and the trust effect meter, which now comes last.](/img/content-design/device-geolocation-after-annotated.png)
 
-<div className="hl-last-row">
+<div className="hl-after">
 
 | | Before | After |
 |---|---|---|

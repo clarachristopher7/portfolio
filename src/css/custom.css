@@ -1731,10 +1731,10 @@ body * {
    everything else uses the light weight. */
 .markdown strong { font-weight: 600 !important; }
 
-/* Highlight the last row of a table, for the change that matters most. */
-.markdown .hl-last-row tbody tr:last-child td {
+/* Highlight the After column of a before-and-after table. */
+.markdown .hl-after th:nth-child(3),
+.markdown .hl-after td:nth-child(3) {
   background: var(--site-chip-bg);
   color: var(--site-chip-ink);
 }
-.markdown .hl-last-row tbody tr:last-child td:first-child { box-shadow: inset 3px 0 0 var(--ia-new); }
-.markdown .hl-last-row tbody tr:last-child td strong { color: var(--site-chip-ink); }
+.markdown .hl-after th:nth-child(3) { box-shadow: inset 0 3px 0 var(--ia-new); }
