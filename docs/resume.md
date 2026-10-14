@@ -50,7 +50,7 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 
 **Content Specialist** · *May 2018 – Nov 2019*
 
-- Wrote enablement content and playbooks for SD Elements, an application security automation platform.
+- Wrote enablement content and playbooks for SD Elements, application security automation software.
 
 ## Core competencies
 
