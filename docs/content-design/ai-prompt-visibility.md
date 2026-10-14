@@ -10,7 +10,7 @@ sidebar_position: 2
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
   <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools such as ChatGPT. Employees sometimes paste sensitive information into these tools, such as customer records, source code, or internal documents. Once that information leaves the company, the company can't control where it goes. The log shows admins what's being shared, so they can catch leaks and set clear rules for using AI.</p>
-  <p>Prompts travel over encrypted connections. Cloud Secure Edge can read a prompt only if it has permission to decrypt that traffic. Admins give that permission in the Internet Threat Protection policy, which is in a different part of the admin console.</p>
+  <p>Prompts travel over encrypted connections. Cloud Secure Edge can read a prompt only if it has permission to decrypt that traffic. Admins turn on decryption in an Internet Threat Protection policy, which is in a different part of the admin console. Each policy applies to specific user roles, so decryption, and prompt logging with it, covers only the employees in those roles.</p>
 </div>
 
 ## The problem
@@ -53,12 +53,13 @@ My first prototype moved the decryption setting onto the logging screen, above t
 
 ## The outcome
 
-The constraint pointed to a better home for the switch. The second prototype puts the decryption switch inside the Internet Threat Protection policy, next to the policy's other settings. Decryption is a policy setting, so the policy is where admins expect to find it.
+The constraint pointed to a better home for the switch. The second prototype puts the decryption switch inside each Internet Threat Protection policy. Decryption is turned on one policy at a time, and each policy applies to specific user roles. So the policy is where an admin can see exactly whose traffic they're about to decrypt.
 
 ![The second prototype. An Internet Threat Protection policy has a TLS decryption tab with a decryption switch, a list of the features that use decryption, and a list of categories that are never decrypted.](/img/content-design/ai-prompt-itp-policy.webp)
 
-Under the switch, a **Used by** list names each feature that needs decryption and shows its status. AI prompt visibility appears there with the number of devices that it logs. An admin can see what turning off decryption would stop, and can open **Prompt Visibility** from the policy.
+The decryption tab also has two lists.
 
-A **Don't decrypt** list names the categories that the policy never decrypts, such as financial services and health. Admins can protect employee privacy in the same place where they turn on decryption.
+- **Used by** names the features that depend on this policy's decryption, including AI prompt visibility. An admin who's thinking about turning decryption off can see that prompt logging would stop for the roles that this policy covers.
+- **Don't decrypt** names the website categories that always stay encrypted, such as financial services and health. Admins can protect employee privacy in the same place where they turn decryption on.
 
-Both designs are prototypes. The product team chose the second direction for the roadmap, so decryption will live in the policy, and AI prompt visibility will appear in its **Used by** list. Until then, the docs cover both settings in one procedure, so admins finish decryption before they turn on logging.
+Both designs are prototypes. The product team chose the second direction for the roadmap. Until it ships, the docs cover both settings in one procedure, so admins turn on decryption in the right policy before they turn on logging.
