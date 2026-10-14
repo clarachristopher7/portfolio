@@ -16,7 +16,7 @@ sidebar_position: 1
 
 ## The problem
 
-![A prototype of the trust factor before the revision. Callout 1 points to the label, 2 to the Allowed and Blocked switch at the far right, 3 to the country list, which has no rule under it, and 4 to the trust effect meter above the settings.](/img/content-design/device-geolocation-before.png)
+![A prototype of the trust factor before the revision. Callout 1 points to the label, 2 to the Allowed and Blocked switch at the far right, 3 to the country list, which has no rule under it, and 4 to the trust effect meter above the settings.](/img/content-design/device-geolocation-before.webp)
 
 In this example, the admin selected Christmas Island and set the switch to **Blocked**. That means a device passes the check only when it's located outside Christmas Island. A device in Christmas Island fails the check, so its trust level drops (to Medium or Low, for example) and it loses access to company apps.
 
@@ -29,7 +29,7 @@ In this example, the admin selected Christmas Island and set the switch to **Blo
 
 I made three changes to the same screen. I rewrote the label so that it names both choices, block and allow. I added a sentence under the country list that states the rule in words. I also moved the trust effect meter below the settings, because the meter shows a result of those settings.
 
-![A prototype of the trust factor after the revision. Callouts point to the label, which names both choices, the sentence that states the rule, and the trust effect meter, which now comes last.](/img/content-design/device-geolocation-after-annotated.png)
+![A prototype of the trust factor after the revision. Callouts point to the label, which names both choices, the sentence that states the rule, and the trust effect meter, which now comes last.](/img/content-design/device-geolocation-after-annotated.webp)
 
 <div className="hl-after">
 
@@ -56,6 +56,6 @@ I made three changes to the same screen. I rewrote the label so that it names bo
 
 The lead front-end engineer used the same order for every trust factor, because the order made sense for all of them. Each card now lists its settings first, states its rule, and ends with the trust effect meter.
 
-![A trust profile with four trust factors. They are Device Geolocation, Operating System Version, Disk Encryption, and Firewall. Each card shows its settings, then a sentence that states its rule, then the trust effect meter.](/img/content-design/trust-factors-after.png)
+![A trust profile with four trust factors. They are Device Geolocation, Operating System Version, Disk Encryption, and Firewall. Each card shows its settings, then a sentence that states its rule, then the trust effect meter.](/img/content-design/trust-factors-after.webp)
 
 <p className="shot-cap">A prototype of one trust profile with four trust factors. The settings in each card are examples. The order of the parts is the same on every card.</p>

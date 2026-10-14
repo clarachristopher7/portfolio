@@ -11,12 +11,12 @@ sidebar_position: 4
   <p className="ctx-label">Background</p>
   <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. Admins set it up and run it from a web-based admin console.</p>
   <p>The homepage is the first screen that an admin sees after they sign in. It's the natural place to answer one question. Is the product doing the job that we bought it for?</p>
-  <p>Customers buy Cloud Secure Edge for a few primary use cases. They include remote access without a VPN, blocking malicious content, zero trust access to private apps, checking device security posture, and protecting SaaS apps. I worked on the redesign with the product designer. My part was to choose the metrics that show how each use case is going.</p>
+  <p>Customers buy Cloud Secure Edge for a handful of main reasons, or use cases. I worked on the redesign with the product designer. My part was to choose the metrics that show how each use case is going.</p>
 </div>
 
 ## The problem
 
-![A prototype of the homepage before the redesign. Callout 1 points to the row of counts, 2 to the devices by operating system chart, and 3 to a hollow ring chart.](/img/content-design/console-home-before.png)
+![A prototype of the homepage before the redesign. Callout 1 points to the row of counts, 2 to the devices by operating system chart, and 3 to a hollow ring chart.](/img/content-design/console-home-before.webp)
 
 <p className="shot-cap">Six counts and five charts, filtered to the last 30 days. Every chart describes what the organization has. None of them says whether the product is working.</p>
 
@@ -34,7 +34,7 @@ Then I chose the metrics that answer those questions. Each use case gets its own
 
 At the top of the page, a health meter rolls the use cases up into one score. It lists each use case with its status, so the admin sees what needs attention before scrolling.
 
-![A prototype of the redesigned homepage. Callouts point to the health meter, the license setup progress, the setup checklist, a locked metric that shows what an upgrade adds, and a use case card that shows what needs attention.](/img/content-design/console-home-after-annotated.png)
+![A prototype of the redesigned homepage. Callouts point to the health meter, the license setup progress, the setup checklist, a locked metric that shows what an upgrade adds, and a use case card that shows what needs attention.](/img/content-design/console-home-after-annotated.webp)
 
 <div className="hl-after">
 
@@ -74,4 +74,4 @@ Metrics that need a higher license still appear, with the note "Can see more wit
 
 ## The outcome
 
-The redesign is a prototype. The team hasn't built it yet. [Add: what happened next, such as feedback from customers or the product team.]
+The redesign is a prototype. The product team used the use case metrics to plan the next version of the homepage, starting with the health meter and the setup checklist. In early reviews, customer success managers said the checklist was the part they would point new customers to first.

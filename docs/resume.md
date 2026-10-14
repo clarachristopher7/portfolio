@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Resume
 
-**Clara Christopher** · Technical writer · Content architect · Content designer · Content specialist
+**Clara Christopher** · Content designer · Technical writer
 
 Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/)
 
@@ -16,10 +16,10 @@ Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.
 **Senior Technical Writer** · *Feb 2024 – Present*
 
 - Analyze support tickets, sales engineering calls, product telemetry, and community forums to find where customers hesitate or get stuck.
-- Work with product, design, and front-end engineers on in-product content design. Strategize to create an intuitive, effortless experience given the technical constraints of our product.
-- Continuously refine the presentation of information on our docsite so that it more closely mirrors the real-world experience of our users. Set up vehicles for user engagement, like feedback forms and subscription options.
-- Build and hone AI automations with Claude Code to systematize the accuracy and extensibility of the docsite. Examples include a script that evaluates engineering changes to technical components and identifies which docs require updates based on these changes, or a staleness checker that compares docs against the latest console UI.
-- Leading a documentation platform modernization, including a docs-as-code publishing pipeline, navigation mapped to the customer journey, and new tooling (in progress).
+- Work with product, design, and front-end engineers on in-product copy and screen order, within the limits of shared UI components.
+- Reorganized the docs site around the tasks that admins come to do, without breaking any links. Added feedback forms and update subscriptions.
+- Build AI automations with Claude Code that keep the docs accurate. One flags docs that engineering changes affect. Another compares the docs with the latest console UI.
+- Lead a documentation platform modernization, including a docs-as-code publishing pipeline, navigation mapped to the customer journey, and new tooling (in progress).
 
 ### Banyan Security (acquired by SonicWall), Remotely in Toronto, Ontario, Canada
 

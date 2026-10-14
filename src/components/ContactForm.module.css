@@ -40,8 +40,8 @@
 .textarea {
   font: inherit;
   color: var(--ifm-font-color-base);
-  background: var(--ifm-background-color);
-  border: 1px solid var(--ifm-toc-border-color);
+  background: var(--site-card);
+  border: 1px solid #e3c4ca;
   border-radius: 4px;
   padding: 0.55rem 0.7rem;
   transition: border-color 120ms ease, box-shadow 120ms ease;
@@ -66,16 +66,16 @@
   font-weight: 500;
   cursor: pointer;
   color: #fff;
-  background: var(--ifm-color-primary);
-  border: 1px solid var(--ifm-color-primary);
+  background: #0072d6;
+  border: 1px solid #0072d6;
   border-radius: 4px;
   padding: 0.5rem 1.1rem;
   transition: background-color 120ms ease;
 }
 
 .submit:hover:not(:disabled) {
-  background: var(--ifm-color-primary-dark);
-  border-color: var(--ifm-color-primary-dark);
+  background: #0066c2;
+  border-color: #0066c2;
 }
 
 .submit:disabled {
@@ -96,3 +96,6 @@
 .problem {
   color: #b45309;
 }
+
+:global(html[data-theme='dark']) .input,
+:global(html[data-theme='dark']) .textarea { border-color: var(--ifm-toc-border-color); }

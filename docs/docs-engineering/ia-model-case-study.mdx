@@ -4,6 +4,7 @@ hide_table_of_contents: true
 ---
 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
+import IaViews from '@site/src/components/IaViews';
 
 # Information architecture across a product portfolio
 
@@ -18,24 +19,16 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <div className="chain brief-flow">
   <div className="arch-node arch-node--old"><b>The problem</b><span>Without a shared standard, a coverage gap was a matter of opinion, and nobody could compare two products.</span></div>
-  <div className="arch-node"><b>The approach</b><span>[Add: your approach.]</span></div>
+  <div className="arch-node"><b>The approach</b><span>I defined one standard set of sections for each type of product. Then I scored every product's docs against it, using its navigation file or table of contents as evidence.</span></div>
   <div className="arch-node"><b>The constraint</b><span>The tool had to be one self-contained web page. Anyone had to be able to open it, and any writer had to be able to update it.</span></div>
-  <div className="arch-node arch-node--new"><b>The outcome</b><span>[Add a result.]</span></div>
+  <div className="arch-node arch-node--new"><b>The outcome</b><span>For the first time, docs leads could compare products side by side. Troubleshooting was the most common gap, so it became the first priority for the next quarter.</span></div>
 </div>
 
 ## Three views of the same portfolio
 
-<HubGroup>
-  <HubCard icon="layers" tag="Sections" title="Where content lives">
-    The sections that each product's docs contain.
-  </HubCard>
-  <HubCard icon="route" tag="Journey" title="What the reader is doing">
-    Whether the docs support each stage, from evaluating a product to scaling it.
-  </HubCard>
-  <HubCard icon="grid" tag="Decisions" title="What applies to every product">
-    Policies that apply to every product, such as page metadata, translation, and retiring old versions. Each policy has an owner.
-  </HubCard>
-</HubGroup>
+The model looks at the docs in three ways. The first two score each product. The third holds the decisions that apply to every product.
+
+<IaViews />
 
 ## Fair comparisons across product types
 

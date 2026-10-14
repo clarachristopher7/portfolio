@@ -41,10 +41,13 @@ const Arrow = () => (
   </svg>
 );
 
-export function HubGroup({label, columns = 3, children}) {
+// The group label is an h2, so the card titles (h3) never skip a level.
+// A group with no visible label can pass srLabel for a hidden heading.
+export function HubGroup({label, srLabel, columns = 3, children}) {
   return (
     <section className="hub-group">
-      {label && <p className="hub-group-label">{label}</p>}
+      {label ? <h2 className="hub-group-label">{label}</h2>
+        : srLabel ? <h2 className="sr-only">{srLabel}</h2> : null}
       <div className={`hub-grid hub-grid--${columns}`}>{children}</div>
     </section>
   );

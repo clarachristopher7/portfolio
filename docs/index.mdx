@@ -22,8 +22,11 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
   <Link className="btn-hub-alt" to="/contact">Contact</Link>
 </div>
 
-<WorkCards set="contentDesign" label="Content design" />
-<WorkCards set="architecture" label="Content architecture" />
+<div className="hub-featured">
+<WorkCards set="featured" label="Start here" />
+</div>
+<WorkCards set="contentDesign" label="More content design" exclude />
+<WorkCards set="architecture" label="More content architecture" exclude />
 <WorkCards set="docs" label="Docs" />
 
 <div className="hub-row">
