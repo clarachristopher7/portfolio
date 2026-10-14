@@ -44,7 +44,12 @@ My first prototype moved the decryption setting onto the logging screen, above t
 
 ## The constraint
 
-Turning on decryption lets Cloud Secure Edge read all encrypted traffic that one policy covers, not just the AI prompts. Making it too easy to turn on would introduce employee privacy issues and apply the setting too broadly.
+<div className="ts-steps">
+
+1. Turning on decryption lets Cloud Secure Edge read all encrypted traffic that one policy covers, not just the AI prompts.
+2. Making it too easy to turn on would introduce employee privacy issues and apply the setting too broadly.
+
+</div>
 
 ## The outcome
 

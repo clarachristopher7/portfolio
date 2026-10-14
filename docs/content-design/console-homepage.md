@@ -35,7 +35,7 @@ Then I chose the metrics that answer those questions. Each use case gets its own
 
 At the top of the page, a health meter rolls the use cases up into one score. It lists each use case with its status, so the admin sees what needs attention before scrolling.
 
-![A prototype of the redesigned homepage. Callouts point to the health meter, the license setup progress, a locked metric that shows what an upgrade adds, and a use case card that shows what needs attention.](/img/content-design/console-home-after-annotated.png)
+![A prototype of the redesigned homepage. Callouts point to the health meter, the license setup progress, the setup checklist, a locked metric that shows what an upgrade adds, and a use case card that shows what needs attention.](/img/content-design/console-home-after-annotated.png)
 
 <div className="hl-after">
 
@@ -44,7 +44,7 @@ At the top of the page, a health meter rolls the use cases up into one score. It
 | **Top of the page** | Six inventory counts | A health score for the organization, with what needs attention |
 | **Main content** | Counts of devices, users, services, policies, roles, and connectors | A card for each use case, with a headline number and the gap to fix |
 | **Context** | No comparisons or status | Comparisons such as "vs. yesterday", and a status for each use case |
-| **Next step** | None | A link to the activity behind each number, and a task list |
+| **Next step** | None | A link to the activity behind each number, and a checklist of every setup task that the license includes |
 | **Charts** | Hollow ring charts with legends cut off | Plain numbers and bars with full labels |
 
 </div>
@@ -60,13 +60,18 @@ Each use case card answers one question:
 | **Protecting SaaS apps** | Sign-ins blocked from untrusted devices, and the apps that still accept any device |
 | **AI apps** | AI apps discovered, allowed, and blocked, plus the prompts that employees send |
 
-Above the cards, an alert flags AI apps that nobody has reviewed yet. Each license shows how many of its features are set up, and the task list suggests what to set up next.
+Above the cards, an alert flags AI apps that nobody has reviewed yet. Each license shows how many of its features are set up. Next to it, a checklist lists every setup task that the license includes. Finished steps are greyed out, so the admin gets a complete view of what they can do with their license, and what's left.
 
 Metrics that need a higher license still appear, with the note "Can see more with a license upgrade". The admin sees what they could measure, instead of an empty space.
 
 ## The constraint
 
-The homepage had to work for every customer, whatever they had bought. Each license turns on different features, so each customer's console collects different data. A metric couldn't depend on a feature that the customer doesn't have.
+<div className="ts-steps">
+
+1. The homepage had to work for every customer, whatever they had bought.
+2. Each license turns on different features, so each customer's console collects different data. A metric couldn't depend on a feature that the customer doesn't have.
+
+</div>
 
 ## The outcome
 
