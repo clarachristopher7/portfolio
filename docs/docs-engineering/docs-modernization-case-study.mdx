@@ -6,12 +6,12 @@ hide_table_of_contents: true
 
 # Documentation platform modernization
 
-<p className="hub-sub">SonicWall's product docs were split across two sites, and another team controlled the navigation for most of them. I proposed one docs site that the docs team can change directly.</p>
+<p className="hub-sub">SonicWall's docs lived on two sites, and the docs team could change only one of them. Renaming a menu label meant filing a ticket with another team. I proposed one docs site that the docs team can actually change.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>SonicWall makes firewalls, network management tools, and cloud security services. Most product docs lived on the main website, which the web team builds, so every navigation change was a ticket to that team. The Cloud Secure Edge docs had their own site, which I run.</p>
-  <p>I wrote a proposal for phase 1 of a modernization program, backed by a working prototype.</p>
+  <p>SonicWall makes firewalls, network management tools, and cloud security services. Most product docs lived on the main website, which the web team builds, so every navigation change meant a ticket to that team. The Cloud Secure Edge docs had their own site, which I run.</p>
+  <p>I wrote a proposal for phase 1 of a modernization program, and built a working prototype to back it up.</p>
 </div>
 
 ## The problem
@@ -32,7 +32,7 @@ The docs lived on two sites, and the docs team controlled only one of them.
   </div>
 </div>
 
-Most doc support cases came from customers who couldn't find a doc that already existed.
+The support cases told a clear story. Most of them weren't about missing docs. Customers just couldn't find the ones that already existed.
 
 
 <figure className="cases" aria-label="Documentation support cases from the past two years, by reason">
@@ -49,7 +49,7 @@ Most doc support cases came from customers who couldn't find a doc that already 
   </ol>
 </figure>
 
-The site caused much of this, and the docs team couldn't fix it.
+Much of that was the site's fault, and the docs team couldn't fix it.
 
 <div className="lanes">
   <div className="lane">
@@ -72,7 +72,7 @@ The site caused much of this, and the docs team couldn't fix it.
   </div>
 </div>
 
-Meanwhile, customers and staff kept going to the Cloud Secure Edge docs site, because it was faster to navigate.
+Meanwhile, customers and staff kept heading over to the Cloud Secure Edge docs site, because it was faster to navigate. People vote with their bookmarks.
 
 ## The approach
 
@@ -84,7 +84,7 @@ The proposal rests on three principles.
   <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Mapped to the user journey</b></div><div className="arch-node"><span>Every piece of content ties to a stage of adoption, from discovery to first deployment to running at scale.</span></div></div>
 </div>
 
-I sorted the doc sets by one question. Do they ship with hardware, or carry a regulatory obligation?
+Then I sorted the doc sets with one question. Do they ship with hardware, or carry a regulatory obligation? If not, why wait on a hardware release date?
 
 <div className="docset-groups">
   <div>
@@ -102,7 +102,7 @@ I sorted the doc sets by one question. Do they ship with hardware, or carry a re
 <p className="ia-home-label">What doesn't change</p>
 <p className="ia-chips"><span>Writing in MadCap Flare</span><span>Approval in Agile</span><span>Errata notices</span><span>Printed guides</span><span>Translation</span><span>Regulatory review</span></p>
 
-For publishing, I chose Antora. It handles several live versions of one product, and the docs team owns its navigation and templates. My prototype publishes four products from converted Flare content.
+For publishing, I chose Antora. It handles several live versions of one product (SonicOS needs that), and the docs team owns its navigation and templates. My prototype publishes four products from converted Flare content.
 
 ### One site behind the same address
 
@@ -123,7 +123,7 @@ For publishing, I chose Antora. It handles several live versions of one product,
   </div>
 </div>
 
-Customers, search engines, and AI assistants still see one website. The docs team publishes to its part of it on its own schedule.
+From the outside, nothing changes. Customers, search engines, and AI assistants still see one website. On the inside, the docs team publishes on its own schedule.
 
 ### A correction, from edit to live
 
@@ -138,7 +138,7 @@ Customers, search engines, and AI assistants still see one website. The docs tea
 
 ### The worst failures can't publish
 
-Each of the three worst risks has an automated check that stops the publish.
+Some mistakes are too costly to prevent by being careful. So each of the three worst ones has an automated check that stops the publish.
 
 <div className="pillars">
   <div className="chain chain--3"><div className="arch-node arch-node--old"><b>An old page address has no redirect</b><span>Bookmarks, support articles, and QR codes printed on hardware boxes would break</span></div><div className="arch-node"><b>Redirect check</b><span>Every old address needs a redirect. Printed QR codes get permanent, one-step redirects.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
@@ -148,7 +148,7 @@ Each of the three worst risks has an automated check that stops the publish.
 
 ## The constraint
 
-The web team set six conditions, and the design had to meet all of them.
+The web team had six conditions. Fair enough. It's their website. The design had to meet every one.
 
 | Condition | How the design meets it |
 |---|---|
@@ -161,4 +161,4 @@ The web team set six conditions, and the design had to meet all of them.
 
 ## The outcome
 
-The proposal went to the VP of Product in October 2026. It asked whether the docs team should own the docs site, and whether five doc sets should move to docs-as-code publishing. The VP approved phase 1, and the docs team is building an internal preview of the new site.
+The proposal went to the VP of Product in October 2026, with two questions. Should the docs team own the docs site? And should five doc sets move to docs-as-code publishing? The VP approved phase 1, and we're now building an internal preview of the new site.

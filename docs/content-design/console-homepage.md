@@ -5,25 +5,25 @@ sidebar_position: 2
 
 # Admin console homepage
 
-<p className="hub-sub">The admin console's homepage filled the screen with counts and charts, but none of them told admins whether Cloud Secure Edge was doing its job. The product designer and I redesigned it around the reasons that customers buy the product.</p>
+<p className="hub-sub">The first thing admins saw after signing in was a wall of counts and charts. 1,149 services. 397 policies. Is that good? Nobody could say. The product designer and I rebuilt the page around the reasons customers buy the product.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
   <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. Admins set it up and run it from a web-based admin console.</p>
-  <p>The homepage is the first screen that an admin sees after they sign in. It's the natural place to answer one question. Is the product doing the job that we bought it for?</p>
-  <p>Customers buy Cloud Secure Edge for a handful of main reasons, or use cases. I worked on the redesign with the product designer. My part was to choose the metrics that show how each use case is going.</p>
+  <p>The homepage is the first screen they see after signing in, which makes it the natural place to answer one question. Is this product doing the job we bought it for?</p>
+  <p>Customers buy Cloud Secure Edge for a handful of main reasons, or use cases. I worked on the redesign with the product designer, and my part was choosing the metrics that show how each use case is going.</p>
 </div>
 
 ## The problem
 
 ![A prototype of the homepage before the redesign. Callout 1 points to the devices by operating system chart, and 2 to the row of counts.](/img/content-design/console-home-before.webp)
 
-<p className="shot-cap">Six counts and five charts, filtered to the last 30 days. Every chart describes what the organization has. None of them says whether the product is working.</p>
+<p className="shot-cap">Six counts and five charts, all about what the organization has. Not one says whether the product is working.</p>
 
-The homepage answered questions that admins don't ask when they sign in.
+The page answered questions nobody asks when they sign in.
 
-1. **No sense of what to do.** A chart of devices by operating system shows the mix of devices. It doesn't tell an admin what to act on, or whether the organization is in good health.
-2. **Counts with no context.** The top row counted devices, users, services, policies, roles, and connectors. 1,149 services is neither good nor bad.
+1. **No sense of what to do.** A chart of devices by operating system tells you the mix of devices. Great. Now what? It doesn't say what to act on, or whether things are healthy.
+2. **Counts with no context.** The top row counted devices, users, services, policies, roles, and connectors. Is 1,149 services a lot? A little? It's neither good nor bad. It's just a number.
 
 ## The approach
 
@@ -55,9 +55,9 @@ Each use case card answers one question:
 | **Protecting SaaS apps** | Sign-ins blocked from untrusted devices, and the apps that still accept any device |
 | **AI apps** | AI apps discovered, allowed, and blocked, plus the prompts that employees send |
 
-Above the cards, an alert flags AI apps that nobody has reviewed yet. Each license shows how many of its features are set up. Next to it, a checklist lists every setup task that the license includes. Finished steps are greyed out, so the admin gets a complete view of what they can do with their license, and what's left.
+Above the cards, an alert flags AI apps that nobody has reviewed yet. Each license shows how much of it is set up, and next to it, a checklist lists every setup task the license includes. Finished steps are greyed out, so admins see everything their license can do, and what's left.
 
-Metrics that need a higher license still appear, with the note "Can see more with a license upgrade". The admin sees what they could measure, instead of an empty space.
+Metrics that need a higher license still show up, with a note that says "Can see more with a license upgrade". That beats an empty space, and it shows admins what they could be measuring.
 
 ## The constraint
 
@@ -70,4 +70,4 @@ Metrics that need a higher license still appear, with the note "Can see more wit
 
 ## The outcome
 
-The redesign is a prototype. The product team used the use case metrics to plan the next version of the homepage, starting with the health meter and the setup checklist. In early reviews, customer success managers said the checklist was the part they would point new customers to first.
+It's still a prototype. The product team is using the use case metrics to plan the next version of the homepage, starting with the health meter and the setup checklist.

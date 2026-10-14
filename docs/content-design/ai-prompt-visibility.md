@@ -5,12 +5,12 @@ sidebar_position: 3
 
 # AI prompt visibility
 
-<p className="hub-sub">Admins can log the prompts that employees send to AI tools. In the product manager's prototype, the logging switch seemed to work, but Cloud Secure Edge would capture nothing until an admin changed a second setting in another part of the admin console.</p>
+<p className="hub-sub">Admins can log the prompts that employees send to AI tools. In the product manager's prototype, you could turn logging on, walk away, and never capture a thing. The step that made it work lived somewhere else entirely.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools such as ChatGPT. Employees sometimes paste sensitive information into these tools, such as customer records, source code, or internal documents. Once that information leaves the company, the company can't control where it goes. The log shows admins what's being shared, so they can catch leaks and set clear rules for using AI.</p>
-  <p>Prompts travel over encrypted connections. Cloud Secure Edge can read a prompt only if it has permission to decrypt that traffic. Admins turn on decryption in an Internet Threat Protection policy, which is in a different part of the admin console. Each policy applies to specific user roles, so decryption, and prompt logging with it, covers only the employees in those roles.</p>
+  <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools like ChatGPT. And people paste all sorts of things into those tools (customer records, source code, internal documents). Once that information leaves the company, it's gone. The log shows admins what's being shared, so they can catch leaks and set sensible rules for AI.</p>
+  <p>There's a catch. Prompts travel over encrypted connections, and Cloud Secure Edge can only read them if it's allowed to decrypt that traffic. Admins turn on decryption in an Internet Threat Protection policy, in a completely different part of the admin console. Each policy applies to specific user roles, so decryption (and prompt logging with it) covers only the employees in those roles.</p>
 </div>
 
 ## The problem
@@ -19,13 +19,15 @@ sidebar_position: 3
 
 <p className="shot-cap">The product manager's prototype.</p>
 
+Three things go wrong here.
+
 1. **Setup can be skipped.** An admin can toggle on the switch before decryption is set up.
-2. **The warning can be dismissed.** The warning names the missing step, but the admin can close it and leave the screen with setup unfinished.
-3. **An empty log misleads.** An admin who comes back later may recall turning on AI prompt visibility and see an empty log, thus wrongly concluding that employees aren't using AI tools.
+2. **The warning can be dismissed.** It names the missing step, but one click closes it, and the admin can leave with setup unfinished.
+3. **An empty log misleads.** An admin comes back a month later, finds an empty log, and concludes nobody's using AI. They'd be wrong. Nothing was ever logged.
 
 ## The approach
 
-My first prototype moved the decryption setting onto the logging screen, above the logging switch. The admin could finish setup in one place, so the warning was no longer needed.
+My first instinct was to put everything in one place. The first prototype moved the decryption setting onto the logging screen, right above the logging switch. Admins could finish setup without leaving, and the warning had nothing left to warn about.
 
 ![The first prototype. Callouts point to the decryption setting on the same screen as logging, the device count for each policy, and the line that confirms how many devices are logged.](/img/content-design/ai-prompt-after-annotated.webp)
 
@@ -53,7 +55,7 @@ My first prototype moved the decryption setting onto the logging screen, above t
 
 ## The outcome
 
-The constraint pointed to a better home for the switch. The second prototype puts the decryption switch inside each Internet Threat Protection policy. Decryption is turned on one policy at a time, and each policy applies to specific user roles. So the policy is where an admin can see exactly whose traffic they're about to decrypt.
+That constraint changed my mind about where the switch belongs. Decryption isn't really a logging setting. It's a policy setting, turned on one policy at a time, and each policy applies to specific user roles. So the second prototype puts the switch inside each Internet Threat Protection policy, where an admin can see exactly whose traffic they're about to decrypt.
 
 ![The second prototype. An Internet Threat Protection policy has a TLS decryption tab with a decryption switch, a list of the features that use decryption, and a list of categories that are never decrypted.](/img/content-design/ai-prompt-itp-policy.webp)
 
@@ -62,4 +64,4 @@ The decryption tab also has two lists.
 - **Used by** names the features that depend on this policy's decryption, including AI prompt visibility. An admin who's thinking about turning decryption off can see that prompt logging would stop for the roles that this policy covers.
 - **Don't decrypt** names the website categories that always stay encrypted, such as financial services and health. Admins can protect employee privacy in the same place where they turn decryption on.
 
-Both designs are prototypes. The product team chose the second direction for the roadmap. Until it ships, the docs cover both settings in one procedure, so admins turn on decryption in the right policy before they turn on logging.
+Both designs are still prototypes. The product team picked the second direction for the roadmap. Until it ships, the docs walk admins through both settings in one procedure, decryption first, so nobody ends up staring at an empty log.

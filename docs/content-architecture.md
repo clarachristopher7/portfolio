@@ -7,6 +7,6 @@ import WorkCards from '@site/src/components/WorkCards';
 
 # Content architecture
 
-<p className="hub-sub">How docs are structured and how readers find their way through them, for one product and for a group of products.</p>
+<p className="hub-sub">How docs are organized, for one product and for a whole company's worth of them. Good structure is invisible, until it's missing.</p>
 
 <WorkCards set="architecture" />

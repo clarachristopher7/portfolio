@@ -9,7 +9,7 @@ sidebar_position: 6
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Cloud Secure Edge engineers change the product every day, and the admin console ships new versions often. Nothing in the release process tells the docs team when a page stops matching the product.</p>
+  <p>Cloud Secure Edge engineers change the product every day, and the admin console ships new versions often. Nothing in the release process tells the docs team when a page stops matching the product. Usually, a customer tells us.</p>
 </div>
 
 ## The problem
@@ -24,7 +24,7 @@ sidebar_position: 6
   </div>
 </div>
 
-Reading every change by hand isn't realistic. Most changes never affect the docs, and the ones that do are hard to spot.
+Could someone read every change by hand? In theory, sure. In practice, most changes never touch the docs, and the ones that do hide among them.
 
 ## The approach
 
@@ -58,4 +58,4 @@ Building the tools was the easy part. The real work was deciding what they shoul
 
 ## The outcome
 
-Every code change and console release now comes with a short list of pages to check, ranked by impact. Writers find the mismatches before customers do.
+Now every code change and console release comes with a short list of pages to check, biggest gaps first. We find the mismatches before customers do.

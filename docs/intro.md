@@ -5,14 +5,27 @@ sidebar_position: 1
 
 # About me
 
-I'm a content designer and technical writer with a background in networking and cloud security startups. I own product documentation strategy, design in-product content, and define the information architecture of doc sets.
+I'm a content designer and technical writer, and I've spent my career at networking and cloud security startups. That means a lot of explaining things you can't see (traffic, trust, encryption) to people who have to make decisions about them.
 
-My role is to understand the technical requirements of a system, then translate them into terms that match what users experience in the real world. I learn products first-hand and investigate where customers get stuck. I use that understanding to build content around the customer journey and to clarify a path forward for users.
+My job is to understand how a system actually works, then describe it in terms of what people experience. I learn the product first-hand, by setting it up and poking at it. Then I go looking for where customers get stuck, in support tickets, sales calls, and forums, and I build the content around that.
 
-I currently own Cloud Secure Edge docs at SonicWall, following its acquisition of Banyan Security, where I was the sole technical writer. Before that, I wrote docs for Tailscale and technical content for Security Compass.
+I studied philosophy at McGill. It turns out to be surprisingly good training for this work. Most of philosophy is noticing when a sentence doesn't quite say what it means, and that's still most of my job.
+
+Right now I own the Cloud Secure Edge docs at SonicWall. I was the only technical writer at Banyan Security, and I stayed on when SonicWall acquired it. Before that, I wrote docs for Tailscale and technical content for Security Compass.
+
+## How I work
+
+<div className="ts-steps">
+
+1. **I learn the product before I write about it.** If I can't set it up myself, I can't explain it to someone who has to.
+2. **If a screen needs a doc to explain it, I fix the screen first.** The best help text is the help text nobody needs.
+3. **Structure is content.** Where something lives tells readers what it is. Put an install guide under "Learn", and nobody will find it.
+4. **Tools report, people decide.** I automate the tedious parts of keeping docs accurate, and I keep the judgment calls.
+
+</div>
 
 
-I'm open to roles including:
+I'm open to roles in most corners of content, including:
 
 <p className="ia-chips role-chips"><span>Technical writer</span><span>Content engineer</span><span>Content architect</span><span>Content designer</span><span>UX writer</span><span>Content strategist</span><span>Content specialist</span><span>Technical content marketer</span></p>
 
@@ -20,15 +33,15 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <HubGroup label="What's here" columns={2}>
   <HubCard to="/published-cse-docs" icon="file" tag="Docs" title="Docs" go="See the pages">
-    Pages that I write and maintain on the Cloud Secure Edge docs site.
+    Live pages I write and maintain. The real thing, not samples.
   </HubCard>
   <HubCard to="/content-design/overview" icon="pen" tag="In-product" title="Content design" go="See the samples">
-    The words in the product, and the order in which users see them.
+    The words in the product, and the order people see them in.
   </HubCard>
   <HubCard to="/content-architecture" icon="layers" tag="Structure" title="Content architecture" go="See the work">
-    How docs are structured, for one product and for a group of products.
+    How docs are organized, and why that matters more than it sounds.
   </HubCard>
   <HubCard to="/automations" icon="bot" tag="Tooling" title="Automations" go="See the tools">
-    Tools that find docs that no longer match the product.
+    Two tools that catch docs drifting out of date.
   </HubCard>
 </HubGroup>

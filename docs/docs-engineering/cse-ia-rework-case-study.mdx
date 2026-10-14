@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 # Cloud Secure Edge information architecture
 
-<p className="hub-sub">I reorganized the Cloud Secure Edge docs around the tasks that admins come to do. The new structure is live, and every existing link still works.</p>
+<p className="hub-sub">The Cloud Secure Edge docs were organized the way engineers built the product. But admins don't show up thinking in components. They show up with a task. I reorganized the docs around those tasks, and every existing link still works.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
@@ -14,7 +14,7 @@ hide_table_of_contents: true
 
 
 <div className="chain brief-flow">
-  <div className="arch-node arch-node--old"><b>The problem</b><span>The navigation was organized by product component. Admins come to the docs with a task.</span></div>
+  <div className="arch-node arch-node--old"><b>The problem</b><span>The navigation followed the product's components. Admins come to the docs with a task.</span></div>
   <div className="arch-node"><b>The approach</b><span>I changed only the navigation, with new section names, a new order, and a homepage organized by goal.</span></div>
   <div className="arch-node"><b>The constraint</b><span>No page could move and no URL could change, so bookmarks, search results, and support links kept working.</span></div>
   <div className="arch-node arch-node--new"><b>The outcome</b><span>Each task now has a name that describes the work, in the order that an admin does it.</span></div>
@@ -22,7 +22,7 @@ hide_table_of_contents: true
 
 ## The homepage starts with goals
 
-The old homepage listed product areas. The new homepage starts with what the admin wants to do.
+The old homepage listed nine product areas and left you to guess. The new one starts with what the admin wants to do.
 
 <div className="ia-shot">
   <p className="ia-shot-label">Before</p>
@@ -83,7 +83,7 @@ The old homepage listed product areas. The new homepage starts with what the adm
 
 ## The navigation follows the order of adoption
 
-The sections now follow the order in which an admin adopts the product, from evaluating it to fixing problems.
+The sections now follow the order an admin actually goes through, from trying the product out to fixing it when something breaks.
 
 <div className="journey" role="img" aria-label="The new navigation sections in order, grouped into four phases. Start: Get started, Learn. Set up: Activate, Deploy (new), Set up users and devices (new). Protect: Define access policies, Secure resources. Run: Monitor and maintain (new), Troubleshoot (new).">
   <div className="journey-phases">
@@ -107,32 +107,32 @@ The sections now follow the order in which an admin adopts the product, from eva
 
 ## Tasks are named for the work
 
-Here's the path to three common tasks, before and after.
+Want to see the difference? Here's the path to three common tasks, before and after.
 
 <div className="ia-paths">
   <div className="ia-path">
     <p className="ia-q">Install a Connector with Docker</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Connector</li><li>Install</li><li>Docker Container</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Deploy</li><li>Install a Connector</li><li>Docker Container</li></ol></div>
-    <p className="ia-note">The install guide was under Learn, a section for concepts.</p>
+    <p className="ia-note">The install guide lived under Learn, a section for concepts. Nobody looks there to install anything.</p>
   </div>
   <div className="ia-path">
     <p className="ia-q">Troubleshoot the desktop app</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Learn</li><li>Platform Components</li><li>Desktop App</li><li>Troubleshooting the Desktop App</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Troubleshooting</li><li>Find and Fix a Problem</li><li>Desktop App</li></ol></div>
-    <p className="ia-note">To fix the app, an admin first had to open a description of the product's components.</p>
+    <p className="ia-note">To fix the app, an admin first had to open a page about the product's components. Not where you'd look when something's broken.</p>
   </div>
   <div className="ia-path">
     <p className="ia-q">Connect Okta as the sign-in provider</p>
     <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Manage and Monitor Your Org</li><li>Manage Users and Devices</li><li>Okta</li></ol></div>
     <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Set Up Users and Devices</li><li>Set Up an Identity Provider</li><li>Okta</li></ol></div>
-    <p className="ia-note">First-time setup was in a section named for monitoring.</p>
+    <p className="ia-note">First-time setup lived in a section named for monitoring.</p>
   </div>
 </div>
 
 ## One place to troubleshoot
 
-Troubleshooting pages were in seven places across three sections. Now they're in one, linked from the homepage.
+Troubleshooting pages were scattered across seven places in three sections. If something broke, you first had to guess where to look. Now they're all in one section, linked from the homepage.
 
 <div className="ia-compare">
   <div className="ia-mini">
