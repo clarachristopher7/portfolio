@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # About me
 
-<img className="about-photo" src={require('@site/static/img/clara.jpg').default} alt="Clara Christopher in black-rimmed glasses" />
+<img className="about-photo" src={require('@site/static/img/clara.jpg').default} alt="Clara Christopher in a pink T-shirt, beside a painting" />
 
 My name is Clara, and I've spent my career writing for networking and cloud security startups. That means a lot of explaining things you can't see (traffic, tunnels, encryption) to people who have to make decisions about them.
 
