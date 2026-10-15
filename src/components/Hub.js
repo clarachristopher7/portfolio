@@ -25,6 +25,17 @@ const ICONS = {
   book: <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z" /><path d="M6.5 17A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20v-5" /></>,
 };
 
+// Black-and-white emoji drawings, in the same style as the white-glove
+// hands on the case studies. Cards with one of these names use the drawing
+// instead of the line icon.
+const DRAWINGS = {
+  file: require('./icons/file.png').default,
+  pen: require('./icons/pen.png').default,
+  layers: require('./icons/layers.png').default,
+  bot: require('./icons/bot.png').default,
+  book: require('./icons/book.png').default,
+};
+
 export function Icon({name, size = 20}) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -63,7 +74,9 @@ export function HubCard({to, icon, tag, title, img, imgAlt = '', go, children}) 
         <span className="hub-thumb"><img src={src} alt={imgAlt} loading="lazy" /></span>
       ) : null}
       <span className="hub-card-top">
-        {icon && <span className="hub-ico"><Icon name={icon} /></span>}
+        {icon && (DRAWINGS[icon]
+          ? <span className="hub-ico hub-ico--drawing"><img src={DRAWINGS[icon]} alt="" /></span>
+          : <span className="hub-ico"><Icon name={icon} /></span>)}
         {tag && <span className="hub-tag">{tag}</span>}
       </span>
       <h3>{title}</h3>
