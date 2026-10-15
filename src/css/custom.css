@@ -1858,3 +1858,25 @@ html[data-theme='dark'] .iav { border-color: #3a414b; }
 
 /* Images open full size in a new tab. */
 .markdown a.img-zoom { display: block; cursor: zoom-in; text-decoration: none; }
+
+/* Little white-glove claps around every outcome. The emoji is greyed and
+   brightened so it reads as a white glove, and hidden from screen readers. */
+.markdown h2#the-outcome { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4em; }
+.markdown h2#the-outcome .hash-link { order: 2; }
+.markdown h2#the-outcome::before,
+.markdown h2#the-outcome::after,
+.brief-flow .arch-node--new b::before,
+.brief-flow .arch-node--new b::after {
+  content: '👏';
+  content: '👏' / '';
+  display: inline-block;
+  font-size: 0.8em;
+  letter-spacing: 0;
+  filter: grayscale(1) brightness(1.6) drop-shadow(0 0 1px #444);
+}
+.markdown h2#the-outcome::after,
+.brief-flow .arch-node--new b::after { transform: scaleX(-1); }
+.brief-flow .arch-node--new b::before,
+.brief-flow .arch-node--new b::after { font-size: 1.35em; line-height: 0; vertical-align: -0.12em; }
+.brief-flow .arch-node--new b::before { margin-right: 0.35em; }
+.brief-flow .arch-node--new b::after { margin-left: 0.35em; }
