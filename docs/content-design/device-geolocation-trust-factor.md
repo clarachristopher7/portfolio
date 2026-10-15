@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Geolocation trust factor
 
-<p className="hub-sub">Admins can block or allow employee devices by country. On this screen, an admin could pick a country, flip a switch, and save, without ever being told which rule they'd just built. I rewrote the copy so the screen says the rule out loud.</p>
+<p className="hub-sub">Admins can block or allow employee devices by country. On this screen, an admin could pick a country, flip a switch, and save, without ever being told which rule they'd just built. I rewrote the copy so the screen declares the rule proudly.</p>
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
