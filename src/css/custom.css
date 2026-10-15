@@ -1929,3 +1929,18 @@ html[data-theme='dark'] .iav { border-color: #3a414b; }
 .markdown .hero-art--side ~ form { display: flow-root; }
 .markdown .hero-art--lg { width: 250px; }
 @media (max-width: 767px) { .markdown .hero-art--side { width: 120px; margin: 0 0 0.5rem 1rem; } }
+
+/* Portrait on About me: a circle cropped from a black-and-white photo. */
+.markdown .about-photo {
+  float: right;
+  width: 190px;
+  height: 190px;
+  margin: 0.25rem 0 1rem 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 5px var(--site-card), 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+.markdown .about-photo + * { margin-top: 0; }
+@media (max-width: 767px) {
+  .markdown .about-photo { width: 110px; height: 110px; margin-left: 1rem; }
+}
