@@ -43,16 +43,6 @@ Each use case gets a card with a headline number, the gap to fix, and a link to 
 
 </div>
 
-Each use case card answers one question:
-
-| Use case | What the homepage shows |
-|---|---|
-| **Remote access** | How many users connected through a Service Tunnel today, and how many connections failed |
-| **Blocking malicious content** | Threats blocked this week, and the devices that have no threat protection |
-| **Zero trust access** | Access requests denied by policy, and the services that have no access policy |
-| **Device security posture** | Devices at each trust level, how many are below the level they need, and the most common reason |
-| **Protecting SaaS apps** | Sign-ins blocked from untrusted devices, and the apps that still accept any device |
-
 ## The constraint
 
 <div className="ts-steps">
