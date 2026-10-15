@@ -1899,9 +1899,8 @@ html[data-theme='dark'] .iav { border-color: #3a414b; }
 .hub-ico.hub-ico--drawing { width: 44px; height: 44px; border: 0; background: none; }
 .hub-ico--drawing img { width: 100%; height: 100%; object-fit: contain; }
 
-/* A little drawing beside the page title: a rooster on the homepage,
-   a juggler on About me. Same black-and-white Noto Emoji style. */
-.docs-doc-id-index .markdown h1::after,
+/* A little juggler beside the About me title, in the same black-and-white
+   Noto Emoji style. */
 .docs-doc-id-intro .markdown h1::after {
   content: '';
   display: inline-block;
@@ -1911,7 +1910,6 @@ html[data-theme='dark'] .iav { border-color: #3a414b; }
   vertical-align: -0.1em;
   background: center / contain no-repeat;
 }
-.docs-doc-id-index .markdown h1::after { background-image: url('./hands/rooster.png'); width: 1em; height: 1em; }
 .docs-doc-id-intro .markdown h1::after { background-image: url('./hands/juggle.png'); width: 1em; height: 1em; }
 
 /* Drawings beside a page intro. The boxes and forms below them make room
