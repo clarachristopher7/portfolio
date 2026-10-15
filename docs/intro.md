@@ -13,7 +13,7 @@ The second half is building a vivid sense of the person using it. Who are they? 
 
 You're not supposed to say this these days, since the hero of our times is the technical specialist, but I'm a creative at heart. I like to expand outward and synthesize. Writing well means moving past the narrow considerations into the larger ones. You have to exercise judgment, know how to reach people and relate to them, and then give them something that flows meaningfully. In many ways, it's better to see a complex technology with innocent eyes, as an outsider, because that's usually closer to where your user is standing.
 
-Right now I own the Cloud Secure Edge docs at SonicWall. I was the only technical writer at Banyan Security, and I stayed on when SonicWall acquired it. Before that, I wrote docs for Tailscale and technical content for Security Compass.
+I was the only technical writer at Banyan Security, and when SonicWall acquired it, I stayed on to own what became the Cloud Secure Edge docs. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
 If you're building something complicated and want people to enjoy using it, [I'd love to hear about it](/contact).
 
