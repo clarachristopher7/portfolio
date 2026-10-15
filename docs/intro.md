@@ -7,11 +7,11 @@ sidebar_position: 1
 
 My name is Clara, and I've spent my (so far short) career writing for networking and cloud security startups. That means a lot of explaining things you can't see (traffic, trust, encryption) to people who have to make decisions about them.
 
-The world I write about is incredibly abstract, so I like to make it concrete by using the-thing-itself. But what is it that really happens when I push a button and a VPN turns on? This is where I dive into the fundamentals and figure out the most basic building blocks of the technology, before getting into its more nuanced layers. And that's just the first half of my work.
+The world I write about is incredibly abstract, so I like to make it concrete by going straight to the-thing-itself. What actually happens when I push a button and a VPN turns on? I start with the fundamentals, the most basic building blocks of the technology, before I get into its more nuanced layers. And that's just the first half of my work.
 
-The second half is trying to hone a vivid sense of the person using the-thing-itself. Who are they? What are they trying to do? Is what is unintuitive to me unintuitive to them too?
+The second half is building a vivid sense of the person using it. Who are they? What are they trying to do? Does what feels unintuitive to me feel unintuitive to them too?
 
-You're not supposed to say this these days (since the hero of our times is a technical specialist), but I'm a creative at heart, who likes to expand outward and synthesize. Writing well requires you to move outside of the narrow considerations into the larger ones. You have to exercise judgment, know how to reach people and relate to them, and then deliver back the right sequencing, flow, and meaning. It is better, in many ways, to see a complex technology with innocent eyes, as someone on the outside, because that's usually closer to where your user is standing.
+You're not supposed to say this these days (the hero of our times is the technical specialist), but I'm a creative at heart. I like to expand outward and synthesize. Writing well means moving past the narrow considerations into the larger ones. You have to exercise judgment, know how to reach people and relate to them, and then deliver the right sequence, flow, and meaning. In many ways, it's better to see a complex technology with innocent eyes, as an outsider, because that's usually closer to where your user is standing.
 
 Right now I own the Cloud Secure Edge docs at SonicWall. I was the only technical writer at Banyan Security, and I stayed on when SonicWall acquired it. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
