@@ -44,7 +44,7 @@ const SETS = {
     {to: "https://cse-docs.sonicwall.com/docs/securing-internet-traffic/dns-architecture/", img: "/img/previews/itp.png",
       imgAlt: "A docs page with a diagram of how a website request is checked", tag: "Architecture",
       title: "Internet Threat Protection architecture", go: "Open the live page",
-      text: "Where a website request gets checked, where it gets blocked, and which part does what. A tricky system, explained plainly."},
+      text: "Where a website request gets checked, where it gets blocked, and which part does what. A tricky system, explained simply."},
     {hidden: true, to: "https://cse-docs.sonicwall.com/docs/visibility-logging/events/elk-stack/", img: "/img/previews/elastic.png",
       imgAlt: "A docs page with a Logstash configuration example", tag: "Integration",
       title: "Forward security events to the Elastic Stack", go: "Open the live page",
