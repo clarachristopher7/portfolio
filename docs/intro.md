@@ -15,7 +15,7 @@ You're not supposed to say this these days (the hero of our times is the technic
 
 Right now I own the Cloud Secure Edge docs at SonicWall. I was the only technical writer at Banyan Security, and I stayed on when SonicWall acquired it. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
-If you're building something complicated and want people to actually understand it, [I'd love to hear about it](/contact).
+If you're building something complicated and want people to enjoy using it, [I'd love to hear about it](/contact).
 
 ## How I work
 
