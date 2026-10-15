@@ -11,9 +11,11 @@ The world I write about is incredibly abstract, so I like to make it concrete by
 
 The second half is building a vivid sense of the person using it. Who are they? What are they trying to do? Does what feels unintuitive to me feel unintuitive to them too?
 
-You're not supposed to say this these days (the hero of our times is the technical specialist), but I'm a creative at heart. I like to expand outward and synthesize. Writing well means moving past the narrow considerations into the larger ones. You have to exercise judgment, know how to reach people and relate to them, and then deliver the right sequence, flow, and meaning. In many ways, it's better to see a complex technology with innocent eyes, as an outsider, because that's usually closer to where your user is standing.
+You're not supposed to say this these days (the hero of our times is the technical specialist), but I'm a creative at heart. I like to expand outward and synthesize. Writing well means moving past the narrow considerations into the larger ones. You have to exercise judgment, know how to reach people and relate to them, and then give them something that flows, comes in the right order, and actually means something to them. In many ways, it's better to see a complex technology with innocent eyes, as an outsider, because that's usually closer to where your user is standing.
 
 Right now I own the Cloud Secure Edge docs at SonicWall. I was the only technical writer at Banyan Security, and I stayed on when SonicWall acquired it. Before that, I wrote docs for Tailscale and technical content for Security Compass.
+
+If you're building something complicated and want people to actually understand it, [I'd love to hear about it](/contact).
 
 ## How I work
 
