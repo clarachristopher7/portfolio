@@ -1859,24 +1859,38 @@ html[data-theme='dark'] .iav { border-color: #3a414b; }
 /* Images open full size in a new tab. */
 .markdown a.img-zoom { display: block; cursor: zoom-in; text-decoration: none; }
 
-/* Little white-glove claps around every outcome. The emoji is greyed and
-   brightened so it reads as a white glove, and hidden from screen readers. */
+/* White-glove hands on each part of a case study: a raised hand for the
+   problem, a writing hand for the approach, a pinch for the constraint,
+   and claps for the outcome. They're drawn from Noto Emoji, recolored to
+   black and white, and decorative only. */
+.markdown h2#the-problem,
+.markdown h2#the-approach,
+.markdown h2#the-constraint,
 .markdown h2#the-outcome { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4em; }
+.markdown h2#the-problem .hash-link,
+.markdown h2#the-approach .hash-link,
+.markdown h2#the-constraint .hash-link,
 .markdown h2#the-outcome .hash-link { order: 2; }
-.markdown h2#the-outcome::before,
-.markdown h2#the-outcome::after,
-.brief-flow .arch-node--new b::before,
-.brief-flow .arch-node--new b::after {
-  content: '👏';
-  content: '👏' / '';
+.markdown h2#the-problem::before, .markdown h2#the-problem::after,
+.markdown h2#the-approach::before, .markdown h2#the-approach::after,
+.markdown h2#the-constraint::before, .markdown h2#the-constraint::after,
+.markdown h2#the-outcome::before, .markdown h2#the-outcome::after,
+.brief-flow .arch-node b::before, .brief-flow .arch-node b::after {
+  content: '';
   display: inline-block;
-  font-size: 0.8em;
-  letter-spacing: 0;
-  filter: grayscale(1) brightness(1.6) drop-shadow(0 0 1px #444);
+  width: 0.95em;
+  height: 0.95em;
+  background: var(--hand) center / contain no-repeat;
+  flex: none;
 }
-.markdown h2#the-outcome::after,
-.brief-flow .arch-node--new b::after { transform: scaleX(-1); }
-.brief-flow .arch-node--new b::before,
-.brief-flow .arch-node--new b::after { font-size: 1.35em; line-height: 0; vertical-align: -0.12em; }
-.brief-flow .arch-node--new b::before { margin-right: 0.35em; }
-.brief-flow .arch-node--new b::after { margin-left: 0.35em; }
+.markdown h2#the-problem::after, .markdown h2#the-approach::after,
+.markdown h2#the-constraint::after, .markdown h2#the-outcome::after,
+.brief-flow .arch-node b::after { transform: scaleX(-1); }
+.markdown h2#the-problem, .brief-flow .arch-node:nth-child(1) b { --hand: url('./hands/problem.png'); }
+.markdown h2#the-approach, .brief-flow .arch-node:nth-child(2) b { --hand: url('./hands/approach.png'); }
+.markdown h2#the-constraint, .brief-flow .arch-node:nth-child(3) b { --hand: url('./hands/constraint.png'); }
+.markdown h2#the-outcome, .brief-flow .arch-node:nth-child(4) b { --hand: url('./hands/outcome.png'); }
+.brief-flow .arch-node b::before,
+.brief-flow .arch-node b::after { width: 1.6em; height: 1.6em; vertical-align: -0.45em; margin-top: -0.6em; margin-bottom: -0.3em; }
+.brief-flow .arch-node b::before { margin-right: 0.4em; }
+.brief-flow .arch-node b::after { margin-left: 0.4em; }
