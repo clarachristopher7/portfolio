@@ -76,15 +76,7 @@ Meanwhile, customers and staff kept heading over to the Cloud Secure Edge docs s
 
 ## The approach
 
-The proposal rests on three principles.
-
-<div className="pillars">
-  <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Content as code</b></div><div className="arch-node"><span>Docs are stored in Git, built from reusable parts, and checked automatically before they publish.</span></div></div>
-  <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Built for AI tools</b></div><div className="arch-node"><span>Every page carries structured facts, such as product and version, so AI assistants and search engines read it correctly.</span></div></div>
-  <div className="chain chain--2"><div className="arch-node arch-node--new"><b>Mapped to the user journey</b></div><div className="arch-node"><span>Every piece of content ties to a stage of adoption, from discovery to first deployment to running at scale.</span></div></div>
-</div>
-
-Then I sorted the doc sets with one question. Do they ship with hardware, or carry a regulatory obligation? If not, why wait on a hardware release date?
+I sorted the doc sets with one question. Do they ship with hardware, or carry a regulatory obligation? If not, why wait on a hardware release date?
 
 <div className="docset-groups">
   <div>
@@ -125,26 +117,7 @@ For publishing, I chose Antora. It handles several live versions of one product 
 
 From the outside, nothing changes. Customers, search engines, and AI assistants still see one website. On the inside, the docs team publishes on its own schedule.
 
-### A correction, from edit to live
-
-<div className="ia-paths">
-  <div className="ia-path">
-    <p className="ia-q">A writer fixes an error in a published procedure</p>
-    <div className="ia-row"><span className="ia-when">Before</span><ol className="ia-crumbs ia-crumbs--before"><li>Edit in Flare</li><li>Ready to Publish folder</li><li>Approval in Agile</li><li>Script places the file</li><li>Live, date unknown</li></ol></div>
-    <div className="ia-row"><span className="ia-when">After</span><ol className="ia-crumbs ia-crumbs--after"><li>Edit in Flare</li><li>Preview of the real page</li><li>Automated checks</li><li>Recorded approval</li><li>Live in minutes</li></ol></div>
-    <p className="ia-note">This applies to the five doc sets without hardware release gates.</p>
-  </div>
-</div>
-
-### The worst failures can't publish
-
-Some mistakes are too costly to prevent by being careful. So each of the three worst ones has an automated check that stops the publish.
-
-<div className="pillars">
-  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>An old page address has no redirect</b><span>Bookmarks, support articles, and QR codes printed on hardware boxes would break</span></div><div className="arch-node"><b>Redirect check</b><span>Every old address needs a redirect. Printed QR codes get permanent, one-step redirects.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
-  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>A page shows the wrong firmware version</b><span>A customer follows steps that don't match their device</span></div><div className="arch-node"><b>Version check</b><span>The version comes from the Flare source. Each page is compared with the page published today.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
-  <div className="chain chain--3"><div className="arch-node arch-node--old"><b>Certified content changes</b><span>Government-certified docs can't absorb ordinary edits</span></div><div className="arch-node"><b>Checksum check</b><span>Certified docs stay out of the pipeline. Any change to their pages is detected.</span></div><div className="arch-node arch-node--new"><b>The build fails</b></div></div>
-</div>
+Some mistakes are too costly to prevent by being careful, so the worst three can't publish at all. An automated check stops the build if an old page address has no redirect, if a page shows the wrong firmware version, or if a certified doc changes.
 
 ## The constraint
 
