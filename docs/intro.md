@@ -37,7 +37,7 @@ import {HubGroup, HubCard} from '@site/src/components/Hub';
 
 <HubGroup label="What's here" columns={2}>
   <HubCard to="/published-cse-docs" icon="file" tag="Docs" title="Docs" go="See the pages">
-    Live pages I write and maintain. The real thing, not samples.
+    Live pages I write and maintain.
   </HubCard>
   <HubCard to="/content-design/overview" icon="pen" tag="In-product" title="Content design" go="See the samples">
     The words in the product, and the order people see them in.
