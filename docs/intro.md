@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # About me
 
-I'm a content designer and technical writer, and I've spent my career at networking and cloud security startups. That means a lot of explaining things you can't see (traffic, trust, encryption) to people who have to make decisions about them.
+My name is Clara, and I've spent my career writing for networking and cloud security startups. That means a lot of explaining things you can't see (traffic, trust, encryption) to people who have to make decisions about them.
 
 My job is to understand how a system actually works, then describe it in terms of what people experience. I learn the product first-hand, by setting it up and poking at it. Then I go looking for where customers get stuck, in support tickets, sales calls, and forums, and I build the content around that.
 
