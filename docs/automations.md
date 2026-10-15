@@ -5,6 +5,8 @@ sidebar_position: 6
 
 # Keeping the docs accurate
 
+<img className="hero-art hero-art--side" src={require('@site/static/img/drawings/hand-watch.jpg').default} alt="Pencil drawing of a hand resting on a table, wearing a watch, by Clara Christopher" />
+
 <p className="hub-sub">Docs drift when the product version updates. I built two tools that catch it, one for code changes and one for UI console releases. Both tools report what they find, and I decide how to fix it.</p>
 
 <div className="ctx-prose">

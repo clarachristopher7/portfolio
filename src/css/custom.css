@@ -1921,3 +1921,11 @@ html[data-theme='dark'] .iav { border-color: #3a414b; }
 @media (prefers-reduced-motion: reduce) {
   .docs-doc-id-index .markdown h1::after { animation: none; }
 }
+
+/* Drawings beside a page intro. The boxes and forms below them make room
+   instead of running underneath. */
+.markdown .hero-art--side { width: 190px; margin-top: -2.5rem; }
+.markdown .hero-art--side ~ .ctx-prose,
+.markdown .hero-art--side ~ form { display: flow-root; }
+.markdown .hero-art--lg { width: 250px; }
+@media (max-width: 767px) { .markdown .hero-art--side { width: 120px; margin: 0 0 0.5rem 1rem; } }
