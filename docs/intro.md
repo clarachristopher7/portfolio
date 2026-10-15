@@ -5,13 +5,13 @@ sidebar_position: 1
 
 # About me
 
-My name is Clara, and I've spent my career writing for networking and cloud security startups. That means a lot of explaining things you can't see (traffic, trust, encryption) to people who have to make decisions about them.
+My name is Clara, and I've spent my (so far short) career writing for networking and cloud security startups. That means a lot of explaining things you can't see (traffic, trust, encryption) to people who have to make decisions about them.
 
-My job is to understand how a system actually works, then describe it in terms of what people experience. I learn the product first-hand, by setting it up and poking at it. Then I go looking for where customers get stuck, in support tickets, sales calls, and forums, and I build the content around that.
+The world I write about is incredibly abstract, so I like to make it concrete by using the-thing-itself. But what is it that really happens when I push a button and a VPN turns on? This is where I dive into the fundamentals and figure out the most basic building blocks of the technology, before getting into its more nuanced layers. And that's just the first half of my work.
 
-I studied philosophy at McGill. It turns out to be surprisingly good training for this work. Most of philosophy is noticing when a sentence doesn't quite say what it means, and that's still most of my job.
+The second half is trying to hone a vivid sense of the person using the-thing-itself. Who are they? What are they trying to do? Is what is unintuitive to me unintuitive to them too?
 
-I'm a creative at heart, and a generalist. You're not supposed to say that these days, but I'll say it anyway. Writing well takes a lot of things at once. You have to exercise judgment, know how to reach people and relate to them, and get the delivery, flow, and sequence right. And you have to see a complex technology with the innocent eyes of someone on the outside, because that's where your reader is standing.
+You're not supposed to say this these days (since the hero of our times is a technical specialist), but I'm a creative at heart, who likes to expand outward and synthesize. Writing well requires you to move outside of the narrow considerations into the larger ones. You have to exercise judgment, know how to reach people and relate to them, and then deliver back the right sequencing, flow, and meaning. It is better, in many ways, to see a complex technology with innocent eyes, as someone on the outside, because that's usually closer to where your user is standing.
 
 Right now I own the Cloud Secure Edge docs at SonicWall. I was the only technical writer at Banyan Security, and I stayed on when SonicWall acquired it. Before that, I wrote docs for Tailscale and technical content for Security Compass.
 
