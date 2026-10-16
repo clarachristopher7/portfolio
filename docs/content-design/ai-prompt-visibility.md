@@ -65,3 +65,23 @@ The decryption tab also has two lists.
 - **Don't decrypt** names the website categories that always stay encrypted, such as financial services and health. Admins can protect employee privacy in the same place where they turn decryption on.
 
 Both designs are still prototypes. The product team picked the second direction for the roadmap. Until it ships, the docs walk admins through both settings in one procedure, decryption first, so nobody ends up staring at an empty log.
+
+### Then the roadmap grew
+
+AI prompt visibility isn't the only feature that needs TLS decryption. Require approved AI apps needs it too, and so does risk-based URL filtering, which isn't an AI feature at all. The team also wanted one tab for every AI feature in a policy.
+
+That brought the original problem back. Put the AI features in their own tab, and they're separated from decryption again. Put them under decryption, and URL filtering has nowhere to go.
+
+So I proposed showing the dependency through each feature's state, instead of through where the feature lives. Decryption keeps one home, its own tab. The AI tab is organized around what admins want to do, and every feature that needs decryption says so.
+
+![A prototype of the AI tab in an Internet Threat Protection policy, with TLS decryption turned off. Callouts point to a banner that says decryption is off, a paused feature that says why it stopped, and a feature that says it can't turn on until decryption is on.](/img/content-design/ai-tab-annotated.webp)
+
+<p className="shot-cap">A prototype of the AI tab with decryption turned off. Two features need it, and one doesn't.</p>
+
+Each feature that needs decryption has three states. It's on and working, it can't turn on yet, or it's paused because someone turned decryption off. That paused state fixes the empty-log problem for every feature, not just this one.
+
+Turning on decryption from the AI tab is never a silent toggle. It opens a confirmation that says exactly what the admin is agreeing to.
+
+![A confirmation dialog titled "Turn on TLS decryption for this policy?". Callouts point to the line that says it's the same setting as the TLS decryption tab, whose traffic will be decrypted, the categories that are never decrypted, and the features that use decryption.](/img/content-design/ai-tab-confirm-annotated.webp)
+
+<p className="shot-cap">The confirmation, when an admin turns on decryption from the AI tab.</p>
