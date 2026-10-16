@@ -10,13 +10,10 @@ hide_table_of_contents: true
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>SonicWall makes firewalls, network management tools, and cloud security services. Most product docs lived on the main website, which the web team builds, so every navigation change meant a ticket to that team. The Cloud Secure Edge docs had their own site, which I run.</p>
-  <p>I wrote a proposal for phase 1 of a modernization program, and built a working prototype to back it up.</p>
+  <p>SonicWall makes firewalls, network management tools, and cloud security services. Most product docs lived on the main website, which the web team builds. The Cloud Secure Edge docs had their own site, which I run. I wrote a proposal to bring them together, and built a working prototype to back it up.</p>
 </div>
 
 ## The problem
-
-The docs lived on two sites, and the docs team controlled only one of them.
 
 <div className="arch">
   <div className="arch-col">
@@ -34,18 +31,13 @@ The docs lived on two sites, and the docs team controlled only one of them.
 
 The support cases told a clear story. Most of them weren't about missing docs. Customers just couldn't find the ones that already existed.
 
-
 <figure className="cases" aria-label="Documentation support cases from the past two years, by reason">
   <figcaption>Doc support cases from the past two years, by reason</figcaption>
   <ol>
     <li><span className="cases-label">Couldn't find a doc that already exists</span><span className="cases-track"><span className="cases-bar" style={{width: '100.0%'}} /></span><span className="cases-val">76.5%</span></li>
     <li><span className="cases-label">Needed an API or command line reference</span><span className="cases-track"><span className="cases-bar" style={{width: '6.5%'}} /></span><span className="cases-val">5%</span></li>
-    <li><span className="cases-label">Couldn't tell which version or firmware a doc covers</span><span className="cases-track"><span className="cases-bar" style={{width: '5.9%'}} /></span><span className="cases-val">4.5%</span></li>
-    <li><span className="cases-label">Needed a hardening or security guide</span><span className="cases-track"><span className="cases-bar" style={{width: '5.1%'}} /></span><span className="cases-val">3.9%</span></li>
-    <li><span className="cases-label">A required step or detail was missing</span><span className="cases-track"><span className="cases-bar" style={{width: '2.9%'}} /></span><span className="cases-val">2.2%</span></li>
-    <li><span className="cases-label">No doc existed for the feature</span><span className="cases-track"><span className="cases-bar" style={{width: '2.9%'}} /></span><span className="cases-val">2.2%</span></li>
-    <li><span className="cases-label">The doc was wrong about the product</span><span className="cases-track"><span className="cases-bar" style={{width: '2.9%'}} /></span><span className="cases-val">2.2%</span></li>
-    <li><span className="cases-label">Other</span><span className="cases-track"><span className="cases-bar" style={{width: '3.7%'}} /></span><span className="cases-val">2.8%</span></li>
+    <li><span className="cases-label">Couldn't tell which version a doc covers</span><span className="cases-track"><span className="cases-bar" style={{width: '5.9%'}} /></span><span className="cases-val">4.5%</span></li>
+    <li><span className="cases-label">Everything else</span><span className="cases-track"><span className="cases-bar" style={{width: '18.4%'}} /></span><span className="cases-val">14%</span></li>
   </ol>
 </figure>
 
@@ -76,27 +68,25 @@ Meanwhile, customers and staff kept heading over to the Cloud Secure Edge docs s
 
 ## The approach
 
-I sorted the doc sets with one question. Do they ship with hardware, or carry a regulatory obligation? If not, why wait on a hardware release date?
+First, I sorted the doc sets with one question.
 
-<div className="docset-groups">
-  <div>
-    <p className="arch-head">Publish as soon as they're approved</p>
-    <p className="ia-chips"><span>Unified Management</span><span>NSM</span><span>Endpoint Security</span><span>WNM console</span><span>Cloud Secure Edge</span></p>
-    <p className="docset-note">No printed guides, errata notices, or regulatory sign-off. Yet they published on the hardware release schedule.</p>
-  </div>
-  <div>
-    <p className="arch-head">Keep today's release gates</p>
-    <p className="ia-chips"><span>SonicOS</span><span>WNM hardware</span></p>
-    <p className="docset-note">Printed in the box and tied to hardware ship dates. Every approval step stays.</p>
+<div className="arch">
+  <div className="arch-col">
+    <div className="arch-node"><b>Does the doc set ship with hardware, or need regulatory sign-off?</b></div>
+    <div className="arch-split">
+      <div>
+        <p className="arch-route">↓ No</p>
+        <div className="arch-node arch-node--new"><b>Publish as soon as it's approved</b><span>Unified Management, NSM, Endpoint Security, WNM console, Cloud Secure Edge</span></div>
+      </div>
+      <div>
+        <p className="arch-route">↓ Yes</p>
+        <div className="arch-node"><b>Keep today's release gates</b><span>SonicOS, WNM hardware</span></div>
+      </div>
+    </div>
   </div>
 </div>
 
-<p className="ia-home-label">What doesn't change</p>
-<p className="ia-chips"><span>Writing in MadCap Flare</span><span>Approval in Agile</span><span>Errata notices</span><span>Printed guides</span><span>Translation</span><span>Regulatory review</span></p>
-
-For publishing, I chose Antora. It handles several live versions of one product (SonicOS needs that), and the docs team owns its navigation and templates. My prototype publishes four products from converted Flare content.
-
-### One site behind the same address
+Then I chose Antora for publishing. It handles several live versions of one product, and the docs team owns its navigation.
 
 <div className="arch">
   <div className="arch-col">
@@ -115,13 +105,11 @@ For publishing, I chose Antora. It handles several live versions of one product 
   </div>
 </div>
 
-From the outside, nothing changes. Customers, search engines, and AI assistants still see one website. On the inside, the docs team publishes on its own schedule.
-
-Some mistakes are too costly to prevent by being careful, so the worst three can't publish at all. An automated check stops the build if an old page address has no redirect, if a page shows the wrong firmware version, or if a certified doc changes.
+From the outside, it's still one website. On the inside, the docs team publishes on its own schedule.
 
 ## The constraint
 
-The web team had six conditions. Fair enough. It's their website. The design had to meet every one.
+The web team had six conditions. Fair enough. It's their website.
 
 | Condition | How the design meets it |
 |---|---|
@@ -134,4 +122,8 @@ The web team had six conditions. Fair enough. It's their website. The design had
 
 ## The outcome
 
-The proposal went to the VP of Product in October 2026, with two questions. Should the docs team own the docs site? And should five doc sets move to docs-as-code publishing? The VP approved phase 1, and we're now building an internal preview of the new site.
+The VP of Product approved phase 1. We're now building an internal preview of the new site.
+
+![A prototype of the new docs site. Callouts point to the product switcher, the version picker at the top of the page, and the navigation sidebar.](/img/content-architecture/docs-modernization-preview-annotated.webp)
+
+<p className="shot-cap">The internal preview. One site, with the version up front.</p>
