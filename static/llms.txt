@@ -1,0 +1,35 @@
+# Clara Christopher
+
+> Portfolio of Clara Christopher, a content designer and technical writer for networking, application, and cloud security products. She owns the Cloud Secure Edge docs at SonicWall, and was previously the only technical writer at Banyan Security, a technical writer at Tailscale, and a content specialist at Security Compass. She is open to roles as a technical writer, content designer, content strategist, or content engineer.
+
+Each case study follows the same structure: background, the problem, the approach, the constraint, and the outcome. Mockups are recreations of the real product screens.
+
+## About
+
+- [About me](/intro): How Clara works, from understanding a system first-hand to building a vivid sense of the person using it.
+- [Resume](/resume): Work history, skills, and education.
+- [Contact](/contact): Email and a contact form.
+
+## Content design
+
+- [Geolocation trust factor](/content-design/device-geolocation-trust-factor): Rewrote a settings screen so it states the rule an admin is building, and reordered it. The lead front-end engineer adopted the new order for every trust factor.
+- [Admin console homepage](/content-design/console-homepage): Chose the metrics that show how each customer use case is going, replacing counts that admins couldn't act on.
+- [AI prompt visibility](/content-design/ai-prompt-visibility): Fixed a setup flow where logging could be turned on without the decryption it depends on. The design ships in the next release, followed by a proposal for showing one policy-wide setting that several features depend on.
+
+## Content architecture
+
+- [Reorganizing security docs around tasks](/docs-engineering/cse-ia-rework-case-study): Reorganized a product's docs around the tasks admins come to do, without moving a page or breaking a link.
+- [Documentation platform modernization](/docs-engineering/docs-modernization-case-study): Proposed one docs site that the docs team can change directly, backed by support data and a working prototype.
+
+## Automation
+
+- [Keeping the docs accurate](/automations): Two tools that flag docs affected by code changes and console releases. Both report, and a writer decides what to fix.
+
+## Writing
+
+- [Docs](/published-cse-docs): Live pages Clara writes and maintains on the Cloud Secure Edge docs site.
+- [Technical writing and generative AI](/blog/future-of-technical-writing-generative-ai): An essay published by Security Boulevard in July 2023, on what the Chinese Room thought experiment says about writing docs with AI.
+
+## Optional
+
+- [Full text of every page](/llms-full.txt)

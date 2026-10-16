@@ -4,7 +4,7 @@ const {themes} = require('prism-react-renderer');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Clara Christopher',
-  tagline: 'Content architect for cloud security products, technical writing, content design, and documentation architecture',
+  tagline: 'Content designer and technical writer for networking and cloud security products',
   favicon: 'img/favicon.ico',
 
   // TODO: replace with your real domain once you pick a host (Netlify/Vercel/GitHub Pages)
@@ -20,6 +20,25 @@ const config = {
   // this banner would otherwise appear on the homepage.
   baseUrlIssueBanner: false,
   onBrokenMarkdownLinks: 'warn',
+
+  // Structured data so search engines and AI tools can tell who this site is about.
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Clara Christopher',
+        jobTitle: 'Content designer and technical writer',
+        description: 'Content designer and technical writer for networking, application, and cloud security products. Owns the Cloud Secure Edge docs at SonicWall.',
+        worksFor: {'@type': 'Organization', name: 'SonicWall'},
+        alumniOf: {'@type': 'CollegeOrUniversity', name: 'McGill University'},
+        knowsAbout: ['Technical writing', 'Content design', 'Information architecture', 'Content strategy', 'Docs-as-code', 'Cloud security', 'Zero trust networking'],
+        sameAs: ['https://www.linkedin.com/in/clara-c-36406568/'],
+      }),
+    },
+  ],
 
   stylesheets: [
     {
@@ -61,7 +80,7 @@ const config = {
           {to: '/resume', label: 'Resume', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/contact', label: 'Contact', position: 'left'},
-          {href: 'https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG', label: 'LinkedIn', position: 'right'},
+          {href: 'https://www.linkedin.com/in/clara-c-36406568/', label: 'LinkedIn', position: 'right'},
           {href: 'mailto:clara.christopher56@gmail.com', label: 'Email', position: 'right'},
         ],
       },
@@ -71,7 +90,7 @@ const config = {
           {
             title: 'Elsewhere',
             items: [
-              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG'},
+              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/clara-c-36406568/'},
               {label: 'Email', href: 'mailto:clara.christopher56@gmail.com'},
             ],
           },
