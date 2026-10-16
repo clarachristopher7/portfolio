@@ -21,13 +21,11 @@ Content designer and technical writer for networking and cloud security products
 **Senior Technical Writer, Cloud Secure Edge** · *Feb 2024 – Present*
 
 - Own the Cloud Secure Edge docs end to end, from architecture explainers to setup guides and release notes. {/* DRAFT: "release notes" */}
-- Rewrote the [geolocation trust factor](/content-design/device-geolocation-trust-factor) screen so it states the rule an admin is building. The lead front-end engineer adopted the new order for every trust factor.
-- Redesigned the [AI prompt visibility](/content-design/ai-prompt-visibility) setup so logging can't be turned on without the decryption it depends on. The design ships in the next release.
+- Find where customers get stuck by analyzing support tickets, sales engineering calls, product telemetry, and community forums, and turn the findings into fixes in the docs and the product.
+- Lead content design for the admin console, from settings screens and setup flows to the homepage, working with product, design, and front-end engineering. A trust factor screen rewrite became the pattern for every trust factor, and a redesigned AI setup flow ships in the next release. [See the projects](/content-design/overview).
 - [Reorganized the docs site](/docs-engineering/cse-ia-rework-case-study) around the tasks admins come to do, without moving a page or breaking a link. Support now sends customers links to task pages instead of writing answers from scratch. {/* DRAFT: support outcome */}
 - Built [two AI tools](/automations) with Claude Code that catch docs drift. One flags docs affected by each code change, and the other compares the docs with each console release. Docs updates went from a scramble at release time to a short weekly review. {/* DRAFT: weekly review outcome */}
-- Chose the [console homepage](/content-design/console-homepage) metrics that show admins how each use case is going. The product team is using them to plan the next version. {/* DRAFT: confirm */}
 - Proposed a [docs-as-code platform](/docs-engineering/docs-modernization-case-study) the docs team can change directly, backed by support data and a working prototype. The VP of Product approved phase 1. {/* DRAFT: confirm */}
-- Find where customers get stuck by analyzing support tickets, sales engineering calls, product telemetry, and community forums.
 
 ### Banyan Security (acquired by SonicWall), Toronto (remote)
 
