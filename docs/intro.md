@@ -7,7 +7,7 @@ sidebar_position: 1
 
 <img className="about-photo" src={require('@site/static/img/clara.jpg').default} alt="Clara Christopher in a pink T-shirt, beside a painting" />
 
-My name is Clara, and I've spent my career writing for networking and cloud security startups. That means a lot of explaining things you can't see (traffic, tunnels, encryption) to people who have to make decisions about them.
+My name is Clara, and I've spent my career writing for networking, application, and cloud security startups. That means a lot of explaining things you can't see (traffic, tunnels, encryption) to people who have to make decisions about them.
 
 The world I write about is incredibly abstract, so I like to make it concrete by directly using the-thing-itself. What actually happens when I push a button and a VPN turns on? I start with the fundamentals, the most basic building blocks of the technology, before I get into its more nuanced layers. And that's just the beginning of my work.
 
