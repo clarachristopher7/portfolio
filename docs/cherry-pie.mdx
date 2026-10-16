@@ -1,0 +1,29 @@
+---
+title: Cherry pie
+description: A cherry pie with cardamom in the filling and an all-butter crust. The easter egg on Clara Christopher's portfolio.
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+import Recipe from '@site/src/components/Recipe';
+
+# Cherry pie
+
+<p className="hub-sub">You found the pie. It's a classic lattice-top cherry pie with two changes I'd defend to anyone. There's cardamom in the filling, which makes the cherries taste brighter and a little floral, and nobody can quite say why. And the crust uses butter as its only fat, so it's flaky and actually tastes like something.</p>
+
+<Recipe />
+
+<details className="pie-how">
+<summary>How this page works</summary>
+
+I'm a content engineer at heart, so even the pie got a content model.
+
+- **One source.** The ingredients and steps are written once, as data. That data builds this page, the [Schema.org Recipe](https://schema.org/Recipe) markup that search engines read, and the plain text that AI tools get in [llms-full.txt](pathname:///llms-full.txt).
+- **Amounts are numbers, not text.** That's what lets the page scale and convert them. US amounts round to fractions you can measure, metric weights to the nearest 5 grams, and oven temperatures to the nearest 5 degrees.
+- **It works without JavaScript.** The build writes the whole recipe into the HTML. The controls are added on top by one small function with no dependencies, so they also work on a static copy of this site that has no React at all.
+- **Kitchen tools.** The timers chime with the Web Audio API, so there's no sound file. Keep screen on uses the Screen Wake Lock API, and only appears in browsers that support it. Your checkmarks are saved in this browser, and nowhere else.
+- **Print.** A print stylesheet leaves out everything but the recipe.
+- **Nothing hidden.** If you found this by typing "pie," that's a small listener that ignores anything you type into a form. AI tools can find this page too. It's listed openly in [llms.txt](pathname:///llms.txt).
+
+</details>

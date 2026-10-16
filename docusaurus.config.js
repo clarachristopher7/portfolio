@@ -38,6 +38,14 @@ const config = {
         sameAs: ['https://www.linkedin.com/in/clara-c-36406568/'],
       }),
     },
+    // The easter egg: type "pie" on any page (outside a form field) to open
+    // the recipe. It follows the footer's cherry link, so it works wherever
+    // the site is hosted.
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `(function(){var k='';document.addEventListener('keydown',function(e){var t=e.target;if(e.metaKey||e.ctrlKey||e.altKey||e.key.length!==1||(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))))return;k=(k+e.key.toLowerCase()).slice(-3);if(k==='pie'){var a=document.querySelector('a.pie-egg');location.href=a?a.href:'/cherry-pie'}})})();`,
+    },
   ],
 
   stylesheets: [
@@ -95,7 +103,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Clara Christopher`,
+        copyright: `Copyright © ${new Date().getFullYear()} Clara Christopher <a class="pie-egg" href="/cherry-pie" aria-label="There's pie" title="There's pie. Psst, you can also type “pie” on any page."><img src="/img/cherry.png" alt="" width="17" height="20"></a>`,
       },
       prism: {
         theme: themes.github,

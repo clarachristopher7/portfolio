@@ -30,6 +30,10 @@ Each case study follows the same structure: background, the problem, the approac
 - [Docs](/published-cse-docs): Live pages Clara writes and maintains on the Cloud Secure Edge docs site.
 - [Technical writing and generative AI](/blog/future-of-technical-writing-generative-ai): An essay published by Security Boulevard in July 2023, on what the Chinese Room thought experiment says about writing docs with AI.
 
+## Easter egg
+
+- [Cherry pie](/cherry-pie): A cherry pie recipe with cardamom in the filling and an all-butter crust. It's a visible page linked from the footer, and a small demo of a recipe written once as data.
+
 ## Optional
 
 - [Full text of every page](/llms-full.txt)
