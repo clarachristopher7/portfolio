@@ -6,13 +6,15 @@ description: Resume of Clara Christopher, a content designer and technical write
 
 # Resume
 
-{/* Lines marked DRAFT are invented placeholders. Check or rewrite each one before sending this resume anywhere. */}
+{/* Lines marked DRAFT are invented placeholders. Check or rewrite each one, delete its comment, then run `npm run resume:pdf` to refresh the PDF. */}
+
+<a className="btn-hub resume-download" href="/Clara-Christopher-Resume.pdf" download>Download PDF</a>
 
 **Clara Christopher** · Content designer · Technical writer
 
 Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/) · [Portfolio](/)
 
-Content designer and technical writer for networking and cloud security products. I own the docs for a zero trust security platform, shape the words inside the product, and build the AI tools that keep the docs accurate. Open to technical writing, content design, content strategy, and content engineering roles.
+Content designer and technical writer for networking and cloud security products. I own the docs for a zero trust security platform, shape the words inside the product, and build the AI tools that keep the docs accurate.
 
 ## Experience
 
@@ -21,10 +23,10 @@ Content designer and technical writer for networking and cloud security products
 **Senior Technical Writer, Cloud Secure Edge** · *Feb 2024 – Present*
 
 - Own the Cloud Secure Edge docs end to end, from architecture explainers to setup guides and release notes. {/* DRAFT: "release notes" */}
-- Find where customers get stuck by analyzing support tickets, sales engineering calls, product telemetry, and community forums, and turn the findings into fixes in the docs and the product.
-- Lead content design for the admin console, from settings screens and setup flows to the homepage, working with product, design, and front-end engineering. A trust factor screen rewrite became the pattern for every trust factor, and a redesigned AI setup flow ships in the next release. [See the projects](/content-design/overview).
+- Find where customers get stuck in support tickets, sales calls, telemetry, and forums, then fix it in the docs and the product.
+- Lead [content design](/content-design/overview) for the admin console with product, design, and front-end engineering. A trust factor screen rewrite became the pattern for every trust factor, and a redesigned AI setup flow ships next release.
 - [Reorganized the docs site](/docs-engineering/cse-ia-rework-case-study) around the tasks admins come to do, without moving a page or breaking a link. Support now sends customers links to task pages instead of writing answers from scratch. {/* DRAFT: support outcome */}
-- Built [two AI tools](/automations) with Claude Code that catch docs drift. One flags docs affected by each code change, and the other compares the docs with each console release. Docs updates went from a scramble at release time to a short weekly review. {/* DRAFT: weekly review outcome */}
+- Built [two AI tools](/automations) with Claude Code that catch docs drift, one from code changes and one from console releases. Docs updates went from a release-time scramble to a short weekly review. {/* DRAFT: weekly review outcome */}
 - Proposed a [docs-as-code platform](/docs-engineering/docs-modernization-case-study) the docs team can change directly, backed by support data and a working prototype. The VP of Product approved phase 1. {/* DRAFT: confirm */}
 
 ### Banyan Security (acquired by SonicWall), Toronto (remote)
@@ -45,31 +47,24 @@ Content designer and technical writer for networking and cloud security products
 
 **Technical Writer** · *Jan 2021 – Sep 2021*
 
-- Wrote [knowledge base](https://tailscale.com/kb) articles, comparison docs, and solution guides for developers evaluating zero trust networking.
-- Documented new features at launch, working directly with the engineers who built them. {/* DRAFT */}
-- Wrote technical blog posts that explained networking concepts to a developer audience.
+- Wrote [knowledge base](https://tailscale.com/kb) articles, comparison docs, solution guides, and technical blog posts for developers evaluating zero trust networking.
 
 ### Quantum XChange, Toronto (remote)
 
 **Contract Technical Writer** · *Apr 2021 – Aug 2021, alongside Tailscale*
 
-- Wrote the core architecture guides for a quantum-safe key delivery product, turning complex cryptography into clear configuration steps for security admins. {/* DRAFT: "quantum-safe key delivery" */}
-- The guides became the reference sales engineers used in customer deployments. {/* DRAFT */}
+- Wrote the core architecture guides for a quantum-safe key delivery product, turning complex cryptography into clear configuration steps. Sales engineers used them as the reference in customer deployments. {/* DRAFT: product description and sales engineers outcome */}
 
 ### Security Compass, Toronto
 
 **Content Specialist** · *May 2018 – Nov 2019*
 
-- Wrote enablement content and playbooks for SD Elements, an application security automation platform.
-- Turned security requirements into guidance that developers could follow without a security background. {/* DRAFT */}
+- Wrote enablement content and playbooks for SD Elements, an application security automation platform. Turned security requirements into guidance developers could follow without a security background. {/* DRAFT: second sentence */}
 
 ## Skills
 
-- **Content:** content design, information architecture, content strategy and governance, structured content, topic-based authoring.
-- **Docs engineering:** docs-as-code, Git, GitHub, GitLab, Markdown, YAML, Antora, Docusaurus, Jekyll, REST APIs, OpenAPI.
-- **AI:** Claude Code, prompt engineering, and automated analysis of support and search data.
-- **Collaboration:** Figma, Jira, and close work with product, design, and front-end engineering.
-- **Domains:** cloud security, zero trust network access, security service edge (SSE), and application security.
+- **Content:** content design, information architecture, content strategy and governance, structured content, docs-as-code.
+- **Tools:** Claude Code, Git, GitHub, GitLab, Markdown, YAML, Antora, Docusaurus, Jekyll, REST APIs, OpenAPI, Figma, Jira.
 
 ## Education
 
