@@ -584,6 +584,7 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1.05rem;
 }
 .hub-ico {
@@ -606,6 +607,8 @@ html[data-theme='dark'] { --ia-new: #4b8df8; --ia-old: #d97706; }
   color: var(--site-label-ink);
   padding-top: 0.35rem;
   margin-left: auto;
+  text-align: right;
+  line-height: 1.6;
 }
 .hub-card h3 {
   font-size: 1.1rem;
@@ -1915,8 +1918,7 @@ html[data-theme='dark'] .iav { border-color: #3a414b; }
 /* Drawings beside a page intro. The boxes and forms below them make room
    instead of running underneath. */
 .markdown .hero-art--side { width: 190px; margin-top: -2.5rem; }
-.markdown .hero-art--side ~ .ctx-prose,
-.markdown .hero-art--side ~ form { display: flow-root; }
+.markdown .hero-art--side ~ .ctx-prose { display: flow-root; }
 .markdown .hero-art--lg { width: 250px; }
 @media (max-width: 767px) { .markdown .hero-art--side { width: 120px; margin: 0 0 0.5rem 1rem; } }
 
