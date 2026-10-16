@@ -64,6 +64,12 @@ export function HubGroup({label, srLabel, columns = 3, children}) {
   );
 }
 
+// Text written on its own lines inside a card in MDX arrives already
+// wrapped in a <p>. Wrapping it again would nest paragraphs, which browsers
+// split apart, and React then finds a different page than it built.
+const hasParagraph = (children) =>
+  React.Children.toArray(children).some((c) => React.isValidElement(c) && c.type === 'p');
+
 export function HubCard({to, icon, tag, title, img, imgAlt = '', go, children}) {
   const src = useBaseUrl(img || '');
   const Tag = to ? Link : 'div';
@@ -80,7 +86,7 @@ export function HubCard({to, icon, tag, title, img, imgAlt = '', go, children}) 
         {tag && <span className="hub-tag">{tag}</span>}
       </span>
       <h3>{title}</h3>
-      {children && <p>{children}</p>}
+      {children && (hasParagraph(children) ? children : <p>{children}</p>)}
       {go && <span className="go">{go} <Arrow /></span>}
     </Tag>
   );
