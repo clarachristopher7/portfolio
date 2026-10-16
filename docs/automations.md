@@ -11,7 +11,7 @@ sidebar_position: 6
 
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
-  <p>Cloud Secure Edge engineers change the product every day, and the admin console ships new versions often. Nothing in the release process tells the docs team when a page stops matching the product. Usually, a customer tells us.</p>
+  <p>Engineers change the product every day, and the admin console ships new versions often. Nothing in the release process tells the docs team when a page stops matching the product. Usually, a customer tells us.</p>
 </div>
 
 ## The problem

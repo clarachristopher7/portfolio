@@ -10,7 +10,7 @@ sidebar_position: 2
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
   <p>Admins run Cloud Secure Edge from a web-based admin console. The homepage is the first screen they see after signing in, which makes it the natural place to answer one question. Is this product doing the job we bought it for?</p>
-  <p>Customers buy Cloud Secure Edge for a handful of main reasons, or use cases. I worked on the redesign with the product designer, and my part was choosing what the page measures for each one.</p>
+  <p>Customers buy the product for a handful of main reasons, or use cases. I worked on the redesign with the product designer, and my part was choosing what the page measures for each one.</p>
 </div>
 
 ## The problem

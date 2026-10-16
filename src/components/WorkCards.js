@@ -29,7 +29,7 @@ const SETS = {
   architecture: [
     {to: "/docs-engineering/cse-ia-rework-case-study", img: "/img/previews/cse-ia.png",
       imgAlt: "A docs homepage organized by goal, with a task-based sidebar", tag: "Navigation",
-      title: "Cloud Secure Edge information architecture", go: "See what changed",
+      title: "Reorganizing security docs around tasks", go: "See what changed",
       text: "The docs followed how engineers built the product. I reorganized them around what admins came to do, and no link broke."},
     {hidden: true, to: "/docs-engineering/ia-model-case-study", img: "/img/previews/ia-model.png",
       imgAlt: "A portfolio map table showing each product's docs sections as Have, Partial, Missing, or Not applicable", tag: "Portfolio model",

@@ -10,7 +10,7 @@ sidebar_position: 3
 <div className="ctx-prose">
   <p className="ctx-label">Background</p>
   <p>Cloud Secure Edge is a service that decides whether an employee's device can connect to company apps and websites. It can also log the prompts that employees send to AI tools like ChatGPT. And people paste all sorts of things into those tools (customer records, source code, internal documents). Once that information leaves the company, it's gone. The log shows admins what's being shared, so they can catch leaks and set sensible rules for AI.</p>
-  <p>There's a catch. Prompts travel over encrypted connections, and Cloud Secure Edge can only read them if it's allowed to decrypt that traffic. Admins turn on decryption in an Internet Threat Protection policy, in a completely different part of the admin console. Each policy applies to specific user roles, so decryption (and prompt logging with it) covers only the employees in those roles.</p>
+  <p>There's a catch. Prompts travel over encrypted connections, and the product can only read them if it's allowed to decrypt that traffic. Admins turn on decryption in an Internet Threat Protection policy, in a completely different part of the admin console. Each policy applies to specific user roles, so decryption (and prompt logging with it) covers only the employees in those roles.</p>
 </div>
 
 ## The problem
@@ -31,13 +31,13 @@ My first instinct was to put everything in one place. The first prototype moved 
 
 ![The first prototype. Callouts point to the decryption setting on the same screen as logging, the device count for each policy, and the line that confirms how many devices are logged.](/img/content-design/ai-prompt-after-annotated.webp)
 
-<p className="shot-cap">The screen lists each Internet Threat Protection policy with the number of devices that it covers and a decryption switch. A line under the logging switch confirms how many devices Cloud Secure Edge is logging.</p>
+<p className="shot-cap">The screen lists each Internet Threat Protection policy with the number of devices that it covers and a decryption switch. A line under the logging switch confirms how many devices are being logged.</p>
 
 ## The constraint
 
 <div className="ts-steps">
 
-1. Turning on decryption lets Cloud Secure Edge read all encrypted traffic that one policy covers, not just the AI prompts.
+1. Turning on decryption lets the product read all encrypted traffic that one policy covers, not just the AI prompts.
 2. Making it too easy to turn on would introduce employee privacy issues and apply the setting too broadly.
 
 </div>
