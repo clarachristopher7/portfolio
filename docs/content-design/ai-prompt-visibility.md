@@ -46,11 +46,11 @@ My first instinct was to put everything in one place. The first prototype moved 
 
 That constraint changed my mind about where the switch belongs. Decryption isn't really a logging setting. It's a policy setting, turned on one policy at a time, and each policy applies to specific user roles. So the second prototype puts the switch inside each Internet Threat Protection policy, where an admin can see exactly whose traffic they're about to decrypt.
 
-![The second prototype. An Internet Threat Protection policy has a TLS decryption tab with a decryption switch, a list of the features that use decryption, and a list of categories that are never decrypted.](/img/content-design/ai-prompt-itp-policy.webp)
+![The second prototype. An Internet Threat Protection policy has a TLS decryption tab with a decryption switch, a list of the features that use decryption with a switch for AI prompt visibility, and a list of categories that are never decrypted.](/img/content-design/ai-prompt-itp-policy.webp)
 
 The decryption tab also has two lists.
 
-- **Used by** names the features that depend on this policy's decryption, including AI prompt visibility. An admin who's thinking about turning decryption off can see that prompt logging would stop for the roles that this policy covers.
+- **Features that use decryption** lists AI prompt visibility with its own switch, right under the decryption switch. The admin turns on decryption first, then logging. And anyone thinking about turning decryption off can see that logging would stop too.
 - **Don't decrypt** names the website categories that always stay encrypted, such as financial services and health. Admins can protect employee privacy in the same place where they turn decryption on.
 
 Both designs are still prototypes. The product team picked the second direction for the roadmap. Until it ships, the docs walk admins through both settings in one procedure, decryption first, so nobody ends up staring at an empty log.
