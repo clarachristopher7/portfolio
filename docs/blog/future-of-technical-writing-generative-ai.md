@@ -9,6 +9,12 @@ hide_table_of_contents: true
 
 <p className="post-meta">July 2023 · Published by <a href="https://securityboulevard.com/2023/07/generative-ai-and-the-future-of-technical-writing">Security Boulevard</a></p>
 
+<div className="ctx-prose">
+  <p className="ctx-label">Three years later</p>
+  <p>I wrote this in July 2023, when most people were asking whether AI would replace technical writers. Since then, my own work has moved where I guessed it would. I spend more time on information architecture and content strategy, I use AI to find where the docs fall short, and I build tools that keep them accurate. Some of this even has a name now, content engineering.</p>
+  <p>Here's the original, as it ran in Security Boulevard.</p>
+</div>
+
 
 
 
@@ -37,7 +43,7 @@ I'd even venture to say that generative AI could make documentation better for b
 
 And so, overall, there's very little feedback from end users to technical writers about the utility of documentation. Customer surveys are seen as a nuisance that takes away even more of the end user's time, and surveys are limited when it comes to grasping meaningful feedback.
 
-Based on AI analytics that derive from user searches, technical writers could have better insights into what their end users are actually seeking. If we see that end users are searching frequently for information about one of your product's new functionalities, then we have some sense of how important the feature is to  customers, how challenging it is to understand or use, and what pieces of information may be missing or hard to reach. We could then surface more relevant information in the docs, add new documentation, or clarify concepts within existing documentation. Tech writers could also have visibility into which questions AI isn't answering well, and they could then help deliver feedback that is used to train the model to better tune to data sets.
+Based on AI analytics that derive from user searches, technical writers could have better insights into what their end users are actually seeking. If we see that end users are searching frequently for information about one of your product's new functionalities, then we have some sense of how important the feature is to customers, how challenging it is to understand or use, and what pieces of information may be missing or hard to reach. We could then surface more relevant information in the docs, add new documentation, or clarify concepts within existing documentation. Tech writers could also have visibility into which questions AI isn't answering well, and they could then help deliver feedback that is used to train the model to better tune to data sets.
 
 In short, I could see the technical writer moving closer to the UI side of the house, where they spend more time on content strategy, information architecture, and usability of documentation. The technical writer could spend time that used to be spent writing getting a better idea of technical user requirements and key aspects of new features worth showcasing in the documentation.
 
@@ -49,4 +55,4 @@ But, despite the fact that AI may be better equipped than humans to make statist
 
 An AI that is not reliant on human input and training, an autonomous AI, is an idea that's been considered before and perhaps been feared for a long time - judging by the number of popular sci-fi horrors on the subject. It's hard to conceive what such a thing would look like, if it were possible: what function(s) would it serve? How would it evolve over time? What would become of human beings? But all of this conjecture only points to the importance of ethics around existing AI: it's something we need to consider as we input data and train models - which could almost too easily reinforce inferences that lead to harmful bias or the spread of misinformation. So, once again, human intervention would be required, and this is why there are currently efforts to make AI data publicly accessible – to provide more transparency by having more human eyes on how models are trained and what data is used, to the end of mitigating bias and improving the reliability of data.
 
-So, while the world might seize this opportunity to use and develop AI - which could have simultaneous potential for great good and great evil, depending on how it all plays out-, I'm still revelling in the freedom of sentient being-in-the-world.
+So, while the world might seize this opportunity to use and develop AI (which could have simultaneous potential for great good and great evil, depending on how it all plays out), I'm still revelling in the freedom of sentient being-in-the-world.
