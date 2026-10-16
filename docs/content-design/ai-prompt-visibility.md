@@ -55,7 +55,7 @@ The decryption tab also has two lists.
 
 This design is being shipped in our next release.
 
-### Then the roadmap grew
+### But reality was messier...
 
 More features needed decryption, including one that has nothing to do with AI. The team also wanted every AI feature in one tab, which would separate them from decryption again.
 
