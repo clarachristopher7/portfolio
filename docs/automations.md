@@ -51,12 +51,7 @@ Building the tools was the easy part. The real work was deciding what they shoul
 
 ## The constraint
 
-<div className="ts-steps">
-
-1. I couldn't add a step to how engineering releases the product. The tools work only from what already exists, the code changes and the released console.
-2. The docs team is small, so each report had to be short enough to finish before the next release.
-
-</div>
+I couldn't ask engineers to do anything extra, like flag which changes affect the docs. So the tools had to find those changes on their own, by reading the code changes and each new console release.
 
 ## The outcome
 
