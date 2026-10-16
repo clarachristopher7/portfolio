@@ -13,9 +13,9 @@ The world I write about is incredibly abstract, so I like to make it concrete by
 
 The next part is building a vivid sense of the person using it. Who are they? What are they trying to do? Does what feels unintuitive to me feel unintuitive to them, too?
 
-You're not supposed to say this these days, since the hero of our times is the technical specialist, but I'm a creative at heart. I like to expand outward and synthesize. Writing well means moving past the narrow considerations into the larger ones. You have to think and feel outside of the box, sense how to reach people and relate to them, and then finally reflect back something that flows meaningfully and grounds people in their own world. In many ways, it's better to see a complex technology with naive eyes, as an outsider, because that's usually closer to where your user is standing. So I stand by this: A specialist knows how the thing works, but it takes a generalist to make it matter to anyone else.
+You're not supposed to say this these days, since the hero of our times is the technical specialist, but I'm a creative at heart. I like to expand outward and synthesize. You have to think and feel outside of the box, sense how to reach people and relate to them, and then finally reflect back something that flows meaningfully and grounds people in their own world. In many ways, it's better to see a complex technology with naive eyes, as an outsider, because that's usually closer to where your user is standing. So I stand by this: A specialist knows how the thing works, but it takes a generalist to make it matter to anyone else.
 
-In the past, I was the sole technical writer at Banyan Security. When SonicWall acquired us, I stayed on to own what became the Cloud Secure Edge docs. Before that, I wrote docs for [Tailscale](https://tailscale.com/kb) and technical content for [Security Compass](https://www.securitycompass.com/).
+Today I own the Cloud Secure Edge docs at SonicWall. I started as the only technical writer at Banyan Security and stayed on through the acquisition. Before that, I wrote docs for [Tailscale](https://tailscale.com/kb) and technical content for [Security Compass](https://www.securitycompass.com/).
 
 If you're building something complicated and want people to enjoy using it, [I'd love to hear about it](/contact).
 
@@ -31,9 +31,9 @@ If you're building something complicated and want people to enjoy using it, [I'd
 </div>
 
 
-I'm open to roles in most corners of content, including:
+I'm open to roles like these:
 
-<p className="ia-chips role-chips"><span>Technical writer</span><span>Content engineer</span><span>Content architect</span><span>Content designer</span><span>UX writer</span><span>Content strategist</span><span>Content specialist</span><span>Technical content marketer</span></p>
+<p className="ia-chips role-chips"><span>Technical writer</span><span>Content designer</span><span>Content strategist</span><span>Content engineer</span></p>
 
 import {HubGroup, HubCard} from '@site/src/components/Hub';
 
