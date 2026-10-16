@@ -53,7 +53,7 @@ The decryption tab also has two lists.
 - **Features that use decryption** lists AI prompt visibility with its own switch, right under the decryption switch. The admin turns on decryption first, then logging. And anyone thinking about turning decryption off can see that logging would stop too.
 - **Don't decrypt** names the website categories that always stay encrypted, such as financial services and health. Admins can protect employee privacy in the same place where they turn decryption on.
 
-Both designs are still prototypes. The product team picked the second direction for the roadmap. Until it ships, the docs walk admins through both settings in one procedure, decryption first, so nobody ends up staring at an empty log.
+This design is being shipped in our next release.
 
 ### Then the roadmap grew
 
