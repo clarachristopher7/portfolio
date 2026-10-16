@@ -70,11 +70,11 @@ Both designs are still prototypes. The product team picked the second direction 
 
 More features needed decryption, including one that has nothing to do with AI. The team also wanted every AI feature in one tab, which would separate them from decryption again.
 
-So I let each feature say what it needs, wherever it lives.
+So the AI tab shows decryption once, as one setting for the whole policy, with the features that need it grouped underneath.
 
-![A prototype of the AI tab in an Internet Threat Protection policy, with TLS decryption turned off. Callouts point to the banner that says decryption is off, the paused feature that says why it stopped, and the feature that says what it needs.](/img/content-design/ai-tab-annotated.webp)
+![A prototype of the AI tab in an Internet Threat Protection policy, with TLS decryption turned off. Callouts point to the one decryption setting for the whole policy, the two features that wait for it, and a feature that doesn't need it.](/img/content-design/ai-tab-annotated.webp)
 
-<p className="shot-cap">Decryption is off. Each feature says what that means for it.</p>
+<p className="shot-cap">Decryption is off, so both features that need it wait.</p>
 
 ![A confirmation dialog titled "Turn on TLS decryption for this policy?". Callouts point to the line that says it's the same setting, whose traffic is decrypted, what's never decrypted, and every feature that uses it.](/img/content-design/ai-tab-confirm-annotated.webp)
 
