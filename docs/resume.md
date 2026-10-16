@@ -1,71 +1,78 @@
 ---
 hide_table_of_contents: true
 sidebar_position: 2
+description: Resume of Clara Christopher, a content designer and technical writer for networking and cloud security products.
 ---
 
 # Resume
 
+{/* Lines marked DRAFT are invented placeholders. Check or rewrite each one before sending this resume anywhere. */}
+
 **Clara Christopher** · Content designer · Technical writer
 
-Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/)
+Toronto, ON · [clara.christopher56@gmail.com](mailto:clara.christopher56@gmail.com) · [LinkedIn](https://www.linkedin.com/in/clara-c-36406568/) · [Portfolio](/)
 
-## Professional experience
+Content designer and technical writer for networking and cloud security products. I own the docs for a zero trust security platform, shape the words inside the product, and build the AI tools that keep the docs accurate. Open to technical writing, content design, content strategy, and content engineering roles.
 
-### SonicWall (Cloud Secure Edge), Remotely in Toronto, Ontario, Canada
+## Experience
 
-**Senior Technical Writer** · *Feb 2024 – Present*
+### SonicWall, Toronto (remote)
 
-- Analyze support tickets, sales engineering calls, product telemetry, and community forums to find where customers hesitate or get stuck.
-- Work with product, design, and front-end engineers on in-product copy and screen order, within the limits of shared UI components.
-- Reorganized the docs site around the tasks that admins come to do, without breaking any links. Added feedback forms and update subscriptions.
-- Build AI automations with Claude Code that keep the docs accurate. One flags docs that engineering changes affect. Another compares the docs with the latest console UI.
-- Lead a documentation platform modernization, including a docs-as-code publishing pipeline, navigation mapped to the customer journey, and new tooling (in progress).
+**Senior Technical Writer, Cloud Secure Edge** · *Feb 2024 – Present*
 
-### Banyan Security (acquired by SonicWall), Remotely in Toronto, Ontario, Canada
+- Own the Cloud Secure Edge docs end to end, from architecture explainers to setup guides and release notes. {/* DRAFT: "release notes" */}
+- Rewrote the [geolocation trust factor](/content-design/device-geolocation-trust-factor) screen so it states the rule an admin is building. The lead front-end engineer adopted the new order for every trust factor.
+- Redesigned the [AI prompt visibility](/content-design/ai-prompt-visibility) setup so logging can't be turned on without the decryption it depends on. The design ships in the next release.
+- [Reorganized the docs site](/docs-engineering/cse-ia-rework-case-study) around the tasks admins come to do, without moving a page or breaking a link. Support now sends customers links to task pages instead of writing answers from scratch. {/* DRAFT: support outcome */}
+- Built [two AI tools](/automations) with Claude Code that catch docs drift. One flags docs affected by each code change, and the other compares the docs with each console release. Docs updates went from a scramble at release time to a short weekly review. {/* DRAFT: weekly review outcome */}
+- Chose the [console homepage](/content-design/console-homepage) metrics that show admins how each use case is going. The product team is using them to plan the next version. {/* DRAFT: confirm */}
+- Proposed a [docs-as-code platform](/docs-engineering/docs-modernization-case-study) the docs team can change directly, backed by support data and a working prototype. The VP of Product approved phase 1. {/* DRAFT: confirm */}
+- Find where customers get stuck by analyzing support tickets, sales engineering calls, product telemetry, and community forums.
+
+### Banyan Security (acquired by SonicWall), Toronto (remote)
 
 **Senior Technical Writer and Content Designer** · *May 2023 – Jan 2024*
 
-- Restructured the docs' information architecture and taxonomy ahead of the acquisition, in an effort to reposition our product as a full-fledged SSE offering.
-- Used generative AI tools to test customer FAQs and onboarding flows. Analyzed AI search patterns to find gaps in the docs' structure, then fixed them.
-- Worked with product, front-end leads, and UX designers on in-product content for the admin console and desktop app.
+- As the company's only technical writer, owned every doc and carried them through the acquisition by SonicWall.
+- Restructured the docs' information architecture and taxonomy as the product grew into a full security service edge (SSE) platform.
+- Tested FAQs and onboarding flows with generative AI, and used AI search patterns to find gaps in the docs. Filled the gaps that kept turning into support tickets. {/* DRAFT: support tickets outcome */}
+- Wrote in-product content for the admin console and desktop app with product, front-end engineering, and UX design.
 
 **Technical Writer and UX Writer** · *Sep 2021 – May 2023*
 
-- Created and maintained the style guide, which set one standard and information hierarchy across all docs.
+- Created the style guide that set one standard and information hierarchy across all docs. Product managers and engineers started using it for their own drafts. {/* DRAFT: PMs and engineers outcome */}
 - Audited legacy docs for readability, and turned static manuals into task-based walkthroughs and video scripts.
 
-### Tailscale, Toronto, Ontario, Canada
+### Tailscale, Toronto
 
 **Technical Writer** · *Jan 2021 – Sep 2021*
 
-- Wrote comparison docs, solution guides, and technical blogs for developers evaluating zero trust networking.
+- Wrote [knowledge base](https://tailscale.com/kb) articles, comparison docs, and solution guides for developers evaluating zero trust networking.
+- Documented new features at launch, working directly with the engineers who built them. {/* DRAFT */}
+- Wrote technical blog posts that explained networking concepts to a developer audience.
 
-### Quantum XChange, Remotely in Toronto, Ontario, Canada
+### Quantum XChange, Toronto (remote)
 
-**Contract Technical Writer (concurrent)** · *Apr 2021 – Aug 2021*
+**Contract Technical Writer** · *Apr 2021 – Aug 2021, alongside Tailscale*
 
-- Wrote the core architecture guides for a quantum security product, turning complex cryptography into clear configuration steps for security admins.
+- Wrote the core architecture guides for a quantum-safe key delivery product, turning complex cryptography into clear configuration steps for security admins. {/* DRAFT: "quantum-safe key delivery" */}
+- The guides became the reference sales engineers used in customer deployments. {/* DRAFT */}
 
-### Security Compass, Toronto, Ontario, Canada
+### Security Compass, Toronto
 
 **Content Specialist** · *May 2018 – Nov 2019*
 
-- Wrote enablement content and playbooks for SD Elements, application security automation software.
+- Wrote enablement content and playbooks for SD Elements, an application security automation platform.
+- Turned security requirements into guidance that developers could follow without a security background. {/* DRAFT */}
 
-## Core competencies
+## Skills
 
-- **Content design:** in-product copy and the order it appears in, written with design and front-end engineering.
-- **Information architecture:** navigation for a live docs site, and a model for comparing different doc sets across a product portfolio.
-- **Content governance:** docs-as-code publishing, ownership and review schedules, and policies for retiring content.
-- **AI documentation tools:** jobs that flag docs that no longer match the code, and audits that produce a ranked backlog.
-- **Domains:** cloud security, zero trust network access, and cybersecurity platforms.
-
-## Technical skills
-
-- **Methods:** user-centered design, topic-based authoring, structured content modeling, and docs-as-code pipelines.
-- **Tools:** Git, GitHub, GitLab, REST APIs, OpenAPI/Swagger, Markdown, YAML, Antora, Jekyll, Jira, Figma.
-- **AI tools:** Claude Code, prompt engineering, and automated analysis of support and search data.
+- **Content:** content design, information architecture, content strategy and governance, structured content, topic-based authoring.
+- **Docs engineering:** docs-as-code, Git, GitHub, GitLab, Markdown, YAML, Antora, Docusaurus, Jekyll, REST APIs, OpenAPI.
+- **AI:** Claude Code, prompt engineering, and automated analysis of support and search data.
+- **Collaboration:** Figma, Jira, and close work with product, design, and front-end engineering.
+- **Domains:** cloud security, zero trust network access, security service edge (SSE), and application security.
 
 ## Education
 
-**Bachelor of Arts, Philosophy** (First Class Level in Philosophy), McGill University
+**Bachelor of Arts, Philosophy**, McGill University · First-class standing in philosophy
