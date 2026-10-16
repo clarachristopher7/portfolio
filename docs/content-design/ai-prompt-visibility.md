@@ -46,12 +46,9 @@ My first instinct was to put everything in one place. The first prototype moved 
 
 That constraint changed my mind about where the switch belongs. Decryption isn't really a logging setting. It's a policy setting, turned on one policy at a time, and each policy applies to specific user roles. So the second prototype puts the switch inside each Internet Threat Protection policy, where an admin can see exactly whose traffic they're about to decrypt.
 
-![The second prototype. An Internet Threat Protection policy has a TLS decryption tab with a decryption switch, a list of the features that use decryption with a switch for AI prompt visibility, and a list of categories that are never decrypted.](/img/content-design/ai-prompt-itp-policy.webp)
+![The second prototype. An Internet Threat Protection policy has a TLS decryption tab with a decryption switch, and a list of the features that use decryption with a switch for AI prompt visibility.](/img/content-design/ai-prompt-itp-policy.webp)
 
-The decryption tab also has two lists.
-
-- **Features that use decryption** lists AI prompt visibility with its own switch, right under the decryption switch. The admin turns on decryption first, then logging. And anyone thinking about turning decryption off can see that logging would stop too.
-- **Don't decrypt** names the website categories that always stay encrypted, such as financial services and health. Admins can protect employee privacy in the same place where they turn decryption on.
+Right under the decryption switch, **Features that use decryption** lists AI prompt visibility with its own switch. The admin turns on decryption first, then logging. And anyone thinking about turning decryption off can see that logging would stop too.
 
 This design is being shipped in our next release.
 
@@ -65,6 +62,6 @@ So the AI tab shows decryption once, as one setting for the whole policy, with t
 
 <p className="shot-cap">Decryption is off, so both features that need it wait.</p>
 
-![A confirmation dialog titled "Turn on TLS decryption for this policy?". Callouts point to the line that says it's the same setting, whose traffic is decrypted, what's never decrypted, and every feature that uses it.](/img/content-design/ai-tab-confirm-annotated.webp)
+![A confirmation dialog titled "Turn on TLS decryption for this policy?". Callouts point to the line that says it's the same setting, whose traffic is decrypted, and every feature that uses it.](/img/content-design/ai-tab-confirm-annotated.webp)
 
 <p className="shot-cap">Turning decryption on from the AI tab asks first.</p>
