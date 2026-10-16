@@ -17,8 +17,6 @@ import Recipe from '@site/src/components/Recipe';
 <details className="pie-how">
 <summary>How this page works</summary>
 
-I'm a content engineer at heart, so even the pie got a content model.
-
 - **One source.** The ingredients and steps are written once, as data. That data builds this page, the [Schema.org Recipe](https://schema.org/Recipe) markup that search engines read, and the plain text that AI tools get in [llms-full.txt](pathname:///llms-full.txt).
 - **Amounts are numbers, not text.** That's what lets the page scale and convert them. US amounts round to fractions you can measure, metric weights to the nearest 5 grams, and oven temperatures to the nearest 5 degrees.
 - **It works without JavaScript.** The build writes the whole recipe into the HTML. The controls are added on top by one small function with no dependencies, so they also work on a static copy of this site that has no React at all.
